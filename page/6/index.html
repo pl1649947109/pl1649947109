@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
-      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2019/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
+      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2018/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
@@ -98,7 +98,7 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/2019/12/02/main/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/2018/12/02/main/">主页</a></li>
 		        
 					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
@@ -118,243 +118,6 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
-  
-    <article id="post-小绿本/第二部分——并发与网络编程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/21/小绿本/第二部分——并发与网络编程/">第二部分——并发与网络编程</a>
-    </h1>
-  
-
-			
-			<a href="/2019/10/21/小绿本/第二部分——并发与网络编程/" class="archive-article-date">
-  	<time datetime="2019-10-21T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">4.8k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">17min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-简述-OSI-七层协议。"><a href="#1-简述-OSI-七层协议。" class="headerlink" title="1. 简述 OSI 七层协议。"></a>1. 简述 OSI 七层协议。</h3><p><img src="https://images2018.cnblogs.com/blog/1258691/201805/1258691-20180529095800367-902368750.png" alt="img"></p>
-<p>物理层：主要是基于电器特性发送高低电压（电信号），高电压对应数字1，低电压对应数字0</p>
-<p>数据链路层：定义了电信号的分组方式</p>
-<p>网路层：引入一套新的地址用来区分不同的广播域/子网，这套地址即网络地址</p>
-<p>传输层：建立端口到端口的通信</p>
-<p>会话层：建立客户端与服务端连接</p>
-<p>表示层：对来自应用层的命令和数据进行解释，按照一定格式传给会话层。如编码、数据格式转换、加密解密、压缩解压<br>应用层：规定应用程序的数据格式</p>
-        
-          <!---<a class="article-more-a" href="/2019/10/21/小绿本/第二部分——并发与网络编程/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小绿本</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/21/小绿本/第二部分——并发与网络编程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/20/书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统/">第十八讲——django综合扩展八之Django缓存与自带认证系统讲</a>
-    </h1>
-  
-
-			
-			<a href="/2019/10/20/书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统/" class="archive-article-date">
-  	<time datetime="2019-10-20T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.4k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">9min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Dajngo与缓存"><a href="#Dajngo与缓存" class="headerlink" title="Dajngo与缓存"></a>Dajngo与缓存</h2><p>我们都知道Django建立的是动态网站，正常情况下，每次请求过来都经历了这样一个过程：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">收请求 -&gt; url路由 -&gt; 视图处理 -&gt; 数据库读写 -&gt; 视图处理 -&gt; 模版渲染 -&gt; 返回请求</span><br></pre></td></tr></table></figure>
-
-<p><strong>设想这么个场景，一个用户或者大量用户都对某个页面非常感兴趣，出现了大量实质相同的请求，如果每次请求都采取上面的流程，将出现大量的重复工作，尤其是大量无谓的数据库读写。</strong></p>
-        
-          <!---<a class="article-more-a" href="/2019/10/20/书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/20/书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
   
     <article id="post-小绿本/第一部分——Python基础篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -589,243 +352,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/linux/第一讲——linux初始与常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/20/书/linux/第一讲——linux初始与常用命令/">第一讲——linux初始与常用命令</a>
-    </h1>
-  
-
-			
-			<a href="/2019/10/20/书/linux/第一讲——linux初始与常用命令/" class="archive-article-date">
-  	<time datetime="2019-10-20T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.2k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">8min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><p>最完整的命令大全：<a href="https://www.runoob.com/linux/linux-command-manual.html" target="_blank" rel="noopener">https://www.runoob.com/linux/linux-command-manual.html</a></p>
-<p>linux在线中文手册：<a href="http://linux.51yip.com/" target="_blank" rel="noopener">http://linux.51yip.com/</a></p>
-<p>linux开源镜像大全：<a href="https://www.douban.com/note/517555410/" target="_blank" rel="noopener">https://www.douban.com/note/517555410/</a></p>
-<h3 id="linux目录结构"><a href="#linux目录结构" class="headerlink" title="linux目录结构"></a>linux目录结构</h3><p><img src="http://9017499461.linshutu.top/linux1.png" alt></p>
-        
-          <!---<a class="article-more-a" href="/2019/10/20/书/linux/第一讲——linux初始与常用命令/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/20/书/linux/第一讲——linux初始与常用命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/Django/第十七讲——django综合扩展七之发送邮件与日志记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/19/书/Django/第十七讲——django综合扩展七之发送邮件与日志记录/">第十七讲——django综合扩展七之发送邮件与日志记录</a>
-    </h1>
-  
-
-			
-			<a href="/2019/10/19/书/Django/第十七讲——django综合扩展七之发送邮件与日志记录/" class="archive-article-date">
-  	<time datetime="2019-10-19T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-19</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.8k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">7min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="发送邮件"><a href="#发送邮件" class="headerlink" title="发送邮件"></a>发送邮件</h2><p>在Python中已经内置了一个smtp邮件发送模块，Django在此基础上进行了简单地封装，让我们在Django环境中可以更方便更灵活的发送邮件。</p>
-<p>所有的功能都在django.core.mail中。</p>
-<h3 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h3><p>两行就可以搞定一封邮件：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.core.mail <span class="keyword">import</span> send_mail</span><br><span class="line"></span><br><span class="line">send_mail(</span><br><span class="line">    <span class="string">'Subject here'</span>,</span><br><span class="line">    <span class="string">'Here is the message.'</span>,</span><br><span class="line">    <span class="string">'from@example.com'</span>,</span><br><span class="line">    [<span class="string">'to@example.com'</span>],</span><br><span class="line">    fail_silently=<span class="literal">False</span>,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<p>导入功能模块，然后发送邮件，so easy！</p>
-<p>默认情况下，使用配置文件中的<code>EMAIL_HOST</code>和<code>EMAIL_PORT</code>设置SMTP服务器主机和端口，<code>EMAIL_HOST_USER</code>和<code>EMAIL_HOST_PASSWORD</code>是用户名和密码。如果设置了<code>EMAIL_USE_TLS</code>和<code>EMAIL_USE_SSL</code>，它们将控制是否使用相应的加密链接。</p>
-        
-          <!---<a class="article-more-a" href="/2019/10/19/书/Django/第十七讲——django综合扩展七之发送邮件与日志记录/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/19/书/Django/第十七讲——django综合扩展七之发送邮件与日志记录/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
     <article id="post-数据结构与算法/算法视频第一天——递归、查找、排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -945,20 +471,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-项目/Django实现可重用注册登录系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/18/书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容/">第十六讲——django综合扩展六之分页Paginator和聚合内容</a>
+      <a class="article-title" href="/2019/10/09/项目/Django实现可重用注册登录系统/">Django实现可重用注册登录系统</a>
     </h1>
   
 
 			
-			<a href="/2019/10/18/书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容/" class="archive-article-date">
-  	<time datetime="2019-10-18T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
+			<a href="/2019/10/09/项目/Django实现可重用注册登录系统/" class="archive-article-date">
+  	<time datetime="2019-10-09T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -969,7 +495,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2k 字</span>
+        <span class="post-count">15.6k 字</span>
       </span>
     </span>
 
@@ -978,7 +504,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">8min</span>
+        <span class="post-count">67min</span>
       </span>
     </span>
 </div>
@@ -992,11 +518,23 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="分页Paginator"><a href="#分页Paginator" class="headerlink" title="分页Paginator"></a>分页Paginator</h2><p>分页功能是几乎所有的网站上都需要提供的功能，当你要展示的条目比较多时，必须进行分页，不但能减小数据库读取数据压力，也有利于用户浏览。</p>
-<p>Django又很贴心的为我们提供了一个Paginator分页工具，但是不幸的是，这个工具功能差了点，不好添加CSS样式，所以前端的展示效果比较丑。如果你能力够，自己编写一个分页器，然后提交给Django官方吧，争取替代掉这个当前的分页器，我看好你哦！</p>
-<p>但不管怎么样，当前的Paginator分页器，还是值得学一下用一下的。</p>
+        <h3 id="项目一——Django实现可重用注册登录系统"><a href="#项目一——Django实现可重用注册登录系统" class="headerlink" title="项目一——Django实现可重用注册登录系统"></a>项目一——Django实现可重用注册登录系统</h3><p>项目源码：<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:linshutu/login_register.git</p>
+<h3 id="项目流程"><a href="#项目流程" class="headerlink" title="项目流程"></a>项目流程</h3><ul>
+<li>搭建项目环境</li>
+<li>设计数据模型</li>
+<li>admin后台</li>
+<li>url路由和视图</li>
+<li>前端页面设计</li>
+<li>登录视图</li>
+<li>Django表单(综合前面的步骤)</li>
+<li>图片验证码</li>
+<li>session会话</li>
+<li>注册视图</li>
+<li>邮箱注册确认</li>
+<li>重用app</li>
+</ul>
         
-          <!---<a class="article-more-a" href="/2019/10/18/书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/10/09/项目/Django实现可重用注册登录系统/#more">more >></a>--->
         
       
 	  
@@ -1017,7 +555,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目实战</a>
         		</li>
       		
 		</ul>
@@ -1027,7 +565,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/18/书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/10/09/项目/Django实现可重用注册登录系统/">展开全文 >></a>
         </p>
       
 
@@ -1061,20 +599,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/17/书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)/">第十五讲——django综合扩展五之序列化和消息框架(模板)</a>
+      <a class="article-title" href="/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/">centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署</a>
     </h1>
   
 
 			
-			<a href="/2019/10/17/书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)/" class="archive-article-date">
-  	<time datetime="2019-10-17T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-17</time>
+			<a href="/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/" class="archive-article-date">
+  	<time datetime="2019-10-07T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-07</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -1108,9 +646,13 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="序列化serializers"><a href="#序列化serializers" class="headerlink" title="序列化serializers"></a>序列化serializers</h3><p>Django的序列化工具让你可以将Django的模型‘翻译’成其它格式的数据。通常情况下，这种其它格式的数据是基于文本的，并且用于数据交换\传输过程。</p>
+        <h3 id="完整的项目部署流程"><a href="#完整的项目部署流程" class="headerlink" title="完整的项目部署流程"></a>完整的项目部署流程</h3><p>不懂点我：<a href="https://chpl.top/2019/11/03/%E4%B9%A6/linux/%E7%AC%AC%E5%9B%9B%E8%AE%B2%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E3%80%81%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/" target="_blank" rel="noopener">https://chpl.top/2019/11/03/%E4%B9%A6/linux/%E7%AC%AC%E5%9B%9B%E8%AE%B2%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E3%80%81%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</a></p>
+<h4 id="完整的通信流程"><a href="#完整的通信流程" class="headerlink" title="完整的通信流程"></a>完整的通信流程</h4><p><img src="http://9017499461.linshutu.top/django%E9%83%A8%E7%BD%B2%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg" alt></p>
+<h4 id="一、更新系统软件包"><a href="#一、更新系统软件包" class="headerlink" title="一、更新系统软件包"></a>一、更新系统软件包</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
+
+<h4 id="二、安装软件管理包和可能使用的依赖"><a href="#二、安装软件管理包和可能使用的依赖" class="headerlink" title="二、安装软件管理包和可能使用的依赖"></a><strong>二、安装软件管理包和可能使用的依赖</strong></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y groupinstall "Development tools"</span><br><span class="line">yum install openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel</span><br></pre></td></tr></table></figure>
         
-          <!---<a class="article-more-a" href="/2019/10/17/书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/#more">more >></a>--->
         
       
 	  
@@ -1131,7 +673,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">django项目部署</a>
         		</li>
       		
 		</ul>
@@ -1141,7 +683,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/17/书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/">展开全文 >></a>
         </p>
       
 
@@ -1175,20 +717,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-知识扩展/Django的路由path和url的比较" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/">第十四讲——django综合扩展四之网站地图sitemap和信号signal</a>
+      <a class="article-title" href="/2019/10/06/知识扩展/Django的路由path和url的比较/">Django的路由path和url的比较</a>
     </h1>
   
 
 			
-			<a href="/2019/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/" class="archive-article-date">
-  	<time datetime="2019-10-16T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
+			<a href="/2019/10/06/知识扩展/Django的路由path和url的比较/" class="archive-article-date">
+  	<time datetime="2019-10-06T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-06</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -1199,7 +741,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.3k 字</span>
+        <span class="post-count">628 字</span>
       </span>
     </span>
 
@@ -1208,7 +750,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">9min</span>
+        <span class="post-count">2min</span>
       </span>
     </span>
 </div>
@@ -1222,10 +764,17 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="网站地图sitemap"><a href="#网站地图sitemap" class="headerlink" title="网站地图sitemap"></a>网站地图sitemap</h3><p>网站地图是根据网站的结构、框架、内容，生成的导航网页，是一个网站所有链接的容器。很多网站的连接层次比较深，蜘蛛很难抓取到，网站地图可以方便搜索引擎或者网络蜘蛛抓取网站页面，了解网站的架构，为网络蜘蛛指路，增加网站内容页面的收录概率。网站地图一般存放在域名根目录下并命名为sitemap。</p>
-<p>Django自带了一个高级的生成网站地图的框架，我们可以很容易地创建出XML格式的网站地图。创建网站地图，只需编写一个Sitemap类，并在URLconf中编写对应的访问路由。</p>
+        <h3 id="Django的路由path和url的比较"><a href="#Django的路由path和url的比较" class="headerlink" title="Django的路由path和url的比较"></a>Django的路由path和url的比较</h3><p>我们知道，Django1.x版本和Django2.0版本的最大的区别就是路由系统的不同。在Django2.0之前一直使用的是正则匹配的方式；之后使用的是path转换器方式匹配。当然，为了兼容性，re_path支持正则方式匹配。</p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>views.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">articles</span><span class="params">(seq,year)</span>:</span></span><br><span class="line">    year = int(year)</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(year)</span><br></pre></td></tr></table></figure>
+
+<p>路由使用正则匹配的方式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url(<span class="string">r"^articles/(?P&lt;year&gt;[0-9]&#123;4&#125;)/$"</span>,views.articles)  <span class="comment">#采用有名分组的方式进行路由匹配</span></span><br></pre></td></tr></table></figure>
+
+<p>路由使用path的方式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">path(<span class="string">r"articles/&lt;int:teay&gt;/"</span>,views.articles)</span><br></pre></td></tr></table></figure>
         
-          <!---<a class="article-more-a" href="/2019/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/10/06/知识扩展/Django的路由path和url的比较/#more">more >></a>--->
         
       
 	  
@@ -1246,7 +795,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识扩展</a>
         		</li>
       		
 		</ul>
@@ -1256,7 +805,495 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/10/06/知识扩展/Django的路由path和url的比较/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/git/GIT版本管理工具教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/06/书/git/GIT版本管理工具教程/">git——GIT版本管理工具教程</a>
+    </h1>
+  
+
+			
+			<a href="/2019/10/06/书/git/GIT版本管理工具教程/" class="archive-article-date">
+  	<time datetime="2019-10-06T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-06</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">9.9k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">36min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="GIT版本管理工具教程"><a href="#GIT版本管理工具教程" class="headerlink" title="GIT版本管理工具教程"></a>GIT版本管理工具教程</h1><h2 id="一-Git初始化"><a href="#一-Git初始化" class="headerlink" title="一 Git初始化"></a>一 Git初始化</h2><ol>
+<li><p>下载安装， 下载地址： <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a> 每个系统的都有（linux、mac、windows等），看官网的安装教程，很详细，此处我以windows来练习 </p>
+</li>
+<li><p>首先创建一个文件夹，这个文件夹就是我们将来通过git来管理的所有文件的存放地点 。</p>
+</li>
+<li><p>在文件夹中右键 使用Git Bash </p>
+</li>
+<li><p>在弹出的窗口中执行初始化指令，让git帮我们对这个文件夹中的所有文件以及文件夹进行管理 </p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init  #创建git版本管理的本地仓库</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>产生的.git文件夹用来存放你管理的文件的所有版本以及git配置相关的内容，不要轻易动它</p>
+</li>
+</ol>
+        
+          <!---<a class="article-more-a" href="/2019/10/06/书/git/GIT版本管理工具教程/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">git版本控制系统</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/06/书/git/GIT版本管理工具教程/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-数据分析/第一讲——python数据分析初始" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/05/数据分析/第一讲——python数据分析初始/">第一讲——python数据分析初始</a>
+    </h1>
+  
+
+			
+			<a href="/2019/10/05/数据分析/第一讲——python数据分析初始/" class="archive-article-date">
+  	<time datetime="2019-10-05T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-05</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">1.4k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">5min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="初始"><a href="#初始" class="headerlink" title="初始"></a>初始</h2><p>在数据分析和处理领域，毫无疑问，Python是主流语言，其原因在于：</p>
+<ul>
+<li>Python语法简单，代码量少</li>
+<li>Numpy、Scipy、Pandas和Matplotlib的科学计算生态圈过于强大</li>
+<li>Ipython和Jupyter notebook的交互式环境</li>
+<li>容易整合C/C++/FORTRAN代码，使用过往的存量代码</li>
+<li>从代码走向工程很快捷</li>
+</ul>
+        
+          <!---<a class="article-more-a" href="/2019/10/05/数据分析/第一讲——python数据分析初始/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据分析</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/05/数据分析/第一讲——python数据分析初始/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/git/git——分布式版本控制系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/05/书/git/git——分布式版本控制系统/">git——分布式版本控制系统</a>
+    </h1>
+  
+
+			
+			<a href="/2019/10/05/书/git/git——分布式版本控制系统/" class="archive-article-date">
+  	<time datetime="2019-10-05T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-05</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">7min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>git：分布式版本控制系统  VS  cvs：集中式版本控制系统</p>
+<p>​        集中式的工作方式就是一个主server，下面的人工作就去主server拿，改完再放回去。它最大的缺点就是必须联网才能工作，局域网内还好，但是在公网上网速一旦慢下来就非常的难受。集中式的工作方式就是一个主server，下面的人工作就去主server拿，改完再放回去。它最大的缺点就是必须联网才能工作，局域网内还好，但是在公网上网速一旦慢下来就非常的难受。</p>
+<p>​        GIT是分布式的，不存在集中的server，每个人的电脑都是一个完整的版本库，工作的时候就不需要联网了，我们把修改的内容推送给团队的其他人员就可以进行内容的共享了。一般来说，分布式系统也有一台电脑充当中央服务器的功能，但这个服务器仅仅是用来方便交换大家的修改，没有它，大家一样的干活。为了就是方便。</p>
+<p>​        Git的开发者就是linux的开发者linus，由于最早在linux上面开发的，所以开始只能在linux和unix上面跑。但是后来慢慢的可以移植到windows上面了。现在基本上可以在所有的平台上面跑起来了。</p>
+        
+          <!---<a class="article-more-a" href="/2019/10/05/书/git/git——分布式版本控制系统/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">git版本控制系统</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/05/书/git/git——分布式版本控制系统/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-知识扩展/全面知识扩展一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/24/知识扩展/全面知识扩展一/">全面知识扩展一</a>
+    </h1>
+  
+
+			
+			<a href="/2019/09/24/知识扩展/全面知识扩展一/" class="archive-article-date">
+  	<time datetime="2019-09-24T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-24</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">4.5k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">17min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>涉及范围：面想对象（类和对象）、并发编程</strong></p>
+<h3 id="学习大纲："><a href="#学习大纲：" class="headerlink" title="学习大纲："></a>学习大纲：</h3><ul>
+<li>一切皆对象</li>
+<li>魔法函数</li>
+<li>python一个经典的错误</li>
+<li>深入类编程</li>
+<li>元类编程</li>
+<li>并发编程</li>
+<li>asyncio的并发编程</li>
+</ul>
+        
+          <!---<a class="article-more-a" href="/2019/09/24/知识扩展/全面知识扩展一/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识扩展</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/24/知识扩展/全面知识扩展一/">展开全文 >></a>
         </p>
       
 

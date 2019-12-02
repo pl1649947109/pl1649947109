@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
-      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2019/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
+      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2018/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
@@ -98,7 +98,7 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/2019/12/02/main/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/2018/12/02/main/">主页</a></li>
 		        
 					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
@@ -119,20 +119,20 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-书/数据库/第六讲——数据库扩展一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-书/Django/第四讲——Django之模板系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/05/书/数据库/第六讲——数据库扩展一/">第六讲——数据库扩展一</a>
+      <a class="article-title" href="/2018/09/27/书/Django/第四讲——Django之模板系统/">第四讲——Django之模板系统</a>
     </h1>
   
 
 			
-			<a href="/2019/09/05/书/数据库/第六讲——数据库扩展一/" class="archive-article-date">
-  	<time datetime="2019-09-05T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
+			<a href="/2018/09/27/书/Django/第四讲——Django之模板系统/" class="archive-article-date">
+  	<time datetime="2018-09-27T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-27</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -143,7 +143,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.1k 字</span>
+        <span class="post-count">8.6k 字</span>
       </span>
     </span>
 
@@ -152,7 +152,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">7min</span>
+        <span class="post-count">35min</span>
       </span>
     </span>
 </div>
@@ -166,16 +166,19 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="分页查询方法及优化"><a href="#分页查询方法及优化" class="headerlink" title="分页查询方法及优化"></a>分页查询方法及优化</h3><p><strong>问题</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">select * from orders_history where type=8 limit 100,100;</span><br><span class="line">select * from orders_history where type=8 limit 1000,100;</span><br><span class="line">select * from orders_history where type=8 limit 10000,100;</span><br><span class="line">select * from orders_history where type=8 limit 100000,100;</span><br><span class="line">select * from orders_history where type=8 limit 1000000,100;</span><br><span class="line">结果：</span><br><span class="line">查询100偏移：25ms 24ms 24ms</span><br><span class="line">查询1000偏移：78ms 76ms 77ms</span><br><span class="line">查询10000偏移：3092ms 3212ms 3128ms</span><br><span class="line">查询100000偏移：3878ms 3812ms 3798ms</span><br><span class="line">查询1000000偏移：14608ms 14062ms 14700ms</span><br></pre></td></tr></table></figure>
+        <p>内容大全：<a href="https://docs.djangoproject.com/en/1.11/ref/templates/builtins/#std:templatetag-for" target="_blank" rel="noopener">https://docs.djangoproject.com/en/1.11/ref/templates/builtins/#std:templatetag-for</a></p>
+<h3 id="什么是系统模板"><a href="#什么是系统模板" class="headerlink" title="什么是系统模板"></a>什么是系统模板</h3><p>每一个Web框架都需要一种很便利的方法用于动态生成HTML页面，最常见的做法就是使用模板。系统模板就是如何网HTML文件中填入动态内容的系统。Django自带一个称为DTL（Django Template Language ）的模板语言，以及另外一种流行的Jinja2语言(需要提前安装，pip install Jinja2）。Django为加载和渲染模板定义了一套标准的API，与具体的后台无关。加载指的是，根据给定的模版名称找到的模板然后预处理，通常会将它编译好放在内存中。渲染则表示，使用Context数据对模板插值并返回生成的字符串。</p>
+<h3 id="配置引擎"><a href="#配置引擎" class="headerlink" title="配置引擎"></a>配置引擎</h3><p>模板引擎通过settings中的<code>TEMPLATES</code>设置来配置。这是一个列表，与引擎一一对应，每个元素都是一个引擎配置字典。由startproject命令生成的<code>settings.py</code>会自定定义如下的值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">TEMPLATES = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">'BACKEND'</span>: <span class="string">'django.template.backends.django.DjangoTemplates'</span>,</span><br><span class="line">        <span class="string">'DIRS'</span>: [os.path.join(BASE_DIR, <span class="string">'templates'</span>)]</span><br><span class="line">        ,</span><br><span class="line">        <span class="string">'APP_DIRS'</span>: <span class="literal">True</span>,</span><br><span class="line">        <span class="string">'OPTIONS'</span>: &#123;</span><br><span class="line">            <span class="string">'context_processors'</span>: [</span><br><span class="line"><span class="string">'django.template.context_processors.debug'</span>,</span><br><span class="line"><span class="string">'django.template.context_processors.request'</span>,</span><br><span class="line"><span class="string">'django.contrib.auth.context_processors.auth'</span>,</span><br><span class="line"><span class="string">'django.contrib.messages.context_processors.messages'</span>,</span><br><span class="line">            ],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">#解释每个字段的含义</span></span><br><span class="line">BACKEND:后端。内置的后端有：</span><br><span class="line">    <span class="comment">#原生的DTL </span></span><br><span class="line">    django.template.backends.django.DjangoTemplates  </span><br><span class="line">    <span class="comment">#流行的Jinja2</span></span><br><span class="line">    django.template.backends.jinjia2.Jinja2</span><br><span class="line">OPTIONS:包含了具体的后端设置</span><br><span class="line">    由于绝大多数引擎都是从文件加载模板的，所有每种模板引擎都包含两项通用设置：</span><br><span class="line">    DIRS:定义了一个目录列表，模板引擎按列表顺序搜索这些目录以查找模板源文件。</span><br><span class="line">    APP_DIRS:告诉模板引擎是否应该进入每个已经安装的应用中查找模板。通查过请将该项保持为<span class="literal">True</span></span><br><span class="line">DTL引擎的OPTIONS配置项中接受一下参数：</span><br><span class="line">    <span class="string">'autoescape'</span>：一个布尔值，用于控制是否启用HTML自动转义功能。默认为<span class="literal">True</span>。</span><br><span class="line">    <span class="string">'context_processors'</span>: 以<span class="string">"."</span>为分隔符的Python调用路径的列表。默认是个空列表。</span><br><span class="line">    <span class="string">'debug'</span>：打开/关闭模板调试模式的布尔值。默认和setting中的DEBUG有相同的值。</span><br><span class="line">    <span class="string">'loaders'</span>：模板加载器类的虚拟Python路径列表。默认值取决于DIRS和APP_DIRS的值。</span><br><span class="line">    <span class="string">'string_if_invalid'</span>：非法变量时输出的字符串。默认为空字符串。</span><br><span class="line">    <span class="string">'file_charset'</span>：用于读取磁盘上的模板文件的字符集编码。默认为FILE_CHARSET的值。</span><br><span class="line">    <span class="string">'libraries'</span>：用于注册模板引擎。 这可以用于添加新的库或为现有库添加备用标签。</span><br><span class="line">    <span class="string">'builtins'</span>：以圆点分隔的Python路径的列表。</span><br><span class="line">         </span><br><span class="line"><span class="comment">#注意：每种模板引擎后端都定义了一个惯用的名称作为应用内部存放模板的子目录名称。（例如Django为它自己的模板引擎指定的是 ‘templates’，为jinja2指定的名字是‘jinja2’）。尤其是，django允许你有多个模板引擎后端实例，且每个实例有不同的配置选项。 在这种情况下你必须为每个配置指定一个唯一的NAME .</span></span><br></pre></td></tr></table></figure>
 
-<p>分析：随着查询的偏移的增大，尤其查询偏移大于100000以后，查询的时间急剧增加。这种分页查询方式会从数据库的第一条记录开始扫描，所以越往后查询速度越慢，而且查询的数据越多，也会拖慢总查询速度。</p>
-<p><strong>解决</strong></p>
-<p>方式一：使用子查询优化</p>
-<p>这种方式先定位偏移位置的 id，然后往后查询，这种方式适用于 id 递增的情况。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">select * from orders_history where type=8 limit 100000,1;</span><br><span class="line"></span><br><span class="line">select id from orders_history where type=8 limit 100000,1;</span><br><span class="line"></span><br><span class="line">select * from orders_history where type=8 and </span><br><span class="line">id&gt;=(select id from orders_history where type=8 limit 100000,1) </span><br><span class="line">limit 100;</span><br><span class="line"></span><br><span class="line">select * from orders_history where type=8 limit 100000,100;</span><br><span class="line">结果：</span><br><span class="line">第1条语句：3674ms</span><br><span class="line"></span><br><span class="line">第2条语句：1315ms</span><br><span class="line">第3条语句：1327ms</span><br><span class="line"></span><br><span class="line">第4条语句：3710ms</span><br><span class="line">分析：</span><br><span class="line">1、比较第1条语句和第2条语句：使用 select id 代替 select * 速度增加了3倍</span><br><span class="line"></span><br><span class="line">2、比较第2条语句和第3条语句：速度相差几十毫秒</span><br><span class="line"></span><br><span class="line">3、比较第3条语句和第4条语句：得益于 select id 速度增加，第3条语句查询速度增加了3倍</span><br><span class="line"></span><br><span class="line">这种方式相较于原始一般的查询方法，将会增快数倍。</span><br></pre></td></tr></table></figure>
+<h3 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h3><p>模板时纯文本文件，可以生成任何基于文本的文件格式，比如HTML，XML，CSV等。</p>
+<p><strong>一个简单的小模板</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends "base_generic.html" %&#125;    #继承母版</span><br><span class="line"></span><br><span class="line">&#123;% block title %&#125;&#123;&#123; section.title &#125;&#125;&#123;% endblock %&#125;  #填充自己页面的内容</span><br><span class="line"></span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line">&lt;h1&gt;&#123;&#123; section.title &#125;&#125;&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&#123;% for story in story_list %&#125;</span></span><br><span class="line"><span class="regexp">&lt;h2&gt;</span></span><br><span class="line"><span class="regexp">  &lt;a href="&#123;&#123; story.get_absolute_url &#125;&#125;"&gt;</span></span><br><span class="line"><span class="regexp">    &#123;&#123; story.headline|upper &#125;&#125;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>a&gt;</span><br><span class="line">&lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">&lt;p&gt;&#123;&#123; story.tease|truncatewords:"100" &#125;&#125;&lt;/</span>p&gt;</span><br><span class="line">&#123;% endfor %&#125;</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>关于模板渲染你只需要记两种特殊符号（语法）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;  &#125;&#125;和 &#123;% %&#125;</span><br><span class="line">变量相关的用&#123;&#123;&#125;&#125;，逻辑相关的用&#123;%%&#125;。</span><br></pre></td></tr></table></figure>
         
-          <!---<a class="article-more-a" href="/2019/09/05/书/数据库/第六讲——数据库扩展一/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2018/09/27/书/Django/第四讲——Django之模板系统/#more">more >></a>--->
         
       
 	  
@@ -196,7 +199,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
         		</li>
       		
 		</ul>
@@ -206,7 +209,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/05/书/数据库/第六讲——数据库扩展一/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/09/27/书/Django/第四讲——Django之模板系统/">展开全文 >></a>
         </p>
       
 
@@ -240,20 +243,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/数据库/第五讲——数据库索引优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-爬虫/第十二讲——scrapy爬虫框架之CrawSpider类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/04/书/数据库/第五讲——数据库索引优化/">第五讲——数据库之索引优化</a>
+      <a class="article-title" href="/2018/09/26/爬虫/第十二讲——scrapy爬虫框架之CrawSpider类/">第十二讲——scrapy爬虫框架之CrawSpider类</a>
     </h1>
   
 
 			
-			<a href="/2019/09/04/书/数据库/第五讲——数据库索引优化/" class="archive-article-date">
-  	<time datetime="2019-09-04T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
+			<a href="/2018/09/26/爬虫/第十二讲——scrapy爬虫框架之CrawSpider类/" class="archive-article-date">
+  	<time datetime="2018-09-26T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-26</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -264,7 +267,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">3.7k 字</span>
+        <span class="post-count">683 字</span>
       </span>
     </span>
 
@@ -273,7 +276,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">13min</span>
+        <span class="post-count">3min</span>
       </span>
     </span>
 </div>
@@ -287,17 +290,9 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h3><ul>
-<li>索引</li>
-<li>创建用户和授权</li>
-<li>锁和事务</li>
-</ul>
-<p>外链：<a href="https://www.cnblogs.com/clschao/articles/10049133.html" target="_blank" rel="noopener">https://www.cnblogs.com/clschao/articles/10049133.html</a></p>
-<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">普通索引：index（加速查找）</span><br><span class="line">唯一索引：</span><br><span class="line">	主键索引：primary key:加速查找+约束（不为空、不能重复）</span><br><span class="line">	唯一索引：unique:加速查找+约束（不能重复）</span><br><span class="line">联合索引：</span><br><span class="line">	primary key(id,name):联合主键索引</span><br><span class="line">	unique(id,name):联合唯一索引</span><br><span class="line">	index(id,name):联合普通索引</span><br></pre></td></tr></table></figure>
-
-<h5 id="为什么要有索引？"><a href="#为什么要有索引？" class="headerlink" title="为什么要有索引？"></a>为什么要有索引？</h5><p>一般的应用系统，读写的比例一般在10:1左右，而且插入操作和一般更新操作很少出现性能问题，在生产环境中我们遇到最多的，也是最容易出现问题的，还是一些复杂的查询操作，因此查询语句的优化显然是重中之重。说哦起加速查询，就不得不提到索引了。</p>
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">CrawSpider类：Spider的一个子类</span><br><span class="line">    --全栈数据爬取的方式</span><br><span class="line">        -基于Spider：手动请求</span><br><span class="line">        -基于CrawlSpider</span><br><span class="line">    --CrawlSpider的使用：</span><br><span class="line">        -创建一个工程</span><br><span class="line">        -cd xx</span><br><span class="line">        -创建爬虫文件（CrawlSpider）</span><br><span class="line">            --scrapy genspider -t crawl name www.xxx.com</span><br><span class="line">            --链接提取器：</span><br><span class="line">                -作用：将链接提取器到的链接进行指定规则（callback）的解析。</span><br><span class="line">    <span class="comment">#需求：爬取sun网站中的编号，新闻标题，新闻内容，标号</span></span><br><span class="line">        --分析：爬取的数据没有在同一张页面中。</span><br><span class="line">            <span class="number">-1</span>，可以使用链接提取器提取所有网页的链接</span><br><span class="line">            <span class="number">-2</span>，让链接提取器提取所有的新闻详情页的连接</span><br></pre></td></tr></table></figure>
         
-          <!---<a class="article-more-a" href="/2019/09/04/书/数据库/第五讲——数据库索引优化/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2018/09/26/爬虫/第十二讲——scrapy爬虫框架之CrawSpider类/#more">more >></a>--->
         
       
 	  
@@ -318,7 +313,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
         		</li>
       		
 		</ul>
@@ -328,7 +323,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/04/书/数据库/第五讲——数据库索引优化/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/09/26/爬虫/第十二讲——scrapy爬虫框架之CrawSpider类/">展开全文 >></a>
         </p>
       
 
@@ -362,20 +357,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/数据库/第四讲——数据库之多表行操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-书/Django/第三讲——Django之视图函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/03/书/数据库/第四讲——数据库之多表行操作/">第四讲——数据库之多表行操作</a>
+      <a class="article-title" href="/2018/09/26/书/Django/第三讲——Django之视图函数/">第三讲——Django之视图层</a>
     </h1>
   
 
 			
-			<a href="/2019/09/03/书/数据库/第四讲——数据库之多表行操作/" class="archive-article-date">
-  	<time datetime="2019-09-03T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
+			<a href="/2018/09/26/书/Django/第三讲——Django之视图函数/" class="archive-article-date">
+  	<time datetime="2018-09-26T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-26</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -386,367 +381,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.2k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">8min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h3><p><strong>笛卡尔级</strong>：将两张表所有的数据一一对应，生成一张大表。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#将两张表拼在一起，生成一张大表</span><br><span class="line">select * form dep,eemp;</span><br><span class="line"></span><br><span class="line">#找到两张表之间的对应关系</span><br><span class="line">select * from emp,dep where dep.id = emp.dep_id;</span><br><span class="line"></span><br><span class="line">#筛选部门名称为技术的大表中的记录</span><br><span class="line">select * from emp,dep where dep.id = emp.dep_id and dep.name=&quot;技术&quot;;</span><br><span class="line"></span><br><span class="line">#拿到筛选后的记录的员工姓名字段数据</span><br><span class="line">select emp.name from dep,emp where dep.id = emp.dep_id and dep.name = &quot;技术&quot;;</span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2019/09/03/书/数据库/第四讲——数据库之多表行操作/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/03/书/数据库/第四讲——数据库之多表行操作/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/数据库/第三讲——数据库之单表行操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/02/书/数据库/第三讲——数据库之单表行操作/">第三讲——数据库之行的操作</a>
-    </h1>
-  
-
-			
-			<a href="/2019/09/02/书/数据库/第三讲——数据库之单表行操作/" class="archive-article-date">
-  	<time datetime="2019-09-02T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.4k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">10min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h3><ul>
-<li>行记录的增删改</li>
-<li>行记录的查</li>
-<li>聚合函数补充</li>
-</ul>
-<h3 id="行记录的增删改"><a href="#行记录的增删改" class="headerlink" title="行记录的增删改"></a>行记录的增删改</h3><p>增加insert</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#增加一个值</span><br><span class="line">insert into 表名（字段） value(值);</span><br><span class="line"></span><br><span class="line">#增加好多值</span><br><span class="line">insert into 表名(字段1，字段2，字段3...) values(值1，值2，值3);</span><br><span class="line"></span><br><span class="line">#将表2中查出来的数据插入到表1中</span><br><span class="line">insert into 表1(字段1，字段2，字段3...) </span><br><span class="line">			select (字段1，字段2，字段3) from 表2 </span><br><span class="line">			where ...;</span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2019/09/02/书/数据库/第三讲——数据库之单表行操作/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/02/书/数据库/第三讲——数据库之单表行操作/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/数据库/第二讲——数据库之表的操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/30/书/数据库/第二讲——数据库之表的操作/">第二讲——数据库之表的操作</a>
-    </h1>
-  
-
-			
-			<a href="/2019/08/30/书/数据库/第二讲——数据库之表的操作/" class="archive-article-date">
-  	<time datetime="2019-08-30T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">6.3k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">24min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h3><ul>
-<li>表相关的操作</li>
-<li>完整性约束</li>
-<li>表中字段增删查改及外键的操作</li>
-<li>复制表</li>
-</ul>
-<h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><p><strong>创建表</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create table table_name(</span><br><span class="line">	字段1 类型[(宽度) 约束条件],</span><br><span class="line">	字段2 类型[(宽度) 约束条件],</span><br><span class="line">	...</span><br><span class="line">	z字段n 类型[(宽度) 约束条件]</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p><strong>数值类型</strong></p>
-<p>整型类型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&apos;&apos;&apos;最常用的是int类型&apos;&apos;&apos;</span><br><span class="line">创建有符号的数值类型</span><br><span class="line">create table t1(num tinyint);</span><br><span class="line">创建无符号的数值类型</span><br><span class="line">create table t1(num tinyint unsigned);</span><br><span class="line">#何止了数据类型就会有一个约束效果，只能表示自己范围内的数，如果是宽松模式，超出范围会提醒警告，并以临界的数值插入表中。如果是严格模式，就会报错。在工作中，我们使用的模式必须为严格模式。下面我们会讲解sql_mode（数据库模式）！</span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2019/08/30/书/数据库/第二讲——数据库之表的操作/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/30/书/数据库/第二讲——数据库之表的操作/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/数据库/第一讲——数据库初始" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/29/书/数据库/第一讲——数据库初始/">第一讲——数据库初始</a>
-    </h1>
-  
-
-			
-			<a href="/2019/08/29/书/数据库/第一讲——数据库初始/" class="archive-article-date">
-  	<time datetime="2019-08-29T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-29</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">5.2k 字</span>
+        <span class="post-count">4.7k 字</span>
       </span>
     </span>
 
@@ -769,165 +404,31 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="数据库的基础认识"><a href="#数据库的基础认识" class="headerlink" title="数据库的基础认识"></a>数据库的基础认识</h3><p>数据库服务器：一台装了数据库管理软件的机器</p>
-<p>数据库管理系统（DBMS）：就是一款软件</p>
-<p>关系型数据库（RDBMS）：Mysql</p>
-<p>库：文件夹</p>
-<p>表：文件</p>
-<p>记录：一条一条的信息</p>
-<p>SQL语句：结构化查询语句</p>
-<h3 id="数据库的分类"><a href="#数据库的分类" class="headerlink" title="数据库的分类"></a>数据库的分类</h3><p><strong>关系型</strong></p>
-<p>解释：关系型数据库模型是把复杂的数据结构归结为简单的二元关系（即二维表格形式，不是excel，但是和excel的形式很像）</p>
-<p>Mysql：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mysql被广泛的应用在Internet上的大中小型网站中；其体积小、速度快、总体拥有成本低，开放源代码。</span><br></pre></td></tr></table></figure>
-
-<p>Oracle：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Oracle公司是目前全球最大的数据库软件公司，也是近年业务增长极为迅速的软件提供与服务商 。主要应用范围：传统大企业、大公司、政府、金融、证券等。</span><br></pre></td></tr></table></figure>
-
-<p>SQL Server：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Microsoft SQL Server是微软公司开发的大型关系数据库系统。SQL Server的功能比较全面，效率高，可以作为中型企业或单位的数据库平台。SQL Server可以与Winodws操作系统紧密集成，不论是应用程序开发速度还是系统事务处理运行速度，都得到较大的提升，对于在Windows平台上开发的各种企业级信息管理系统来说，不论是C/S（客户机/服务器）架构还是B/S（浏览器/服务器）架构。SQL Server都是一个很好的选择。SQL Server的缺点是只能在Windows系统下运行</span><br></pre></td></tr></table></figure>
-
-<p>Access</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　Access是入门级小型桌面数据库，性能安全性都很一般，可供个人管理或小型企业使用；Access不是数据库语言，只是一个数据库程序。</span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2019/08/29/书/数据库/第一讲——数据库初始/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/29/书/数据库/第一讲——数据库初始/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-第三方模块/Socketserver——socket编程模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/28/第三方模块/Socketserver——socket编程模块/">socketserver——socket编程模块</a>
-    </h1>
-  
-
-			
-			<a href="/2019/08/28/第三方模块/Socketserver——socket编程模块/" class="archive-article-date">
-  	<time datetime="2019-08-28T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-28</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.1k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>介绍</strong>：这是标准库中的一个高级模块，它的目标就是简化多样性样板代码。</p>
-<p><strong>用途</strong>：我们之前讲的tcp协议的socket一次只能和一个客户端通信，如果用socketserver可以实现和多个客户端通信。它是在socket的基础上进行的一层封装，也就是说底层还是调用的socket，并发实现和多个客户端进行通信。</p>
-<p>Socketserver的5个服务类：</p>
+        <h3 id="视图层"><a href="#视图层" class="headerlink" title="视图层"></a>视图层</h3><p>视图层对外接收用户的请求，对内调度模型层和模板层，连接数据库和前端，最后根据业务逻辑，将处理好的数据，与前端结合，返回给用户。</p>
+<p>Django的视图层包含的内容：</p>
 <ul>
-<li>BaseServer：基类，所有服务器对象的超类，定义了接口。</li>
-<li>TCPServer</li>
-<li>UDPServer</li>
-<li>UnixStreamServer</li>
-<li>UnixDatagramServer</li>
+<li>URL路由</li>
+<li>视图函数</li>
+<li>快捷方式</li>
+<li>装饰器</li>
+<li>请求与响应</li>
+<li>类视图</li>
+<li>文件上传</li>
+<li>CSV、PDF生成</li>
+<li>内置中间件</li>
 </ul>
-<p><strong>实例代码</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">server端</span><br><span class="line"><span class="keyword">import</span> socketserver</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyServer</span><span class="params">(socketserver.BaseRequestHandler)</span>:</span></span><br><span class="line">	<span class="comment">#重写父类方法，必须是这个名字</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">handle</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        我们拿到了每个客服端的管道，那么我们自己在这个方法里面就写我们接收消息发送消息的逻辑就可以了。</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="comment">#self.request相当于一个conn</span></span><br><span class="line">		self.request.recv(<span class="number">1024</span>)</span><br><span class="line">		msg = input(<span class="string">"&gt;&gt;&gt;"</span>)</span><br><span class="line">		self.request.send(bytes(msg,encoding=<span class="string">'utf-8'</span>))</span><br><span class="line">        <span class="comment">#关闭连接</span></span><br><span class="line">		self.request.close()</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment">#使用socketserver的ThreadingTCPServer这个类，将IP和端口的元组传进去，还需要将我们上面定义的类传进去，实例化得到server这个对象的时候初始化__init__自动执行里面的代码，里面把所有的事情都干了，相当于我们通过它进行了bind，listen。</span></span><br><span class="line">	server = socketserver.ThreadingTCPServer((<span class="string">'127.0.0.1'</span>,<span class="number">8888</span>))</span><br><span class="line">    <span class="comment">#使用上面的这个类的对象来执行serve_forever方法，它的作用就是我们的服务一直开启，serve_forever帮我们进行accept</span></span><br><span class="line">	server.serve_forever()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">上述的socketservr内部做的操作解读：</span><br><span class="line">在整个socketserver这个模块中，其实就干了两件事情：</span><br><span class="line"><span class="number">1</span>、一个是循环建立链接的部分，每个客户链接都可以连接成功  </span><br><span class="line"><span class="number">2</span>、一个通讯循环的部分，就是每个客户端链接成功之后，要循环的和客户端进行通信。</span><br><span class="line">看代码中的：server=socketserver.ThreadingTCPServer((<span class="string">'127.0.0.1'</span>,<span class="number">8090</span>),MyServer)</span><br><span class="line"></span><br><span class="line">还记得面向对象的继承吗？来，大家自己尝试着看看源码：</span><br><span class="line"></span><br><span class="line">查找属性的顺序:ThreadingTCPServer</span><br><span class="line">			-&gt;ThreadingMixIn</span><br><span class="line">    		-&gt;TCPServer</span><br><span class="line">			-&gt;BaseServer</span><br><span class="line"></span><br><span class="line">实例化得到server，先找ThreadMinxIn中的__init__方法，发现没有init方法，然后找类ThreadingTCPServer的__init__,在TCPServer中找到，在里面创建了socket对象，进而执行server_bind（相当于bind）,server_active（点进去看执行了listen）</span><br><span class="line"></span><br><span class="line">找server下的serve_forever,在BaseServer中找到，进而执行self._handle_request_noblock()，该方法同样是在BaseServer中</span><br><span class="line">执行self._handle_request_noblock()进而执行request, client_address = self.get_request()（就是TCPServer中的self.socket.accept()），然后执行self.process_request(request, client_address)</span><br><span class="line">在ThreadingMixIn中找到process_request，开启多线程应对并发，进而执行process_request_thread，执行self.finish_request(request, client_address)</span><br><span class="line"></span><br><span class="line">上述四部分完成了链接循环，本部分开始进入处理通讯部分，在BaseServer中找到finish_request,触发我们自己定义的类的实例化，去找__init__方法，而我们自己定义的类没有该方法，则去它的父类也就是BaseRequestHandler中找....</span><br><span class="line">源码分析总结：</span><br><span class="line"></span><br><span class="line">基于tcp的socketserver我们自己定义的类中的</span><br><span class="line"></span><br><span class="line">　　self.server即套接字对象</span><br><span class="line">　　self.request即一个链接</span><br><span class="line">　　self.client_address即客户端地址</span><br><span class="line">基于udp的socketserver我们自己定义的类中的</span><br><span class="line"></span><br><span class="line">　　self.request是一个元组（第一个元素是客户端发来的数据，第二部分是服务端的udp套接字对象），如(<span class="string">b'adsf'</span>, &lt;socket.socket fd=<span class="number">200</span>, family=AddressFamily.AF_INET, type=SocketKind.SOCK_DGRAM, proto=<span class="number">0</span>, laddr=(<span class="string">'127.0.0.1'</span>, <span class="number">8080</span>)&gt;)</span><br><span class="line">　　self.client_address即客户端地址</span><br></pre></td></tr></table></figure>
-
-<p><strong>Server Objects</strong>：</p>
-<p>BaseServer.fileno:返回整数表示那个服务器正在监听，常用。</p>
-<p>select.select()：表示允许监听多个相同处理过程的服务。</p>
-<p>BaseServer.handle_request:处理单一请求。</p>
-<p>BaseServer.server_forever:处理请求直到明确shutdown()请求。</p>
-<p>BaseServer.RequestHandlerClass:用户请求处理程序类，为每一个请求创建这个类的实例。</p>
-<p><strong>Twisted框架</strong></p>
-<p>介绍：Twisted是一个完整的事件驱动的网络框架，利用它既能使用也可以开发完整的异步网络应用程序和协议。它提供了大量的支持建立完整的系统，包括网络协议，线程，安全性和身份验证，聊天，DBM，web，电子邮件，命令行等。如果我们有这方面的需求的时候可以详细的了解：</p>
-<p><a href="http://gashero.yeax.com/?cat=7" target="_blank" rel="noopener"><strong>http://gashero.yeax.com/?cat=7</strong></a></p>
-<p><a href="https://blog.csdn.net/qq_24861509/article/details/45192067" target="_blank" rel="noopener">https://blog.csdn.net/qq_24861509/article/details/45192067</a></p>
-
+<h3 id="视图函数View"><a href="#视图函数View" class="headerlink" title="视图函数View"></a>视图函数View</h3><p>说明：一个视图函数（类），简称视图，是一个简单的Python 函数（类），它接受Web请求并且返回Web响应。响应可以是一张网页的HTML内容，一个重定向，一个404错误，一个XML文档，或者一张图片。</p>
+<p>注意：每个视图至少做两件事情：返回一个包含请求页面的HTPResponse对象或者弹出一个类似http404的异常。其他的则随便，你爱干嘛干嘛。</p>
+<h3 id="HTTPRequest对象祥讲"><a href="#HTTPRequest对象祥讲" class="headerlink" title="HTTPRequest对象祥讲"></a>HTTPRequest对象祥讲</h3><p>说明：当一个页面被请求时，Django就会创建一个包含本次请求原信息的HttpRequest对象。Django会将这个对象自动传递给响应的视图函数，一般视图函数约定俗成地使用 request 参数承接这个对象。</p>
+<p>超链接：<a href="https://chpl.top/2018/08/22/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/requests%E2%80%94%E2%80%94%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/" target="_blank" rel="noopener">https://chpl.top/2018/08/22/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/requests%E2%80%94%E2%80%94%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/</a></p>
+<h3 id="HTTPResponse对象详讲"><a href="#HTTPResponse对象详讲" class="headerlink" title="HTTPResponse对象详讲"></a>HTTPResponse对象详讲</h3><p>说明：与由Django自动创建的HttpRequest对象相比，HttpResponse对象是我们的职责范围了。我们写的每个视图都需要实例化，填充和返回一个HttpResponse。HttpResponse类位于django.http模块中。</p>
+<p>属性：</p>
+<p>HttpResponse.content：响应内容</p>
+<p>HttpResponse.charset：响应内容的编码</p>
+<p>HttpResponse.status_code：响应的状态码</p>
+        
+          <!---<a class="article-more-a" href="/2018/09/26/书/Django/第三讲——Django之视图函数/#more">more >></a>--->
+        
       
 	  
 			  
@@ -947,7 +448,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
         		</li>
       		
 		</ul>
@@ -957,7 +458,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/28/第三方模块/Socketserver——socket编程模块/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/09/26/书/Django/第三讲——Django之视图函数/">展开全文 >></a>
         </p>
       
 
@@ -991,20 +492,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/网络编程与并发/第十讲——并发编程之协程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-爬虫/第十一讲——scrapy爬虫框架之中间件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/27/书/网络编程与并发/第十讲——并发编程之协程/">第十讲——并发编程之协程</a>
+      <a class="article-title" href="/2018/09/25/爬虫/第十一讲——scrapy爬虫框架之中间件/">第十一讲——scrapy爬虫框架之中间件和selenium中的应用</a>
     </h1>
   
 
 			
-			<a href="/2019/08/27/书/网络编程与并发/第十讲——并发编程之协程/" class="archive-article-date">
-  	<time datetime="2019-08-27T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
+			<a href="/2018/09/25/爬虫/第十一讲——scrapy爬虫框架之中间件/" class="archive-article-date">
+  	<time datetime="2018-09-25T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-25</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -1015,7 +516,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.5k 字</span>
+        <span class="post-count">3k 字</span>
       </span>
     </span>
 
@@ -1024,7 +525,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">6min</span>
+        <span class="post-count">14min</span>
       </span>
     </span>
 </div>
@@ -1038,19 +539,24 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h3><ul>
-<li>线程queue</li>
-<li>事件Event</li>
-<li>协程</li>
+        <h3 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h3><ul>
+<li>下载中间件（Downloader Middlewares） 位于scrapy引擎和下载器之间的一层组件。</li>
+<li>作用：我们主要使用下载中间件处理请求，一般会对请求设置随机的User-Agent ，设置随机的代理。目的在于防止爬取网站的反爬虫策略。<ul>
+<li>（1）引擎将请求传递给下载器过程中， 下载中间件可以对请求进行一系列处理。比如设置请求的 User-Agent，设置代理等</li>
+<li>（2）在下载器完成将Response传递给引擎中，下载中间件可以对响应进行一系列处理。比如进行gzip解压等。</li>
 </ul>
-<h3 id="线程queue"><a href="#线程queue" class="headerlink" title="线程queue"></a>线程queue</h3><p>多线程抢占资源，只能让其串行。</p>
+</li>
+</ul>
+<h4 id="UA池：User-Agent池"><a href="#UA池：User-Agent池" class="headerlink" title="UA池：User-Agent池"></a>UA池：User-Agent池</h4><ul>
+<li><p>作用：尽可能多的将scrapy工程中的请求伪装成不同类型的浏览器身份。</p>
+</li>
+<li><p>操作流程：</p>
 <ul>
-<li>互斥锁</li>
-<li>队列</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> queue</span><br><span class="line"><span class="comment">#后进后出 LIFO推栈</span></span><br><span class="line">q = queue.LifoQueue(<span class="number">4</span>)</span><br><span class="line">q.put(<span class="number">1</span>)</span><br><span class="line">q.put(<span class="number">2</span>)</span><br><span class="line">q.put(<span class="string">'pl'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> (q.get())</span><br><span class="line"><span class="keyword">print</span> (q.get())</span><br><span class="line"><span class="keyword">print</span> (q.get())</span><br><span class="line"></span><br><span class="line"><span class="comment">#优先级队列</span></span><br><span class="line">q = queue.PriorityQueue(<span class="number">4</span>)</span><br><span class="line">q.put((<span class="number">3</span>,<span class="string">'pl'</span>))</span><br><span class="line">q.put((<span class="number">-2</span>,<span class="number">3</span>))</span><br><span class="line">q.put((<span class="number">0</span>,<span class="string">'彭'</span>))</span><br><span class="line"></span><br><span class="line">print(q.get())</span><br><span class="line">print(q.get())</span><br><span class="line">print(q.get())</span><br><span class="line">结果：</span><br><span class="line"><span class="number">3</span></span><br><span class="line">彭</span><br><span class="line">pl</span><br></pre></td></tr></table></figure>
+<li>1.在下载中间件中拦截请求</li>
+<li>2.将拦截到的请求的请求头信息中的UA进行篡改伪装</li>
+<li>3.在配置文件中开启下载中间件
         
-          <!---<a class="article-more-a" href="/2019/08/27/书/网络编程与并发/第十讲——并发编程之协程/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2018/09/25/爬虫/第十一讲——scrapy爬虫框架之中间件/#more">more >></a>--->
         
       
 	  
@@ -1071,7 +577,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">socket和并发编程</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
         		</li>
       		
 		</ul>
@@ -1081,7 +587,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/27/书/网络编程与并发/第十讲——并发编程之协程/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/09/25/爬虫/第十一讲——scrapy爬虫框架之中间件/">展开全文 >></a>
         </p>
       
 
@@ -1115,20 +621,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-第三方模块/shutil——高级文件操作模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-书/Django/第二讲——Django之URL路由" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/26/第三方模块/shutil——高级文件操作模块/">shutil——高级文件操作模块</a>
+      <a class="article-title" href="/2018/09/25/书/Django/第二讲——Django之URL路由/">第二讲——Django之URL路由</a>
     </h1>
   
 
 			
-			<a href="/2019/08/26/第三方模块/shutil——高级文件操作模块/" class="archive-article-date">
-  	<time datetime="2019-08-26T11:58:42.392Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
+			<a href="/2018/09/25/书/Django/第二讲——Django之URL路由/" class="archive-article-date">
+  	<time datetime="2018-09-25T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-25</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -1139,7 +645,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.7k 字</span>
+        <span class="post-count">4.2k 字</span>
       </span>
     </span>
 
@@ -1148,7 +654,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">7min</span>
+        <span class="post-count">17min</span>
       </span>
     </span>
 </div>
@@ -1162,11 +668,21 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <p>介绍：该模块对文件和文件集合提供了许多高级操作。特别是，提供了支持文件复制和删除的功能。单个文件的操作，请参考os模块。</p>
-<p>注意：高级别的文件的复制的功能，也无法复制所有文件元数据。</p>
-<h3 id="文件夹和文件操作"><a href="#文件夹和文件操作" class="headerlink" title="文件夹和文件操作"></a>文件夹和文件操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">shutil.copyfileobj(src,dst,length=<span class="number">16</span>*<span class="number">1024</span>):</span><br><span class="line">功能：将src文件内容复制到dst文件，length为src每次读取的长度，用作缓冲区大小。</span><br><span class="line">参数：</span><br><span class="line">fsrc： 源文件</span><br><span class="line">fdst： 复制至fdst文件</span><br><span class="line">length： 缓冲区大小，即fsrc每次读取的长度</span><br><span class="line">实例:</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line">f1 = open(<span class="string">'file.txt'</span>,<span class="string">'r'</span>)</span><br><span class="line">f2 = open(<span class="string">'filel_copy.txt'</span>,<span class="string">'a+'</span>)</span><br><span class="line">shutil.copyfileobj(f1,f2,length=<span class="number">1024</span>)</span><br></pre></td></tr></table></figure>
+        <h2 id="内容明晰"><a href="#内容明晰" class="headerlink" title="内容明晰"></a>内容明晰</h2><p><strong>路由的编写方式是Django2.0和1.11最大的区别所在。Django官方迫于压力和同行的影响，不得不将原来的正则匹配表达式，改为更加简单的path表达式，但依然通过re_path()方法保持对1.x版本的兼容。</strong></p>
+<p>URL是Web服务的入口，用户通过浏览器发送过来的任何请求，都是发送到一个指定的URL地址，然后被响应。</p>
+<p>在Django项目中编写路由，就是向外暴露我们接收哪些URL的请求，除此之外的任何URL都不被处理，也没有返回。通俗地理解，不恰当的形容，URL路由是你的Web服务对外暴露的API。</p>
+<h2 id="Django如何处理请求"><a href="#Django如何处理请求" class="headerlink" title="Django如何处理请求"></a>Django如何处理请求</h2><ul>
+<li><strong>决定要使用的根URLconf模块。</strong>通常，这是<code>ROOT_URLCONF</code>设置的值，但是如果传入的HttpRequest对象具有urlconf属性（由中间件设置），则其值将被用于代替<code>ROOT_URLCONF</code>设置。<strong>通俗的讲，就是你可以自定义项目入口url是哪个文件！</strong></li>
+<li><strong>加载该 模块并寻找可用的urlpatterens。</strong></li>
+<li><strong>依次匹配每个URL模式，在与请求的URL相匹配的第一个模式停下</strong>也就是说，url匹配是从上往下的短路操作，所以url在列表中的位置非常关键。</li>
+<li>导入并调用匹配中给定的视图，该视图是一个简单的python函数，也就是我们常说的视图函数，或者基于类的视图。</li>
+<li>如果没有匹配到任何的表达式，或者过程中抛出异常，将调用一个适合的错误处理视图。</li>
+</ul>
+<h2 id="URL配置（URLConf）"><a href="#URL配置（URLConf）" class="headerlink" title="URL配置（URLConf）"></a>URL配置（URLConf）</h2><p>解释：URL配置（URLconf）就像Django所支撑网站的目录。它的本质是URL与要为该URL调用的视图之间的映射表。</p>
+<h4 id="基本格式"><a href="#基本格式" class="headerlink" title="基本格式"></a>基本格式</h4><p><strong>Django版本1.x</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</span><br><span class="line">urlpatterns = [</span><br><span class="line">     url(正则表达式, views，kwargs，name),</span><br><span class="line">]</span><br><span class="line"><span class="comment">#参数说明：</span></span><br><span class="line"><span class="number">1.</span>正则表达式:当 Django 响应一个请求时，它会从 urlpatterns 的第一项开始，按顺序依次匹配列表中的项，直到找到匹配的项，然后执行该条目映射的视图函数或下级路由，其后的条目将不再继续匹配。因此，url路由的编写顺序非常重要</span><br><span class="line">    </span><br><span class="line"><span class="number">2.</span>views：当Django匹配到某个路由条目时，自动将封装的HttpRequest对象作为第一个参数，被“捕获”的参数以关键字参数的形式，传递给该条目指定的视图view。</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>kwargs:任意数量的关键字参数可以作为一个字典传递给目标视图。</span><br><span class="line">    </span><br><span class="line"><span class="number">4.</span>name:对你的URL进行命名，让你能够在Django的任意处，尤其是模板内显式地引用它。这是一个非常强大的功能，相当于给URL取了个全局变量名，不会将url匹配地址写死。</span><br><span class="line"><span class="comment">#注意</span></span><br><span class="line">请求的URL被看做是一个普通的Python字符串，URLconf在其上查找并匹配。进行匹配时将不包括GET或POST请求方式的参数以及域名。</span><br><span class="line"></span><br><span class="line">例如，在https://www.example.com/myapp/的请求中，URLconf将查找myapp/。</span><br><span class="line"></span><br><span class="line">在https://www.example.com/myapp/?page=3的请求中，URLconf也将查找myapp/。</span><br></pre></td></tr></table></figure>
         
-          <!---<a class="article-more-a" href="/2019/08/26/第三方模块/shutil——高级文件操作模块/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2018/09/25/书/Django/第二讲——Django之URL路由/#more">more >></a>--->
         
       
 	  
@@ -1187,7 +703,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
         		</li>
       		
 		</ul>
@@ -1197,7 +713,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/26/第三方模块/shutil——高级文件操作模块/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/09/25/书/Django/第二讲——Django之URL路由/">展开全文 >></a>
         </p>
       
 
@@ -1231,20 +747,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/网络编程与并发/第九讲——并发编程之同步、异步" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-爬虫/第十讲——scrapy爬虫框架之图片数据爬取" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/25/书/网络编程与并发/第九讲——并发编程之同步、异步/">第九讲——并发编程之同步、异步</a>
+      <a class="article-title" href="/2018/09/24/爬虫/第十讲——scrapy爬虫框架之图片数据爬取/">第十讲——scrapy爬虫框架之图片数据爬取</a>
     </h1>
   
 
 			
-			<a href="/2019/08/25/书/网络编程与并发/第九讲——并发编程之同步、异步/" class="archive-article-date">
-  	<time datetime="2019-08-25T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
+			<a href="/2018/09/24/爬虫/第十讲——scrapy爬虫框架之图片数据爬取/" class="archive-article-date">
+  	<time datetime="2018-09-24T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-24</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -1255,7 +771,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.6k 字</span>
+        <span class="post-count">548 字</span>
       </span>
     </span>
 
@@ -1264,7 +780,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">6min</span>
+        <span class="post-count">2min</span>
       </span>
     </span>
 </div>
@@ -1278,20 +794,136 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h3><ul>
-<li>阻塞、非阻塞、同步、异步</li>
-<li>同步调用、异步调用</li>
-<li>异步调用+回调函数</li>
-</ul>
-<h3 id="阻塞、非阻塞、同步、异步"><a href="#阻塞、非阻塞、同步、异步" class="headerlink" title="阻塞、非阻塞、同步、异步"></a>阻塞、非阻塞、同步、异步</h3><p>程序运行的三种状态：运行、就绪、阻塞</p>
-<p><strong>执行的角度</strong></p>
-<p>阻塞：程序运行时，遇到了IO，程序挂起，cpu被切走。</p>
-<p>非阻塞：理论上程序运行没有遇到IO，但是程序遇到IO，然后我们通过某种手段，让cpu强行运行我的程序。</p>
-<p><strong>提交任务的角度</strong></p>
-<p>同步：提交一个任务，自任务开始运行直到此任务结束（可能有IO），返回值之后，我们提交下一个任务。</p>
-<p>异步：一次提交多个任务，然后我就执行下一行代码。</p>
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">爬取图片ImagesPipeline</span><br><span class="line">    --基于scrapy爬取字符串数据类型的数据和爬取图片类型的数据的区别</span><br><span class="line">        --字符串：只需要基于xpath进行数据解析且提交管道进行持久化储存</span><br><span class="line">        --图片：xpath解析出图片src的属性值，单独的对图片地址发起请求获取图片二进制类型的数据</span><br><span class="line">    --ImagesPipline：</span><br><span class="line">        --只需要将img的src的属性值进行解析，提交到管道，管道会对图片进行发送请求获取图片的二进制数据</span><br><span class="line">        --使用流程：</span><br><span class="line">           -需求：爬取站长素材中的高清图片</span><br><span class="line">           -数据解析：获取图片的地址</span><br><span class="line">           -将储存图片地址的item提交到指定的管道类</span><br><span class="line">           -在管道文件中自定制一个基于ImagesPileLine的一个管道类</span><br><span class="line">           -重写<span class="number">3</span>个管道类的方法</span><br><span class="line">           -在配置文件中：</span><br><span class="line">                -指定图片储存的目录：IMAGES_STORE</span><br><span class="line">                -指定开启的管道：就是自定制的管道</span><br></pre></td></tr></table></figure>
+
+<p>爬取文件：first.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> scrapy4.items <span class="keyword">import</span> Scrapy4Item</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FirstSpider</span><span class="params">(scrapy.Spider)</span>:</span></span><br><span class="line">    name = <span class="string">'first'</span></span><br><span class="line">    <span class="comment"># allowed_domains = ['www.xxx.com']</span></span><br><span class="line">    start_urls = [<span class="string">'http://sc.chinaz.com/tupian/'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        div_list = response.xpath(<span class="string">'//*[@id="container"]/div'</span>)</span><br><span class="line">        <span class="keyword">for</span> div <span class="keyword">in</span> div_list:</span><br><span class="line">            <span class="comment">#注意：使用伪属性（图片的懒加载）</span></span><br><span class="line">            src = div.xpath(<span class="string">'./div/a/img/@src2'</span>).extract_first()</span><br><span class="line"></span><br><span class="line">            item = Scrapy4Item()</span><br><span class="line">            item[<span class="string">'src'</span>] = src</span><br><span class="line">            <span class="keyword">yield</span> item</span><br></pre></td></tr></table></figure>
+
+<p>属性封装：items.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Scrapy4Item</span><span class="params">(scrapy.Item)</span>:</span></span><br><span class="line">    <span class="comment"># define the fields for your item here like:</span></span><br><span class="line">    <span class="comment"># name = scrapy.Field()</span></span><br><span class="line">    src = scrapy.Field()</span><br></pre></td></tr></table></figure>
+
+<p>管道储存：pipelines.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#自定义</span></span><br><span class="line"><span class="keyword">from</span> scrapy.pipelines.images <span class="keyword">import</span> ImagesPipeline</span><br><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImgproPipeline</span><span class="params">(object)</span>:</span></span><br><span class="line">    item = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span><span class="params">(self, item, spider)</span>:</span></span><br><span class="line">        <span class="comment"># print(item)</span></span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line"><span class="comment">#ImagesPipeline专门用于文件下载的管道类，下载过程支持异步和多线程</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImagesPipeline</span><span class="params">(ImagesPipeline)</span>:</span></span><br><span class="line">    <span class="comment">#就是可以根据图片的地址进行图片数据的请求</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_media_requests</span><span class="params">(self, item, info)</span>:</span></span><br><span class="line">        <span class="keyword">yield</span> scrapy.Request(item[<span class="string">'src'</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment">#定制图片的名称</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">file_downloaded</span><span class="params">(self, response, request, info=None)</span>:</span></span><br><span class="line">        imageName = request.url.split(<span class="string">'/'</span>)[<span class="number">-1</span>]</span><br><span class="line">        <span class="keyword">return</span> imageName</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">item_completed</span><span class="params">(self, results, item, info)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> item <span class="comment">#返回给下一个即将被执行的管道类</span></span><br></pre></td></tr></table></figure>
+
+<p>配置文件：settings.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#UA伪装</span></span><br><span class="line">USER_AGENT = <span class="string">'"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36"'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#不遵循该协议</span></span><br><span class="line">ROBOTSTXT_OBEY = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#开启管道</span></span><br><span class="line">ITEM_PIPELINES = &#123;</span><br><span class="line">   <span class="string">'scrapy4.pipelines.ImagesPipeline'</span>: <span class="number">300</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#指定图片指定的路径</span></span><br><span class="line">IMAGES_STORE = ‘./imgs’：表示最终图片存储的目录</span><br></pre></td></tr></table></figure>
+
+
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/24/爬虫/第十讲——scrapy爬虫框架之图片数据爬取/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
         
-          <!---<a class="article-more-a" href="/2019/08/25/书/网络编程与并发/第九讲——并发编程之同步、异步/#more">more >></a>--->
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/Django/第一讲——Django知识带入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/24/书/Django/第一讲——Django知识带入/">第一讲——Django之知识带入</a>
+    </h1>
+  
+
+			
+			<a href="/2018/09/24/书/Django/第一讲——Django知识带入/" class="archive-article-date">
+  	<time datetime="2018-09-24T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-24</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">6.1k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">21min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>很简洁的一个学习dj的网站：<a href="https://code.ziqiangxuetang.com/django/django-admin.html" target="_blank" rel="noopener">https://code.ziqiangxuetang.com/django/django-admin.html</a></p>
+<h3 id="HTTP协议相关"><a href="#HTTP协议相关" class="headerlink" title="HTTP协议相关"></a>HTTP协议相关</h3><h4 id="HTTP协议简介"><a href="#HTTP协议简介" class="headerlink" title="HTTP协议简介"></a>HTTP协议简介</h4><p>HTTP，超文本传输协议（HyperText Transfer Protocol)是互联网上应用最为广泛的 一种网络协议。所有的WWW文件都必须遵守这个标准。设计HTTP最初的目的是为了提供一种发布和接收HTML页面的方法，HTTP是万维网的数据通信的基础。<strong>现在应用最广泛的是HTTP1.1版本</strong></p>
+<h4 id="HTTP工作流程"><a href="#HTTP工作流程" class="headerlink" title="HTTP工作流程"></a>HTTP工作流程</h4><p>HTTP是一个客户端终端（用户）和服务器端（网站）请求和应答的标准（TCP）。通过使用网页浏览器、网络爬虫或者其它的工具，客户端发起一个HTTP请求到服务器上指定端口（默认端口为80）。我们称这个客户端为用户代理程序（user agent）。应答的服务器上存储着一些资源，比如HTML文件和图像。我们称这个应答服务器为源服务器（origin server）。在用户代理和源服务器中间可能存在多个“中间层”，比如代理服务器、网关或者隧道（tunnel）。</p>
+        
+          <!---<a class="article-more-a" href="/2018/09/24/书/Django/第一讲——Django知识带入/#more">more >></a>--->
         
       
 	  
@@ -1312,7 +944,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">socket和并发编程</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
         		</li>
       		
 		</ul>
@@ -1322,7 +954,361 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/25/书/网络编程与并发/第九讲——并发编程之同步、异步/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/09/24/书/Django/第一讲——Django知识带入/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-爬虫/第九讲——scrapy爬虫框架之请求传参" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/23/爬虫/第九讲——scrapy爬虫框架之请求传参/">第九讲——scrapy爬虫框架之请求传参</a>
+    </h1>
+  
+
+			
+			<a href="/2018/09/23/爬虫/第九讲——scrapy爬虫框架之请求传参/" class="archive-article-date">
+  	<time datetime="2018-09-23T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-23</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">664 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ul>
+<li>在某些情况下，我们爬取的数据不在同一个页面中，例如，我们爬取一个电影网站，电影的名称，评分在一级页面，而要爬取的其他电影详情在其二级子页面中。这时我们就需要用到请求传参。</li>
+<li>请求传参的使用场景<ul>
+<li>当我们使用爬虫爬取的数据没有存在于同一张页面的时候，则必须使用请求传参</li>
+</ul>
+</li>
+<li>需求：爬取boos的岗位名称，岗位描述</li>
+</ul>
+        
+          <!---<a class="article-more-a" href="/2018/09/23/爬虫/第九讲——scrapy爬虫框架之请求传参/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/23/爬虫/第九讲——scrapy爬虫框架之请求传参/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-爬虫/第八讲——scrapy爬虫框架之全站数据爬去" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/22/爬虫/第八讲——scrapy爬虫框架之全站数据爬去/">第八讲——scrapy爬虫框架之全站数据爬去</a>
+    </h1>
+  
+
+			
+			<a href="/2018/09/22/爬虫/第八讲——scrapy爬虫框架之全站数据爬去/" class="archive-article-date">
+  	<time datetime="2018-09-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-22</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">832 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">3min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="文件目录结构"><a href="#文件目录结构" class="headerlink" title="文件目录结构"></a>文件目录结构</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">|-firstBlood <span class="comment"># #我们创建的爬虫工程的名称 scrapy startproject firstBlood(工程名)</span></span><br><span class="line">----|-firstBlood <span class="comment">#和项目同名目录，自动创建的</span></span><br><span class="line">--------|-__init__.py</span><br><span class="line">--------|-spiders <span class="comment">#工程创建好之后，cd到该目录下</span></span><br><span class="line">------------|-first.py <span class="comment">#创建爬虫文件 scapy genspider first(文件名) www.xxx.com(别问，就这样写)</span></span><br><span class="line">--------|-items.py  <span class="comment">#下面都是自动创建的，都是我们的功能文件</span></span><br><span class="line">--------|-middlewares.py</span><br><span class="line">--------|-pipelines.py</span><br><span class="line">--------|-settings.py</span><br><span class="line">----|-scrapy.cfg</span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2018/09/22/爬虫/第八讲——scrapy爬虫框架之全站数据爬去/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/22/爬虫/第八讲——scrapy爬虫框架之全站数据爬去/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/前端/第六讲——前端拓展一：css之before和after的实际用例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/21/书/前端/第六讲——前端拓展一：css之before和after的实际用例/">前端拓展一：css之::before和::after的实际用例</a>
+    </h1>
+  
+
+			
+			<a href="/2018/09/21/书/前端/第六讲——前端拓展一：css之before和after的实际用例/" class="archive-article-date">
+  	<time datetime="2018-09-21T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-21</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">9min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>以下例子多数是在特定平台上使用过的，未做兼容处理，建议在chrome下浏览</p>
+<h3 id="1-间隔符用法"><a href="#1-间隔符用法" class="headerlink" title="1.间隔符用法"></a>1.间隔符用法</h3><p>如文章最开始的例子，使用::after伪元素做间隔符，并使用伪类:not排除掉最后一个元素。</p>
+<p>效果：<a href="http://htmlpreview.github.io/?https://github.com/laden666666/css-before-and-after-test/blob/master/example1.html" target="_blank" rel="noopener">http://htmlpreview.github.io/?https://github.com/laden666666/css-before-and-after-test/blob/master/example1.html</a></p>
+<h3 id="2-做border三角图标"><a href="#2-做border三角图标" class="headerlink" title="2.做border三角图标"></a>2.做border三角图标</h3><p>很多开发者都用过border做的三角图标，本身三角符号就不属于文档，使用伪元素做三角符最合适了。</p>
+<p>效果：<a href="http://htmlpreview.github.io/?https://github.com/laden666666/css-before-and-after-test/blob/master/example2.html" target="_blank" rel="noopener">http://htmlpreview.github.io/?https://github.com/laden666666/css-before-and-after-test/blob/master/example2.html</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        p&#123;</span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 50px;</span><br><span class="line">            line-height: 50px;</span><br><span class="line">            background: red;</span><br><span class="line">        &#125;</span><br><span class="line">        p::before&#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            border: 5px solid transparent;</span><br><span class="line">            border-right-color: red;</span><br><span class="line">            content: "";</span><br><span class="line">            position: relative;</span><br><span class="line">            left: -10px;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2018/09/21/书/前端/第六讲——前端拓展一：css之before和after的实际用例/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/21/书/前端/第六讲——前端拓展一：css之before和after的实际用例/">展开全文 >></a>
         </p>
       
 

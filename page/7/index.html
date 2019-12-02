@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
-      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2019/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
+      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2018/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
@@ -98,7 +98,7 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/2019/12/02/main/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/2018/12/02/main/">主页</a></li>
 		        
 					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
@@ -119,20 +119,20 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-书/Django/第十三讲——django综合扩展三之Django-admin和manage.py" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-爬虫/第七讲——scrapy爬虫框架之数据持久化储存" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/15/书/Django/第十三讲——django综合扩展三之Django-admin和manage.py/">第十三讲——django综合扩展三之Django-admin和manage.py</a>
+      <a class="article-title" href="/2019/09/19/爬虫/第七讲——scrapy爬虫框架之数据持久化储存/">第七讲——scrapy爬虫框架之数据持久化储存</a>
     </h1>
   
 
 			
-			<a href="/2019/10/15/书/Django/第十三讲——django综合扩展三之Django-admin和manage.py/" class="archive-article-date">
-  	<time datetime="2019-10-15T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-15</time>
+			<a href="/2019/09/19/爬虫/第七讲——scrapy爬虫框架之数据持久化储存/" class="archive-article-date">
+  	<time datetime="2019-09-19T14:21:10.201Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -143,7 +143,121 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.8k 字</span>
+        <span class="post-count">1.6k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">6min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="文件目录结构"><a href="#文件目录结构" class="headerlink" title="文件目录结构"></a>文件目录结构</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">|-firstBlood <span class="comment"># #我们创建的爬虫工程的名称 scrapy startproject firstBlood(工程名)</span></span><br><span class="line">----|-firstBlood <span class="comment">#和项目同名目录，自动创建的</span></span><br><span class="line">--------|-__init__.py</span><br><span class="line">--------|-spiders <span class="comment">#工程创建好之后，cd到该目录下</span></span><br><span class="line">------------|-first.py <span class="comment">#创建爬虫文件 scapy genspider first(文件名) www.xxx.com(别问，就这样写)</span></span><br><span class="line">--------|-items.py  <span class="comment">#下面都是自动创建的，都是我们的功能文件</span></span><br><span class="line">--------|-middlewares.py</span><br><span class="line">--------|-pipelines.py</span><br><span class="line">--------|-settings.py</span><br><span class="line">----|-scrapy.cfg</span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2019/09/19/爬虫/第七讲——scrapy爬虫框架之数据持久化储存/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/19/爬虫/第七讲——scrapy爬虫框架之数据持久化储存/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/数据库/第七讲——数据库扩展二" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/06/书/数据库/第七讲——数据库扩展二/">第七讲——数据库扩展二之数据库之间的对比与选择</a>
+    </h1>
+  
+
+			
+			<a href="/2019/09/06/书/数据库/第七讲——数据库扩展二/" class="archive-article-date">
+  	<time datetime="2019-09-06T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2.9k 字</span>
       </span>
     </span>
 
@@ -166,21 +280,9 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Django-admin和manage-py"><a href="#Django-admin和manage-py" class="headerlink" title="Django-admin和manage.py"></a>Django-admin和manage.py</h3><h4 id="Djangon内置命令选项"><a href="#Djangon内置命令选项" class="headerlink" title="Djangon内置命令选项"></a>Djangon内置命令选项</h4><ul>
-<li>check：检查整个项目是否存在问题</li>
-<li>dbshell：打开某个数据库的shell</li>
-<li>diffsettings：显示当前的settings和默认的settings之间的差别</li>
-<li>flush：删除数据库的所有数据，不删除数据表</li>
-<li>makemigrations :生成数据表记录</li>
-<li>migrate：把数据刷到数据库</li>
-<li>runserver：启动项目</li>
-<li>shell：启动命令行环境</li>
-<li>startapp:创建一个app</li>
-<li>startproject：创建一个项目</li>
-<li>test：运行所有安装app的测试代码</li>
-</ul>
+        <h3 id="Nosql"><a href="#Nosql" class="headerlink" title="Nosql"></a>Nosql</h3><p><strong>优点：</strong><br>1）成本：nosql数据库简单易部署，基本都是开源软件，不需要像使用oracle那样花费大量成本购买使用，相比关系型数据库价格便宜。<br>2）查询速度：nosql数据库将数据存储于缓存之中，关系型数据库将数据存储在硬盘中，自然查询速度远不及nosql数据库。<br>3）存储数据的格式：nosql的存储格式是key,value形式、文档形式、图片形式等等，所以可以存储基础类型以及对象或者是集合等各种格式，而数据库则只支持基础类型。<br>4）扩展性：关系型数据库有类似join这样的多表查询机制的限制导致扩展很艰难。<br><strong>缺点：</strong><br>1）维护的工具和资料有限，因为nosql是属于新的技术，不能和关系型数据库10几年的技术同日而语。<br>2）不提供对sql的支持，如果不支持sql这样的工业标准，将产生一定用户的学习和使用成本。<br>3）不提供关系型数据库对事物的处理。</p>
         
-          <!---<a class="article-more-a" href="/2019/10/15/书/Django/第十三讲——django综合扩展三之Django-admin和manage.py/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/09/06/书/数据库/第七讲——数据库扩展二/#more">more >></a>--->
         
       
 	  
@@ -201,7 +303,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
         		</li>
       		
 		</ul>
@@ -211,7 +313,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/15/书/Django/第十三讲——django综合扩展三之Django-admin和manage.py/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/06/书/数据库/第七讲——数据库扩展二/">展开全文 >></a>
         </p>
       
 
@@ -245,20 +347,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/Django/第十二讲——django综合扩展二之核心配置项" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-书/数据库/第六讲——数据库扩展一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/14/书/Django/第十二讲——django综合扩展二之核心配置项/">第十二讲——django综合扩展一之核心配置项</a>
+      <a class="article-title" href="/2019/09/05/书/数据库/第六讲——数据库扩展一/">第六讲——数据库扩展一</a>
     </h1>
   
 
 			
-			<a href="/2019/10/14/书/Django/第十二讲——django综合扩展二之核心配置项/" class="archive-article-date">
-  	<time datetime="2019-10-14T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
+			<a href="/2019/09/05/书/数据库/第六讲——数据库扩展一/" class="archive-article-date">
+  	<time datetime="2019-09-05T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-05</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -269,7 +371,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">5.7k 字</span>
+        <span class="post-count">2.1k 字</span>
       </span>
     </span>
 
@@ -278,7 +380,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">22min</span>
+        <span class="post-count">7min</span>
       </span>
     </span>
 </div>
@@ -292,11 +394,16 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="核心配置项"><a href="#核心配置项" class="headerlink" title="核心配置项"></a>核心配置项</h3><p>Django的默认配置文件中，包含上百条配置项目，其中很多是我们‘一辈子’都不碰到或者不需要单独配置的，这些项目在需要的时候再去查手册。</p>
-<p><strong>强调：配置的默认值不是在settings.py文件中！</strong>不要以为<code>settings.py</code>中的配置值就是默认值，参考前文。<code>settings.py</code>是使用<code>django-admin startproject xxx</code>命令时，额外给我们创建的。</p>
-<p>下面介绍的是61个相对比较常用和重要的配置项，按字母顺序排序，但是最后部分是cache、auth、message、session、static等的配置。</p>
+        <h3 id="分页查询方法及优化"><a href="#分页查询方法及优化" class="headerlink" title="分页查询方法及优化"></a>分页查询方法及优化</h3><p><strong>问题</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">select * from orders_history where type=8 limit 100,100;</span><br><span class="line">select * from orders_history where type=8 limit 1000,100;</span><br><span class="line">select * from orders_history where type=8 limit 10000,100;</span><br><span class="line">select * from orders_history where type=8 limit 100000,100;</span><br><span class="line">select * from orders_history where type=8 limit 1000000,100;</span><br><span class="line">结果：</span><br><span class="line">查询100偏移：25ms 24ms 24ms</span><br><span class="line">查询1000偏移：78ms 76ms 77ms</span><br><span class="line">查询10000偏移：3092ms 3212ms 3128ms</span><br><span class="line">查询100000偏移：3878ms 3812ms 3798ms</span><br><span class="line">查询1000000偏移：14608ms 14062ms 14700ms</span><br></pre></td></tr></table></figure>
+
+<p>分析：随着查询的偏移的增大，尤其查询偏移大于100000以后，查询的时间急剧增加。这种分页查询方式会从数据库的第一条记录开始扫描，所以越往后查询速度越慢，而且查询的数据越多，也会拖慢总查询速度。</p>
+<p><strong>解决</strong></p>
+<p>方式一：使用子查询优化</p>
+<p>这种方式先定位偏移位置的 id，然后往后查询，这种方式适用于 id 递增的情况。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">select * from orders_history where type=8 limit 100000,1;</span><br><span class="line"></span><br><span class="line">select id from orders_history where type=8 limit 100000,1;</span><br><span class="line"></span><br><span class="line">select * from orders_history where type=8 and </span><br><span class="line">id&gt;=(select id from orders_history where type=8 limit 100000,1) </span><br><span class="line">limit 100;</span><br><span class="line"></span><br><span class="line">select * from orders_history where type=8 limit 100000,100;</span><br><span class="line">结果：</span><br><span class="line">第1条语句：3674ms</span><br><span class="line"></span><br><span class="line">第2条语句：1315ms</span><br><span class="line">第3条语句：1327ms</span><br><span class="line"></span><br><span class="line">第4条语句：3710ms</span><br><span class="line">分析：</span><br><span class="line">1、比较第1条语句和第2条语句：使用 select id 代替 select * 速度增加了3倍</span><br><span class="line"></span><br><span class="line">2、比较第2条语句和第3条语句：速度相差几十毫秒</span><br><span class="line"></span><br><span class="line">3、比较第3条语句和第4条语句：得益于 select id 速度增加，第3条语句查询速度增加了3倍</span><br><span class="line"></span><br><span class="line">这种方式相较于原始一般的查询方法，将会增快数倍。</span><br></pre></td></tr></table></figure>
         
-          <!---<a class="article-more-a" href="/2019/10/14/书/Django/第十二讲——django综合扩展二之核心配置项/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/09/05/书/数据库/第六讲——数据库扩展一/#more">more >></a>--->
         
       
 	  
@@ -317,7 +424,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
         		</li>
       		
 		</ul>
@@ -327,7 +434,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/14/书/Django/第十二讲——django综合扩展二之核心配置项/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/05/书/数据库/第六讲——数据库扩展一/">展开全文 >></a>
         </p>
       
 
@@ -361,20 +468,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/Django/第十一讲——django综合扩展一之配置Django" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-书/数据库/第五讲——数据库索引优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/13/书/Django/第十一讲——django综合扩展一之配置Django/">第十一讲——django综合扩展一之配置Django</a>
+      <a class="article-title" href="/2019/09/04/书/数据库/第五讲——数据库索引优化/">第五讲——数据库之索引优化</a>
     </h1>
   
 
 			
-			<a href="/2019/10/13/书/Django/第十一讲——django综合扩展一之配置Django/" class="archive-article-date">
-  	<time datetime="2019-10-13T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
+			<a href="/2019/09/04/书/数据库/第五讲——数据库索引优化/" class="archive-article-date">
+  	<time datetime="2019-09-04T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -385,247 +492,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.4k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">5min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="配置Django"><a href="#配置Django" class="headerlink" title="配置Django"></a>配置Django</h3><p>Django项目的设置文件位于项目同名目录下，名叫<code>settings.py</code>。这个模块，集合了整个项目方方面面的设置属性，是项目启动和提供服务的根本保证。</p>
-<h4 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h4><p><code>settings.py</code>文件本质上是一个Python模块，带有模块级别的变量。</p>
-<p>下面是一些示例设置：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ALLOWED_HOSTS = [<span class="string">'www.example.com'</span>]</span><br><span class="line">DEBUG = <span class="literal">False</span></span><br><span class="line">DEFAULT_FROM_EMAIL = <span class="string">'webmaster@example.com'</span></span><br></pre></td></tr></table></figure>
-
-<p>注：当DEBUG为False时，必须设置<code>ALLOWED_HOSTS</code>的值。</p>
-<p>配置<code>settings.py</code>时：</p>
-<ul>
-<li>不允许出现Python层面的语法错误；</li>
-<li>可以使用普通的Python语法动态地设置，例如：<code>MY_SETTING = [str(i) for i in range(30)]</code>；</li>
-<li>可以从其它设置文件导入值</li>
-</ul>
-        
-          <!---<a class="article-more-a" href="/2019/10/13/书/Django/第十一讲——django综合扩展一之配置Django/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/13/书/Django/第十一讲——django综合扩展一之配置Django/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/Django/第十讲——django之models锁和事务与中间件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/12/书/Django/第十讲——django之models锁和事务与中间件/">第十讲——django之models锁和事务与中间件</a>
-    </h1>
-  
-
-			
-			<a href="/2019/10/12/书/Django/第十讲——django之models锁和事务与中间件/" class="archive-article-date">
-  	<time datetime="2019-10-12T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-12</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">3.6k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">15min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="锁和事务"><a href="#锁和事务" class="headerlink" title="锁和事务"></a>锁和事务</h3><h4 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h4><p>所有匹配的行将被锁定，直到事务结束。这意味着可以通过锁防止数据被其它事务修改。</p>
-<p>​        一般情况下如果其他事务锁定了相关行，那么本查询将被阻塞，直到锁被释放。 如果这不想要使查询阻塞的话，使用select_for_update(nowait=True)。 如果其它事务持有冲突的锁，互斥锁, 那么查询将引发 DatabaseError 异常。你也可以使用select_for_update(skip_locked=True)忽略锁定的行。 nowait和　　skip_locked是互斥的，同时设置会导致ValueError。</p>
-        
-          <!---<a class="article-more-a" href="/2019/10/12/书/Django/第十讲——django之models锁和事务与中间件/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/12/书/Django/第十讲——django之models锁和事务与中间件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/Django/第九讲——Django之ajax与csrf_token" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/书/Django/第九讲——Django之ajax与csrf_token/">第九讲——Django之ajax</a>
-    </h1>
-  
-
-			
-			<a href="/2019/10/11/书/Django/第九讲——Django之ajax与csrf_token/" class="archive-article-date">
-  	<time datetime="2019-10-11T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">3k 字</span>
+        <span class="post-count">3.7k 字</span>
       </span>
     </span>
 
@@ -648,14 +515,17 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h3><h4 id="Ajax简介"><a href="#Ajax简介" class="headerlink" title="Ajax简介"></a>Ajax简介</h4><p>AJAX（Asynchronous Javascript And XML）翻译成中文就是“异步的Javascript和XML”。</p>
-<p>AJAX的特点:</p>
-<ul>
-<li>异步请求：客户端发出一个请求后，无需等待服务器响应结束，就可以发出第二个请求</li>
-<li>浏览器页面局部刷新</li>
+        <h3 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h3><ul>
+<li>索引</li>
+<li>创建用户和授权</li>
+<li>锁和事务</li>
 </ul>
+<p>外链：<a href="https://www.cnblogs.com/clschao/articles/10049133.html" target="_blank" rel="noopener">https://www.cnblogs.com/clschao/articles/10049133.html</a></p>
+<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">普通索引：index（加速查找）</span><br><span class="line">唯一索引：</span><br><span class="line">	主键索引：primary key:加速查找+约束（不为空、不能重复）</span><br><span class="line">	唯一索引：unique:加速查找+约束（不能重复）</span><br><span class="line">联合索引：</span><br><span class="line">	primary key(id,name):联合主键索引</span><br><span class="line">	unique(id,name):联合唯一索引</span><br><span class="line">	index(id,name):联合普通索引</span><br></pre></td></tr></table></figure>
+
+<h5 id="为什么要有索引？"><a href="#为什么要有索引？" class="headerlink" title="为什么要有索引？"></a>为什么要有索引？</h5><p>一般的应用系统，读写的比例一般在10:1左右，而且插入操作和一般更新操作很少出现性能问题，在生产环境中我们遇到最多的，也是最容易出现问题的，还是一些复杂的查询操作，因此查询语句的优化显然是重中之重。说哦起加速查询，就不得不提到索引了。</p>
         
-          <!---<a class="article-more-a" href="/2019/10/11/书/Django/第九讲——Django之ajax与csrf_token/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/09/04/书/数据库/第五讲——数据库索引优化/#more">more >></a>--->
         
       
 	  
@@ -676,7 +546,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
         		</li>
       		
 		</ul>
@@ -686,7 +556,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/书/Django/第九讲——Django之ajax与csrf_token/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/04/书/数据库/第五讲——数据库索引优化/">展开全文 >></a>
         </p>
       
 
@@ -720,20 +590,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/Django/第八讲——Django知识回顾及cookie和sessio" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-书/数据库/第四讲——数据库之多表行操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/10/书/Django/第八讲——Django知识回顾及cookie和sessio/">第八讲——django知识回顾及cookie和session</a>
+      <a class="article-title" href="/2019/09/03/书/数据库/第四讲——数据库之多表行操作/">第四讲——数据库之多表行操作</a>
     </h1>
   
 
 			
-			<a href="/2019/10/10/书/Django/第八讲——Django知识回顾及cookie和sessio/" class="archive-article-date">
-  	<time datetime="2019-10-10T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
+			<a href="/2019/09/03/书/数据库/第四讲——数据库之多表行操作/" class="archive-article-date">
+  	<time datetime="2019-09-03T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -744,7 +614,242 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">6.1k 字</span>
+        <span class="post-count">2.2k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">8min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h3><p><strong>笛卡尔级</strong>：将两张表所有的数据一一对应，生成一张大表。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#将两张表拼在一起，生成一张大表</span><br><span class="line">select * form dep,eemp;</span><br><span class="line"></span><br><span class="line">#找到两张表之间的对应关系</span><br><span class="line">select * from emp,dep where dep.id = emp.dep_id;</span><br><span class="line"></span><br><span class="line">#筛选部门名称为技术的大表中的记录</span><br><span class="line">select * from emp,dep where dep.id = emp.dep_id and dep.name=&quot;技术&quot;;</span><br><span class="line"></span><br><span class="line">#拿到筛选后的记录的员工姓名字段数据</span><br><span class="line">select emp.name from dep,emp where dep.id = emp.dep_id and dep.name = &quot;技术&quot;;</span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2019/09/03/书/数据库/第四讲——数据库之多表行操作/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/03/书/数据库/第四讲——数据库之多表行操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/数据库/第三讲——数据库之单表行操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/书/数据库/第三讲——数据库之单表行操作/">第三讲——数据库之行的操作</a>
+    </h1>
+  
+
+			
+			<a href="/2019/09/02/书/数据库/第三讲——数据库之单表行操作/" class="archive-article-date">
+  	<time datetime="2019-09-02T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2.4k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">10min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h3><ul>
+<li>行记录的增删改</li>
+<li>行记录的查</li>
+<li>聚合函数补充</li>
+</ul>
+<h3 id="行记录的增删改"><a href="#行记录的增删改" class="headerlink" title="行记录的增删改"></a>行记录的增删改</h3><p>增加insert</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#增加一个值</span><br><span class="line">insert into 表名（字段） value(值);</span><br><span class="line"></span><br><span class="line">#增加好多值</span><br><span class="line">insert into 表名(字段1，字段2，字段3...) values(值1，值2，值3);</span><br><span class="line"></span><br><span class="line">#将表2中查出来的数据插入到表1中</span><br><span class="line">insert into 表1(字段1，字段2，字段3...) </span><br><span class="line">			select (字段1，字段2，字段3) from 表2 </span><br><span class="line">			where ...;</span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2019/09/02/书/数据库/第三讲——数据库之单表行操作/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/02/书/数据库/第三讲——数据库之单表行操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/数据库/第二讲——数据库之表的操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/30/书/数据库/第二讲——数据库之表的操作/">第二讲——数据库之表的操作</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/30/书/数据库/第二讲——数据库之表的操作/" class="archive-article-date">
+  	<time datetime="2019-08-30T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">6.3k 字</span>
       </span>
     </span>
 
@@ -767,15 +872,290 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今日大纲</p>
+        <h3 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h3><ul>
+<li>表相关的操作</li>
+<li>完整性约束</li>
+<li>表中字段增删查改及外键的操作</li>
+<li>复制表</li>
+</ul>
+<h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><p><strong>创建表</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create table table_name(</span><br><span class="line">	字段1 类型[(宽度) 约束条件],</span><br><span class="line">	字段2 类型[(宽度) 约束条件],</span><br><span class="line">	...</span><br><span class="line">	z字段n 类型[(宽度) 约束条件]</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p><strong>数值类型</strong></p>
+<p>整型类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&apos;&apos;&apos;最常用的是int类型&apos;&apos;&apos;</span><br><span class="line">创建有符号的数值类型</span><br><span class="line">create table t1(num tinyint);</span><br><span class="line">创建无符号的数值类型</span><br><span class="line">create table t1(num tinyint unsigned);</span><br><span class="line">#何止了数据类型就会有一个约束效果，只能表示自己范围内的数，如果是宽松模式，超出范围会提醒警告，并以临界的数值插入表中。如果是严格模式，就会报错。在工作中，我们使用的模式必须为严格模式。下面我们会讲解sql_mode（数据库模式）！</span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2019/08/30/书/数据库/第二讲——数据库之表的操作/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/30/书/数据库/第二讲——数据库之表的操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/数据库/第一讲——数据库初始" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/29/书/数据库/第一讲——数据库初始/">第一讲——数据库初始</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/29/书/数据库/第一讲——数据库初始/" class="archive-article-date">
+  	<time datetime="2019-08-29T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-29</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">5.2k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">19min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="数据库的基础认识"><a href="#数据库的基础认识" class="headerlink" title="数据库的基础认识"></a>数据库的基础认识</h3><p>数据库服务器：一台装了数据库管理软件的机器</p>
+<p>数据库管理系统（DBMS）：就是一款软件</p>
+<p>关系型数据库（RDBMS）：Mysql</p>
+<p>库：文件夹</p>
+<p>表：文件</p>
+<p>记录：一条一条的信息</p>
+<p>SQL语句：结构化查询语句</p>
+<h3 id="数据库的分类"><a href="#数据库的分类" class="headerlink" title="数据库的分类"></a>数据库的分类</h3><p><strong>关系型</strong></p>
+<p>解释：关系型数据库模型是把复杂的数据结构归结为简单的二元关系（即二维表格形式，不是excel，但是和excel的形式很像）</p>
+<p>Mysql：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mysql被广泛的应用在Internet上的大中小型网站中；其体积小、速度快、总体拥有成本低，开放源代码。</span><br></pre></td></tr></table></figure>
+
+<p>Oracle：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Oracle公司是目前全球最大的数据库软件公司，也是近年业务增长极为迅速的软件提供与服务商 。主要应用范围：传统大企业、大公司、政府、金融、证券等。</span><br></pre></td></tr></table></figure>
+
+<p>SQL Server：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Microsoft SQL Server是微软公司开发的大型关系数据库系统。SQL Server的功能比较全面，效率高，可以作为中型企业或单位的数据库平台。SQL Server可以与Winodws操作系统紧密集成，不论是应用程序开发速度还是系统事务处理运行速度，都得到较大的提升，对于在Windows平台上开发的各种企业级信息管理系统来说，不论是C/S（客户机/服务器）架构还是B/S（浏览器/服务器）架构。SQL Server都是一个很好的选择。SQL Server的缺点是只能在Windows系统下运行</span><br></pre></td></tr></table></figure>
+
+<p>Access</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　Access是入门级小型桌面数据库，性能安全性都很一般，可供个人管理或小型企业使用；Access不是数据库语言，只是一个数据库程序。</span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2019/08/29/书/数据库/第一讲——数据库初始/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/29/书/数据库/第一讲——数据库初始/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-第三方模块/Socketserver——socket编程模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/28/第三方模块/Socketserver——socket编程模块/">socketserver——socket编程模块</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/28/第三方模块/Socketserver——socket编程模块/" class="archive-article-date">
+  	<time datetime="2019-08-28T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-28</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">1.1k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">4min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>介绍</strong>：这是标准库中的一个高级模块，它的目标就是简化多样性样板代码。</p>
+<p><strong>用途</strong>：我们之前讲的tcp协议的socket一次只能和一个客户端通信，如果用socketserver可以实现和多个客户端通信。它是在socket的基础上进行的一层封装，也就是说底层还是调用的socket，并发实现和多个客户端进行通信。</p>
+<p>Socketserver的5个服务类：</p>
 <ul>
-<li>知识回顾</li>
-<li>cookie</li>
-<li>session</li>
+<li>BaseServer：基类，所有服务器对象的超类，定义了接口。</li>
+<li>TCPServer</li>
+<li>UDPServer</li>
+<li>UnixStreamServer</li>
+<li>UnixDatagramServer</li>
 </ul>
-        
-          <!---<a class="article-more-a" href="/2019/10/10/书/Django/第八讲——Django知识回顾及cookie和sessio/#more">more >></a>--->
-        
+<p><strong>实例代码</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">server端</span><br><span class="line"><span class="keyword">import</span> socketserver</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyServer</span><span class="params">(socketserver.BaseRequestHandler)</span>:</span></span><br><span class="line">	<span class="comment">#重写父类方法，必须是这个名字</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">handle</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        我们拿到了每个客服端的管道，那么我们自己在这个方法里面就写我们接收消息发送消息的逻辑就可以了。</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="comment">#self.request相当于一个conn</span></span><br><span class="line">		self.request.recv(<span class="number">1024</span>)</span><br><span class="line">		msg = input(<span class="string">"&gt;&gt;&gt;"</span>)</span><br><span class="line">		self.request.send(bytes(msg,encoding=<span class="string">'utf-8'</span>))</span><br><span class="line">        <span class="comment">#关闭连接</span></span><br><span class="line">		self.request.close()</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment">#使用socketserver的ThreadingTCPServer这个类，将IP和端口的元组传进去，还需要将我们上面定义的类传进去，实例化得到server这个对象的时候初始化__init__自动执行里面的代码，里面把所有的事情都干了，相当于我们通过它进行了bind，listen。</span></span><br><span class="line">	server = socketserver.ThreadingTCPServer((<span class="string">'127.0.0.1'</span>,<span class="number">8888</span>))</span><br><span class="line">    <span class="comment">#使用上面的这个类的对象来执行serve_forever方法，它的作用就是我们的服务一直开启，serve_forever帮我们进行accept</span></span><br><span class="line">	server.serve_forever()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">上述的socketservr内部做的操作解读：</span><br><span class="line">在整个socketserver这个模块中，其实就干了两件事情：</span><br><span class="line"><span class="number">1</span>、一个是循环建立链接的部分，每个客户链接都可以连接成功  </span><br><span class="line"><span class="number">2</span>、一个通讯循环的部分，就是每个客户端链接成功之后，要循环的和客户端进行通信。</span><br><span class="line">看代码中的：server=socketserver.ThreadingTCPServer((<span class="string">'127.0.0.1'</span>,<span class="number">8090</span>),MyServer)</span><br><span class="line"></span><br><span class="line">还记得面向对象的继承吗？来，大家自己尝试着看看源码：</span><br><span class="line"></span><br><span class="line">查找属性的顺序:ThreadingTCPServer</span><br><span class="line">			-&gt;ThreadingMixIn</span><br><span class="line">    		-&gt;TCPServer</span><br><span class="line">			-&gt;BaseServer</span><br><span class="line"></span><br><span class="line">实例化得到server，先找ThreadMinxIn中的__init__方法，发现没有init方法，然后找类ThreadingTCPServer的__init__,在TCPServer中找到，在里面创建了socket对象，进而执行server_bind（相当于bind）,server_active（点进去看执行了listen）</span><br><span class="line"></span><br><span class="line">找server下的serve_forever,在BaseServer中找到，进而执行self._handle_request_noblock()，该方法同样是在BaseServer中</span><br><span class="line">执行self._handle_request_noblock()进而执行request, client_address = self.get_request()（就是TCPServer中的self.socket.accept()），然后执行self.process_request(request, client_address)</span><br><span class="line">在ThreadingMixIn中找到process_request，开启多线程应对并发，进而执行process_request_thread，执行self.finish_request(request, client_address)</span><br><span class="line"></span><br><span class="line">上述四部分完成了链接循环，本部分开始进入处理通讯部分，在BaseServer中找到finish_request,触发我们自己定义的类的实例化，去找__init__方法，而我们自己定义的类没有该方法，则去它的父类也就是BaseRequestHandler中找....</span><br><span class="line">源码分析总结：</span><br><span class="line"></span><br><span class="line">基于tcp的socketserver我们自己定义的类中的</span><br><span class="line"></span><br><span class="line">　　self.server即套接字对象</span><br><span class="line">　　self.request即一个链接</span><br><span class="line">　　self.client_address即客户端地址</span><br><span class="line">基于udp的socketserver我们自己定义的类中的</span><br><span class="line"></span><br><span class="line">　　self.request是一个元组（第一个元素是客户端发来的数据，第二部分是服务端的udp套接字对象），如(<span class="string">b'adsf'</span>, &lt;socket.socket fd=<span class="number">200</span>, family=AddressFamily.AF_INET, type=SocketKind.SOCK_DGRAM, proto=<span class="number">0</span>, laddr=(<span class="string">'127.0.0.1'</span>, <span class="number">8080</span>)&gt;)</span><br><span class="line">　　self.client_address即客户端地址</span><br></pre></td></tr></table></figure>
+
+<p><strong>Server Objects</strong>：</p>
+<p>BaseServer.fileno:返回整数表示那个服务器正在监听，常用。</p>
+<p>select.select()：表示允许监听多个相同处理过程的服务。</p>
+<p>BaseServer.handle_request:处理单一请求。</p>
+<p>BaseServer.server_forever:处理请求直到明确shutdown()请求。</p>
+<p>BaseServer.RequestHandlerClass:用户请求处理程序类，为每一个请求创建这个类的实例。</p>
+<p><strong>Twisted框架</strong></p>
+<p>介绍：Twisted是一个完整的事件驱动的网络框架，利用它既能使用也可以开发完整的异步网络应用程序和协议。它提供了大量的支持建立完整的系统，包括网络协议，线程，安全性和身份验证，聊天，DBM，web，电子邮件，命令行等。如果我们有这方面的需求的时候可以详细的了解：</p>
+<p><a href="http://gashero.yeax.com/?cat=7" target="_blank" rel="noopener"><strong>http://gashero.yeax.com/?cat=7</strong></a></p>
+<p><a href="https://blog.csdn.net/qq_24861509/article/details/45192067" target="_blank" rel="noopener">https://blog.csdn.net/qq_24861509/article/details/45192067</a></p>
+
       
 	  
 			  
@@ -795,7 +1175,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
         		</li>
       		
 		</ul>
@@ -805,7 +1185,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/10/书/Django/第八讲——Django知识回顾及cookie和sessio/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/28/第三方模块/Socketserver——socket编程模块/">展开全文 >></a>
         </p>
       
 
@@ -839,20 +1219,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/Django/第七讲——Django之Admin管理后台" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-第三方模块/shutil——高级文件操作模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/09/书/Django/第七讲——Django之Admin管理后台/">第七讲——django之Admin后台管理系统</a>
+      <a class="article-title" href="/2019/08/26/第三方模块/shutil——高级文件操作模块/">shutil——高级文件操作模块</a>
     </h1>
   
 
 			
-			<a href="/2019/10/09/书/Django/第七讲——Django之Admin管理后台/" class="archive-article-date">
-  	<time datetime="2019-10-09T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
+			<a href="/2019/08/26/第三方模块/shutil——高级文件操作模块/" class="archive-article-date">
+  	<time datetime="2019-08-26T11:58:42.392Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -863,7 +1243,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">8.2k 字</span>
+        <span class="post-count">1.7k 字</span>
       </span>
     </span>
 
@@ -872,7 +1252,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">33min</span>
+        <span class="post-count">7min</span>
       </span>
     </span>
 </div>
@@ -886,20 +1266,11 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Admin管理后台"><a href="#Admin管理后台" class="headerlink" title="Admin管理后台"></a>Admin管理后台</h2><p>Admin站点是Django有别于其它Web框架最重要的一点，并且非常受欢迎，简直是出门旅游xxxx的必备。不管你是写个小demo还是做个大项目都用得上。<strong>admin（下文中将Admin管理后台简称为admin）通过读取你的模型数据，快速构造出一个可以对实际数据进行管理的Web站点，常用于开发测试，简单管理等场合，适用于部门内部为工作方便的场合，但不建议在生产环境中使用。</strong></p>
-<p>默认情况下，使用startproject的时候，admin就被激活了。</p>
-<p>在使用admin时请注意下面的需求和要点：</p>
-<ul>
-<li>将<code>django.contrib.admin</code>加入<code>INSTALLED_APPS</code>。</li>
-<li>admin依赖四个模块，请确保它们存在于<code>INSTALLED_APPS</code>，他们是django.contrib.auth、django.contrib.contenttypes、django.contrib.messages和django.contrib.sessions。</li>
-<li>在你的settings文件中的TEMPLATES中的<code>context_processors</code>选项内添加<code>django.contrib.auth.context_processors.auth</code>和<code>django.contrib.messages.context_processors.messages</code>这两条。同样，将<code>django.contrib.auth.middleware.AuthenticationMiddleware</code>和<code>django.contrib.messages.middleware.MessageMiddleware</code>添加到settings的<code>MIDDLEWARE</code>内。默认情况下，这些都是配置好的。</li>
-<li>决定哪些模型需要在admin内进行管理，在<code>admin.py</code>文件中注册它们。</li>
-<li>对于每个模型，可以创建一个对应的<code>ModelAdmin</code>类，这个类将封装对模型的所有自定义设置。</li>
-<li>实例化一个AdminSite，将模型、模型对应的ModelAdmin类传给它。</li>
-<li>链接AdminSite和你的URLconf。这一步通常默认已经完成。</li>
-</ul>
+        <p>介绍：该模块对文件和文件集合提供了许多高级操作。特别是，提供了支持文件复制和删除的功能。单个文件的操作，请参考os模块。</p>
+<p>注意：高级别的文件的复制的功能，也无法复制所有文件元数据。</p>
+<h3 id="文件夹和文件操作"><a href="#文件夹和文件操作" class="headerlink" title="文件夹和文件操作"></a>文件夹和文件操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">shutil.copyfileobj(src,dst,length=<span class="number">16</span>*<span class="number">1024</span>):</span><br><span class="line">功能：将src文件内容复制到dst文件，length为src每次读取的长度，用作缓冲区大小。</span><br><span class="line">参数：</span><br><span class="line">fsrc： 源文件</span><br><span class="line">fdst： 复制至fdst文件</span><br><span class="line">length： 缓冲区大小，即fsrc每次读取的长度</span><br><span class="line">实例:</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line">f1 = open(<span class="string">'file.txt'</span>,<span class="string">'r'</span>)</span><br><span class="line">f2 = open(<span class="string">'filel_copy.txt'</span>,<span class="string">'a+'</span>)</span><br><span class="line">shutil.copyfileobj(f1,f2,length=<span class="number">1024</span>)</span><br></pre></td></tr></table></figure>
         
-          <!---<a class="article-more-a" href="/2019/10/09/书/Django/第七讲——Django之Admin管理后台/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/08/26/第三方模块/shutil——高级文件操作模块/#more">more >></a>--->
         
       
 	  
@@ -920,7 +1291,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
         		</li>
       		
 		</ul>
@@ -930,375 +1301,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/09/书/Django/第七讲——Django之Admin管理后台/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-项目/Django实现可重用注册登录系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/09/项目/Django实现可重用注册登录系统/">Django实现可重用注册登录系统</a>
-    </h1>
-  
-
-			
-			<a href="/2019/10/09/项目/Django实现可重用注册登录系统/" class="archive-article-date">
-  	<time datetime="2019-10-09T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">15.6k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">67min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="项目一——Django实现可重用注册登录系统"><a href="#项目一——Django实现可重用注册登录系统" class="headerlink" title="项目一——Django实现可重用注册登录系统"></a>项目一——Django实现可重用注册登录系统</h3><p>项目源码：<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:linshutu/login_register.git</p>
-<h3 id="项目流程"><a href="#项目流程" class="headerlink" title="项目流程"></a>项目流程</h3><ul>
-<li>搭建项目环境</li>
-<li>设计数据模型</li>
-<li>admin后台</li>
-<li>url路由和视图</li>
-<li>前端页面设计</li>
-<li>登录视图</li>
-<li>Django表单(综合前面的步骤)</li>
-<li>图片验证码</li>
-<li>session会话</li>
-<li>注册视图</li>
-<li>邮箱注册确认</li>
-<li>重用app</li>
-</ul>
-        
-          <!---<a class="article-more-a" href="/2019/10/09/项目/Django实现可重用注册登录系统/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目实战</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/09/项目/Django实现可重用注册登录系统/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/">centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署</a>
-    </h1>
-  
-
-			
-			<a href="/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/" class="archive-article-date">
-  	<time datetime="2019-10-07T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-07</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.7k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">11min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="完整的项目部署流程"><a href="#完整的项目部署流程" class="headerlink" title="完整的项目部署流程"></a>完整的项目部署流程</h3><p>不懂点我：<a href="https://chpl.top/2019/11/03/%E4%B9%A6/linux/%E7%AC%AC%E5%9B%9B%E8%AE%B2%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E3%80%81%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/" target="_blank" rel="noopener">https://chpl.top/2019/11/03/%E4%B9%A6/linux/%E7%AC%AC%E5%9B%9B%E8%AE%B2%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E3%80%81%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</a></p>
-<h4 id="完整的通信流程"><a href="#完整的通信流程" class="headerlink" title="完整的通信流程"></a>完整的通信流程</h4><p><img src="http://9017499461.linshutu.top/django%E9%83%A8%E7%BD%B2%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg" alt></p>
-<h4 id="一、更新系统软件包"><a href="#一、更新系统软件包" class="headerlink" title="一、更新系统软件包"></a>一、更新系统软件包</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
-
-<h4 id="二、安装软件管理包和可能使用的依赖"><a href="#二、安装软件管理包和可能使用的依赖" class="headerlink" title="二、安装软件管理包和可能使用的依赖"></a><strong>二、安装软件管理包和可能使用的依赖</strong></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y groupinstall "Development tools"</span><br><span class="line">yum install openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel</span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">django项目部署</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-知识扩展/Django的路由path和url的比较" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/06/知识扩展/Django的路由path和url的比较/">Django的路由path和url的比较</a>
-    </h1>
-  
-
-			
-			<a href="/2019/10/06/知识扩展/Django的路由path和url的比较/" class="archive-article-date">
-  	<time datetime="2019-10-06T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-06</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">628 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Django的路由path和url的比较"><a href="#Django的路由path和url的比较" class="headerlink" title="Django的路由path和url的比较"></a>Django的路由path和url的比较</h3><p>我们知道，Django1.x版本和Django2.0版本的最大的区别就是路由系统的不同。在Django2.0之前一直使用的是正则匹配的方式；之后使用的是path转换器方式匹配。当然，为了兼容性，re_path支持正则方式匹配。</p>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>views.py</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">articles</span><span class="params">(seq,year)</span>:</span></span><br><span class="line">    year = int(year)</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(year)</span><br></pre></td></tr></table></figure>
-
-<p>路由使用正则匹配的方式：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url(<span class="string">r"^articles/(?P&lt;year&gt;[0-9]&#123;4&#125;)/$"</span>,views.articles)  <span class="comment">#采用有名分组的方式进行路由匹配</span></span><br></pre></td></tr></table></figure>
-
-<p>路由使用path的方式：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">path(<span class="string">r"articles/&lt;int:teay&gt;/"</span>,views.articles)</span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2019/10/06/知识扩展/Django的路由path和url的比较/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识扩展</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/06/知识扩展/Django的路由path和url的比较/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/26/第三方模块/shutil——高级文件操作模块/">展开全文 >></a>
         </p>
       
 

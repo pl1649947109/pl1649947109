@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
-      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2019/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
+      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2018/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
@@ -98,7 +98,7 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/2019/12/02/main/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/2018/12/02/main/">主页</a></li>
 		        
 					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
@@ -119,20 +119,20 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-书/Django/第二讲——Django之URL路由" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-部分详讲/python之正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/25/书/Django/第二讲——Django之URL路由/">第二讲——Django之URL路由</a>
+      <a class="article-title" href="/2019/08/05/部分详讲/python之正则表达式/">python之正则表达式</a>
     </h1>
   
 
 			
-			<a href="/2019/09/25/书/Django/第二讲——Django之URL路由/" class="archive-article-date">
-  	<time datetime="2019-09-25T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-25</time>
+			<a href="/2019/08/05/部分详讲/python之正则表达式/" class="archive-article-date">
+  	<time datetime="2019-08-05T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -143,7 +143,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">4.2k 字</span>
+        <span class="post-count">6k 字</span>
       </span>
     </span>
 
@@ -152,7 +152,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">17min</span>
+        <span class="post-count">23min</span>
       </span>
     </span>
 </div>
@@ -166,21 +166,11 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="内容明晰"><a href="#内容明晰" class="headerlink" title="内容明晰"></a>内容明晰</h2><p><strong>路由的编写方式是Django2.0和1.11最大的区别所在。Django官方迫于压力和同行的影响，不得不将原来的正则匹配表达式，改为更加简单的path表达式，但依然通过re_path()方法保持对1.x版本的兼容。</strong></p>
-<p>URL是Web服务的入口，用户通过浏览器发送过来的任何请求，都是发送到一个指定的URL地址，然后被响应。</p>
-<p>在Django项目中编写路由，就是向外暴露我们接收哪些URL的请求，除此之外的任何URL都不被处理，也没有返回。通俗地理解，不恰当的形容，URL路由是你的Web服务对外暴露的API。</p>
-<h2 id="Django如何处理请求"><a href="#Django如何处理请求" class="headerlink" title="Django如何处理请求"></a>Django如何处理请求</h2><ul>
-<li><strong>决定要使用的根URLconf模块。</strong>通常，这是<code>ROOT_URLCONF</code>设置的值，但是如果传入的HttpRequest对象具有urlconf属性（由中间件设置），则其值将被用于代替<code>ROOT_URLCONF</code>设置。<strong>通俗的讲，就是你可以自定义项目入口url是哪个文件！</strong></li>
-<li><strong>加载该 模块并寻找可用的urlpatterens。</strong></li>
-<li><strong>依次匹配每个URL模式，在与请求的URL相匹配的第一个模式停下</strong>也就是说，url匹配是从上往下的短路操作，所以url在列表中的位置非常关键。</li>
-<li>导入并调用匹配中给定的视图，该视图是一个简单的python函数，也就是我们常说的视图函数，或者基于类的视图。</li>
-<li>如果没有匹配到任何的表达式，或者过程中抛出异常，将调用一个适合的错误处理视图。</li>
-</ul>
-<h2 id="URL配置（URLConf）"><a href="#URL配置（URLConf）" class="headerlink" title="URL配置（URLConf）"></a>URL配置（URLConf）</h2><p>解释：URL配置（URLconf）就像Django所支撑网站的目录。它的本质是URL与要为该URL调用的视图之间的映射表。</p>
-<h4 id="基本格式"><a href="#基本格式" class="headerlink" title="基本格式"></a>基本格式</h4><p><strong>Django版本1.x</strong></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</span><br><span class="line">urlpatterns = [</span><br><span class="line">     url(正则表达式, views，kwargs，name),</span><br><span class="line">]</span><br><span class="line"><span class="comment">#参数说明：</span></span><br><span class="line"><span class="number">1.</span>正则表达式:当 Django 响应一个请求时，它会从 urlpatterns 的第一项开始，按顺序依次匹配列表中的项，直到找到匹配的项，然后执行该条目映射的视图函数或下级路由，其后的条目将不再继续匹配。因此，url路由的编写顺序非常重要</span><br><span class="line">    </span><br><span class="line"><span class="number">2.</span>views：当Django匹配到某个路由条目时，自动将封装的HttpRequest对象作为第一个参数，被“捕获”的参数以关键字参数的形式，传递给该条目指定的视图view。</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>kwargs:任意数量的关键字参数可以作为一个字典传递给目标视图。</span><br><span class="line">    </span><br><span class="line"><span class="number">4.</span>name:对你的URL进行命名，让你能够在Django的任意处，尤其是模板内显式地引用它。这是一个非常强大的功能，相当于给URL取了个全局变量名，不会将url匹配地址写死。</span><br><span class="line"><span class="comment">#注意</span></span><br><span class="line">请求的URL被看做是一个普通的Python字符串，URLconf在其上查找并匹配。进行匹配时将不包括GET或POST请求方式的参数以及域名。</span><br><span class="line"></span><br><span class="line">例如，在https://www.example.com/myapp/的请求中，URLconf将查找myapp/。</span><br><span class="line"></span><br><span class="line">在https://www.example.com/myapp/?page=3的请求中，URLconf也将查找myapp/。</span><br></pre></td></tr></table></figure>
+        <p>导读：我们都知道学习一项技能是为了解决我们的问题的，那么正则表达式是干什么的呢？有哪些内容呢？有哪些应用呢?那么，我们下面将围绕着这三个问题进行详述。</p>
+<p><strong>首先，我们要知道什么是正则表达式</strong></p>
+<p>​        正则表达式(re)，计算机科学的一个概念。它通常被用来检索、替换那些符合某个（规则）的文本。</p>
         
-          <!---<a class="article-more-a" href="/2019/09/25/书/Django/第二讲——Django之URL路由/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/08/05/部分详讲/python之正则表达式/#more">more >></a>--->
         
       
 	  
@@ -201,7 +191,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">python部分内容详讲</a>
         		</li>
       		
 		</ul>
@@ -211,7 +201,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/25/书/Django/第二讲——Django之URL路由/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/05/部分详讲/python之正则表达式/">展开全文 >></a>
         </p>
       
 
@@ -245,20 +235,20 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-爬虫/第十讲——scrapy爬虫框架之图片数据爬取" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-部分详讲/python之日志详讲" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/24/爬虫/第十讲——scrapy爬虫框架之图片数据爬取/">第十讲——scrapy爬虫框架之图片数据爬取</a>
+      <a class="article-title" href="/2019/07/30/部分详讲/python之日志详讲/">python之日志详讲</a>
     </h1>
   
 
 			
-			<a href="/2019/09/24/爬虫/第十讲——scrapy爬虫框架之图片数据爬取/" class="archive-article-date">
-  	<time datetime="2019-09-24T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-24</time>
+			<a href="/2019/07/30/部分详讲/python之日志详讲/" class="archive-article-date">
+  	<time datetime="2019-07-30T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-30</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -269,974 +259,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">548 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">爬取图片ImagesPipeline</span><br><span class="line">    --基于scrapy爬取字符串数据类型的数据和爬取图片类型的数据的区别</span><br><span class="line">        --字符串：只需要基于xpath进行数据解析且提交管道进行持久化储存</span><br><span class="line">        --图片：xpath解析出图片src的属性值，单独的对图片地址发起请求获取图片二进制类型的数据</span><br><span class="line">    --ImagesPipline：</span><br><span class="line">        --只需要将img的src的属性值进行解析，提交到管道，管道会对图片进行发送请求获取图片的二进制数据</span><br><span class="line">        --使用流程：</span><br><span class="line">           -需求：爬取站长素材中的高清图片</span><br><span class="line">           -数据解析：获取图片的地址</span><br><span class="line">           -将储存图片地址的item提交到指定的管道类</span><br><span class="line">           -在管道文件中自定制一个基于ImagesPileLine的一个管道类</span><br><span class="line">           -重写<span class="number">3</span>个管道类的方法</span><br><span class="line">           -在配置文件中：</span><br><span class="line">                -指定图片储存的目录：IMAGES_STORE</span><br><span class="line">                -指定开启的管道：就是自定制的管道</span><br></pre></td></tr></table></figure>
-
-<p>爬取文件：first.py</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> scrapy4.items <span class="keyword">import</span> Scrapy4Item</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FirstSpider</span><span class="params">(scrapy.Spider)</span>:</span></span><br><span class="line">    name = <span class="string">'first'</span></span><br><span class="line">    <span class="comment"># allowed_domains = ['www.xxx.com']</span></span><br><span class="line">    start_urls = [<span class="string">'http://sc.chinaz.com/tupian/'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        div_list = response.xpath(<span class="string">'//*[@id="container"]/div'</span>)</span><br><span class="line">        <span class="keyword">for</span> div <span class="keyword">in</span> div_list:</span><br><span class="line">            <span class="comment">#注意：使用伪属性（图片的懒加载）</span></span><br><span class="line">            src = div.xpath(<span class="string">'./div/a/img/@src2'</span>).extract_first()</span><br><span class="line"></span><br><span class="line">            item = Scrapy4Item()</span><br><span class="line">            item[<span class="string">'src'</span>] = src</span><br><span class="line">            <span class="keyword">yield</span> item</span><br></pre></td></tr></table></figure>
-
-<p>属性封装：items.py</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Scrapy4Item</span><span class="params">(scrapy.Item)</span>:</span></span><br><span class="line">    <span class="comment"># define the fields for your item here like:</span></span><br><span class="line">    <span class="comment"># name = scrapy.Field()</span></span><br><span class="line">    src = scrapy.Field()</span><br></pre></td></tr></table></figure>
-
-<p>管道储存：pipelines.py</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#自定义</span></span><br><span class="line"><span class="keyword">from</span> scrapy.pipelines.images <span class="keyword">import</span> ImagesPipeline</span><br><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImgproPipeline</span><span class="params">(object)</span>:</span></span><br><span class="line">    item = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span><span class="params">(self, item, spider)</span>:</span></span><br><span class="line">        <span class="comment"># print(item)</span></span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line"><span class="comment">#ImagesPipeline专门用于文件下载的管道类，下载过程支持异步和多线程</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImagesPipeline</span><span class="params">(ImagesPipeline)</span>:</span></span><br><span class="line">    <span class="comment">#就是可以根据图片的地址进行图片数据的请求</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_media_requests</span><span class="params">(self, item, info)</span>:</span></span><br><span class="line">        <span class="keyword">yield</span> scrapy.Request(item[<span class="string">'src'</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment">#定制图片的名称</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">file_downloaded</span><span class="params">(self, response, request, info=None)</span>:</span></span><br><span class="line">        imageName = request.url.split(<span class="string">'/'</span>)[<span class="number">-1</span>]</span><br><span class="line">        <span class="keyword">return</span> imageName</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">item_completed</span><span class="params">(self, results, item, info)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> item <span class="comment">#返回给下一个即将被执行的管道类</span></span><br></pre></td></tr></table></figure>
-
-<p>配置文件：settings.py</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#UA伪装</span></span><br><span class="line">USER_AGENT = <span class="string">'"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36"'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#不遵循该协议</span></span><br><span class="line">ROBOTSTXT_OBEY = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#开启管道</span></span><br><span class="line">ITEM_PIPELINES = &#123;</span><br><span class="line">   <span class="string">'scrapy4.pipelines.ImagesPipeline'</span>: <span class="number">300</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#指定图片指定的路径</span></span><br><span class="line">IMAGES_STORE = ‘./imgs’：表示最终图片存储的目录</span><br></pre></td></tr></table></figure>
-
-
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/24/爬虫/第十讲——scrapy爬虫框架之图片数据爬取/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-知识扩展/全面知识扩展一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/24/知识扩展/全面知识扩展一/">全面知识扩展一</a>
-    </h1>
-  
-
-			
-			<a href="/2019/09/24/知识扩展/全面知识扩展一/" class="archive-article-date">
-  	<time datetime="2019-09-24T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-24</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">4.5k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">17min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>涉及范围：面想对象（类和对象）、并发编程</strong></p>
-<h3 id="学习大纲："><a href="#学习大纲：" class="headerlink" title="学习大纲："></a>学习大纲：</h3><ul>
-<li>一切皆对象</li>
-<li>魔法函数</li>
-<li>python一个经典的错误</li>
-<li>深入类编程</li>
-<li>元类编程</li>
-<li>并发编程</li>
-<li>asyncio的并发编程</li>
-</ul>
-        
-          <!---<a class="article-more-a" href="/2019/09/24/知识扩展/全面知识扩展一/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">知识扩展</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/24/知识扩展/全面知识扩展一/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/Django/第一讲——Django知识带入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/24/书/Django/第一讲——Django知识带入/">第一讲——Django之知识带入</a>
-    </h1>
-  
-
-			
-			<a href="/2019/09/24/书/Django/第一讲——Django知识带入/" class="archive-article-date">
-  	<time datetime="2019-09-24T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-24</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">6.1k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">21min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>很简洁的一个学习dj的网站：<a href="https://code.ziqiangxuetang.com/django/django-admin.html" target="_blank" rel="noopener">https://code.ziqiangxuetang.com/django/django-admin.html</a></p>
-<h3 id="HTTP协议相关"><a href="#HTTP协议相关" class="headerlink" title="HTTP协议相关"></a>HTTP协议相关</h3><h4 id="HTTP协议简介"><a href="#HTTP协议简介" class="headerlink" title="HTTP协议简介"></a>HTTP协议简介</h4><p>HTTP，超文本传输协议（HyperText Transfer Protocol)是互联网上应用最为广泛的 一种网络协议。所有的WWW文件都必须遵守这个标准。设计HTTP最初的目的是为了提供一种发布和接收HTML页面的方法，HTTP是万维网的数据通信的基础。<strong>现在应用最广泛的是HTTP1.1版本</strong></p>
-<h4 id="HTTP工作流程"><a href="#HTTP工作流程" class="headerlink" title="HTTP工作流程"></a>HTTP工作流程</h4><p>HTTP是一个客户端终端（用户）和服务器端（网站）请求和应答的标准（TCP）。通过使用网页浏览器、网络爬虫或者其它的工具，客户端发起一个HTTP请求到服务器上指定端口（默认端口为80）。我们称这个客户端为用户代理程序（user agent）。应答的服务器上存储着一些资源，比如HTML文件和图像。我们称这个应答服务器为源服务器（origin server）。在用户代理和源服务器中间可能存在多个“中间层”，比如代理服务器、网关或者隧道（tunnel）。</p>
-        
-          <!---<a class="article-more-a" href="/2019/09/24/书/Django/第一讲——Django知识带入/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/24/书/Django/第一讲——Django知识带入/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-爬虫/第九讲——scrapy爬虫框架之请求传参" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/23/爬虫/第九讲——scrapy爬虫框架之请求传参/">第九讲——scrapy爬虫框架之请求传参</a>
-    </h1>
-  
-
-			
-			<a href="/2019/09/23/爬虫/第九讲——scrapy爬虫框架之请求传参/" class="archive-article-date">
-  	<time datetime="2019-09-23T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-23</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">664 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ul>
-<li>在某些情况下，我们爬取的数据不在同一个页面中，例如，我们爬取一个电影网站，电影的名称，评分在一级页面，而要爬取的其他电影详情在其二级子页面中。这时我们就需要用到请求传参。</li>
-<li>请求传参的使用场景<ul>
-<li>当我们使用爬虫爬取的数据没有存在于同一张页面的时候，则必须使用请求传参</li>
-</ul>
-</li>
-<li>需求：爬取boos的岗位名称，岗位描述</li>
-</ul>
-        
-          <!---<a class="article-more-a" href="/2019/09/23/爬虫/第九讲——scrapy爬虫框架之请求传参/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/23/爬虫/第九讲——scrapy爬虫框架之请求传参/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-爬虫/第八讲——scrapy爬虫框架之全站数据爬去" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/22/爬虫/第八讲——scrapy爬虫框架之全站数据爬去/">第八讲——scrapy爬虫框架之全站数据爬去</a>
-    </h1>
-  
-
-			
-			<a href="/2019/09/22/爬虫/第八讲——scrapy爬虫框架之全站数据爬去/" class="archive-article-date">
-  	<time datetime="2019-09-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-22</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">832 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="文件目录结构"><a href="#文件目录结构" class="headerlink" title="文件目录结构"></a>文件目录结构</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">|-firstBlood <span class="comment"># #我们创建的爬虫工程的名称 scrapy startproject firstBlood(工程名)</span></span><br><span class="line">----|-firstBlood <span class="comment">#和项目同名目录，自动创建的</span></span><br><span class="line">--------|-__init__.py</span><br><span class="line">--------|-spiders <span class="comment">#工程创建好之后，cd到该目录下</span></span><br><span class="line">------------|-first.py <span class="comment">#创建爬虫文件 scapy genspider first(文件名) www.xxx.com(别问，就这样写)</span></span><br><span class="line">--------|-items.py  <span class="comment">#下面都是自动创建的，都是我们的功能文件</span></span><br><span class="line">--------|-middlewares.py</span><br><span class="line">--------|-pipelines.py</span><br><span class="line">--------|-settings.py</span><br><span class="line">----|-scrapy.cfg</span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2019/09/22/爬虫/第八讲——scrapy爬虫框架之全站数据爬去/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/22/爬虫/第八讲——scrapy爬虫框架之全站数据爬去/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/前端/第六讲——前端拓展一：css之before和after的实际用例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/21/书/前端/第六讲——前端拓展一：css之before和after的实际用例/">前端拓展一：css之::before和::after的实际用例</a>
-    </h1>
-  
-
-			
-			<a href="/2019/09/21/书/前端/第六讲——前端拓展一：css之before和after的实际用例/" class="archive-article-date">
-  	<time datetime="2019-09-21T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">9min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>以下例子多数是在特定平台上使用过的，未做兼容处理，建议在chrome下浏览</p>
-<h3 id="1-间隔符用法"><a href="#1-间隔符用法" class="headerlink" title="1.间隔符用法"></a>1.间隔符用法</h3><p>如文章最开始的例子，使用::after伪元素做间隔符，并使用伪类:not排除掉最后一个元素。</p>
-<p>效果：<a href="http://htmlpreview.github.io/?https://github.com/laden666666/css-before-and-after-test/blob/master/example1.html" target="_blank" rel="noopener">http://htmlpreview.github.io/?https://github.com/laden666666/css-before-and-after-test/blob/master/example1.html</a></p>
-<h3 id="2-做border三角图标"><a href="#2-做border三角图标" class="headerlink" title="2.做border三角图标"></a>2.做border三角图标</h3><p>很多开发者都用过border做的三角图标，本身三角符号就不属于文档，使用伪元素做三角符最合适了。</p>
-<p>效果：<a href="http://htmlpreview.github.io/?https://github.com/laden666666/css-before-and-after-test/blob/master/example2.html" target="_blank" rel="noopener">http://htmlpreview.github.io/?https://github.com/laden666666/css-before-and-after-test/blob/master/example2.html</a></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        p&#123;</span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 50px;</span><br><span class="line">            line-height: 50px;</span><br><span class="line">            background: red;</span><br><span class="line">        &#125;</span><br><span class="line">        p::before&#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            border: 5px solid transparent;</span><br><span class="line">            border-right-color: red;</span><br><span class="line">            content: "";</span><br><span class="line">            position: relative;</span><br><span class="line">            left: -10px;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2019/09/21/书/前端/第六讲——前端拓展一：css之before和after的实际用例/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/21/书/前端/第六讲——前端拓展一：css之before和after的实际用例/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-爬虫/第六讲——Scrapy爬虫框架初始" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/20/爬虫/第六讲——Scrapy爬虫框架初始/">第六讲——Scrapy爬虫框架初始</a>
-    </h1>
-  
-
-			
-			<a href="/2019/09/20/爬虫/第六讲——Scrapy爬虫框架初始/" class="archive-article-date">
-  	<time datetime="2019-09-20T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">786 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h5><ul>
-<li>什么是框架？<ul>
-<li>所谓的框架简单通用解释就是就是一个具有很强通用性并且集成了很多功能的项目模板，该模板可被应用在不同的项目需求中。也可被视为是一个项目的半成品。</li>
-</ul>
-</li>
-<li>如何学习框架？<ul>
-<li>对于刚接触编程或者初级程序员来讲，对于一个新的框架，只需要掌握该框架的作用及其各个功能的使用和应用即可，对于框架的底层实现和原理，在逐步进阶的过程中在慢慢深入即可。</li>
-</ul>
-</li>
-<li>什么是scrapy？<ul>
-<li>Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架，非常出名，非常强悍。其内部已经被集成了各种功能（高性能异步下载，队列，分布式，解析，持久化等）。对于框架的学习，重点是要学习其框架的特性、各个功能的用法即可。</li>
-</ul>
-</li>
-</ul>
-        
-          <!---<a class="article-more-a" href="/2019/09/20/爬虫/第六讲——Scrapy爬虫框架初始/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/20/爬虫/第六讲——Scrapy爬虫框架初始/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/前端/第五讲——前端之框架Bootstrap" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/20/书/前端/第五讲——前端之框架Bootstrap/">第五讲——前端框架Bootstrap</a>
-    </h1>
-  
-
-			
-			<a href="/2019/09/20/书/前端/第五讲——前端之框架Bootstrap/" class="archive-article-date">
-  	<time datetime="2019-09-20T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">729 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h3><p>所有的关于Bootstrap：<a href="https://v3.bootcss.com/" target="_blank" rel="noopener">https://v3.bootcss.com/</a></p>
-<p><strong>介绍</strong>：</p>
-<ul>
-<li>Bootstrap是Twitter开源的基于HTML、CSS、JavaScript的前端框架。</li>
-<li>它是为实现快速开发Web应用程序而设计的一套前端工具包。</li>
-<li>它支持响应式布局，并且在V3版本之后坚持移动设备优先。</li>
-<li>就是复制黏贴一把梭，html\css\js代码的封装组合</li>
-</ul>
-<p>注意：记住bootstrap的导入是基于jQuery的，所以引入之前必须先引入jq。</p>
-        
-          <!---<a class="article-more-a" href="/2019/09/20/书/前端/第五讲——前端之框架Bootstrap/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/20/书/前端/第五讲——前端之框架Bootstrap/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-爬虫/第七讲——scrapy爬虫框架之数据持久化储存" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/19/爬虫/第七讲——scrapy爬虫框架之数据持久化储存/">第七讲——scrapy爬虫框架之数据持久化储存</a>
-    </h1>
-  
-
-			
-			<a href="/2019/09/19/爬虫/第七讲——scrapy爬虫框架之数据持久化储存/" class="archive-article-date">
-  	<time datetime="2019-09-19T14:21:10.201Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.6k 字</span>
+        <span class="post-count">1.5k 字</span>
       </span>
     </span>
 
@@ -1259,9 +282,21 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="文件目录结构"><a href="#文件目录结构" class="headerlink" title="文件目录结构"></a>文件目录结构</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">|-firstBlood <span class="comment"># #我们创建的爬虫工程的名称 scrapy startproject firstBlood(工程名)</span></span><br><span class="line">----|-firstBlood <span class="comment">#和项目同名目录，自动创建的</span></span><br><span class="line">--------|-__init__.py</span><br><span class="line">--------|-spiders <span class="comment">#工程创建好之后，cd到该目录下</span></span><br><span class="line">------------|-first.py <span class="comment">#创建爬虫文件 scapy genspider first(文件名) www.xxx.com(别问，就这样写)</span></span><br><span class="line">--------|-items.py  <span class="comment">#下面都是自动创建的，都是我们的功能文件</span></span><br><span class="line">--------|-middlewares.py</span><br><span class="line">--------|-pipelines.py</span><br><span class="line">--------|-settings.py</span><br><span class="line">----|-scrapy.cfg</span><br></pre></td></tr></table></figure>
+        <p>导读：日志在我们日后的开发中是非常有用的一个工具，本文的内容将讲解3个日志版本，由浅入深的带领大家学习。当然在实际的开发中进阶版日志是最有用的也是最常用的。</p>
+<h3 id="学习大纲："><a href="#学习大纲：" class="headerlink" title="学习大纲："></a>学习大纲：</h3><ul>
+<li><p>日志的分类</p>
+</li>
+<li><p>日志的级别</p>
+</li>
+<li><p>阉割版日志</p>
+</li>
+<li><p>简单版日志</p>
+</li>
+<li><p>进阶版日志</p>
+</li>
+</ul>
         
-          <!---<a class="article-more-a" href="/2019/09/19/爬虫/第七讲——scrapy爬虫框架之数据持久化储存/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/07/30/部分详讲/python之日志详讲/#more">more >></a>--->
         
       
 	  
@@ -1282,7 +317,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">python部分内容详讲</a>
         		</li>
       		
 		</ul>
@@ -1292,7 +327,965 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/19/爬虫/第七讲——scrapy爬虫框架之数据持久化储存/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/07/30/部分详讲/python之日志详讲/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-部分详讲/python常用的内置函数之方法大全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/20/部分详讲/python常用的内置函数之方法大全/">python常用的内置函数之方法大全</a>
+    </h1>
+  
+
+			
+			<a href="/2019/07/20/部分详讲/python常用的内置函数之方法大全/" class="archive-article-date">
+  	<time datetime="2019-07-20T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-20</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">5.8k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">24min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>导读：写这篇文章的目的一个是为了以后使用模块的时候方便去查询它的方法;也是为了记录一些不常用的方法，但是在特定的工作中的时候有些不常用的方法能发挥很大的作用。</p>
+<h3 id="内容大纲"><a href="#内容大纲" class="headerlink" title="内容大纲"></a>内容大纲</h3><ul>
+<li>time 和datetime</li>
+<li>random</li>
+<li>json 和pickle</li>
+<li>os</li>
+<li>sys</li>
+<li>hashlib</li>
+<li>collections</li>
+</ul>
+        
+          <!---<a class="article-more-a" href="/2019/07/20/部分详讲/python常用的内置函数之方法大全/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">python部分内容详讲</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/20/部分详讲/python常用的内置函数之方法大全/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/Django/第二十讲——Django综合扩展十之跨域和CORS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/22/书/Django/第二十讲——Django综合扩展十之跨域和CORS/">第二十讲——Django综合扩展十之跨域和CORS</a>
+    </h1>
+  
+
+			
+			<a href="/2018/10/22/书/Django/第二十讲——Django综合扩展十之跨域和CORS/" class="archive-article-date">
+  	<time datetime="2018-10-22T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-22</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">1.5k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">5min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><p>同源策略（Same origin policy）是一种约定，<strong>它是浏览器最核心也最基本的安全功能</strong>，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。可以说Web是构建在同源策略基础之上的，浏览器只是针对同源策略的一种实现。　　　</p>
+<p>同源策略，它是由Netscape提出的一个著名的安全策略。现在所有支持JavaScript 的浏览器都会使用这个策略。<strong>所谓同源是指，域名，协议，端口相同。</strong>当一个浏览器的两个tab页中分别打开来 百度和谷歌的页面当浏览器的百度tab页执行一个脚本的时候会检查这个脚本是属于哪个页面的，即检查是否同源，只有和百度同源的脚本才会被执行。如果非同源，那么在请求数据时，浏览器会在控制台中报一个异常，提示拒绝访问。</p>
+<p><strong>使用自己的或表述就是：我现在有两个项目，其中一个项目的地址是127.0.0.1:8000,另一个项目的地址是127.0.0.1:8001。很明显，这两个项目的port是不一样的，所以他们就不是同源的。现在我们8000下面有一个函数想去取8001下面的数据，这就产生了跨域，这样留啦你就会把消息拦截下来，并返回不同源错误信息。</strong></p>
+<p>现在我们有这样一个需求，a和b是不同源的两个项目，但是他们是有相互关系的项目，我们就是想跨域交互数据，怎么办？？？下面的CORS就给出了解决办法</p>
+<h3 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h3><p>CORS需要浏览器和服务器同时支持。目前，所有的浏览器都支持这个功能。注意：整个CORS通信过程，都是浏览器自动完成，不需要用户参与。<strong>对于开发者来说，CORS通信与同源的AJAX通信没有差别，代码完全一样。浏览器一旦发现AJAX请求跨源，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。</strong></p>
+<p>浏览器将CORS请求分为两类：<strong>简单请求</strong>和<strong>非简单请求</strong></p>
+<h4 id="简单请求"><a href="#简单请求" class="headerlink" title="简单请求"></a>简单请求</h4><p>只要同时满足以下两大条件，就属于<strong>简单请求</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">（1） 请求方法是以下三种方法之一：（也就是说如果你的请求方法是什么put、delete等肯定是非简单请求）</span><br><span class="line">HEAD</span><br><span class="line">GET</span><br><span class="line">POST</span><br><span class="line">（2）HTTP的头信息不超出以下几种字段：（如果比这些请求头多，那么一定是非简单请求）</span><br><span class="line">Accept</span><br><span class="line">Accept-Language</span><br><span class="line">Content-Language</span><br><span class="line">Last-Event-ID</span><br><span class="line">Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain，也就是说，如果你发送的application/json格式的数据，那么肯定是非简单请求，vue的axios默认的请求体信息格式是json的，ajax默认是urlencoded的。</span><br></pre></td></tr></table></figure>
+
+<h4 id="非简单请求"><a href="#非简单请求" class="headerlink" title="非简单请求"></a>非简单请求</h4><p>凡是不同时满足上面两个条件，就属于<strong>非简单请求</strong></p>
+<p>实例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>s1的首页<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span>Ajax请求<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/jquery/3.4.0/jquery.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">    $('#btn').click(function () &#123;</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            url:'http://127.0.0.1:8001/books/',</span><br><span class="line">            type:'post',</span><br><span class="line">            contentType:'application/json',//非简单请求，会报错：Request header field content-type is not allowed by Access-Control-Allow-Headers in preflight response.</span><br><span class="line">            data:JSON.stringify(&#123;</span><br><span class="line">               a:'1'</span><br><span class="line">            &#125;),</span><br><span class="line">            success:function (response) &#123;</span><br><span class="line">                console.log(response);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="简单请求和非简单请求的区别"><a href="#简单请求和非简单请求的区别" class="headerlink" title="简单请求和非简单请求的区别"></a>简单请求和非简单请求的区别</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">简单请求：一次请求</span><br><span class="line">非简单请求：两次请求，在发送数据之前会先发一次请求用于做“预检”，只有“预检”通过后才再发送一次请求用于数据传输。</span><br><span class="line"></span><br><span class="line">关于“预检”</span><br><span class="line">- 请求方式：OPTIONS</span><br><span class="line">- “预检”其实做检查，检查如果通过则允许传输数据，检查不通过则不再发送真正想要发送的消息</span><br><span class="line">- 如何“预检”</span><br><span class="line">     =&gt; 如果复杂请求是PUT等请求，则服务端需要设置允许某请求，否则“预检”不通过</span><br><span class="line">        Access-Control-Request-Method</span><br><span class="line">     =&gt; 如果复杂请求设置了请求头，则服务端需要设置允许某请求头，否则“预检”不通过</span><br><span class="line">        Access-Control-Request-Headers</span><br></pre></td></tr></table></figure>
+
+<h4 id="服务器怎么处理"><a href="#服务器怎么处理" class="headerlink" title="服务器怎么处理"></a>服务器怎么处理</h4><p>在我们额views.py下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> JsonResponse</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">books</span><span class="params">(request)</span>:</span></span><br><span class="line">    obj = JsonResponse([<span class="string">'西游记2'</span>,<span class="string">'三国演义2'</span>,<span class="string">'水浒传2'</span>],safe=<span class="literal">False</span>)</span><br><span class="line">    <span class="comment">#支持简单请求</span></span><br><span class="line">    <span class="comment"># obj["Access-Control-Allow-Origin"] = "*"    #支持所有的ip访问</span></span><br><span class="line">    obj[<span class="string">"Access-Control-Allow-Origin"</span>] = <span class="string">"http://127.0.0.1:8000"</span></span><br><span class="line">    <span class="comment">#处理预检的options请求，这个预检的响应，我们需要在响应头里面加上下面的内容</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">#支持非简单请求</span></span><br><span class="line">    <span class="keyword">if</span> request.method == <span class="string">'OPTIONS'</span>:</span><br><span class="line">        obj[<span class="string">'Access-Control-Allow-Headers'</span>] = <span class="string">"content-type"</span> <span class="comment">#"Content-Type",首字母小写也行。这个content-type的意思是，什么样的请求体类型数据都可以，我们前面说了content-type等于application/json时，是复杂请求，复杂请求先进行预检，预检的响应中我们加上这个，就是告诉浏览器，不要拦截</span></span><br><span class="line">        obj[<span class="string">'Access-Control-Allow-Methods'</span>] = <span class="string">"DELETE,PUT"</span>  <span class="comment">#通过预检的请求方法设置</span></span><br><span class="line">    <span class="keyword">return</span> obj</span><br></pre></td></tr></table></figure>
+
+<p><strong>小结</strong></p>
+<p>支持跨域，简单请求（一步操作）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">服务器设置响应头：Access-Control-Allow-Origin = '域名' 或 '*'</span><br></pre></td></tr></table></figure>
+
+<p>支持跨域，非简单请求（两步操作）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">由于复杂请求时，首先会发送“预检”请求，如果“预检”成功，则发送真实数据。</span><br><span class="line">	--　“预检”请求时，允许请求方式则需服务器设置响应头：Access-Control-Request-Method</span><br><span class="line">	--“预检”请求时，允许请求头则需服务器设置响应头：Access-Control-Request-Headers</span><br></pre></td></tr></table></figure>
+
+<p>说白了，就是请求的时候，浏览器报错，显示什么错误我们就去在后台返回的时候加上什么样的消息，告诉浏览器，我让这条消息跨域。</p>
+
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/22/书/Django/第二十讲——Django综合扩展十之跨域和CORS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/Django/第十九讲——django综合扩展九之Django部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/21/书/Django/第十九讲——django综合扩展九之Django部署/">第十九讲——django综合扩展九之Django部署</a>
+    </h1>
+  
+
+			
+			<a href="/2018/10/21/书/Django/第十九讲——django综合扩展九之Django部署/" class="archive-article-date">
+  	<time datetime="2018-10-21T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-21</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">152 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="国际化与本地化"><a href="#国际化与本地化" class="headerlink" title="国际化与本地化"></a>国际化与本地化</h3><p>所谓的国际化，是指使用不同语言的用户在访问同一个网站页面时能够看到符合其自身语言的文本页面。</p>
+<p>用到时再去扩展：<a href="http://www.liujiangblog.com/course/django/180" target="_blank" rel="noopener">http://www.liujiangblog.com/course/django/180</a></p>
+<h3 id="部署Django"><a href="#部署Django" class="headerlink" title="部署Django"></a>部署Django</h3><p>关于django的部署的方式有很多，这些内容，我在另外 的一篇blog里面详细的做了讲解。</p>
+<p>外链：<a href="https://chpl.top/2018/10/07/Django%E7%9B%B8%E5%85%B3/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" target="_blank" rel="noopener">https://chpl.top/2018/10/07/Django%E7%9B%B8%E5%85%B3/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/</a></p>
+<h3 id="深入扩展Django"><a href="#深入扩展Django" class="headerlink" title="深入扩展Django"></a>深入扩展Django</h3><p>链接：<a href="https://code.ziqiangxuetang.com/django/django-deploy-base.html" target="_blank" rel="noopener">https://code.ziqiangxuetang.com/django/django-deploy-base.html</a></p>
+
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/21/书/Django/第十九讲——django综合扩展九之Django部署/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/20/书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统/">第十八讲——django综合扩展八之Django缓存与自带认证系统讲</a>
+    </h1>
+  
+
+			
+			<a href="/2018/10/20/书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统/" class="archive-article-date">
+  	<time datetime="2018-10-20T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-20</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2.4k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">9min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Dajngo与缓存"><a href="#Dajngo与缓存" class="headerlink" title="Dajngo与缓存"></a>Dajngo与缓存</h2><p>我们都知道Django建立的是动态网站，正常情况下，每次请求过来都经历了这样一个过程：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">收请求 -&gt; url路由 -&gt; 视图处理 -&gt; 数据库读写 -&gt; 视图处理 -&gt; 模版渲染 -&gt; 返回请求</span><br></pre></td></tr></table></figure>
+
+<p><strong>设想这么个场景，一个用户或者大量用户都对某个页面非常感兴趣，出现了大量实质相同的请求，如果每次请求都采取上面的流程，将出现大量的重复工作，尤其是大量无谓的数据库读写。</strong></p>
+        
+          <!---<a class="article-more-a" href="/2018/10/20/书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/20/书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/Django/第十七讲——django综合扩展七之发送邮件与日志记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/19/书/Django/第十七讲——django综合扩展七之发送邮件与日志记录/">第十七讲——django综合扩展七之发送邮件与日志记录</a>
+    </h1>
+  
+
+			
+			<a href="/2018/10/19/书/Django/第十七讲——django综合扩展七之发送邮件与日志记录/" class="archive-article-date">
+  	<time datetime="2018-10-19T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-19</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">1.8k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">7min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="发送邮件"><a href="#发送邮件" class="headerlink" title="发送邮件"></a>发送邮件</h2><p>在Python中已经内置了一个smtp邮件发送模块，Django在此基础上进行了简单地封装，让我们在Django环境中可以更方便更灵活的发送邮件。</p>
+<p>所有的功能都在django.core.mail中。</p>
+<h3 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h3><p>两行就可以搞定一封邮件：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.core.mail <span class="keyword">import</span> send_mail</span><br><span class="line"></span><br><span class="line">send_mail(</span><br><span class="line">    <span class="string">'Subject here'</span>,</span><br><span class="line">    <span class="string">'Here is the message.'</span>,</span><br><span class="line">    <span class="string">'from@example.com'</span>,</span><br><span class="line">    [<span class="string">'to@example.com'</span>],</span><br><span class="line">    fail_silently=<span class="literal">False</span>,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>导入功能模块，然后发送邮件，so easy！</p>
+<p>默认情况下，使用配置文件中的<code>EMAIL_HOST</code>和<code>EMAIL_PORT</code>设置SMTP服务器主机和端口，<code>EMAIL_HOST_USER</code>和<code>EMAIL_HOST_PASSWORD</code>是用户名和密码。如果设置了<code>EMAIL_USE_TLS</code>和<code>EMAIL_USE_SSL</code>，它们将控制是否使用相应的加密链接。</p>
+        
+          <!---<a class="article-more-a" href="/2018/10/19/书/Django/第十七讲——django综合扩展七之发送邮件与日志记录/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/19/书/Django/第十七讲——django综合扩展七之发送邮件与日志记录/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/18/书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容/">第十六讲——django综合扩展六之分页Paginator和聚合内容</a>
+    </h1>
+  
+
+			
+			<a href="/2018/10/18/书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容/" class="archive-article-date">
+  	<time datetime="2018-10-18T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-18</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">8min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="分页Paginator"><a href="#分页Paginator" class="headerlink" title="分页Paginator"></a>分页Paginator</h2><p>分页功能是几乎所有的网站上都需要提供的功能，当你要展示的条目比较多时，必须进行分页，不但能减小数据库读取数据压力，也有利于用户浏览。</p>
+<p>Django又很贴心的为我们提供了一个Paginator分页工具，但是不幸的是，这个工具功能差了点，不好添加CSS样式，所以前端的展示效果比较丑。如果你能力够，自己编写一个分页器，然后提交给Django官方吧，争取替代掉这个当前的分页器，我看好你哦！</p>
+<p>但不管怎么样，当前的Paginator分页器，还是值得学一下用一下的。</p>
+        
+          <!---<a class="article-more-a" href="/2018/10/18/书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/18/书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/17/书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)/">第十五讲——django综合扩展五之序列化和消息框架(模板)</a>
+    </h1>
+  
+
+			
+			<a href="/2018/10/17/书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)/" class="archive-article-date">
+  	<time datetime="2018-10-17T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-17</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2.7k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">11min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="序列化serializers"><a href="#序列化serializers" class="headerlink" title="序列化serializers"></a>序列化serializers</h3><p>Django的序列化工具让你可以将Django的模型‘翻译’成其它格式的数据。通常情况下，这种其它格式的数据是基于文本的，并且用于数据交换\传输过程。</p>
+        
+          <!---<a class="article-more-a" href="/2018/10/17/书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/17/书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/">第十四讲——django综合扩展四之网站地图sitemap和信号signal</a>
+    </h1>
+  
+
+			
+			<a href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/" class="archive-article-date">
+  	<time datetime="2018-10-16T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2.3k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">9min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="网站地图sitemap"><a href="#网站地图sitemap" class="headerlink" title="网站地图sitemap"></a>网站地图sitemap</h3><p>网站地图是根据网站的结构、框架、内容，生成的导航网页，是一个网站所有链接的容器。很多网站的连接层次比较深，蜘蛛很难抓取到，网站地图可以方便搜索引擎或者网络蜘蛛抓取网站页面，了解网站的架构，为网络蜘蛛指路，增加网站内容页面的收录概率。网站地图一般存放在域名根目录下并命名为sitemap。</p>
+<p>Django自带了一个高级的生成网站地图的框架，我们可以很容易地创建出XML格式的网站地图。创建网站地图，只需编写一个Sitemap类，并在URLconf中编写对应的访问路由。</p>
+        
+          <!---<a class="article-more-a" href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/">展开全文 >></a>
         </p>
       
 
