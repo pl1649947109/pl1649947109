@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
-      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2018/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
+      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2018/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/2018/12/02/email/" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
@@ -85,7 +85,7 @@ var _hmt = _hmt || [];
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="mail" target="_blank" href="/2018/12/02/email/" title="mail"><i class="icon-mail"></i></a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
@@ -118,6 +118,121 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/">第十四讲——django综合扩展四之网站地图sitemap和信号signal</a>
+    </h1>
+  
+
+			
+			<a href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/" class="archive-article-date">
+  	<time datetime="2018-10-16T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2.3k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">9min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="网站地图sitemap"><a href="#网站地图sitemap" class="headerlink" title="网站地图sitemap"></a>网站地图sitemap</h3><p>网站地图是根据网站的结构、框架、内容，生成的导航网页，是一个网站所有链接的容器。很多网站的连接层次比较深，蜘蛛很难抓取到，网站地图可以方便搜索引擎或者网络蜘蛛抓取网站页面，了解网站的架构，为网络蜘蛛指路，增加网站内容页面的收录概率。网站地图一般存放在域名根目录下并命名为sitemap。</p>
+<p>Django自带了一个高级的生成网站地图的框架，我们可以很容易地创建出XML格式的网站地图。创建网站地图，只需编写一个Sitemap类，并在URLconf中编写对应的访问路由。</p>
+        
+          <!---<a class="article-more-a" href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
   
     <article id="post-书/Django/第十三讲——django综合扩展三之Django-admin和manage.py" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -1210,120 +1325,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-爬虫/第十三讲——scrapy爬虫框架之分布式爬虫" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/27/爬虫/第十三讲——scrapy爬虫框架之分布式爬虫/">第十三讲——scrapy爬虫框架之分布式爬虫</a>
-    </h1>
-  
-
-			
-			<a href="/2018/09/27/爬虫/第十三讲——scrapy爬虫框架之分布式爬虫/" class="archive-article-date">
-  	<time datetime="2018-09-27T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-27</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">728 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#分布式爬虫</span></span><br><span class="line">    --概念：我们需要搭建一个分布式的机群，让其对一组资源分布联合爬取</span><br><span class="line">    --作用：提升爬去数据的效率</span><br><span class="line">    -如何实现分布式？</span><br><span class="line">        --安装一个scrapy-redis的组件，pip下载</span><br><span class="line">        --原生的scrapy是不可以实现分布式爬虫的，必须要让scrapy结合组件一起实现分布式爬虫</span><br><span class="line">        -为什么原生的scrapy不可以实现分布式？</span><br><span class="line">            --调度器不可以被分布式机群共享</span><br><span class="line">            --管道不可以被分布式机群共享</span><br><span class="line">        -scrapy-redis组件的作用：</span><br><span class="line">            --可以给原生scrapy框架提供被共享的管道和调度器</span><br><span class="line">        重要：</span><br><span class="line">        实现流程：</span><br><span class="line">            -创建工程</span><br><span class="line">            -创建一个基于CrawlSpider的爬虫文件</span><br><span class="line">            -修改当前的爬虫文件：</span><br><span class="line">                --导包：<span class="keyword">from</span> scrapy_redis.spiders <span class="keyword">import</span> ResidCrawlSpider</span><br><span class="line">                --将start_urls和allow_domains进行注释</span><br><span class="line">                --添加一个新的属性：redis_key = <span class="string">'sun'</span>,表示可以被共享的调度器队列的名称</span><br><span class="line">                --编写数据解析相关的操作</span><br><span class="line">                --将当前爬虫类的父类修改程RedisCrawlSpiders</span><br><span class="line">            -修改配置文件settings</span><br><span class="line">                --指定使用可以被共享的管道：</span><br><span class="line">                    ITEM_PIPELINES =&#123;                    <span class="string">'scrapy_redis.pipelines.RedisPipeline'</span>: <span class="number">400</span>,</span><br><span class="line">                          &#125;</span><br><span class="line">                --指定调度器：</span><br><span class="line">                --指定redis服务器</span><br><span class="line">            -redis相关的操作配置</span><br><span class="line">                --打开配置文件redis.conf</span><br><span class="line">                    --将bind <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>进行删除</span><br><span class="line">                    --关闭保护模式：protected-mode yes改为no</span><br><span class="line">                --结合着配置文件卡其redis服务</span><br><span class="line">                    --redis.server.exe</span><br><span class="line">                --启动客户端</span><br><span class="line">                    --redis.cli.exe</span><br><span class="line">            --执行工程：</span><br><span class="line">                --scrapy runspider xxx.py</span><br><span class="line">            --向调度器的队列中放入一个起始的url</span><br><span class="line">                -调度器的队列在redis的客户端中</span><br><span class="line">                    --执行lpush xxx(这里的key是sun) 起始url</span><br><span class="line">            --最终爬取到的数据存储在了redis的proName：items这个数据结构中</span><br><span class="line"><span class="comment">#增量式爬虫（比较小众）</span></span><br><span class="line">    --概念：检测网站数据的更新的情况，只会爬取网站最新更新出来的数据</span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2018/09/27/爬虫/第十三讲——scrapy爬虫框架之分布式爬虫/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/27/爬虫/第十三讲——scrapy爬虫框架之分布式爬虫/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
@@ -1435,11 +1436,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
+                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
+                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1495,11 +1496,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">

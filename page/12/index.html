@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
-      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2018/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
+      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2018/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/2018/12/02/email/" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
@@ -85,7 +85,7 @@ var _hmt = _hmt || [];
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="mail" target="_blank" href="/2018/12/02/email/" title="mail"><i class="icon-mail"></i></a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
@@ -118,6 +118,125 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-书/前端/第六讲——前端拓展一：css之before和after的实际用例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/21/书/前端/第六讲——前端拓展一：css之before和after的实际用例/">前端拓展一：css之::before和::after的实际用例</a>
+    </h1>
+  
+
+			
+			<a href="/2018/09/21/书/前端/第六讲——前端拓展一：css之before和after的实际用例/" class="archive-article-date">
+  	<time datetime="2018-09-21T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-21</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">9min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>以下例子多数是在特定平台上使用过的，未做兼容处理，建议在chrome下浏览</p>
+<h3 id="1-间隔符用法"><a href="#1-间隔符用法" class="headerlink" title="1.间隔符用法"></a>1.间隔符用法</h3><p>如文章最开始的例子，使用::after伪元素做间隔符，并使用伪类:not排除掉最后一个元素。</p>
+<p>效果：<a href="http://htmlpreview.github.io/?https://github.com/laden666666/css-before-and-after-test/blob/master/example1.html" target="_blank" rel="noopener">http://htmlpreview.github.io/?https://github.com/laden666666/css-before-and-after-test/blob/master/example1.html</a></p>
+<h3 id="2-做border三角图标"><a href="#2-做border三角图标" class="headerlink" title="2.做border三角图标"></a>2.做border三角图标</h3><p>很多开发者都用过border做的三角图标，本身三角符号就不属于文档，使用伪元素做三角符最合适了。</p>
+<p>效果：<a href="http://htmlpreview.github.io/?https://github.com/laden666666/css-before-and-after-test/blob/master/example2.html" target="_blank" rel="noopener">http://htmlpreview.github.io/?https://github.com/laden666666/css-before-and-after-test/blob/master/example2.html</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        p&#123;</span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 50px;</span><br><span class="line">            line-height: 50px;</span><br><span class="line">            background: red;</span><br><span class="line">        &#125;</span><br><span class="line">        p::before&#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            border: 5px solid transparent;</span><br><span class="line">            border-right-color: red;</span><br><span class="line">            content: "";</span><br><span class="line">            position: relative;</span><br><span class="line">            left: -10px;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2018/09/21/书/前端/第六讲——前端拓展一：css之before和after的实际用例/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/21/书/前端/第六讲——前端拓展一：css之before和after的实际用例/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
   
     <article id="post-爬虫/第六讲——Scrapy爬虫框架初始" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -1235,128 +1354,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/前端/第二讲——前端之CSS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/10/书/前端/第二讲——前端之CSS/">第二讲——前端之CSS</a>
-    </h1>
-  
-
-			
-			<a href="/2018/09/10/书/前端/第二讲——前端之CSS/" class="archive-article-date">
-  	<time datetime="2018-09-10T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-10</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">4.7k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">19min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>css快速查找</strong>：<a href="http://css.cuishifeng.cn/" target="_blank" rel="noopener">http://css.cuishifeng.cn/</a></p>
-<p><strong>CSS手册</strong>：<a href="https://www.runoob.com/cssref/css-reference.html" target="_blank" rel="noopener">https://www.runoob.com/cssref/css-reference.html</a></p>
-<p><strong>包含所有的css的实例代码</strong>：<a href="https://www.runoob.com/css/css-examples.html" target="_blank" rel="noopener">https://www.runoob.com/css/css-examples.html</a></p>
-<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><strong>CSS（层叠样式表）</strong>:定义如何显示HTML元素，给HML设置样式，让它更加美观。当浏览器读到一个样式表，它会按照这个样式表来对文档进行格式化（就是我们常说的渲染）</p>
-<p><strong>CSS的组成</strong>：选择器+声明（属性+属性值）</p>
-<p><strong>语法结构</strong>：</p>
-<p><img src="http://9017499461.linshutu.top/%E5%89%8D%E7%AB%AFcss%E6%A0%BC%E5%BC%8F.png" alt></p>
-<p><strong>注释</strong>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/*没错，我就是注释*/</span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2018/09/10/书/前端/第二讲——前端之CSS/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/10/书/前端/第二讲——前端之CSS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
@@ -1468,11 +1465,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
+                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
+                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1528,11 +1525,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
-      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2018/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
+      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<p class="header-subtitle">我虽为兵卒,可谁又见我后退一步</p>				<nav class="header-menu">			<ul>							<li><a href="/2018/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="mail" target="_blank" href="/2018/12/02/email/" title="mail"><i class="icon-mail"></i></a>		        					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
@@ -85,7 +85,7 @@ var _hmt = _hmt || [];
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="mail" target="_blank" href="/1649947109@qq.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="mail" target="_blank" href="/2018/12/02/email/" title="mail"><i class="icon-mail"></i></a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
@@ -118,6 +118,373 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-第三方模块/mutiprocessing——进程模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">mutiprocessing——多进程管理包</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/22/第三方模块/mutiprocessing——进程模块/" class="archive-article-date">
+  	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">523 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>multiprocessing支持子进程、通信和数据共享、执行不同形式的同步。提供了<strong>Process、Queue、Pipe、Lock</strong>等组件</p>
+<h3 id="Process类"><a href="#Process类" class="headerlink" title="Process类"></a>Process类</h3><p>构造方法：</p>
+<p><strong>init</strong>(self, group=None, target=None, name=None, args=(), kwargs={})</p>
+<p><strong>参数说明</strong></p>
+<p>group：扩展参数</p>
+<p>target：表示调用对象任务。</p>
+<p>name：给子进程取别名。</p>
+<p>args：表示条用对象的位置参数元组。</p>
+<p>kwargs：表示调用对象的字典。</p>
+        
+          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-第三方模块/requests——网络请求模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/22/第三方模块/requests——网络请求模块/">requests和Django中的request对象</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/22/第三方模块/requests——网络请求模块/" class="archive-article-date">
+  	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2.5k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">10min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Django-request对象"><a href="#Django-request对象" class="headerlink" title="Django request对象"></a>Django request对象</h3><p>介绍：服务器接收到http协议的请求之后，会根据包文创建HttpRequest对象，这个对象不需要我们创建，直接使用服务器构造好的对象就可以。视图的第一个参数必须是HttpRequest对象，再djando.http模块中定义了HttpRequest对象的API。</p>
+<h3 id="request的对象"><a href="#request的对象" class="headerlink" title="request的对象"></a>request的对象</h3><p>这个对象也就是视图的第一个参数def  func(request):</p>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a><strong>属性</strong></h4><ul>
+<li><p>path：请求页面的相对路径，但是不包括域名：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(request)</span>:</span></span><br><span class="line">	<span class="keyword">print</span> (retuest.path)</span><br><span class="line">    <span class="keyword">print</span> (request.get_ful_path())</span><br><span class="line">结果：</span><br><span class="line"><span class="string">"/music/renran/"</span>（这个路径就是文件再服务器上的地址）</span><br><span class="line"><span class="string">"music/renren?a=1&amp;b=2"</span></span><br><span class="line"></span><br><span class="line">扩展：</span><br><span class="line">获取相对路径:request.get_info</span><br><span class="line">获取全路径:request.get_ful_path()</span><br><span class="line">获取绝对url:request.build_absolute_uri()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>method:提交请求使用的HTTP方法。总是大写：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> request.method ==‘GET/POST’:</span><br><span class="line">	do_something</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>GET:一个类字典对象，包含所有的HTTP的get参数信息。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">获取get方式表单中或url提交的数据</span><br><span class="line">request.POST[<span class="string">"username"</span>]</span><br><span class="line">request.POST.get(<span class="string">"username"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#注意：虽然上面的两种方式都可以取得username的值，但是如果POST对象中没有username，那么使用request.POST["username"]就会报错，而request.POST.get("username")不会报错，而是返回一个None。</span></span><br><span class="line">其实上面的这个问题也很好解决：</span><br><span class="line">request.POST[<span class="string">"username"</span>,<span class="literal">None</span>]，加个<span class="literal">None</span>就很好的解决了</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>POST：一个类字典对象，包涵所有的HTTP的POST参数的信息（提交表单，但是可以是空，不包含文件的上传）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取post中表单键值数据</span></span><br><span class="line">request.POST  <span class="comment">#&lt;QueryDict: &#123;"username":"pl"&#125;&gt;  </span></span><br><span class="line">request.POST.dict()   <span class="comment">#&#123;"username":"pl"&#125;</span></span><br><span class="line">request.POST.get(<span class="string">"username"</span>)   <span class="comment">#"pl"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#总结：</span></span><br><span class="line">request.POST适合接收表单数据，表单数据一般比较简单，面对复杂的数据时，即使是一个简单的list接受后都会变形(元素变成字符串),处理起来不方便。</span><br><span class="line"></span><br><span class="line">request.body可以方便的提交复杂的结构化数据，特别适合RESTful的接口</span><br><span class="line"></span><br><span class="line"><span class="comment">#实例对比POST和body的数据</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"body:"</span>,request.body)</span><br><span class="line">print(request.body.decode(<span class="string">'utf-8'</span>))</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"--------------"</span>)</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"POST:"</span>,request.POST)</span><br><span class="line">print(request.POST.dict())</span><br><span class="line"><span class="comment">#结果（input的name=pl,value=pl）</span></span><br><span class="line">body: <span class="string">b'pl=pl'</span>	<span class="comment">#body的原始数据是bytes类型，所以进行json转换的时候非常的容易转换和处理</span></span><br><span class="line">pl=pl    <span class="comment">#解码之后直接就拿到了字符串数据</span></span><br><span class="line">--------------</span><br><span class="line">POST: &lt;QueryDict: &#123;<span class="string">'pl'</span>: [<span class="string">'pl'</span>]&#125;&gt;   <span class="comment">#POST拿到请求字典形式的数据，它和字典类似又不一样，获取它里面的数据的详细信息在下面的知识扩展里面</span></span><br><span class="line">&#123;<span class="string">'pl'</span>: <span class="string">'pl'</span>&#125;	<span class="comment">#这个方法就是获取它的字典属性</span></span><br><span class="line"><span class="comment">#注意：提交数据的时候，input中的name千万别忘记写了，不然是收不到数据的</span></span><br><span class="line">这里有一个建议，当你成功处理POST数据后，应当保持一个良好的习惯，始终返回一个HttpResponseRedirect。这不仅仅是对Django而言，它是一个良好的WEB开发习惯。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>COOKIES：一个标准的python字典，包涵所有的cookie(键值都是字符串)。</p>
+</li>
+</ul>
+        
+          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/requests——网络请求模块/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/22/第三方模块/requests——网络请求模块/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-第三方模块/queue——队列模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/22/第三方模块/queue——队列模块/">queue——队列模块</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/22/第三方模块/queue——队列模块/" class="archive-article-date">
+  	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">391 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>介绍：队列是线程中最常用的数据交换的形式。在python中，多个线程之间的数据是共享的，多个线程进行数据交换的时候，不能够保证数据的安全性和一致性，这个时候队列就出现了，它完美的解决了线程间数据的交换，安全和一致性的问题。</p>
+        
+          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/queue——队列模块/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/22/第三方模块/queue——队列模块/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
   
     <article id="post-第三方模块/pymysql——和数据库交互的模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -236,19 +603,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-第三方模块/queue——队列模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-第三方模块/epoll——线程相关模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/第三方模块/queue——队列模块/">queue——队列模块</a>
+      <a class="article-title" href="/2019/08/22/第三方模块/epoll——线程相关模块/">epoll——线程相关模块</a>
     </h1>
   
 
 			
-			<a href="/2019/08/22/第三方模块/queue——队列模块/" class="archive-article-date">
+			<a href="/2019/08/22/第三方模块/epoll——线程相关模块/" class="archive-article-date">
   	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
 </a>
 			
@@ -260,7 +627,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">391 字</span>
+        <span class="post-count">1.7k 字</span>
       </span>
     </span>
 
@@ -269,7 +636,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1min</span>
+        <span class="post-count">6min</span>
       </span>
     </span>
 </div>
@@ -283,9 +650,12 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <p>介绍：队列是线程中最常用的数据交换的形式。在python中，多个线程之间的数据是共享的，多个线程进行数据交换的时候，不能够保证数据的安全性和一致性，这个时候队列就出现了，它完美的解决了线程间数据的交换，安全和一致性的问题。</p>
+        <p>简介：对比select(),poll(),epoll()三个模块。他们都是IO多路复用的具体的实现。</p>
+<p><strong>Select</strong>：对多次调用不友好，内核开销大，监听连接数目有限，不是线程安全。</p>
+<p><strong>Poll</strong>：对其进行了改进，但是还有很多的问题epoll 可以说是I/O 多路复用最新的一个实现。</p>
+<p>*<em>epoll *</em>：修复了poll 和select绝大部分问题。 </p>
         
-          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/queue——队列模块/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/epoll——线程相关模块/#more">more >></a>--->
         
       
 	  
@@ -316,7 +686,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/第三方模块/queue——队列模块/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/22/第三方模块/epoll——线程相关模块/">展开全文 >></a>
         </p>
       
 
@@ -561,376 +931,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/08/22/第三方模块/threading——线程模块/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-第三方模块/requests——网络请求模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/第三方模块/requests——网络请求模块/">requests和Django中的request对象</a>
-    </h1>
-  
-
-			
-			<a href="/2019/08/22/第三方模块/requests——网络请求模块/" class="archive-article-date">
-  	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.5k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">10min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Django-request对象"><a href="#Django-request对象" class="headerlink" title="Django request对象"></a>Django request对象</h3><p>介绍：服务器接收到http协议的请求之后，会根据包文创建HttpRequest对象，这个对象不需要我们创建，直接使用服务器构造好的对象就可以。视图的第一个参数必须是HttpRequest对象，再djando.http模块中定义了HttpRequest对象的API。</p>
-<h3 id="request的对象"><a href="#request的对象" class="headerlink" title="request的对象"></a>request的对象</h3><p>这个对象也就是视图的第一个参数def  func(request):</p>
-<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a><strong>属性</strong></h4><ul>
-<li><p>path：请求页面的相对路径，但是不包括域名：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(request)</span>:</span></span><br><span class="line">	<span class="keyword">print</span> (retuest.path)</span><br><span class="line">    <span class="keyword">print</span> (request.get_ful_path())</span><br><span class="line">结果：</span><br><span class="line"><span class="string">"/music/renran/"</span>（这个路径就是文件再服务器上的地址）</span><br><span class="line"><span class="string">"music/renren?a=1&amp;b=2"</span></span><br><span class="line"></span><br><span class="line">扩展：</span><br><span class="line">获取相对路径:request.get_info</span><br><span class="line">获取全路径:request.get_ful_path()</span><br><span class="line">获取绝对url:request.build_absolute_uri()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>method:提交请求使用的HTTP方法。总是大写：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> request.method ==‘GET/POST’:</span><br><span class="line">	do_something</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>GET:一个类字典对象，包含所有的HTTP的get参数信息。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">获取get方式表单中或url提交的数据</span><br><span class="line">request.POST[<span class="string">"username"</span>]</span><br><span class="line">request.POST.get(<span class="string">"username"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#注意：虽然上面的两种方式都可以取得username的值，但是如果POST对象中没有username，那么使用request.POST["username"]就会报错，而request.POST.get("username")不会报错，而是返回一个None。</span></span><br><span class="line">其实上面的这个问题也很好解决：</span><br><span class="line">request.POST[<span class="string">"username"</span>,<span class="literal">None</span>]，加个<span class="literal">None</span>就很好的解决了</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>POST：一个类字典对象，包涵所有的HTTP的POST参数的信息（提交表单，但是可以是空，不包含文件的上传）。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取post中表单键值数据</span></span><br><span class="line">request.POST  <span class="comment">#&lt;QueryDict: &#123;"username":"pl"&#125;&gt;  </span></span><br><span class="line">request.POST.dict()   <span class="comment">#&#123;"username":"pl"&#125;</span></span><br><span class="line">request.POST.get(<span class="string">"username"</span>)   <span class="comment">#"pl"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#总结：</span></span><br><span class="line">request.POST适合接收表单数据，表单数据一般比较简单，面对复杂的数据时，即使是一个简单的list接受后都会变形(元素变成字符串),处理起来不方便。</span><br><span class="line"></span><br><span class="line">request.body可以方便的提交复杂的结构化数据，特别适合RESTful的接口</span><br><span class="line"></span><br><span class="line"><span class="comment">#实例对比POST和body的数据</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"body:"</span>,request.body)</span><br><span class="line">print(request.body.decode(<span class="string">'utf-8'</span>))</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"--------------"</span>)</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"POST:"</span>,request.POST)</span><br><span class="line">print(request.POST.dict())</span><br><span class="line"><span class="comment">#结果（input的name=pl,value=pl）</span></span><br><span class="line">body: <span class="string">b'pl=pl'</span>	<span class="comment">#body的原始数据是bytes类型，所以进行json转换的时候非常的容易转换和处理</span></span><br><span class="line">pl=pl    <span class="comment">#解码之后直接就拿到了字符串数据</span></span><br><span class="line">--------------</span><br><span class="line">POST: &lt;QueryDict: &#123;<span class="string">'pl'</span>: [<span class="string">'pl'</span>]&#125;&gt;   <span class="comment">#POST拿到请求字典形式的数据，它和字典类似又不一样，获取它里面的数据的详细信息在下面的知识扩展里面</span></span><br><span class="line">&#123;<span class="string">'pl'</span>: <span class="string">'pl'</span>&#125;	<span class="comment">#这个方法就是获取它的字典属性</span></span><br><span class="line"><span class="comment">#注意：提交数据的时候，input中的name千万别忘记写了，不然是收不到数据的</span></span><br><span class="line">这里有一个建议，当你成功处理POST数据后，应当保持一个良好的习惯，始终返回一个HttpResponseRedirect。这不仅仅是对Django而言，它是一个良好的WEB开发习惯。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>COOKIES：一个标准的python字典，包涵所有的cookie(键值都是字符串)。</p>
-</li>
-</ul>
-        
-          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/requests——网络请求模块/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/第三方模块/requests——网络请求模块/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-第三方模块/mutiprocessing——进程模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">mutiprocessing——多进程管理包</a>
-    </h1>
-  
-
-			
-			<a href="/2019/08/22/第三方模块/mutiprocessing——进程模块/" class="archive-article-date">
-  	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">523 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>multiprocessing支持子进程、通信和数据共享、执行不同形式的同步。提供了<strong>Process、Queue、Pipe、Lock</strong>等组件</p>
-<h3 id="Process类"><a href="#Process类" class="headerlink" title="Process类"></a>Process类</h3><p>构造方法：</p>
-<p><strong>init</strong>(self, group=None, target=None, name=None, args=(), kwargs={})</p>
-<p><strong>参数说明</strong></p>
-<p>group：扩展参数</p>
-<p>target：表示调用对象任务。</p>
-<p>name：给子进程取别名。</p>
-<p>args：表示条用对象的位置参数元组。</p>
-<p>kwargs：表示调用对象的字典。</p>
-        
-          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-第三方模块/epoll——线程相关模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/第三方模块/epoll——线程相关模块/">epoll——线程相关模块</a>
-    </h1>
-  
-
-			
-			<a href="/2019/08/22/第三方模块/epoll——线程相关模块/" class="archive-article-date">
-  	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.7k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">6min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>简介：对比select(),poll(),epoll()三个模块。他们都是IO多路复用的具体的实现。</p>
-<p><strong>Select</strong>：对多次调用不友好，内核开销大，监听连接数目有限，不是线程安全。</p>
-<p><strong>Poll</strong>：对其进行了改进，但是还有很多的问题epoll 可以说是I/O 多路复用最新的一个实现。</p>
-<p>*<em>epoll *</em>：修复了poll 和select绝大部分问题。 </p>
-        
-          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/epoll——线程相关模块/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/第三方模块/epoll——线程相关模块/">展开全文 >></a>
         </p>
       
 
@@ -1221,19 +1221,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-部分详讲/类比分析python异步模块asyncio、aiohttp、gevent" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-部分详讲/python之正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/05/部分详讲/类比分析python异步模块asyncio、aiohttp、gevent/">类比分析python异步模块asyncio、aiohttp、gevent</a>
+      <a class="article-title" href="/2019/08/05/部分详讲/python之正则表达式/">python之正则表达式</a>
     </h1>
   
 
 			
-			<a href="/2019/08/05/部分详讲/类比分析python异步模块asyncio、aiohttp、gevent/" class="archive-article-date">
+			<a href="/2019/08/05/部分详讲/python之正则表达式/" class="archive-article-date">
   	<time datetime="2019-08-05T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
 </a>
 			
@@ -1245,7 +1245,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.1k 字</span>
+        <span class="post-count">6k 字</span>
       </span>
     </span>
 
@@ -1254,7 +1254,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4min</span>
+        <span class="post-count">23min</span>
       </span>
     </span>
 </div>
@@ -1268,32 +1268,12 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>简述（讲的很好）</strong></p>
-<p>在Python3.6后，可以通过<strong>关键词async def来定义一个coroutine协程，协程就相当于未来需要完成的任务，多个协程就是多个需要完成的任务，多个协程可以进一步封装到一个task对象中，task就是一个储存任务的盒子。</strong>此时，<strong>装在盒子里的任务并没有真正的运行，需要把它接入到一个监视器中使它运行，同时监视器还要持续不断的盯着盒子里的任务运行到了哪一步，这个持续不断的监视器就用一个循环对象loop来实现</strong>。单来说在一个线程里，先后执行 AB 两个任务，但是当A遇到耗时操作（网络等待、文件读写等），这个时候 gevent 会让 A 继续执行，但是同时也会开始执行B任务，如果B在遇到耗时操作同时A又执行完了耗时操作。</p>
-<h4 id="asyncio示例"><a href="#asyncio示例" class="headerlink" title="asyncio示例"></a>asyncio示例</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="comment">#定义第1个协程，协程就是将要具体完成的任务，该任务耗时3秒，完成后显示任务完成</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">to_do_something</span><span class="params">(i)</span>:</span></span><br><span class="line">    print(<span class="string">'第&#123;&#125;个任务：任务启动...'</span>.format(i))</span><br><span class="line">    <span class="comment">#遇到耗时的操作，await就会使任务挂起，继续去完成下一个任务</span></span><br><span class="line">    <span class="keyword">await</span> asyncio.sleep(i)</span><br><span class="line">    print(<span class="string">'第&#123;&#125;个任务：任务完成！'</span>.format(i))</span><br><span class="line"><span class="comment">#定义第2个协程，用于通知任务进行状态</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">mission_running</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'任务正在执行...'</span>)</span><br><span class="line"></span><br><span class="line">start = time.time()</span><br><span class="line"><span class="comment">#创建一个循环</span></span><br><span class="line">loop = asyncio.get_event_loop()</span><br><span class="line"><span class="comment">#创建一个任务盒子tasks，包含了3个需要完成的任务</span></span><br><span class="line">tasks = [asyncio.ensure_future(to_do_something(<span class="number">1</span>)),</span><br><span class="line">         asyncio.ensure_future(to_do_something(<span class="number">2</span>)),</span><br><span class="line">         asyncio.ensure_future(mission_running())]</span><br><span class="line"><span class="comment">#tasks接入loop中开始运行</span></span><br><span class="line">loop.run_until_complete(asyncio.wait(tasks))</span><br><span class="line">end = time.time()</span><br><span class="line">print(end-start)</span><br></pre></td></tr></table></figure>
-
-<p>说明：</p>
-<ul>
-<li><strong>启动入口 asyncio.run()</strong></li>
-<li><strong>并发运行asyncio任务 asyncio.create_task()</strong>，这里使用future(),效果是一样的，不同的就是task是loop创建的</li>
-<li><strong>等待对象 await，await用于挂起阻塞的异步调用接口。</strong></li>
-<li><strong>休眠 asyncio.sleep() 挂起当前任务，允许允许其他任务</strong></li>
-</ul>
-<p><strong>实例</strong>：<a href="https://chpl.top/2019/09/16/%E7%88%AC%E8%99%AB/%E7%AC%AC%E4%B8%89%E8%AE%B2%E2%80%94%E2%80%94%E9%AB%98%E6%80%A7%E8%83%BD%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB/" target="_blank" rel="noopener">https://chpl.top/2019/09/16/%E7%88%AC%E8%99%AB/%E7%AC%AC%E4%B8%89%E8%AE%B2%E2%80%94%E2%80%94%E9%AB%98%E6%80%A7%E8%83%BD%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB/</a></p>
-<p><strong>理论</strong>：<a href="https://chpl.top/2019/08/22/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/asyncio%E2%80%94%E2%80%94%E5%8D%8F%E7%A8%8B%E6%A8%A1%E5%9D%97/" target="_blank" rel="noopener">https://chpl.top/2019/08/22/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/asyncio%E2%80%94%E2%80%94%E5%8D%8F%E7%A8%8B%E6%A8%A1%E5%9D%97/</a></p>
-<h4 id="aoihttp网络访问"><a href="#aoihttp网络访问" class="headerlink" title="aoihttp网络访问"></a>aoihttp网络访问</h4><p><strong>实例</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">from</span> aiohttp <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> aiomultiprocess <span class="keyword">import</span> Process</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">put</span><span class="params">(url, params)</span>:</span></span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">with</span> request(<span class="string">"PUT"</span>, url, params=params) <span class="keyword">as</span> response:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    p = Process(target=put, args=(<span class="string">"https://jreese.sh"</span>, ))</span><br><span class="line">    <span class="keyword">await</span> p</span><br><span class="line"></span><br><span class="line">asyncio.run(main())</span><br><span class="line">If you want to get results back <span class="keyword">from</span> that coroutine, Worker makes that available:</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">from</span> aiohttp <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> aiomultiprocess <span class="keyword">import</span> Worker</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(url)</span>:</span></span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">with</span> request(<span class="string">"GET"</span>, url) <span class="keyword">as</span> response:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">await</span> response.text(<span class="string">"utf-8"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    p = Worker(target=get, args=(<span class="string">"https://jreese.sh"</span>, ))</span><br><span class="line">    response = <span class="keyword">await</span> p</span><br><span class="line"></span><br><span class="line">asyncio.run(main())</span><br><span class="line">If you want a managed pool of worker processes, then use Pool:</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">from</span> aiohttp <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> aiomultiprocess <span class="keyword">import</span> Pool</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(url)</span>:</span></span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">with</span> request(<span class="string">"GET"</span>, url) <span class="keyword">as</span> response:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">await</span> response.text(<span class="string">"utf-8"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    urls = [<span class="string">"https://jreese.sh"</span>, ...]</span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">with</span> Pool() <span class="keyword">as</span> pool:</span><br><span class="line">        result = <span class="keyword">await</span> pool.map(get, urls)</span><br><span class="line"></span><br><span class="line">asyncio.run(main())</span><br></pre></td></tr></table></figure>
-
-<p>外链：<a href="https://www.jianshu.com/p/5f41d9fb6b12" target="_blank" rel="noopener">https://www.jianshu.com/p/5f41d9fb6b12</a></p>
-<h4 id="同类型的gevent模块"><a href="#同类型的gevent模块" class="headerlink" title="同类型的gevent模块"></a>同类型的gevent模块</h4><p>说明：python程序实现的一种单线程下的多任务执行调度器，<strong>简单来说在一个线程里，先后执行 AB 两个任务，但是当A遇到耗时操作（网络等待、文件读写等），这个时候 gevent 会让 A 继续执行，但是同时也会开始执行B任务，如果B在遇到耗时操作同时A又执行完了耗时操作，gevent 又继续执行 A。</strong></p>
-<p><strong>实例</strong>：模拟通信</p>
-<p>服务端</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> gevent <span class="keyword">import</span> monkey, spawn; monkey.patch_all()  <span class="comment"># 使用gevent必须 调用  </span></span><br><span class="line"><span class="keyword">import</span> socket                                                          </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">communicate</span><span class="params">(conn)</span>:</span>                                 </span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:                                         </span><br><span class="line">        <span class="keyword">try</span>:                                           </span><br><span class="line">            data = conn.recv(<span class="number">1024</span>)                     </span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> data:<span class="keyword">break</span>                           </span><br><span class="line">            conn.send(data.upper())                     </span><br><span class="line">        <span class="keyword">except</span> ConnectionResetError:                   </span><br><span class="line">            <span class="keyword">break</span>                                       </span><br><span class="line">    conn.close()                                                       </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">server</span><span class="params">(ip, port)</span>:</span>                                   </span><br><span class="line">    soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)            </span><br><span class="line">    soc.bind((ip,port))                                 </span><br><span class="line">    soc.listen(<span class="number">5</span>)                                       </span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:                                         </span><br><span class="line">        conn, der = soc.accept()                       </span><br><span class="line">        spawn(communicate, conn)  <span class="comment"># 协程开启处理IO问题     </span></span><br><span class="line">    soc.close()                                                        </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:                             </span><br><span class="line">    g = spawn(server, <span class="string">'127.0.0.1'</span>, <span class="number">8080</span>)  <span class="comment"># 开启协程, 异步提交                 </span></span><br><span class="line">    g.join()</span><br></pre></td></tr></table></figure>
-
-<p>客户端</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Thread,currentThread</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">client</span><span class="params">()</span>:</span></span><br><span class="line">    soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">    soc.connect((<span class="string">'127.0.0.1'</span>, <span class="number">8080</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        soc.send((<span class="string">'%s hello'</span> % currentThread().getName()).encode(<span class="string">'utf-8'</span>))</span><br><span class="line">        data = soc.recv(<span class="number">1024</span>)</span><br><span class="line">        print(data.decode(<span class="string">'utf-8'</span>))</span><br><span class="line">    soc.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">500</span>):  <span class="comment"># 模拟500个 用户交互</span></span><br><span class="line">        t = Thread(target=client)  <span class="comment"># 线程开启</span></span><br><span class="line">        t.start()</span><br></pre></td></tr></table></figure>
-
-
+        <p>导读：我们都知道学习一项技能是为了解决我们的问题的，那么正则表达式是干什么的呢？有哪些内容呢？有哪些应用呢?那么，我们下面将围绕着这三个问题进行详述。</p>
+<p><strong>首先，我们要知道什么是正则表达式</strong></p>
+<p>​        正则表达式(re)，计算机科学的一个概念。它通常被用来检索、替换那些符合某个（规则）的文本。</p>
+        
+          <!---<a class="article-more-a" href="/2019/08/05/部分详讲/python之正则表达式/#more">more >></a>--->
+        
       
 	  
 			  
@@ -1323,7 +1303,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/05/部分详讲/类比分析python异步模块asyncio、aiohttp、gevent/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/05/部分详讲/python之正则表达式/">展开全文 >></a>
         </p>
       
 
@@ -1468,11 +1448,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
+                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
+                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1528,11 +1508,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
