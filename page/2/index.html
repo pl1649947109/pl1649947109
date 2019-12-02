@@ -52,7 +52,7 @@ var _hmt = _hmt || [];
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
-      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<nav class="header-menu">			<ul>							<li><a href="/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/photos">相册</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
+      <!--------><div class="overlay"></div><div class="intrude-less">	<header id="header" class="inner">		<a href="/" class="profilepic">			<img src="http://9017499461.linshutu.top/pl.jpg" class="js-avatar">		</a>		<hgroup>		  <h1 class="header-author"><a href="/">pl</a></h1>		</hgroup>				<nav class="header-menu">			<ul>							<li><a href="/2019/12/02/main/">主页</a></li>	        				<li><a href="/archives">归档</a></li>	        				<li><a href="/photos">相册</a></li>	        				<li><a href="/404">公益404</a></li>	        			</ul>		</nav>		<nav class="header-smart-menu">    		    			    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>    			                			    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>    			                			    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>    			            		</nav>		<nav class="header-nav">			<div class="social">									<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>		        					<a class="weixin" target="_blank" href="http://9017499461.linshutu.top/%E5%BE%AE%E4%BF%A1.png" title="weixin"><i class="icon-weixin"></i></a>		        			</div>		</nav>			</header>	</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><div id="aplayer" style="position:absolute;left:35px;bottom:0;"></div><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script><script>  const ap = new APlayer({	container: document.getElementById('aplayer'),	autoplay: false, 	listFolded: true, 	listMaxHeight: 90, 	order: 'list', 	loop: 'all', 	theme: '#e9e9e9', 	preload: 'none', 	mutex: true, 	lrcType: 3, 	volume: 0.3, 	fixed: false, 	audio: [{		name: '平凡之路',		artist: '朴树',		lrc: '/lrc/平凡之路.lrc',		cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3'	  },	  {		name: '后会无期',		artist: 'G.E.M.邓紫棋',		lrc: '/lrc/后会无期.lrc',		cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F.mp3'	  },	  {		name: '告白气球',		artist: '周杰伦',		lrc: '/lrc/告白气球.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg',		url: 'http://9017499461.linshutu.top/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3'	  },	  {		name: '山丘',		artist: '李宗盛',		lrc: '/lrc/山丘.lrc',		cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003pvlsM2k3kE3.jpg',		url: 'http://9017499461.linshutu.top/%E5%B1%B1%E4%B8%98.mp3'	  },	  {		name: '追梦赤子心',		artist: 'GALA',		lrc: '/lrc/追梦赤子心.lrc',		cover: 'http://p1.music.126.net/XDncptlBJ4_LN3hLBx-8aw==/19061133579343591.jpg?param=300x300',		url: 'http://9017499461.linshutu.top/%E8%BF%BD%E6%A2%A6%E8%B5%A4%E5%AD%90%E5%BF%83.mp3'	  }	]  });    const colorThief = new ColorThief();  const setTheme = (index) => {	if (!ap.list.audios[index].theme) {	  colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {		ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);	  });	}  };  setTheme(ap.list.index);  ap.on('listswitch', (data) => {	setTheme(data.index);  });</script>
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
@@ -96,7 +96,7 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/2019/12/02/main/">主页</a></li>
 		        
 					<li style="width: 25%"><a href="/archives">归档</a></li>
 		        
@@ -119,19 +119,19 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-书/drf/第七讲——扩展：drf中版本、认证、权限、频率限制源码分析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-书/cmdb/第四讲——cmdb项目扩展与总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/19/书/drf/第七讲——扩展：drf中版本、认证、权限、频率限制源码分析/">第七讲——扩展：drf中版本、认证、权限、频率限制源码分析</a>
+      <a class="article-title" href="/2019/11/19/书/cmdb/第四讲——cmdb项目扩展与总结/">第四讲——cmdb项目扩展与总结</a>
     </h1>
   
 
 			
-			<a href="/2019/11/19/书/drf/第七讲——扩展：drf中版本、认证、权限、频率限制源码分析/" class="archive-article-date">
+			<a href="/2019/11/19/书/cmdb/第四讲——cmdb项目扩展与总结/" class="archive-article-date">
   	<time datetime="2019-11-19T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-19</time>
 </a>
 			
@@ -143,7 +143,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">3.3k 字</span>
+        <span class="post-count">2.6k 字</span>
       </span>
     </span>
 
@@ -152,7 +152,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">14min</span>
+        <span class="post-count">10min</span>
       </span>
     </span>
 </div>
@@ -166,17 +166,22 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <p>文章导读：在这里我们将分为两部分来讲解:第一部分，我们将随着程序执行的顺序一步步的去分析源码(看源码不可跳读，必须一步步的走)；第二部分，我们使用一个实例完整的把这个使用流程展示出来。</p>
-<p>第一部分：源码的讲解</p>
-<p>路由</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> .views <span class="keyword">import</span> account</span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^login/$'</span>,account.LoginView.as_view()),</span><br></pre></td></tr></table></figure>
-
-<p>视图类</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> rest_framework.views <span class="keyword">import</span> APIView</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LoginView</span><span class="params">(APIView)</span>:</span></span><br><span class="line">	<span class="string">"""</span></span><br><span class="line"><span class="string">	CBV视图类</span></span><br><span class="line"><span class="string">	"""</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-
-<p>下面，我们将开始分析，<strong>login路由</strong>进入查找到我们的<strong>account.LoginView</strong>，接着执行LoginView视图类里面的<strong>as_view()</strong>视图类，在该类里面找不到，接着找他的父类，如后就到<strong>APIView</strong>父类里面查找，</p>
+        <h2 id="内容回顾"><a href="#内容回顾" class="headerlink" title="内容回顾"></a>内容回顾</h2><ol>
+<li>jwt的优势？</li>
+<li>节流是如何实现的?</li>
+<li>权限的实现流程？</li>
+<li>认证的实现流程？</li>
+<li>cmdb是如何实现的？</li>
+<li>cmdb开发的过程中你觉得什么最难搞？</li>
+<li>什么是跨域？如何解决跨域？</li>
+</ol>
+<h2 id="今日概要"><a href="#今日概要" class="headerlink" title="今日概要"></a>今日概要</h2><ul>
+<li>CPU和主板信息的采集入库</li>
+<li>后台管理示例</li>
+<li>agent和第三方工具的模式</li>
+</ul>
         
-          <!---<a class="article-more-a" href="/2019/11/19/书/drf/第七讲——扩展：drf中版本、认证、权限、频率限制源码分析/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/11/19/书/cmdb/第四讲——cmdb项目扩展与总结/#more">more >></a>--->
         
       
 	  
@@ -197,7 +202,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">drf</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">cmdb</a>
         		</li>
       		
 		</ul>
@@ -207,7 +212,123 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/19/书/drf/第七讲——扩展：drf中版本、认证、权限、频率限制源码分析/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/19/书/cmdb/第四讲——cmdb项目扩展与总结/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-小绿本/第七部分——算法部分" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/18/小绿本/第七部分——算法部分/">第七部分——算法部分</a>
+    </h1>
+  
+
+			
+			<a href="/2019/11/18/小绿本/第七部分——算法部分/" class="archive-article-date">
+  	<time datetime="2019-11-18T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-18</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">932 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">3min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-顺序表、链表的区别及应用场景？"><a href="#1-顺序表、链表的区别及应用场景？" class="headerlink" title="1.顺序表、链表的区别及应用场景？"></a>1.顺序表、链表的区别及应用场景？</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-哈希树的构造与应用场景？"><a href="#2-哈希树的构造与应用场景？" class="headerlink" title="2.哈希树的构造与应用场景？"></a>2.哈希树的构造与应用场景？</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2019/11/18/小绿本/第七部分——算法部分/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小绿本</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/18/小绿本/第七部分——算法部分/">展开全文 >></a>
         </p>
       
 
@@ -339,122 +460,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/11/18/知识扩展/async——源码解读/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-小绿本/第七部分——算法部分" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/18/小绿本/第七部分——算法部分/">第七部分——算法部分</a>
-    </h1>
-  
-
-			
-			<a href="/2019/11/18/小绿本/第七部分——算法部分/" class="archive-article-date">
-  	<time datetime="2019-11-18T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-18</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">932 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-顺序表、链表的区别及应用场景？"><a href="#1-顺序表、链表的区别及应用场景？" class="headerlink" title="1.顺序表、链表的区别及应用场景？"></a>1.顺序表、链表的区别及应用场景？</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="2-哈希树的构造与应用场景？"><a href="#2-哈希树的构造与应用场景？" class="headerlink" title="2.哈希树的构造与应用场景？"></a>2.哈希树的构造与应用场景？</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2019/11/18/小绿本/第七部分——算法部分/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小绿本</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/18/小绿本/第七部分——算法部分/">展开全文 >></a>
         </p>
       
 
@@ -835,6 +840,122 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-书/linux/第七讲——消息队列初识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/15/书/linux/第七讲——消息队列初识/">消息队列——初识</a>
+    </h1>
+  
+
+			
+			<a href="/2019/11/15/书/linux/第七讲——消息队列初识/" class="archive-article-date">
+  	<time datetime="2019-11-15T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">3.8k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">12min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="消息队列初始"><a href="#消息队列初始" class="headerlink" title="消息队列初始"></a>消息队列初始</h2><h3 id="什么是消息队列"><a href="#什么是消息队列" class="headerlink" title="什么是消息队列"></a>什么是消息队列</h3><p>我们可以把消息队列比作是一个存放消息的容器，当我们需要使用消息的时候可以取出消息供自己使用。</p>
+<p>消息队列是分布式系统中重要的组件，主要解决应用解耦，异步消息，流量削锋等问题，实现高性能，高可用，可伸缩和最终一致性架构。</p>
+<p>目前使用较多的消息队列有ActiveMQ，RabbitMQ，Kafka，RocketMQ，我们后面会一一对比这些消息队列。</p>
+        
+          <!---<a class="article-more-a" href="/2019/11/15/书/linux/第七讲——消息队列初识/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/15/书/linux/第七讲——消息队列初识/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
     <article id="post-知识扩展/python2和python3的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -920,122 +1041,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/11/15/知识扩展/python2和python3的区别/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/linux/第七讲——消息队列初识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/15/书/linux/第七讲——消息队列初识/">消息队列——初识</a>
-    </h1>
-  
-
-			
-			<a href="/2019/11/15/书/linux/第七讲——消息队列初识/" class="archive-article-date">
-  	<time datetime="2019-11-15T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">3.8k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">12min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="消息队列初始"><a href="#消息队列初始" class="headerlink" title="消息队列初始"></a>消息队列初始</h2><h3 id="什么是消息队列"><a href="#什么是消息队列" class="headerlink" title="什么是消息队列"></a>什么是消息队列</h3><p>我们可以把消息队列比作是一个存放消息的容器，当我们需要使用消息的时候可以取出消息供自己使用。</p>
-<p>消息队列是分布式系统中重要的组件，主要解决应用解耦，异步消息，流量削锋等问题，实现高性能，高可用，可伸缩和最终一致性架构。</p>
-<p>目前使用较多的消息队列有ActiveMQ，RabbitMQ，Kafka，RocketMQ，我们后面会一一对比这些消息队列。</p>
-        
-          <!---<a class="article-more-a" href="/2019/11/15/书/linux/第七讲——消息队列初识/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/15/书/linux/第七讲——消息队列初识/">展开全文 >></a>
         </p>
       
 
@@ -1187,19 +1192,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-小绿本/第五部分——Django" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-书/flask/flask入门初始" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/15/小绿本/第五部分——Django/">第五部分——Django</a>
+      <a class="article-title" href="/2019/11/15/书/flask/flask入门初始/">flask入门初始</a>
     </h1>
   
 
 			
-			<a href="/2019/11/15/小绿本/第五部分——Django/" class="archive-article-date">
+			<a href="/2019/11/15/书/flask/flask入门初始/" class="archive-article-date">
   	<time datetime="2019-11-15T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
 </a>
 			
@@ -1211,7 +1216,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">11.7k 字</span>
+        <span class="post-count">1.3k 字</span>
       </span>
     </span>
 
@@ -1220,7 +1225,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">47min</span>
+        <span class="post-count">4min</span>
       </span>
     </span>
 </div>
@@ -1234,30 +1239,14 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-简述http协议以及常用的请求头"><a href="#1-简述http协议以及常用的请求头" class="headerlink" title="1.简述http协议以及常用的请求头"></a>1.简述http协议以及常用的请求头</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">User-Agent：标识浏览器</span><br><span class="line">Content_Type：用来标记请求体的数据的格式，服务端根据这个对数据进行解析</span><br><span class="line">Accept：指定客户端能够接收的内容类型</span><br><span class="line">Accept-Encoding:指定浏览器可以支持的web服务器返回内容压缩编码类型</span><br><span class="line">Accept-Language:浏览器可接受的语言</span><br><span class="line">Content-Length:请求的内容长度</span><br><span class="line">Date：请求发送的日期和时间</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-列举常见请求方法："><a href="#2-列举常见请求方法：" class="headerlink" title="2.列举常见请求方法："></a>2.列举常见请求方法：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET</span><br><span class="line">POST</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-列举常见的状态码"><a href="#3-列举常见的状态码" class="headerlink" title="3.列举常见的状态码"></a>3.列举常见的状态码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">200：请求成功</span><br><span class="line">301：永久重定向</span><br><span class="line">302：临时重定向</span><br><span class="line">403：没有通过跨站请求伪造</span><br><span class="line">404：请求的页面不存在</span><br><span class="line">500：服务器错误</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-简述websocket协议及实现原理"><a href="#4-简述websocket协议及实现原理" class="headerlink" title="4.简述websocket协议及实现原理"></a>4.简述websocket协议及实现原理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">协议：WebSocket 是一种标准协议，用于在客户端和服务端之间进行双向数据传输。但它跟 HTTP 没什么关系，它是基于 TCP 的一种独立实现。用来弥补http协议在持久通信能力上的不足。</span><br><span class="line"></span><br><span class="line">原理：WebSocket是HTML5下一种新的协议。它实现了浏览器与服务器全双工通信，能更好的节省服务器资源和带宽并达到实时通讯的目的。它与HTTP一样通过已建立的TCP连接来传输数据，但是它和HTTP最大不同是：</span><br><span class="line">WebSocket是一种双向通信协议。在建立连接后，WebSocket服务器端和客户端都能主动向对方发送或接收数据，就像Socket一样；</span><br><span class="line">WebSocket需要像TCP一样，先建立连接，连接成功后才能相互通信。</span><br><span class="line"></span><br><span class="line">相比HTTP长连接，WebSocket有以下特点：</span><br><span class="line">1，是真正的全双工方式，建立连接后客户端与服务器端是完全平等的，可以互相主动请求。</span><br><span class="line">2，Websocket协议通过第一个request建立了TCP连接之后，之后交换的数据都不需要发送 HTTP header就能交换数据</span><br><span class="line">3，此外还有 multiplexing、不同的URL可以复用同一个WebSocket连接等功能</span><br><span class="line"></span><br><span class="line">Wesocket协议的优点：</span><br><span class="line">Websocket协议一旦建立后，互相沟通所消耗的请求头是很小的</span><br><span class="line">服务端可以向客户端推送消息了</span><br><span class="line">Wesocket协议的缺点：</span><br><span class="line">少部分浏览器不支持，浏览器支持的成都与方式有区别</span><br><span class="line"></span><br><span class="line">Wesocket协议的应用场景：</span><br><span class="line">即时聊天通信</span><br><span class="line">多玩家游戏</span><br><span class="line">在线协同编辑</span><br><span class="line">实时数据流的拉取与推送</span><br><span class="line">体育实况</span><br><span class="line">实时地图位置</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-Python-web开发中，跨域问题的解决思路是什么"><a href="#5-Python-web开发中，跨域问题的解决思路是什么" class="headerlink" title="5.Python web开发中，跨域问题的解决思路是什么"></a>5.Python web开发中，跨域问题的解决思路是什么</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">首先，什么是跨域？</span><br><span class="line">同源策略/SOP（Same origin policy）是一种约定，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，浏览器很容易受到XSS、CSFR等攻击。</span><br><span class="line"></span><br><span class="line">SOP要求两个通讯地址的协议、域名、端口号必须相同，否则两个地址的通讯将被浏览器视为不安全的，并被block下来。比如“http页面”和“https页面”属于不同协议；“qq.com”、“www.qq.com”、“a.qq.com”都属于不同域名（或主机）；“a.com”和“a.com:8000”属于不同端口号。这三种情况常规都是无法直接进行通讯的。</span><br><span class="line"></span><br><span class="line">解决办法：</span><br><span class="line">目前业界流行的解决方案有三种：服务器代理、JSONP、CORS（不展开）</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-简述http的缓存机制"><a href="#6-简述http的缓存机制" class="headerlink" title="6.简述http的缓存机制"></a>6.简述http的缓存机制</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HTTP的缓存可以分为两大类：强制缓存和协商缓存。强制缓存的优先级高于比较缓存。</span><br><span class="line">强制缓存（状态码200）：服务端通知浏览器一个缓存时间，在缓存期间内，下次请求，直接使用浏览器中缓存的数据，不在时间内，执行比较缓存策略。</span><br><span class="line">比较缓存（状态码：304）：对于 比较缓存而言，将缓存信息中的Etag（浏览器当前资源在服务器的唯一标识）和Last-Modified（浏览器资源的最后修改时间）通过请求发送给服务器，由服务器校验，比较成功，返回304状态，浏览器直接使用缓存。</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://9017499461.linshutu.top/Http%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6.webp" alt></p>
-<h3 id="7-谈谈你知道的python-web框架："><a href="#7-谈谈你知道的python-web框架：" class="headerlink" title="7.谈谈你知道的python web框架："></a>7.谈谈你知道的python web框架：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Django</span><br><span class="line">flask</span><br><span class="line">Tornado</span><br><span class="line">Twisted</span><br></pre></td></tr></table></figure>
-
-<h3 id="8-django中model的SulgFiled类型字段有什么用途"><a href="#8-django中model的SulgFiled类型字段有什么用途" class="headerlink" title="8.django中model的SulgFiled类型字段有什么用途"></a>8.django中model的SulgFiled类型字段有什么用途</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slug是一个新闻行业的术语。一个slug就是一个某种东西的简短标签，包含字母、数字、下划线或者连接线，通常用于URLs中。可以设置max_length参数，默认为50。</span><br></pre></td></tr></table></figure>
-
-<h3 id="9-django常见的线上部署方式有哪几种"><a href="#9-django常见的线上部署方式有哪几种" class="headerlink" title="9.django常见的线上部署方式有哪几种"></a>9.django常见的线上部署方式有哪几种</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Nginx+uwsgi+Django+mysql（目前我用到的）</span><br></pre></td></tr></table></figure>
-
-<h3 id="10-django中使用memcached作为缓存的具体方法？优缺点说明？"><a href="#10-django中使用memcached作为缓存的具体方法？优缺点说明？" class="headerlink" title="10.django中使用memcached作为缓存的具体方法？优缺点说明？"></a>10.django中使用memcached作为缓存的具体方法？优缺点说明？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">1，settings.py</span><br><span class="line">CACHES = &#123;</span><br><span class="line">    &apos;default&apos;: &#123;</span><br><span class="line">        &apos;BACKEND&apos;: &apos;django.core.cache.backends.memcached.MemcachedCache&apos;,</span><br><span class="line">        &apos;LOCATION&apos;: &apos;127.0.0.1:11211&apos;, #多个使用列表</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2，views.py</span><br><span class="line">from django.http import  HttpResponse</span><br><span class="line"># 使用cache来操作memcached</span><br><span class="line">from django.core.cache import cache</span><br><span class="line"></span><br><span class="line"># Create your views here.</span><br><span class="line">def index(request):</span><br><span class="line">    cache.set(&apos;username&apos;,&apos;zhiliao&apos;,12000)</span><br><span class="line">    username = cache.get(&apos;username&apos;)</span><br><span class="line">    print(username)</span><br><span class="line">    return HttpResponse(&apos;index&apos;)</span><br><span class="line">我认为：</span><br><span class="line">优点：对于一些访问量高的文件放在缓存中，可以提高访问的效率</span><br><span class="line">缺点：缓存的缺点即使数据断电丢失，这点memcached没有好的办法处理</span><br></pre></td></tr></table></figure>
-
-<p>memcached的具体操作：<a href="https://blog.csdn.net/xujin0/article/details/84311862" target="_blank" rel="noopener">https://blog.csdn.net/xujin0/article/details/84311862</a></p>
+        <p><strong>简介：</strong></p>
+<p>Flask是一个基于Python开发并且依赖jinja2模板和Werkzeug WSGI服务的一个微型框架。</p>
+<p>Micro（微）：<strong>微的旨在保持核心简单而易于拓展</strong>；众多的扩展提供了数据库集成、表单验证、上传处理、各种各样的开放认证技术等功能。</p>
+<p>虚拟环境：virtualenv，为什么要采用虚拟环境呢？当我们的项目越来越多的时候，同时拥有不同版本的python工作的可能性就越大，常常会有库（内，外部库）破坏向后兼容性，</p>
+<p>当出现两个或多个依赖性冲突时，我们该怎么做？肯定是产生虚拟环境，给每一个项目提供一份虚拟的环境（不是副本），我们在使用指定的项目的时候就可以激活相应的环境。</p>
+<p>依赖的两个外部库：Jinja2（<a href="http://jinja.pocoo.org/docs/2.10/）和Werkzeug" target="_blank" rel="noopener">http://jinja.pocoo.org/docs/2.10/）和Werkzeug</a> WSGI（<a href="https://werkzeug.palletsprojects.com/en/0.15.x/）工具集" target="_blank" rel="noopener">https://werkzeug.palletsprojects.com/en/0.15.x/）工具集</a></p>
         
-          <!---<a class="article-more-a" href="/2019/11/15/小绿本/第五部分——Django/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/11/15/书/flask/flask入门初始/#more">more >></a>--->
         
       
 	  
@@ -1278,7 +1267,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小绿本</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">flask</a>
         		</li>
       		
 		</ul>
@@ -1288,7 +1277,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/15/小绿本/第五部分——Django/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/15/书/flask/flask入门初始/">展开全文 >></a>
         </p>
       
 
@@ -1433,15 +1422,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1454,6 +1439,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">知识扩展</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
