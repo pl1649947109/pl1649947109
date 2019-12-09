@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://pl1649947109.github.io/pl1649947109">
-  <title>第四讲——cmdb项目扩展与总结 | 林殊途</title>
+  <title>centos7+docker19.03.5+Django1.11.9项目部署 | 林殊途</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="内容回顾 jwt的优势？ 节流是如何实现的? 权限的实现流程？ 认证的实现流程？ cmdb是如何实现的？ cmdb开发的过程中你觉得什么最难搞？ 什么是跨域？如何解决跨域？  今日概要 CPU和主板信息的采集入库 后台管理示例 agent和第三方工具的模式">
-<meta name="keywords" content="cmdb">
+  <meta name="description" content="docker部署最简单的django项目一、安装docker基于源安装，这种方式会自动安装依赖 12345678#执行使用阿里镜像源下载wget http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo#yum.repos.d是源的配置文件，如果使yum生效必须配置在该文件夹下才能生效（安装yum源）mv docker-ce.r">
+<meta name="keywords" content="django项目部署">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第四讲——cmdb项目扩展与总结">
-<meta property="og:url" content="https://pl1649947109.github.io/pl1649947109/2019/11/19/书/cmdb/第四讲——cmdb项目扩展与总结/index.html">
+<meta property="og:title" content="centos7+docker19.03.5+Django1.11.9项目部署">
+<meta property="og:url" content="https://pl1649947109.github.io/pl1649947109/2019/12/07/django项目部署/centos7+docker19.03.5+Django1.11.9项目部署/index.html">
 <meta property="og:site_name" content="林殊途">
-<meta property="og:description" content="内容回顾 jwt的优势？ 节流是如何实现的? 权限的实现流程？ 认证的实现流程？ cmdb是如何实现的？ cmdb开发的过程中你觉得什么最难搞？ 什么是跨域？如何解决跨域？  今日概要 CPU和主板信息的采集入库 后台管理示例 agent和第三方工具的模式">
+<meta property="og:description" content="docker部署最简单的django项目一、安装docker基于源安装，这种方式会自动安装依赖 12345678#执行使用阿里镜像源下载wget http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo#yum.repos.d是源的配置文件，如果使yum生效必须配置在该文件夹下才能生效（安装yum源）mv docker-ce.r">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-11-19T07:47:33.394Z">
+<meta property="og:updated_time" content="2019-12-09T07:23:51.377Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第四讲——cmdb项目扩展与总结">
-<meta name="twitter:description" content="内容回顾 jwt的优势？ 节流是如何实现的? 权限的实现流程？ 认证的实现流程？ cmdb是如何实现的？ cmdb开发的过程中你觉得什么最难搞？ 什么是跨域？如何解决跨域？  今日概要 CPU和主板信息的采集入库 后台管理示例 agent和第三方工具的模式">
+<meta name="twitter:title" content="centos7+docker19.03.5+Django1.11.9项目部署">
+<meta name="twitter:description" content="docker部署最简单的django项目一、安装docker基于源安装，这种方式会自动安装依赖 12345678#执行使用阿里镜像源下载wget http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo#yum.repos.d是源的配置文件，如果使yum生效必须配置在该文件夹下才能生效（安装yum源）mv docker-ce.r">
   
     <link rel="alternative" href="/atom.xml" title="林殊途" type="application/atom+xml">
   
@@ -117,20 +117,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-书/cmdb/第四讲——cmdb项目扩展与总结" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-django项目部署/centos7+docker19.03.5+Django1.11.9项目部署" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 class="article-title" itemprop="name">
-      第四讲——cmdb项目扩展与总结
+      centos7+docker19.03.5+Django1.11.9项目部署
     </h1>
   
 
 			
-			<a href="/2019/11/19/书/cmdb/第四讲——cmdb项目扩展与总结/" class="archive-article-date">
-  	<time datetime="2019-11-19T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-19</time>
+			<a href="/2019/12/07/django项目部署/centos7+docker19.03.5+Django1.11.9项目部署/" class="archive-article-date">
+  	<time datetime="2019-12-07T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-07</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -141,7 +141,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.6k 字</span>
+        <span class="post-count">1.1k 字</span>
       </span>
     </span>
 
@@ -150,7 +150,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">10min</span>
+        <span class="post-count">4min</span>
       </span>
     </span>
 </div>
@@ -164,458 +164,46 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="内容回顾"><a href="#内容回顾" class="headerlink" title="内容回顾"></a>内容回顾</h2><ol>
-<li>jwt的优势？</li>
-<li>节流是如何实现的?</li>
-<li>权限的实现流程？</li>
-<li>认证的实现流程？</li>
-<li>cmdb是如何实现的？</li>
-<li>cmdb开发的过程中你觉得什么最难搞？</li>
-<li>什么是跨域？如何解决跨域？</li>
-</ol>
-<h2 id="今日概要"><a href="#今日概要" class="headerlink" title="今日概要"></a>今日概要</h2><ul>
-<li>CPU和主板信息的采集入库</li>
-<li>后台管理示例</li>
-<li>agent和第三方工具的模式</li>
-</ul>
+        <h2 id="docker部署最简单的django项目"><a href="#docker部署最简单的django项目" class="headerlink" title="docker部署最简单的django项目"></a>docker部署最简单的django项目</h2><h3 id="一、安装docker"><a href="#一、安装docker" class="headerlink" title="一、安装docker"></a>一、安装docker</h3><p>基于源安装，这种方式会自动安装依赖</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>执行使用阿里镜像源下载</span><br><span class="line">wget http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"><span class="meta">#</span>yum.repos.d是源的配置文件，如果使yum生效必须配置在该文件夹下才能生效（安装yum源）</span><br><span class="line">mv docker-ce.repo /etc/yum.repos.d</span><br><span class="line"><span class="meta">#</span>安装docker（基于阿里源）</span><br><span class="line">yum install -y docker-ce</span><br><span class="line"><span class="meta">#</span>安装docker-compose</span><br><span class="line">pip3 install docker-compose -i http://pypi.douban.com/simple --trusted-host pypi.douban.com</span><br></pre></td></tr></table></figure>
+
 <a id="more"></a>
 
-<h3 id="1-CPU和主板信息"><a href="#1-CPU和主板信息" class="headerlink" title="1.CPU和主板信息"></a>1.CPU和主板信息</h3><h3 id="2-简单的后台"><a href="#2-简单的后台" class="headerlink" title="2. 简单的后台"></a>2. 简单的后台</h3><ul>
-<li>首页，服务器列表</li>
-<li>图表<ul>
-<li>echarts</li>
-<li>highcharts<br>注意： <a href="https://www.cnblogs.com/wupeiqi/articles/6216618.html" target="_blank" rel="noopener">https://www.cnblogs.com/wupeiqi/articles/6216618.html</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="3-agent和第三方工具的模式"><a href="#3-agent和第三方工具的模式" class="headerlink" title="3. agent和第三方工具的模式"></a>3. agent和第三方工具的模式</h3><ul>
-<li><p>基于SSH实现</p>
-</li>
-<li><p>基于saltstack实现</p>
-<ul>
-<li><p>在进入公司之前，公司已经再用 saltstack（100服务器）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.cnblogs.com/wupeiqi/articles/6415436.html</span><br></pre></td></tr></table></figure>
+<p>自定义的方式安装，可能会出现组件找不到的情况</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-17.09.0.ce-1.el7.centos.x86_64.rpm</span><br><span class="line"></span><br><span class="line">yum localinstall docker-ce-17.09.0.ce-1.el7.centos.x86_64.rpm</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>master: 1台</li>
-<li>minion: 99台</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>基于agent实现</p>
-</li>
-</ul>
-<h2 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h2><p>基于saltstack实现资产的采集</p>
-<p>两个虚拟机</p>
-<ul>
-<li><p>master</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 安装salt-master</span><br><span class="line">    yum install salt-master</span><br><span class="line">2. 修改配置文件：/etc/salt/master</span><br><span class="line">    interface: 0.0.0.0    # 表示Master的IP </span><br><span class="line">3. 启动</span><br><span class="line">    service salt-master start</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>minion</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 安装salt-minion</span><br><span class="line">    yum install salt-minion</span><br><span class="line"></span><br><span class="line">2. 修改配置文件 /etc/salt/minion</span><br><span class="line">    master: 10.211.55.4           # master的地址</span><br><span class="line">    id: c2.salt.com                    # 客户端在salt-master中显示的唯一ID</span><br><span class="line">3. 启动</span><br><span class="line">    service salt-minion start</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在master上进行授权</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">salt-key -L                # 查看已授权和未授权的slave</span><br><span class="line">salt-key -a  salve_id      # 接受指定id的salve</span><br><span class="line"></span><br><span class="line">salt-key -r  salve_id      # 拒绝指定id的salve</span><br><span class="line">salt-key -d  salve_id      # 删除指定id的salve</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在master上远程执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">salt &apos;c2.salt.com&apos; cmd.run  &apos;ifconfig&apos;</span><br></pre></td></tr></table></figure>
+<p>查看是否安装成功</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>如果安装成功，该命令会展示一些信息</span><br><span class="line"><span class="meta">$</span>docker info  </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查看版本信息</span><br><span class="line"><span class="meta">$</span>docker -v</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<h2 id="内容梳理"><a href="#内容梳理" class="headerlink" title="内容梳理"></a>内容梳理</h2><h4 id="1-环境"><a href="#1-环境" class="headerlink" title="1. 环境"></a>1. 环境</h4><ul>
-<li><p>开发环境，在我们自己电脑上进行项目开发。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例如：开发一个网站。 在自己电脑上开发+连接自己电脑的数据库。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试环境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">公司会给你提供一台服务器（阿里云）。 </span><br><span class="line">	IP：47.93.2.18</span><br><span class="line">	用户名：root</span><br><span class="line">	密码：123123</span><br><span class="line">把你开发的网站要部署在这个服务器上。</span><br><span class="line">	- 安装必要的环境：python/django/requests/mysql</span><br><span class="line">	- 把代码拷贝到这个服务器上</span><br><span class="line">	- 让我们的程序运行起来。</span><br><span class="line">		python aa.py </span><br><span class="line">		python manage.py runserver 0.0.0.0:8000</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>线上环境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">公司会给运维一个台服务器（阿里云）。</span><br><span class="line">	IP：47.93.2.22</span><br><span class="line">	用户名：root</span><br><span class="line">	密码：123123</span><br><span class="line"></span><br><span class="line">把你开发的网站要部署在这个服务器上。</span><br><span class="line">	- 安装必要的环境：python/django/requests/mysql</span><br><span class="line">	- 把代码拷贝到这个服务器上</span><br><span class="line">	- 让我们的程序运行起来。</span><br><span class="line">		python aa.py </span><br><span class="line">		python manage.py runserver 0.0.0.0:8000</span><br></pre></td></tr></table></figure>
+<h3 id="二、设置镜像仓库源"><a href="#二、设置镜像仓库源" class="headerlink" title="二、设置镜像仓库源"></a>二、设置镜像仓库源</h3><p>默认的镜像仓库是国外的，拉取镜像的速度很慢，所以为了方便镜像的获取，可以更改镜像源，这就需要配置一个文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>新建文件</span><br><span class="line"><span class="meta">$</span>sudo vi /etc/docker/daemon.json</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>配置信息</span><br><span class="line">&#123;</span><br><span class="line">"registry-mirrors": ["https://i1el1i0w.mirror.aliyuncs.com"]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>重启容器服务</span><br><span class="line"><span class="meta">$</span>systemctl raemon-reload</span><br><span class="line"><span class="meta">$</span>systemctl restart docker</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>检查是否配置成功</span><br><span class="line"><span class="meta">$</span>docker info</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; Registry Mirrors:</span><br><span class="line">    https://i1el1i0w.mirror.aliyuncs.com/</span><br><span class="line">'''现在，我们发现镜像已经配置到了国内，我们就可以拉取镜像了'''</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<h4 id="2-远程连接服务器"><a href="#2-远程连接服务器" class="headerlink" title="2.远程连接服务器"></a>2.远程连接服务器</h4><p>开发者一般都是用xshell，通过ssh连接上远程服务器然后进行操作。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@192.168.16.85</span><br></pre></td></tr></table></figure>
+<h3 id="三、制作镜像"><a href="#三、制作镜像" class="headerlink" title="三、制作镜像"></a>三、制作镜像</h3><p><strong>Dockerfile</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> This my first django Dockerfile</span><br><span class="line"><span class="meta">#</span> Version 1.0</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> Base images 基础镜像</span><br><span class="line">FROM centos:centos7.5.1804</span><br><span class="line"><span class="meta">#</span>这个centos系统就相当于是虚拟机之上的系统，就是集装箱，这是一个干净的系统，什么都没有</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>MAINTAINER 维护者信息</span><br><span class="line">LABEL maintainer="inspur_lyx@hotmail.com"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>ENV 设置环境变量</span><br><span class="line">ENV VERSION v1.0</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>RUN 执行以下命令（安装pytohn环境）</span><br><span class="line">RUN yum install -y wget</span><br><span class="line"></span><br><span class="line">RUN wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line"></span><br><span class="line">RUN yum install -y  python36 python3-devel gcc</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>工作目录（集装箱的/opt目录）</span><br><span class="line">WORKDIR /opt</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>拷贝文件至工作目录（虚拟机下的项目目录）</span><br><span class="line">COPY . /opt</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>这里只使用到了django模块，如果是真正的项目，应该下载-r requirements.txt </span><br><span class="line">RUN pip3 install -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com Django==2.1.8</span><br><span class="line"></span><br><span class="line">RUN rm -rf ~/.cache/pip</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>EXPOSE 映射端口</span><br><span class="line">EXPOSE 8000</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>容器启动时执行命令</span><br><span class="line">CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>用户名和密码连接</li>
-<li>公钥和私钥进行连接</li>
-</ul>
-<h4 id="3-向服务器上传文件"><a href="#3-向服务器上传文件" class="headerlink" title="3.向服务器上传文件"></a>3.向服务器上传文件</h4><ul>
-<li><p>FTP/xftp6</p>
-</li>
-<li><p>lrzsz</p>
-</li>
-<li><p>scp命令（对于五图形界面使用的频率最高）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp 文件 root@目标服务器:目录</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>基于git ( 公司做代码上线会利用 ) </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">开发：git push origin master </span><br><span class="line">运维：git clone xxx</span><br></pre></td></tr></table></figure>
+<p><strong>项目目录</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-docker_test </span><br><span class="line">    -docker  </span><br><span class="line">    <span class="comment">#配置的文件</span></span><br><span class="line">    -Dockerfile  </span><br><span class="line">    -docker_test  </span><br><span class="line">    -manage.py  </span><br><span class="line">    -requirements.txt  </span><br><span class="line">    -templates</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<p>一般情况下：</p>
-<ul>
-<li><p>windows</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FTP</span><br><span class="line">lrzsz</span><br><span class="line">git终端来继续操作 scp</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>mac/linux</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp</span><br></pre></td></tr></table></figure>
+<p><strong>创建镜像</strong></p>
+<p>在该项目下执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>docker build . -f Dockerfile -t my-helloworld:20191209</span><br><span class="line"><span class="meta">#</span>参数说明</span><br><span class="line">.表示本项目</span><br><span class="line">-f告诉docker运行什么文件</span><br><span class="line">-t表示给镜像起一个名称</span><br><span class="line">:20191209表示镜像的tag</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>我们检查一下镜像是否创建成功</span><br><span class="line"><span class="meta">$</span>docker images</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt;REPOSITORY  TAG  IMAGE ID CREATED  SIZE</span><br><span class="line">my-helloworld 20191209 ea926bbce8f5 3hoursago 583MB</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<h4 id="4-运维"><a href="#4-运维" class="headerlink" title="4.运维"></a>4.运维</h4><p>运维管理500台服务器，由于数量太多，所以他们会借助于一些管理工具，例如：saltstack / ansible(paramiko)</p>
-<p>未借助工具</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">                                                               服务器A（公钥）</span><br><span class="line">                                                               服务器B（公钥）</span><br><span class="line">运维      电脑（私钥）                                            服务器C（公钥）</span><br><span class="line">                                                               服务器D（公钥）</span><br><span class="line">                                                               服务器E（公钥）</span><br><span class="line">                                                               服务器...（公钥）</span><br></pre></td></tr></table></figure>
+<p>对于镜像我们可以知己制作，也可以拉仓库里面的（前提是配好源）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> docker pull pl/my-helloworld:20191110</span><br></pre></td></tr></table></figure>
 
-<p>借助工具（ansible/saltstack）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">                                                               服务器A（公钥）minion</span><br><span class="line">                                                               服务器B（公钥）minion</span><br><span class="line">运维      电脑（私钥）          服务器（salt-master）              服务器C（公钥）minion</span><br><span class="line">                                                               服务器D（公钥）minion</span><br><span class="line">                                                               服务器E（公钥）minion</span><br><span class="line">                                                               服务器...（公钥）minion</span><br></pre></td></tr></table></figure>
+<p>制作好的镜像，我们也可以推到镜像仓库（前提是配好源）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> docker push pl/my-helloworld:20191110</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li><p>单独操作</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在自己电脑上连接远程服务器A</span><br><span class="line">	ssh root@服务器A</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>批量操作</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">在自己电脑上连接salt-master</span><br><span class="line">	ssh root@salt-master </span><br><span class="line">在master服务器上执行命令</span><br><span class="line">	salt &quot;*&quot; cmd.run &quot;ifconfig&quot;</span><br><span class="line">让所有的minion都去执行ifconfig命令，并返回。</span><br></pre></td></tr></table></figure>
+<h3 id="四、启动容器"><a href="#四、启动容器" class="headerlink" title="四、启动容器"></a>四、启动容器</h3><p>启动命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> docker run --name helloworld -d -p 8000:8000 my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>参数解释：</span><br><span class="line">--name后面是容器的名字</span><br><span class="line">-d是后台运行</span><br><span class="line">-p是端口映射（前面的8000是容器内部的端口，后面的8000是虚拟机的8000端口）</span><br><span class="line">最后的参数就是我们刚刚创建好的镜像</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<h4 id="5-cmdb项目"><a href="#5-cmdb项目" class="headerlink" title="5.cmdb项目"></a>5.cmdb项目</h4><ul>
-<li><p>基于ssh实现，适用场景：公司没有用  saltstack/用了ansible/没有任何工具 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">服务器(autoserver)       服务器（autoclient）</span><br><span class="line">                                                                服务器A（公钥）</span><br><span class="line">DB  API                  中控机(私钥)                             服务器B（公钥）</span><br><span class="line">后台管理                                                          服务器C（公钥）</span><br><span class="line">  人                                                              服务器D（公钥）</span><br><span class="line">                                                                 服务器E（公钥）</span><br><span class="line">                                                                 ...</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>基于salt实现，使用场景：公司本身就有saltstack</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">服务器(autoserver)       服务器（autoclient）</span><br><span class="line">                                                                服务器A(salt-minion)</span><br><span class="line">DB  API                 中控机（salt-master）                    服务器B(salt-minion)</span><br><span class="line">后台管理                                                          服务器C(salt-minion)</span><br><span class="line">  人                                                              服务器D(salt-minion)</span><br><span class="line">                                                                 服务器E(salt-minion)</span><br><span class="line">                                                                 ...</span><br></pre></td></tr></table></figure>
+<p>在虚拟机访问项目</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>curl 127.0.0.1:8000</span><br><span class="line">'''</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang="en"&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta http-equiv="content-type" content="text/html; charset=utf-8"&gt;</span><br><span class="line">  &lt;title&gt;pl&lt;/title&gt;</span><br><span class="line">  &lt;meta name="robots" content="NONE,NOARCHIVE"&gt;</span><br><span class="line">  &lt;style type="text/css"&gt;</span><br><span class="line">  &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">  &lt;p&gt;hello word!&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line">'''</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>这就表明我们的项目已经启动起来了，如果我们的虚拟机有外网ip就可以使用ip+port访问了</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<h4 id="6-cmdb项目测试"><a href="#6-cmdb项目测试" class="headerlink" title="6.cmdb项目测试"></a>6.cmdb项目测试</h4><h5 id="6-1-salt模式进行"><a href="#6-1-salt模式进行" class="headerlink" title="6.1 salt模式进行"></a>6.1 salt模式进行</h5><p>我们需要三台服务器进行测试。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">192.168.16.64     做API和后台管理项目的部署</span><br><span class="line">192.168.16.85     做salt-master，在上面部署autoclient，用于资产采集。</span><br><span class="line">192.168.16.22     做salt-minion，让master去连接他并采集资产。</span><br></pre></td></tr></table></figure>
+<p>进入容器调试项目</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>docker exec -ti 容器的hash值  bash</span><br><span class="line">我们输入上面的命令就进入了集装箱的内部，自动/opt目录下，也就是我们的django项目下面，我们这里的操作一样，可以下载模块，调试项目也可以使用curl进行项目的访问</span><br></pre></td></tr></table></figure>
 
-<h6 id="第一步：安装并使用salt-（运维）"><a href="#第一步：安装并使用salt-（运维）" class="headerlink" title="第一步：安装并使用salt （运维）"></a>第一步：安装并使用salt （运维）</h6><ul>
-<li><p>master（192.168.16.85）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 安装salt-master</span><br><span class="line">    yum install salt-master</span><br><span class="line">2. 修改配置文件：/etc/salt/master</span><br><span class="line">    interface: 0.0.0.0    # 表示Master的IP </span><br><span class="line">3. 启动</span><br><span class="line">    service salt-master start</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>minion（192.168.16.22）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 安装salt-minion</span><br><span class="line">    yum install salt-minion</span><br><span class="line"></span><br><span class="line">2. 修改配置文件 /etc/salt/minion</span><br><span class="line">    master: 10.211.55.4           # master的地址</span><br><span class="line">    id: c2.salt.com                    # 客户端在salt-master中显示的唯一ID</span><br><span class="line">3. 启动</span><br><span class="line">    service salt-minion start</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在master上进行授权</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">salt-key -L                # 查看已授权和未授权的slave</span><br><span class="line">salt-key -a  salve_id      # 接受指定id的salve</span><br><span class="line"></span><br><span class="line">salt-key -r  salve_id      # 拒绝指定id的salve</span><br><span class="line">salt-key -d  salve_id      # 删除指定id的salve</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在master上远程执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">salt &apos;c2.salt.com&apos; cmd.run  &apos;ifconfig&apos;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h6 id="第二步：项目开发"><a href="#第二步：项目开发" class="headerlink" title="第二步：项目开发"></a>第二步：项目开发</h6><p>….</p>
-<p>…..</p>
-<p>……</p>
-<h6 id="第三步：项目部署"><a href="#第三步：项目部署" class="headerlink" title="第三步：项目部署"></a>第三步：项目部署</h6><ul>
-<li><p>运行autoserver</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在django项目的setting中要修改</span><br><span class="line"></span><br><span class="line">ALLOWED_HOSTS = [&quot;*&quot;,]</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 启动配置</span><br><span class="line">python manage.py runserver 0.0.0.0:8000</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 其他人可以使用IP地址进行访问</span><br><span class="line">http://192.168.16.64:8000/server/index/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行autoclient</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 将autoclient上传到192.168.16.85</span><br><span class="line">scp</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h5 id="6-2-SSH模式"><a href="#6-2-SSH模式" class="headerlink" title="6.2 SSH模式"></a>6.2 SSH模式</h5><h6 id="第一步：生成一对公钥和私钥"><a href="#第一步：生成一对公钥和私钥" class="headerlink" title="第一步：生成一对公钥和私钥"></a>第一步：生成一对公钥和私钥</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
-
-<h6 id="第二步：公钥拷贝到远程服务器"><a href="#第二步：公钥拷贝到远程服务器" class="headerlink" title="第二步：公钥拷贝到远程服务器"></a>第二步：公钥拷贝到远程服务器</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-code-id -i id_rsa.pub root@192.168.16.22</span><br></pre></td></tr></table></figure>
-
-<h6 id="第三步：修改配置围巾啊"><a href="#第三步：修改配置围巾啊" class="headerlink" title="第三步：修改配置围巾啊"></a>第三步：修改配置围巾啊</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在settings中修改：</span><br><span class="line">	SSH_PRIVATE_KEY_PATH = r&apos;..id_rsa&apos;</span><br><span class="line">	MODE = &quot;SSH&quot; # SALT/SSH</span><br></pre></td></tr></table></figure>
-
-<h6 id="第四步：运行程序"><a href="#第四步：运行程序" class="headerlink" title="第四步：运行程序"></a>第四步：运行程序</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python app.py</span><br></pre></td></tr></table></figure>
-
-<h4 id="7-公司里的规范"><a href="#7-公司里的规范" class="headerlink" title="7.公司里的规范"></a>7.公司里的规范</h4><p>公司里对于服务器很多都是用主机名，不用IP。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c1-bj-zw-shopping.com     192.168.16.64     做API和后台管理项目的部署</span><br><span class="line">c2-bj-zw-shopping.com     192.168.16.85     做salt-master，在上面部署autoclient，用于资产采集。</span><br><span class="line">c3-bj-zw-shopping.com     192.168.16.22     做salt-minion，让master去连接他并采集资产。</span><br></pre></td></tr></table></figure>
-
-<h4 id="8-资产采集多久进行一次？如何进行？"><a href="#8-资产采集多久进行一次？如何进行？" class="headerlink" title="8.资产采集多久进行一次？如何进行？"></a>8.资产采集多久进行一次？如何进行？</h4><p>定时任务在中控机上定期执行脚本。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">30  1   *   *  *     /opt/python367/bin/python3  /data/app.py</span><br></pre></td></tr></table></figure>
-
-<h4 id="9-前端示例-cmdbmanage-py-（2-7版本）"><a href="#9-前端示例-cmdbmanage-py-（2-7版本）" class="headerlink" title="9.前端示例 cmdbmanage.py （2.7版本）"></a>9.前端示例 cmdbmanage.py （2.7版本）</h4><ul>
-<li><p>安装python2.7</p>
-</li>
-<li><p>安装django</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip2 install django==1.7.6</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装MySQLdb / 安装pymysql</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pip2 install pymysql</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import pymysql</span><br><span class="line">pymysql.install_as_MySQLdb()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装 xlrd （读excel）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip2 install xlrd</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装paramiko</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip2 install paramiko</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装 pillow</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip2 install pillow</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在数据库中导入数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">create databse cmdb DEFAULT CHARSET utf8 COLLATE utf8_general_ci;</span><br><span class="line"></span><br><span class="line">mysql -u root -p  cmdb &lt; cmdb.sql</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在项目中修改数据库连接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    &apos;default&apos;: &#123;</span><br><span class="line">        &apos;ENGINE&apos;: &apos;django.db.backends.mysql&apos;,</span><br><span class="line">        &apos;NAME&apos;: &apos;cmdb&apos;,</span><br><span class="line">        &apos;USER&apos;: &apos;root&apos;,</span><br><span class="line">        &apos;PASSWORD&apos;: &apos;222&apos;,</span><br><span class="line">        &apos;HOST&apos;: &apos;127.0.0.1&apos;,</span><br><span class="line">        &apos;PORT&apos;: &apos;3306&apos;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行项目</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python2 manage.py runserver</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>登录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">用户名：wupeiqi</span><br><span class="line">密码：123</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="项目总结"><a href="#项目总结" class="headerlink" title="项目总结"></a>项目总结</h2><ul>
-<li><p>项目名称</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CMDB / 资产管理系统 / 服务器配置管理系统 / 运维自动化平台</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>项目描述</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CMDB是一套用于自动化采集服务器资产信息的项目，由于公司对于资产维护成本比较高并且数据准确性越来越低，因为原来都是搭建了samba服务,在内部共享了excel实现。通过cmdb项目可以改善资产采集的功能，减低人员成本提高工作效率，本项目实现主要有 采集中控机/restful api/资产管控平台 实现。</span><br><span class="line"></span><br><span class="line">对于采集中控机可以支持多种模式进行操作,如：saltstack/ansible/paramiko默认，并且开发过程中遵循开放封闭原则并且利用 工厂模式 实现可扩展性的插件。</span><br><span class="line"></span><br><span class="line">对于api，是严格是遵循restful规范并使用 django rest framework框架实现，并在内通过反射机制实现资产变更记录以及资产的持久化处理。</span><br><span class="line"></span><br><span class="line">资产管控平台主要为运维及主管提供数据支持和部分报表，支持excel批量导入导出，支持利用时间轴清晰的展示服务器生命周期，基于highcharts实现数据报表的展示。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>技术点（项目功能/我的职责）</p>
-<ul>
-<li><p>针对不同公司的业务开发，使用 paramiko/ansible/saltstack 实现远程采集资产的扩展。 </p>
-</li>
-<li><p>参考 middleware 实现源码并结合工厂模式，开发出了可插拔式的采集资产插件。</p>
-</li>
-<li><p>考虑到项目的严谨性，对于项目中的插件使用主动抛出异常进行约束。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">- 有没有其他的约束？</span><br><span class="line">	通过abc实现抽象类和抽象方法实现约束。</span><br><span class="line">- 你为什么不用abc？而用异常？</span><br><span class="line">	abc 操作起来比较麻烦，也可以实现。 </span><br><span class="line">	我觉得异常会更加简洁一些，并且我参考了一些源码，他们内部也是通过异常实现。 </span><br><span class="line"></span><br><span class="line">import abc</span><br><span class="line"></span><br><span class="line"># 抽象类</span><br><span class="line">class Base(metaclass=abc.ABCMeta):</span><br><span class="line">    </span><br><span class="line">    # 抽象方法</span><br><span class="line">    @abc.abstractmethod</span><br><span class="line">    def process(self):</span><br><span class="line">        pass</span><br><span class="line">class Foo(Base):</span><br><span class="line">    pass</span><br><span class="line">Foo()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过定制和扩展drf 内置authentication组件，实现用户认证。 </p>
-</li>
-<li><p>在restful api中实现api/版本/认证的功能。 </p>
-</li>
-<li><p>支持最服务器资产进行批量的导入导出，内部只用xlrd/xlwt模块进行操作。 </p>
-</li>
-<li><p>对于公司的服务器资产进行根据业务线做 数据报表的处理。  </p>
-</li>
-<li><p>基于rbac实现权限的信息的校验。</p>
-</li>
-</ul>
-</li>
-<li><p>面试题相关</p>
-<ul>
-<li><p>你的cmdb是怎们实现？</p>
-</li>
-<li><p>为什么要开发cmdb？</p>
-</li>
-<li><p>你们公司有多少台服务器？（物理机）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">70台服务器</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>什么是品牌的服务器？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">戴尔</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>资产采集都用到了那些命令？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">demidecode </span><br><span class="line">Megacli</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>cmdb都用到了那些表？（13张表）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">用户表</span><br><span class="line">部门</span><br><span class="line">机房IDC</span><br><span class="line">服务器</span><br><span class="line">硬盘</span><br><span class="line">网卡</span><br><span class="line">内存</span><br><span class="line">变更记录</span><br><span class="line"></span><br><span class="line">菜单表</span><br><span class="line">权限</span><br><span class="line">角色表</span><br><span class="line">角色和权限关系</span><br><span class="line">用户和角色的关系表</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>多少人开发？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1个人/2个人 + 运维人员</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>开发了多久？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3个月 ~ 6个月</span><br><span class="line">质疑时间短，开发资产采集很简单；资产管控平台也是有你来开发。</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</li>
-</ul>
-</li>
-</ul>
+<p>到这里，一个简单的项目算是部署成功了，但是这里面没有涉及太多的内容，后面，我会部署一个完整的比较大一点的项目（会用docker-compose的方式搭建）</p>
 
       
 	  
@@ -628,7 +216,7 @@ var _hmt = _hmt || [];
 			
 			<br>
 			<strong>本文链接：</strong>
-			https://pl1649947109.github.io/pl1649947109/2019/11/19/书/cmdb/第四讲——cmdb项目扩展与总结/
+			https://pl1649947109.github.io/pl1649947109/2019/12/07/django项目部署/centos7+docker19.03.5+Django1.11.9项目部署/
 			<br>
 			<strong>版权声明：</strong>
 			本作品采用
@@ -679,7 +267,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">cmdb</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">django项目部署</a>
         		</li>
       		
 		</ul>
@@ -735,7 +323,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://pl1649947109.github.io/pl1649947109/2019/11/19/书/cmdb/第四讲——cmdb项目扩展与总结/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://pl1649947109.github.io/pl1649947109/2019/12/07/django项目部署/centos7+docker19.03.5+Django1.11.9项目部署/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -749,18 +337,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/11/19/书/drf/第七讲——扩展：drf中版本、认证、权限、频率限制源码分析/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2030/01/01/main/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          第七讲——扩展：drf中版本、认证、权限、频率限制源码分析
+          网站使用说明
         
       </div>
     </a>
   
   
-    <a href="/2019/11/19/书/flask/第一讲——flask的快速入门与网站的搭建/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第一讲——flask的快速入门与网站的搭建</div>
+    <a href="/2019/12/02/小绿本/面试备战/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">知识大总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -787,7 +375,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#内容回顾"><span class="toc-number">1.</span> <span class="toc-text">内容回顾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#今日概要"><span class="toc-number">2.</span> <span class="toc-text">今日概要</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-CPU和主板信息"><span class="toc-number">2.1.</span> <span class="toc-text">1.CPU和主板信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-简单的后台"><span class="toc-number">2.2.</span> <span class="toc-text">2. 简单的后台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-agent和第三方工具的模式"><span class="toc-number">2.3.</span> <span class="toc-text">3. agent和第三方工具的模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#作业"><span class="toc-number">3.</span> <span class="toc-text">作业</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内容梳理"><span class="toc-number">4.</span> <span class="toc-text">内容梳理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-环境"><span class="toc-number">4.0.1.</span> <span class="toc-text">1. 环境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-远程连接服务器"><span class="toc-number">4.0.2.</span> <span class="toc-text">2.远程连接服务器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-向服务器上传文件"><span class="toc-number">4.0.3.</span> <span class="toc-text">3.向服务器上传文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-运维"><span class="toc-number">4.0.4.</span> <span class="toc-text">4.运维</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-cmdb项目"><span class="toc-number">4.0.5.</span> <span class="toc-text">5.cmdb项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-cmdb项目测试"><span class="toc-number">4.0.6.</span> <span class="toc-text">6.cmdb项目测试</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#6-1-salt模式进行"><span class="toc-number">4.0.6.1.</span> <span class="toc-text">6.1 salt模式进行</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#第一步：安装并使用salt-（运维）"><span class="toc-number">4.0.6.1.1.</span> <span class="toc-text">第一步：安装并使用salt （运维）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#第二步：项目开发"><span class="toc-number">4.0.6.1.2.</span> <span class="toc-text">第二步：项目开发</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#第三步：项目部署"><span class="toc-number">4.0.6.1.3.</span> <span class="toc-text">第三步：项目部署</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-2-SSH模式"><span class="toc-number">4.0.6.2.</span> <span class="toc-text">6.2 SSH模式</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#第一步：生成一对公钥和私钥"><span class="toc-number">4.0.6.2.1.</span> <span class="toc-text">第一步：生成一对公钥和私钥</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#第二步：公钥拷贝到远程服务器"><span class="toc-number">4.0.6.2.2.</span> <span class="toc-text">第二步：公钥拷贝到远程服务器</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#第三步：修改配置围巾啊"><span class="toc-number">4.0.6.2.3.</span> <span class="toc-text">第三步：修改配置围巾啊</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#第四步：运行程序"><span class="toc-number">4.0.6.2.4.</span> <span class="toc-text">第四步：运行程序</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-公司里的规范"><span class="toc-number">4.0.7.</span> <span class="toc-text">7.公司里的规范</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-资产采集多久进行一次？如何进行？"><span class="toc-number">4.0.8.</span> <span class="toc-text">8.资产采集多久进行一次？如何进行？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-前端示例-cmdbmanage-py-（2-7版本）"><span class="toc-number">4.0.9.</span> <span class="toc-text">9.前端示例 cmdbmanage.py （2.7版本）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目总结"><span class="toc-number">5.</span> <span class="toc-text">项目总结</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#docker部署最简单的django项目"><span class="toc-number">1.</span> <span class="toc-text">docker部署最简单的django项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、安装docker"><span class="toc-number">1.1.</span> <span class="toc-text">一、安装docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、设置镜像仓库源"><span class="toc-number">1.2.</span> <span class="toc-text">二、设置镜像仓库源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、制作镜像"><span class="toc-number">1.3.</span> <span class="toc-text">三、制作镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、启动容器"><span class="toc-number">1.4.</span> <span class="toc-text">四、启动容器</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -801,7 +389,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="书/cmdb/第四讲——cmdb项目扩展与总结" data-title="第四讲——cmdb项目扩展与总结" data-url="https://pl1649947109.github.io/pl1649947109/2019/11/19/书/cmdb/第四讲——cmdb项目扩展与总结/"></div>
+	<div class="ds-thread" data-thread-key="django项目部署/centos7+docker19.03.5+Django1.11.9项目部署" data-title="centos7+docker19.03.5+Django1.11.9项目部署" data-url="https://pl1649947109.github.io/pl1649947109/2019/12/07/django项目部署/centos7+docker19.03.5+Django1.11.9项目部署/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -832,7 +420,7 @@ var _hmt = _hmt || [];
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "https://pl1649947109.github.io/pl1649947109/2019/11/19/书/cmdb/第四讲——cmdb项目扩展与总结/",
+  id: "https://pl1649947109.github.io/pl1649947109/2019/12/07/django项目部署/centos7+docker19.03.5+Django1.11.9项目部署/",
   owner: 'pl1649947109',
   repo: 'https://github.com/pl1649947109/gitment.git',
   oauth: {
