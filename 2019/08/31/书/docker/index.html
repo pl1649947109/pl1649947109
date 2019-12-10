@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://pl1649947109.github.io/pl1649947109">
   <title>docker | 林殊途</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Docker一、学习目标 透彻理解Docker的概念,功能 了解Docker的核心组件,整体架构 学会Docker的安装,CentOS7.x Docker镜像的制作以及使用">
+  <meta name="description" content="Docker云计算的服务类型： IAAS:kvm+openstack PAAS:docker+k8s SAAS: 一、学习目标 透彻理解Docker的概念,功能 了解Docker的核心组件,整体架构 学会Docker的安装,CentOS7.x Docker镜像的制作以及使用">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker">
 <meta property="og:url" content="https://pl1649947109.github.io/pl1649947109/2019/08/31/书/docker/index.html">
 <meta property="og:site_name" content="林殊途">
-<meta property="og:description" content="Docker一、学习目标 透彻理解Docker的概念,功能 了解Docker的核心组件,整体架构 学会Docker的安装,CentOS7.x Docker镜像的制作以及使用">
+<meta property="og:description" content="Docker云计算的服务类型： IAAS:kvm+openstack PAAS:docker+k8s SAAS: 一、学习目标 透彻理解Docker的概念,功能 了解Docker的核心组件,整体架构 学会Docker的安装,CentOS7.x Docker镜像的制作以及使用">
 <meta property="og:locale" content="zh">
 <meta property="og:image" content="http://9017499461.linshutu.top/docker1.png">
 <meta property="og:image" content="http://9017499461.linshutu.top/docker2.png">
@@ -25,10 +25,10 @@
 <meta property="og:image" content="http://9017499461.linshutu.top/docker7.jpg">
 <meta property="og:image" content="http://9017499461.linshutu.top/docker8.jpg">
 <meta property="og:image" content="http://9017499461.linshutu.top/docker9.png">
-<meta property="og:updated_time" content="2019-12-08T13:56:11.370Z">
+<meta property="og:updated_time" content="2019-12-10T15:19:46.299Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker">
-<meta name="twitter:description" content="Docker一、学习目标 透彻理解Docker的概念,功能 了解Docker的核心组件,整体架构 学会Docker的安装,CentOS7.x Docker镜像的制作以及使用">
+<meta name="twitter:description" content="Docker云计算的服务类型： IAAS:kvm+openstack PAAS:docker+k8s SAAS: 一、学习目标 透彻理解Docker的概念,功能 了解Docker的核心组件,整体架构 学会Docker的安装,CentOS7.x Docker镜像的制作以及使用">
 <meta name="twitter:image" content="http://9017499461.linshutu.top/docker1.png">
   
     <link rel="alternative" href="/atom.xml" title="林殊途" type="application/atom+xml">
@@ -151,7 +151,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">3k 字</span>
+        <span class="post-count">3.5k 字</span>
       </span>
     </span>
 
@@ -160,7 +160,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">12min</span>
+        <span class="post-count">14min</span>
       </span>
     </span>
 </div>
@@ -174,7 +174,11 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><h3 id="一、学习目标"><a href="#一、学习目标" class="headerlink" title="一、学习目标"></a>一、学习目标</h3><ul>
+        <h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><p><strong>云计算的服务类型</strong>：</p>
+<p>IAAS:kvm+openstack</p>
+<p>PAAS:docker+k8s</p>
+<p>SAAS:</p>
+<h3 id="一、学习目标"><a href="#一、学习目标" class="headerlink" title="一、学习目标"></a>一、学习目标</h3><ul>
 <li>透彻理解Docker的概念,功能</li>
 <li>了解Docker的核心组件,整体架构</li>
 <li>学会Docker的安装,CentOS7.x</li>
@@ -191,7 +195,7 @@ var _hmt = _hmt || [];
 </ul>
 <p><img src="http://9017499461.linshutu.top/docker2.png" alt="what-is-docker"></p>
 <p>定义：<em>Docker</em> 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows 机器上 ，是一种轻量级的虚拟化技术。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">拓展：</span><br><span class="line">1.Docker是基于Go语言并遵循Apache2.0协议开源</span><br><span class="line"></span><br><span class="line">2.虚拟化技术：简单的说来就是实现物理计算机资源的最大化利用（比如配置很高的机器通过虚拟化技术可以实现分配多个逻辑计算机，这些逻辑计算机相互独立运行实现更多的功能）</span><br><span class="line"></span><br><span class="line">3.工作机制：容器完全是使用沙箱机制，相互之间不会有任何接口，更为重要的是容器性能开销极低（以前我们使用的虚拟机，它分的是物理计算机的实际资源，比如cpu核数、内存等，而容器的开销仅仅就是一个进程）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">拓展：</span><br><span class="line">1.Docker是基于Go语言并遵循Apache2.0协议开源</span><br><span class="line"></span><br><span class="line">2.虚拟化技术：简单的说来就是实现物理计算机资源的最大化利用（比如配置很高的机器通过虚拟化技术可以实现分配多个逻辑计算机，这些逻辑计算机相互独立运行实现更多的功能）</span><br><span class="line"></span><br><span class="line">3.工作机制：容器完全是使用沙箱机制，相互之间不会有任何接口，更为重要的是容器性能开销极低（以前我们使用的虚拟机，它分的是物理计算机的实际资源，比如cpu核数、内存等，而容器的开销仅仅就是一个进程）</span><br><span class="line"></span><br><span class="line">4.容器：在隔离的环境运行的一个进程，如果进程停止，容器就会销毁。隔离的环境拥有自己的系统文件，ip地址，主机名称等。</span><br><span class="line"></span><br><span class="line">容器就是和虚拟化的区别：</span><br><span class="line">kvm虚拟化：需要硬件的支持，需要模拟硬件，可以运行不同操作系统，启动时间分钟级（和物理的开机时间差不多）</span><br><span class="line">容器：共用宿主机内核、轻量级、损耗少、启动快、性能高</span><br></pre></td></tr></table></figure>
 
 <p><img src="http://9017499461.linshutu.top/docker3.svg" alt="differents-docker"></p>
 <p>从上面的演变流程我们可以看出，物理资源的利用率越来越高：从最开始的物理主机到后来的虚拟主机再到容器技术，这是技术的进步。</p>
@@ -217,26 +221,40 @@ var _hmt = _hmt || [];
 </ul>
 <p><img src="http://9017499461.linshutu.top/docker5.png" alt="docker-version"></p>
 <h3 id="三、安装"><a href="#三、安装" class="headerlink" title="三、安装"></a>三、安装</h3><p>基于源安装，这种方式会自动安装依赖</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line">mv docker-ce.repo /etc/yum.repos.d</span><br><span class="line">yum install -y docker-ce</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>添加源</span><br><span class="line">wget http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line">mv docker-ce.repo /etc/yum.repos.d</span><br><span class="line"><span class="meta">#</span>安装</span><br><span class="line">yum install -y docker-ce</span><br></pre></td></tr></table></figure>
 
 <p>自定义的方式安装，可能会出现组件找不到的情况</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-17.09.0.ce-1.el7.centos.x86_64.rpm</span><br><span class="line">yum localinstall docker-ce-17.09.0.ce-1.el7.centos.x86_64.rpm</span><br></pre></td></tr></table></figure>
 
+<p>启动服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>systemctl start docker.service</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>设置开机自启</span><br><span class="line"><span class="meta">$</span>systemctl enable docker.service</span><br></pre></td></tr></table></figure>
+
 <h3 id="四、核心三要素"><a href="#四、核心三要素" class="headerlink" title="四、核心三要素"></a>四、核心三要素</h3><p><img src="http://9017499461.linshutu.top/docker6.png" alt="docker架构"></p>
 <h5 id="镜像仓库-Registry"><a href="#镜像仓库-Registry" class="headerlink" title="镜像仓库(Registry)"></a>镜像仓库(Registry)</h5><ul>
-<li>你是个啥东西<ul>
+<li><p>你是个啥东西</p>
+<ul>
 <li>镜像仓库</li>
 </ul>
 </li>
-<li>你从哪里来<ul>
-<li>里面的镜像都是通过Docker push传上去的</li>
-<li>官方公有仓库</li>
-<li>自建的私有仓库</li>
+<li><p>你从哪里来</p>
+<ul>
+<li><p>里面的镜像都是通过Docker push传上去的</p>
+</li>
+<li><p>官方公有仓库（hub.deocker.com）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>加速地址</span><br><span class="line">https://regitry.docker-cn.com</span><br></pre></td></tr></table></figure>
+
+
+</li>
 </ul>
 </li>
-<li>你要到哪里去<ul>
-<li>镜像存储</li>
 </ul>
+<ul>
+<li><p>自建的私有仓库</p>
+<ul>
+<li>你要到哪里去</li>
+</ul>
+</li>
+<li><p>镜像存储</p>
 </li>
 </ul>
 <h5 id="容器-Containers"><a href="#容器-Containers" class="headerlink" title="容器(Containers)"></a>容器(Containers)</h5><ul>
@@ -253,6 +271,9 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
+<p>补充：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>docker run=docker create+docker start</span><br><span class="line">参数：</span><br><span class="line">-d：方后台</span><br><span class="line">-p：端口映射</span><br><span class="line">-f：强制</span><br><span class="line">-v：源地址(宿主机):目标地址(容器)</span><br><span class="line">-ti：分配交互式终端</span><br><span class="line">--name：指定容器的名字（就是给容器）起个名字</span><br><span class="line"><span class="meta">#</span>展示容器列表</span><br><span class="line"><span class="meta">$</span>docker ps -a -l查看最新启动的镜像</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>杀死容器</span><br><span class="line"><span class="meta">$</span>docker kill container_name</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>启动关掉的容器</span><br><span class="line"><span class="meta">$</span>docker start xx</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>进入容器</span><br><span class="line"><span class="meta">$</span>dcoker exec -ti xx bash</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>批量删除容器命令</span><br><span class="line"><span class="meta">$</span>docker rm -f `docker ps -a -q`</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>端口映射</span><br><span class="line">-p hostPort:containerPort 容器的端口映射到宿主机的端口</span><br><span class="line">-p ip:hostPort:containerPort 多个容器都想使用80端口</span><br><span class="line">-p ip:containerPort(随机端口，可以做负载均衡)</span><br><span class="line">-p 80:80 -p 443:443 指定多个-p</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>随机端口</span><br><span class="line"><span class="meta">$</span>docker run -d -P</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>宿主机的文件拷贝到容器</span><br><span class="line"><span class="meta">$</span>docker cp xx a323sd13as13cd1:/opt</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>-v的方式主要改变宿主机下面的文件容器里面对应的文件一样被修改了（就是建立了容器和宿主机之间的通道）</span><br><span class="line"><span class="meta">$</span>docker run -d -p 80:80 -v /opt:/usr/local/nginx/html nginx:latest</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>容器中test目录不存在，自动创建</span><br><span class="line"><span class="meta">$</span>docker run -d -p 80:80 -v /test:/usr/local/nginx/html nginx:latest</span><br></pre></td></tr></table></figure>
+
 <h5 id="镜像-Images"><a href="#镜像-Images" class="headerlink" title="镜像(Images)"></a>镜像(Images)</h5><p>灵魂三问</p>
 <ul>
 <li>你是个啥东西<ul>
@@ -270,6 +291,9 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
+<p>补充：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>导出镜像</span><br><span class="line"><span class="meta">$</span>dcoker image save -o /opt/docker_myimage:20191210.tar.gz alpine:latest</span><br><span class="line">或</span><br><span class="line"><span class="meta">$</span>dcoker image save -o alpine:latest &gt; /opt/docker_myimage:20191210.tar.gz </span><br><span class="line"><span class="meta">#</span>导入命令</span><br><span class="line"><span class="meta">$</span>dcoker image load - /opt/docker_myimage:20191210.tar.gz</span><br></pre></td></tr></table></figure>
+
 <h3 id="五、HelloWorld"><a href="#五、HelloWorld" class="headerlink" title="五、HelloWorld"></a>五、HelloWorld</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> docker run hello-world</span><br></pre></td></tr></table></figure>
 
 <p><img src="http://9017499461.linshutu.top/docker7.jpg" alt="run容器流程图"></p>
@@ -277,24 +301,35 @@ var _hmt = _hmt || [];
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> "registry-mirrors": ["https://i1el1i0w.mirror.aliyuncs.com"]</span><br></pre></td></tr></table></figure>
 
 <h3 id="六、常用命令"><a href="#六、常用命令" class="headerlink" title="六、常用命令"></a>六、常用命令</h3><ul>
-<li><code>docker ps</code> 查看容器列表</li>
-<li><code>docker images</code> 查看镜像列表</li>
-<li><code>docker run</code> 启动容器，-d|-p|–name</li>
-<li><code>docker pull</code>从仓库拉取镜像</li>
-<li><code>docker push</code> 本地镜像推送到仓库中</li>
-<li><code>docker tag</code> 为镜像做标记</li>
-<li><code>docker search</code> 搜索镜像</li>
-<li><code>docker rm</code> 删除容器</li>
-<li><code>docker rmi</code>删除镜像</li>
-<li><code>docker cp</code> 在容器与宿主机之间拷贝文件</li>
-<li><code>docker exec -ti</code> 进入容器 </li>
-<li><code>docker build</code> 构建镜像</li>
-<li>docker inspect 查看镜像或者容器详细信息</li>
+<li><p><code>docker ps</code> 查看容器列表</p>
+</li>
+<li><p><code>docker images</code> 查看镜像列表</p>
+</li>
+<li><p><code>docker run</code> 启动容器，-d|-p|–name</p>
+</li>
+<li><p><code>docker pull</code>从仓库拉取镜像</p>
+</li>
+<li><p><code>docker push</code> 本地镜像推送到仓库中</p>
+</li>
+<li><p><code>docker tag</code> 为镜像做标记</p>
+</li>
+<li><p><code>docker search</code> 搜索镜像（查询镜像仓库中是否存在该镜像）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>比如查询centos</span><br><span class="line">[root@iZpiur4diu91c9Z ~]# docker search centos</span><br><span class="line">NAME    DESCRIPTION   STARS（点赞）  OFFICI </span><br><span class="line">centos The official build of CentOS.  5714 [OK]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>docker rm</code> 删除容器</p>
+</li>
+<li><p><code>docker rmi</code>删除镜像</p>
+</li>
+<li><p><code>docker cp</code> 在容器与宿主机之间拷贝文件</p>
+</li>
+<li><p><code>docker exec -ti</code> 进入容器 </p>
+</li>
+<li><p><code>docker build</code> 构建镜像</p>
+</li>
+<li><p>docker inspect 查看镜像或者容器详细信息</p>
+</li>
 </ul>
 <p><img src="http://9017499461.linshutu.top/docker8.jpg" alt></p>
-<p>补充：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>启动所有的容器命令</span><br><span class="line">docker stop $(docker ps -a | awk '&#123; print $1&#125;' | tail -n +2)</span><br><span class="line"><span class="meta">#</span>关闭所有的容器命令</span><br><span class="line">docker stop $(docker ps -a | awk '&#123; print $1&#125;' | tail -n +2)</span><br><span class="line"><span class="meta">#</span>删除所有的容器命令</span><br><span class="line">docker rm $(docker ps -a | awk '&#123; print $1&#125;' | tail -n +2)</span><br><span class="line"><span class="meta">#</span>删除所有的镜像命令</span><br><span class="line">docker rmi $(docker images | awk '&#123;print $3&#125;' |tail -n +2)</span><br></pre></td></tr></table></figure>
-
 <h3 id="七、制作自己的镜像"><a href="#七、制作自己的镜像" class="headerlink" title="七、制作自己的镜像"></a>七、制作自己的镜像</h3><h5 id="构建镜像"><a href="#构建镜像" class="headerlink" title="构建镜像"></a>构建镜像</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build . -f ./Dockerfile -t my-helloworld:20191110</span><br></pre></td></tr></table></figure>
 
 <h5 id="Dockerfile（-）"><a href="#Dockerfile（-）" class="headerlink" title="Dockerfile（***）"></a>Dockerfile（***）</h5><p>解释：一个包含一堆指令的文件，在docker build的时候，按照该文件中的指令进行操作，最终生成我们期望的镜像</p>
@@ -352,7 +387,7 @@ var _hmt = _hmt || [];
 <p><img src="http://9017499461.linshutu.top/docker9.png" alt="Dockerfile解释"></p>
 <h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> This my first django Dockerfile</span><br><span class="line"><span class="meta">#</span> Version 1.0</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> Base images 基础镜像</span><br><span class="line">FROM centos:centos7.5.1804</span><br><span class="line"><span class="meta">#</span>这个centos系统就相当于是虚拟机之上的系统，就是集装箱，这是一个干净的系统，什么都没有</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>MAINTAINER 维护者信息</span><br><span class="line">LABEL maintainer="inspur_lyx@hotmail.com"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>ENV 设置环境变量</span><br><span class="line">ENV VERSION v1.0</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>RUN 执行以下命令（安装pytohn环境）</span><br><span class="line">RUN yum install -y wget</span><br><span class="line"></span><br><span class="line">RUN wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line"></span><br><span class="line">RUN yum install -y  python36 python3-devel gcc</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>工作目录</span><br><span class="line">WORKDIR /opt</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>拷贝文件至工作目录</span><br><span class="line">COPY . /opt</span><br><span class="line"></span><br><span class="line">RUN pip3 install -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com Django==2.1.8</span><br><span class="line"></span><br><span class="line">RUN rm -rf ~/.cache/pip</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>EXPOSE 映射端口</span><br><span class="line">EXPOSE 8000</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>容器启动时执行命令</span><br><span class="line">CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]</span><br></pre></td></tr></table></figure>
 
-<h5 id="推送镜像"><a href="#推送镜像" class="headerlink" title="推送镜像"></a>推送镜像</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>创建镜像</span><br><span class="line"><span class="meta">$</span> docker build . -f Dockerfile -t my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>给镜像打上标签</span><br><span class="line"><span class="meta">$</span> docker tag my-helloworld:20191110 liyongxin5288/my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>把镜像push到镜像仓库中</span><br><span class="line"><span class="meta">$</span> docker push liyongxin5288/my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>拉取仓库中的镜像</span><br><span class="line"><span class="meta">$</span> docker pull liyongxin5288/my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>运行镜像就成为了我们的容器</span><br><span class="line"><span class="meta">$</span> docker run --name helloworld -d -p 8000:8000 my-helloworld:20191110</span><br><span class="line">(注：-p后面的参数是映射端口，把容器内容的端口映射到虚拟机的端口上面，我们通过虚拟机的IP和port就能够访问该服务了，前面的端口是容器内部的，后面的端口是我们虚拟机的)</span><br><span class="line"><span class="meta">#</span>进入容器的命令</span><br><span class="line"><span class="meta">$</span> docker exec -ti 容器的hash值   bash</span><br><span class="line">(注：后面的bash是必须加上的)</span><br></pre></td></tr></table></figure>
+<h5 id="推送镜像"><a href="#推送镜像" class="headerlink" title="推送镜像"></a>推送镜像</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>创建镜像</span><br><span class="line"><span class="meta">$</span> docker build . -f Dockerfile -t my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>给镜像打上标签</span><br><span class="line"><span class="meta">$</span> docker tag my-helloworld:20191110 liyongxin5288/my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>把镜像push到镜像仓库中</span><br><span class="line"><span class="meta">$</span> docker push liyongxin5288/my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>拉取仓库中的镜像</span><br><span class="line"><span class="meta">$</span> docker pull liyongxin5288/my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>运行镜像就成为了我们的容器</span><br><span class="line"><span class="meta">$</span> docker run --name helloworld -d -p 8000:8000 my-helloworld:20191110</span><br><span class="line">(注：-p后面的参数是映射端口，把容器内容的端口映射到虚拟机的端口上面，我们通过虚拟机的IP和port就能够访问该服务了，前面的端口是容器内部的，后面的端口是我们虚拟机的)</span><br><span class="line"><span class="meta">#</span>进入容器的命令</span><br><span class="line"><span class="meta">$</span> docker exec -ti 容器的hash值   bash</span><br><span class="line">(后面的base这个分配的终端不加就使用默认的命令，但是有的命令加上这个命令运行的时候就死了那就不加)</span><br><span class="line"><span class="meta">#</span>让容器一直活着</span><br><span class="line"><span class="meta">$</span>docker run -d centos:6.9 tail -f /etc/hosts</span><br></pre></td></tr></table></figure>
 
 <h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><h4 id="常用的命令"><a href="#常用的命令" class="headerlink" title="常用的命令"></a>常用的命令</h4><ul>
 <li>systemctl status xxxxx   #查看相关的服务状态</li>
@@ -360,6 +395,8 @@ var _hmt = _hmt || [];
 <li>curl <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> #在linux下访问百度网站</li>
 <li>curl 127.0.0.1:8000  #linux下访问本地端口</li>
 <li>curl 127.0.0.1:8000  #linux下访问本地端口</li>
+<li>docker system #docker容器相关的信息命令 </li>
+<li>pstree#显示进程树</li>
 </ul>
 
       
