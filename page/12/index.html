@@ -117,6 +117,247 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-爬虫/第十讲——scrapy爬虫框架之图片数据爬取" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/24/爬虫/第十讲——scrapy爬虫框架之图片数据爬取/">第十讲——scrapy爬虫框架之图片数据爬取</a>
+    </h1>
+  
+
+			
+			<a href="/2018/09/24/爬虫/第十讲——scrapy爬虫框架之图片数据爬取/" class="archive-article-date">
+  	<time datetime="2018-09-24T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-24</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">548 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">爬取图片ImagesPipeline</span><br><span class="line">    --基于scrapy爬取字符串数据类型的数据和爬取图片类型的数据的区别</span><br><span class="line">        --字符串：只需要基于xpath进行数据解析且提交管道进行持久化储存</span><br><span class="line">        --图片：xpath解析出图片src的属性值，单独的对图片地址发起请求获取图片二进制类型的数据</span><br><span class="line">    --ImagesPipline：</span><br><span class="line">        --只需要将img的src的属性值进行解析，提交到管道，管道会对图片进行发送请求获取图片的二进制数据</span><br><span class="line">        --使用流程：</span><br><span class="line">           -需求：爬取站长素材中的高清图片</span><br><span class="line">           -数据解析：获取图片的地址</span><br><span class="line">           -将储存图片地址的item提交到指定的管道类</span><br><span class="line">           -在管道文件中自定制一个基于ImagesPileLine的一个管道类</span><br><span class="line">           -重写<span class="number">3</span>个管道类的方法</span><br><span class="line">           -在配置文件中：</span><br><span class="line">                -指定图片储存的目录：IMAGES_STORE</span><br><span class="line">                -指定开启的管道：就是自定制的管道</span><br></pre></td></tr></table></figure>
+
+<p>爬取文件：first.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> scrapy4.items <span class="keyword">import</span> Scrapy4Item</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FirstSpider</span><span class="params">(scrapy.Spider)</span>:</span></span><br><span class="line">    name = <span class="string">'first'</span></span><br><span class="line">    <span class="comment"># allowed_domains = ['www.xxx.com']</span></span><br><span class="line">    start_urls = [<span class="string">'http://sc.chinaz.com/tupian/'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        div_list = response.xpath(<span class="string">'//*[@id="container"]/div'</span>)</span><br><span class="line">        <span class="keyword">for</span> div <span class="keyword">in</span> div_list:</span><br><span class="line">            <span class="comment">#注意：使用伪属性（图片的懒加载）</span></span><br><span class="line">            src = div.xpath(<span class="string">'./div/a/img/@src2'</span>).extract_first()</span><br><span class="line"></span><br><span class="line">            item = Scrapy4Item()</span><br><span class="line">            item[<span class="string">'src'</span>] = src</span><br><span class="line">            <span class="keyword">yield</span> item</span><br></pre></td></tr></table></figure>
+
+<p>属性封装：items.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Scrapy4Item</span><span class="params">(scrapy.Item)</span>:</span></span><br><span class="line">    <span class="comment"># define the fields for your item here like:</span></span><br><span class="line">    <span class="comment"># name = scrapy.Field()</span></span><br><span class="line">    src = scrapy.Field()</span><br></pre></td></tr></table></figure>
+
+<p>管道储存：pipelines.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#自定义</span></span><br><span class="line"><span class="keyword">from</span> scrapy.pipelines.images <span class="keyword">import</span> ImagesPipeline</span><br><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImgproPipeline</span><span class="params">(object)</span>:</span></span><br><span class="line">    item = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span><span class="params">(self, item, spider)</span>:</span></span><br><span class="line">        <span class="comment"># print(item)</span></span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line"><span class="comment">#ImagesPipeline专门用于文件下载的管道类，下载过程支持异步和多线程</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImagesPipeline</span><span class="params">(ImagesPipeline)</span>:</span></span><br><span class="line">    <span class="comment">#就是可以根据图片的地址进行图片数据的请求</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_media_requests</span><span class="params">(self, item, info)</span>:</span></span><br><span class="line">        <span class="keyword">yield</span> scrapy.Request(item[<span class="string">'src'</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment">#定制图片的名称</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">file_downloaded</span><span class="params">(self, response, request, info=None)</span>:</span></span><br><span class="line">        imageName = request.url.split(<span class="string">'/'</span>)[<span class="number">-1</span>]</span><br><span class="line">        <span class="keyword">return</span> imageName</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">item_completed</span><span class="params">(self, results, item, info)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> item <span class="comment">#返回给下一个即将被执行的管道类</span></span><br></pre></td></tr></table></figure>
+
+<p>配置文件：settings.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#UA伪装</span></span><br><span class="line">USER_AGENT = <span class="string">'"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36"'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#不遵循该协议</span></span><br><span class="line">ROBOTSTXT_OBEY = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#开启管道</span></span><br><span class="line">ITEM_PIPELINES = &#123;</span><br><span class="line">   <span class="string">'scrapy4.pipelines.ImagesPipeline'</span>: <span class="number">300</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#指定图片指定的路径</span></span><br><span class="line">IMAGES_STORE = ‘./imgs’：表示最终图片存储的目录</span><br></pre></td></tr></table></figure>
+
+
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/24/爬虫/第十讲——scrapy爬虫框架之图片数据爬取/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/Django/第一讲——Django知识带入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/24/书/Django/第一讲——Django知识带入/">第一讲——Django之知识带入</a>
+    </h1>
+  
+
+			
+			<a href="/2018/09/24/书/Django/第一讲——Django知识带入/" class="archive-article-date">
+  	<time datetime="2018-09-24T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-24</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">6.1k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">21min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>很简洁的一个学习dj的网站：<a href="https://code.ziqiangxuetang.com/django/django-admin.html" target="_blank" rel="noopener">https://code.ziqiangxuetang.com/django/django-admin.html</a></p>
+<h3 id="HTTP协议相关"><a href="#HTTP协议相关" class="headerlink" title="HTTP协议相关"></a>HTTP协议相关</h3><h4 id="HTTP协议简介"><a href="#HTTP协议简介" class="headerlink" title="HTTP协议简介"></a>HTTP协议简介</h4><p>HTTP，超文本传输协议（HyperText Transfer Protocol)是互联网上应用最为广泛的 一种网络协议。所有的WWW文件都必须遵守这个标准。设计HTTP最初的目的是为了提供一种发布和接收HTML页面的方法，HTTP是万维网的数据通信的基础。<strong>现在应用最广泛的是HTTP1.1版本</strong></p>
+<h4 id="HTTP工作流程"><a href="#HTTP工作流程" class="headerlink" title="HTTP工作流程"></a>HTTP工作流程</h4><p>HTTP是一个客户端终端（用户）和服务器端（网站）请求和应答的标准（TCP）。通过使用网页浏览器、网络爬虫或者其它的工具，客户端发起一个HTTP请求到服务器上指定端口（默认端口为80）。我们称这个客户端为用户代理程序（user agent）。应答的服务器上存储着一些资源，比如HTML文件和图像。我们称这个应答服务器为源服务器（origin server）。在用户代理和源服务器中间可能存在多个“中间层”，比如代理服务器、网关或者隧道（tunnel）。</p>
+        
+          <!---<a class="article-more-a" href="/2018/09/24/书/Django/第一讲——Django知识带入/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/24/书/Django/第一讲——Django知识带入/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
     <article id="post-爬虫/第九讲——scrapy爬虫框架之请求传参" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1080,273 +1321,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/前端/第四讲——前端之jQuery" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/17/书/前端/第四讲——前端之jQuery/">第四讲——jQuery</a>
-    </h1>
-  
-
-			
-			<a href="/2018/09/17/书/前端/第四讲——前端之jQuery/" class="archive-article-date">
-  	<time datetime="2018-09-17T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-17</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">5.9k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">24min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>全部内容：找标签+操作标签+事件</p>
-<p>找标签：3种方式</p>
-<ul>
-<li>查找：6(属性)+4(层级)=10个</li>
-<li>筛选：基本9个+利用[]筛选，3个=12个 +表单(input)：input的属性，大概8-9个+4个属性=13个  共计25个</li>
-<li>筛选方法：next系列3个+prev系列3个+parent3个+儿子兄弟2个+find1个+filter1个+补充的first()系列5个共计18个</li>
-</ul>
-<p>操作标签：</p>
-<h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><p>连接：<a href="https://www.jquery123.com/category/css/" target="_blank" rel="noopener">https://www.jquery123.com/category/css/</a></p>
-<p>连接：<a href="https://www.w3school.com.cn/jquery/jquery_reference.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/jquery/jquery_reference.asp</a></p>
-<p>介绍：</p>
-<ul>
-<li>jQuery是一个轻量级的、兼容多浏览器的JavaScript库。</li>
-<li>jQuery使用户能够更加方便的处理HTML Document、Events、实现动画效果、方便地进行Ajax交互，能够极大地简化js编程。</li>
-</ul>
-<p><strong>jQuery的优势</strong></p>
-<ul>
-<li>一款轻量级的JS框架。jQuery核心js文件才几十kb，不会影响页面加载速度。</li>
-<li>丰富的DOM选择器,jQuery的选择器用起来很方便，比如要找到某个DOM对象的相邻元素，JS可能要写好几行代码，而jQuery一行代码就搞定了，再比如要将一个表格的隔行变色，jQuery也是一行代码搞定。</li>
-<li>链式表达式。jQuery的链式操作可以把多个操作写在一行代码里，更加简洁。</li>
-<li>事件、样式、动画支持。jQuery还简化了js操作css的代码，并且代码的可读性也比js要强。</li>
-<li>Ajax操作支持。jQuery简化了AJAX操作，后端只需返回一个JSON格式的字符串就能完成与前端的通信。</li>
-<li>跨浏览器兼容。jQuery基本兼容了现在主流的浏览器，不用再为浏览器的兼容问题而伤透脑筋。</li>
-<li>插件扩展开发。jQuery有着丰富的第三方的插件，例如：树形菜单、日期控件、图片切换插件、弹出窗口等等基本前端页面上的组件都有对应插件，并且用jQuery插件做出来的效果很炫，并且可以根据自己需要去改写和封装插件，简单实用。</li>
-</ul>
-<h4 id="jQuery的两种引入方式"><a href="#jQuery的两种引入方式" class="headerlink" title="jQuery的两种引入方式"></a><strong>jQuery的两种引入方式</strong></h4><ul>
-<li>方式一：直接下载到本地，从本地导入（推荐使用）</li>
-<li>方式二：使用文件的网络地址导入</li>
-</ul>
-<h4 id="jquery和dom对象互相转换"><a href="#jquery和dom对象互相转换" class="headerlink" title="jquery和dom对象互相转换"></a><strong>jquery和dom对象互相转换</strong></h4><p>jQue虽然 <code>jQuery对象</code>是包装 <code>DOM对象</code>后产生的，但是 <code>jQuery对象</code>无法使用 <code>DOM对象</code>的任何方法，同理 <code>DOM对象</code>也没不能使用 <code>jQuery</code>里的方法。</p>
-<ul>
-<li>jQuery对象转成DOM对象：通过一个jQuery对象+[0]索引零，就变成了DOM对象，就可以使用JS的代码方法了，</li>
-<li>DOM对象转换成jQuery对象：$(DOM对象)，通过$符号包裹一下就可以了</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#i1"</span>).html();<span class="comment">//DOM对象转换成jQuery对象</span></span><br><span class="line">$(<span class="string">"#i1"</span>)[<span class="number">0</span>].innerHTML;<span class="comment">//jQuery对象转成DOM对象</span></span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2018/09/17/书/前端/第四讲——前端之jQuery/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/17/书/前端/第四讲——前端之jQuery/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-爬虫/第二讲——解决简单的验证码问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/16/爬虫/第二讲——解决简单的验证码问题/">第二讲——解决验证码问题</a>
-    </h1>
-  
-
-			
-			<a href="/2018/09/16/爬虫/第二讲——解决简单的验证码问题/" class="archive-article-date">
-  	<time datetime="2018-09-16T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-16</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.7k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">7min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>什么是验证码？</strong></p>
-<p>验证码是一种区分用户是计算机还是人的公共全自动程序。验证码可以防止：恶意破解密码、刷票、论坛灌水，有效防止某个黑客对某一个特定注册用户用特定程序暴力破解方式进行不断的登陆尝试，实际上用验证码是现在很多网站通行的方式，我们利用比较简易的方式实现了这个功能。<strong>这是一种反爬机制。</strong></p>
-<p><strong>介绍一种解决的方案</strong></p>
-<p>利用云打码平台识别验证码：<a href="http://www.yundama.com/demo.html" target="_blank" rel="noopener">http://www.yundama.com/demo.html</a></p>
-<p><strong>识别验证码的操作流程</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#识别验证码的操作：</span><br><span class="line">	#人工识别（肯定不会用啊，费眼）</span><br><span class="line">	#第三方自动识别</span><br><span class="line">	#第三方的平台（云打码：http://yundama.com/demo.html)</span><br><span class="line">#云打码的使用流程：</span><br><span class="line">	#注册：普通和开发者模式</span><br><span class="line">	#pl12346（我的账号：普通和开发者都是这个）</span><br><span class="line">	#登录：</span><br><span class="line">		#普通用户的登录：查积分是否有剩余</span><br><span class="line">		#开发者用户的登录：</span><br><span class="line">			#创建一个软件：我的软件》添加新的软件》录入软件信息》提交（获取软件的id和密钥）</span><br><span class="line">			#下载实例代码：开发文档》点击下载云打码接口dll》实例下载</span><br><span class="line">			#下载的实例加载到pycharm，使用实例3进行学习</span><br><span class="line">#实战：识别登录古诗文网登录页面的验证码</span><br><span class="line"># 使用打码平台识别验证的编码流程：</span><br><span class="line"># 	--将验证码下载到本地</span><br><span class="line"># 	--在本地的示例中破解</span><br><span class="line">#封装函数方便调用</span><br><span class="line"></span><br><span class="line">注意：使用该平台识别验证码，必须将验证码事先下载到本地，然后再将本地存储的验证码提交给平台的示例程序进行识别操作。</span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2018/09/16/爬虫/第二讲——解决简单的验证码问题/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/16/爬虫/第二讲——解决简单的验证码问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
@@ -1547,6 +1521,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
               </li>
             
             <div class="clearfix"></div>

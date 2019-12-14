@@ -117,6 +117,264 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-书/数据库/第二讲——数据库之表的操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/30/书/数据库/第二讲——数据库之表的操作/">第二讲——数据库之表的操作</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/30/书/数据库/第二讲——数据库之表的操作/" class="archive-article-date">
+  	<time datetime="2019-08-30T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">6.3k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">24min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="学习大纲"><a href="#学习大纲" class="headerlink" title="学习大纲"></a>学习大纲</h3><ul>
+<li>表相关的操作</li>
+<li>完整性约束</li>
+<li>表中字段增删查改及外键的操作</li>
+<li>复制表</li>
+</ul>
+<h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><p><strong>创建表</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create table table_name(</span><br><span class="line">	字段1 类型[(宽度) 约束条件],</span><br><span class="line">	字段2 类型[(宽度) 约束条件],</span><br><span class="line">	...</span><br><span class="line">	z字段n 类型[(宽度) 约束条件]</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p><strong>数值类型</strong></p>
+<p>整型类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&apos;&apos;&apos;最常用的是int类型&apos;&apos;&apos;</span><br><span class="line">创建有符号的数值类型</span><br><span class="line">create table t1(num tinyint);</span><br><span class="line">创建无符号的数值类型</span><br><span class="line">create table t1(num tinyint unsigned);</span><br><span class="line">#何止了数据类型就会有一个约束效果，只能表示自己范围内的数，如果是宽松模式，超出范围会提醒警告，并以临界的数值插入表中。如果是严格模式，就会报错。在工作中，我们使用的模式必须为严格模式。下面我们会讲解sql_mode（数据库模式）！</span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2019/08/30/书/数据库/第二讲——数据库之表的操作/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/30/书/数据库/第二讲——数据库之表的操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/数据库/第一讲——数据库初始" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/29/书/数据库/第一讲——数据库初始/">第一讲——数据库初始</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/29/书/数据库/第一讲——数据库初始/" class="archive-article-date">
+  	<time datetime="2019-08-29T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-29</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">5.2k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">19min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="数据库的基础认识"><a href="#数据库的基础认识" class="headerlink" title="数据库的基础认识"></a>数据库的基础认识</h3><p>数据库服务器：一台装了数据库管理软件的机器</p>
+<p>数据库管理系统（DBMS）：就是一款软件</p>
+<p>关系型数据库（RDBMS）：Mysql</p>
+<p>库：文件夹</p>
+<p>表：文件</p>
+<p>记录：一条一条的信息</p>
+<p>SQL语句：结构化查询语句</p>
+<h3 id="数据库的分类"><a href="#数据库的分类" class="headerlink" title="数据库的分类"></a>数据库的分类</h3><p><strong>关系型</strong></p>
+<p>解释：关系型数据库模型是把复杂的数据结构归结为简单的二元关系（即二维表格形式，不是excel，但是和excel的形式很像）</p>
+<p>Mysql：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mysql被广泛的应用在Internet上的大中小型网站中；其体积小、速度快、总体拥有成本低，开放源代码。</span><br></pre></td></tr></table></figure>
+
+<p>Oracle：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Oracle公司是目前全球最大的数据库软件公司，也是近年业务增长极为迅速的软件提供与服务商 。主要应用范围：传统大企业、大公司、政府、金融、证券等。</span><br></pre></td></tr></table></figure>
+
+<p>SQL Server：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Microsoft SQL Server是微软公司开发的大型关系数据库系统。SQL Server的功能比较全面，效率高，可以作为中型企业或单位的数据库平台。SQL Server可以与Winodws操作系统紧密集成，不论是应用程序开发速度还是系统事务处理运行速度，都得到较大的提升，对于在Windows平台上开发的各种企业级信息管理系统来说，不论是C/S（客户机/服务器）架构还是B/S（浏览器/服务器）架构。SQL Server都是一个很好的选择。SQL Server的缺点是只能在Windows系统下运行</span><br></pre></td></tr></table></figure>
+
+<p>Access</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　Access是入门级小型桌面数据库，性能安全性都很一般，可供个人管理或小型企业使用；Access不是数据库语言，只是一个数据库程序。</span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2019/08/29/书/数据库/第一讲——数据库初始/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/29/书/数据库/第一讲——数据库初始/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
     <article id="post-第三方模块/Socketserver——socket编程模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -369,19 +627,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-第三方模块/pymysql——和数据库交互的模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-第三方模块/mutiprocessing——进程模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/第三方模块/pymysql——和数据库交互的模块/">pymysql——和数据库交互的模块</a>
+      <a class="article-title" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">mutiprocessing——多进程管理包</a>
     </h1>
   
 
 			
-			<a href="/2019/08/22/第三方模块/pymysql——和数据库交互的模块/" class="archive-article-date">
+			<a href="/2019/08/22/第三方模块/mutiprocessing——进程模块/" class="archive-article-date">
   	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
 </a>
 			
@@ -393,241 +651,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">850 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Python 数据库的Connection、Cursor两大对象</p>
-<p><img src="http://9017499461.linshutu.top/%E6%95%B0%E6%8D%AE%E5%BA%931.png" alt></p>
-<p>两者的比喻：</p>
-<p><img src="http://9017499461.linshutu.top/%E6%95%B0%E6%8D%AE%E5%BA%932.png" alt></p>
-        
-          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/pymysql——和数据库交互的模块/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/第三方模块/pymysql——和数据库交互的模块/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-第三方模块/epoll——线程相关模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/第三方模块/epoll——线程相关模块/">epoll——线程相关模块</a>
-    </h1>
-  
-
-			
-			<a href="/2019/08/22/第三方模块/epoll——线程相关模块/" class="archive-article-date">
-  	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.7k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">6min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>简介：对比select(),poll(),epoll()三个模块。他们都是IO多路复用的具体的实现。</p>
-<p><strong>Select</strong>：对多次调用不友好，内核开销大，监听连接数目有限，不是线程安全。</p>
-<p><strong>Poll</strong>：对其进行了改进，但是还有很多的问题epoll 可以说是I/O 多路复用最新的一个实现。</p>
-<p>*<em>epoll *</em>：修复了poll 和select绝大部分问题。 </p>
-        
-          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/epoll——线程相关模块/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/第三方模块/epoll——线程相关模块/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-第三方模块/queue——队列模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/第三方模块/queue——队列模块/">queue——队列模块</a>
-    </h1>
-  
-
-			
-			<a href="/2019/08/22/第三方模块/queue——队列模块/" class="archive-article-date">
-  	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">391 字</span>
+        <span class="post-count">523 字</span>
       </span>
     </span>
 
@@ -650,9 +674,17 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <p>介绍：队列是线程中最常用的数据交换的形式。在python中，多个线程之间的数据是共享的，多个线程进行数据交换的时候，不能够保证数据的安全性和一致性，这个时候队列就出现了，它完美的解决了线程间数据的交换，安全和一致性的问题。</p>
+        <p>multiprocessing支持子进程、通信和数据共享、执行不同形式的同步。提供了<strong>Process、Queue、Pipe、Lock</strong>等组件</p>
+<h3 id="Process类"><a href="#Process类" class="headerlink" title="Process类"></a>Process类</h3><p>构造方法：</p>
+<p><strong>init</strong>(self, group=None, target=None, name=None, args=(), kwargs={})</p>
+<p><strong>参数说明</strong></p>
+<p>group：扩展参数</p>
+<p>target：表示调用对象任务。</p>
+<p>name：给子进程取别名。</p>
+<p>args：表示条用对象的位置参数元组。</p>
+<p>kwargs：表示调用对象的字典。</p>
         
-          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/queue——队列模块/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/#more">more >></a>--->
         
       
 	  
@@ -683,7 +715,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/第三方模块/queue——队列模块/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">展开全文 >></a>
         </p>
       
 
@@ -843,19 +875,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-第三方模块/requests——网络请求模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-第三方模块/epoll——线程相关模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/第三方模块/requests——网络请求模块/">requests和Django中的request对象</a>
+      <a class="article-title" href="/2019/08/22/第三方模块/epoll——线程相关模块/">epoll——线程相关模块</a>
     </h1>
   
 
 			
-			<a href="/2019/08/22/第三方模块/requests——网络请求模块/" class="archive-article-date">
+			<a href="/2019/08/22/第三方模块/epoll——线程相关模块/" class="archive-article-date">
   	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
 </a>
 			
@@ -867,7 +899,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.5k 字</span>
+        <span class="post-count">1.7k 字</span>
       </span>
     </span>
 
@@ -876,7 +908,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">10min</span>
+        <span class="post-count">6min</span>
       </span>
     </span>
 </div>
@@ -890,26 +922,12 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Django-request对象"><a href="#Django-request对象" class="headerlink" title="Django request对象"></a>Django request对象</h3><p>介绍：服务器接收到http协议的请求之后，会根据包文创建HttpRequest对象，这个对象不需要我们创建，直接使用服务器构造好的对象就可以。视图的第一个参数必须是HttpRequest对象，再djando.http模块中定义了HttpRequest对象的API。</p>
-<h3 id="request的对象"><a href="#request的对象" class="headerlink" title="request的对象"></a>request的对象</h3><p>这个对象也就是视图的第一个参数def  func(request):</p>
-<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a><strong>属性</strong></h4><ul>
-<li><p>path：请求页面的相对路径，但是不包括域名：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(request)</span>:</span></span><br><span class="line">	<span class="keyword">print</span> (retuest.path)</span><br><span class="line">    <span class="keyword">print</span> (request.get_ful_path())</span><br><span class="line">结果：</span><br><span class="line"><span class="string">"/music/renran/"</span>（这个路径就是文件再服务器上的地址）</span><br><span class="line"><span class="string">"music/renren?a=1&amp;b=2"</span></span><br><span class="line"></span><br><span class="line">扩展：</span><br><span class="line">获取相对路径:request.get_info</span><br><span class="line">获取全路径:request.get_ful_path()</span><br><span class="line">获取绝对url:request.build_absolute_uri()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>method:提交请求使用的HTTP方法。总是大写：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> request.method ==‘GET/POST’:</span><br><span class="line">	do_something</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>GET:一个类字典对象，包含所有的HTTP的get参数信息。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">获取get方式表单中或url提交的数据</span><br><span class="line">request.POST[<span class="string">"username"</span>]</span><br><span class="line">request.POST.get(<span class="string">"username"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#注意：虽然上面的两种方式都可以取得username的值，但是如果POST对象中没有username，那么使用request.POST["username"]就会报错，而request.POST.get("username")不会报错，而是返回一个None。</span></span><br><span class="line">其实上面的这个问题也很好解决：</span><br><span class="line">request.POST[<span class="string">"username"</span>,<span class="literal">None</span>]，加个<span class="literal">None</span>就很好的解决了</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>POST：一个类字典对象，包涵所有的HTTP的POST参数的信息（提交表单，但是可以是空，不包含文件的上传）。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取post中表单键值数据</span></span><br><span class="line">request.POST  <span class="comment">#&lt;QueryDict: &#123;"username":"pl"&#125;&gt;  </span></span><br><span class="line">request.POST.dict()   <span class="comment">#&#123;"username":"pl"&#125;</span></span><br><span class="line">request.POST.get(<span class="string">"username"</span>)   <span class="comment">#"pl"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#总结：</span></span><br><span class="line">request.POST适合接收表单数据，表单数据一般比较简单，面对复杂的数据时，即使是一个简单的list接受后都会变形(元素变成字符串),处理起来不方便。</span><br><span class="line"></span><br><span class="line">request.body可以方便的提交复杂的结构化数据，特别适合RESTful的接口</span><br><span class="line"></span><br><span class="line"><span class="comment">#实例对比POST和body的数据</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"body:"</span>,request.body)</span><br><span class="line">print(request.body.decode(<span class="string">'utf-8'</span>))</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"--------------"</span>)</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"POST:"</span>,request.POST)</span><br><span class="line">print(request.POST.dict())</span><br><span class="line"><span class="comment">#结果（input的name=pl,value=pl）</span></span><br><span class="line">body: <span class="string">b'pl=pl'</span>	<span class="comment">#body的原始数据是bytes类型，所以进行json转换的时候非常的容易转换和处理</span></span><br><span class="line">pl=pl    <span class="comment">#解码之后直接就拿到了字符串数据</span></span><br><span class="line">--------------</span><br><span class="line">POST: &lt;QueryDict: &#123;<span class="string">'pl'</span>: [<span class="string">'pl'</span>]&#125;&gt;   <span class="comment">#POST拿到请求字典形式的数据，它和字典类似又不一样，获取它里面的数据的详细信息在下面的知识扩展里面</span></span><br><span class="line">&#123;<span class="string">'pl'</span>: <span class="string">'pl'</span>&#125;	<span class="comment">#这个方法就是获取它的字典属性</span></span><br><span class="line"><span class="comment">#注意：提交数据的时候，input中的name千万别忘记写了，不然是收不到数据的</span></span><br><span class="line">这里有一个建议，当你成功处理POST数据后，应当保持一个良好的习惯，始终返回一个HttpResponseRedirect。这不仅仅是对Django而言，它是一个良好的WEB开发习惯。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>COOKIES：一个标准的python字典，包涵所有的cookie(键值都是字符串)。</p>
-</li>
-</ul>
+        <p>简介：对比select(),poll(),epoll()三个模块。他们都是IO多路复用的具体的实现。</p>
+<p><strong>Select</strong>：对多次调用不友好，内核开销大，监听连接数目有限，不是线程安全。</p>
+<p><strong>Poll</strong>：对其进行了改进，但是还有很多的问题epoll 可以说是I/O 多路复用最新的一个实现。</p>
+<p>*<em>epoll *</em>：修复了poll 和select绝大部分问题。 </p>
         
-          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/requests——网络请求模块/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/epoll——线程相关模块/#more">more >></a>--->
         
       
 	  
@@ -940,7 +958,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/第三方模块/requests——网络请求模块/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/22/第三方模块/epoll——线程相关模块/">展开全文 >></a>
         </p>
       
 
@@ -1096,19 +1114,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-第三方模块/mutiprocessing——进程模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-第三方模块/queue——队列模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">mutiprocessing——多进程管理包</a>
+      <a class="article-title" href="/2019/08/22/第三方模块/queue——队列模块/">queue——队列模块</a>
     </h1>
   
 
 			
-			<a href="/2019/08/22/第三方模块/mutiprocessing——进程模块/" class="archive-article-date">
+			<a href="/2019/08/22/第三方模块/queue——队列模块/" class="archive-article-date">
   	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
 </a>
 			
@@ -1120,7 +1138,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">523 字</span>
+        <span class="post-count">391 字</span>
       </span>
     </span>
 
@@ -1143,17 +1161,9 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <p>multiprocessing支持子进程、通信和数据共享、执行不同形式的同步。提供了<strong>Process、Queue、Pipe、Lock</strong>等组件</p>
-<h3 id="Process类"><a href="#Process类" class="headerlink" title="Process类"></a>Process类</h3><p>构造方法：</p>
-<p><strong>init</strong>(self, group=None, target=None, name=None, args=(), kwargs={})</p>
-<p><strong>参数说明</strong></p>
-<p>group：扩展参数</p>
-<p>target：表示调用对象任务。</p>
-<p>name：给子进程取别名。</p>
-<p>args：表示条用对象的位置参数元组。</p>
-<p>kwargs：表示调用对象的字典。</p>
+        <p>介绍：队列是线程中最常用的数据交换的形式。在python中，多个线程之间的数据是共享的，多个线程进行数据交换的时候，不能够保证数据的安全性和一致性，这个时候队列就出现了，它完美的解决了线程间数据的交换，安全和一致性的问题。</p>
         
-          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/queue——队列模块/#more">more >></a>--->
         
       
 	  
@@ -1184,7 +1194,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/22/第三方模块/queue——队列模块/">展开全文 >></a>
         </p>
       
 
@@ -1218,19 +1228,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-第三方模块/threading——线程模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-第三方模块/requests——网络请求模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/第三方模块/threading——线程模块/">threading——多线程模块</a>
+      <a class="article-title" href="/2019/08/22/第三方模块/requests——网络请求模块/">requests和Django中的request对象</a>
     </h1>
   
 
 			
-			<a href="/2019/08/22/第三方模块/threading——线程模块/" class="archive-article-date">
+			<a href="/2019/08/22/第三方模块/requests——网络请求模块/" class="archive-article-date">
   	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
 </a>
 			
@@ -1242,7 +1252,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">751 字</span>
+        <span class="post-count">2.5k 字</span>
       </span>
     </span>
 
@@ -1251,7 +1261,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2min</span>
+        <span class="post-count">10min</span>
       </span>
     </span>
 </div>
@@ -1265,13 +1275,26 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <p>threading模块提供的类(组件):<strong>Thread、Lock、Rlock、Event、Timer、ocal</strong></p>
-<h3 id="threading之Thread"><a href="#threading之Thread" class="headerlink" title="threading之Thread"></a>threading之Thread</h3><p>介绍：Thread类代表一个分离的控制线程活动。当线程的实例被创建，通过调用实例start()方法闯进活动，它将在一个分离的线程控制器中运行run()方法。</p>
-<h5 id="构造器："><a href="#构造器：" class="headerlink" title="构造器："></a>构造器：</h5><p><strong>threading.Thread(group=None,target=None,name=None,args=(),kwargs={},*,daemon=None)</strong></p>
-<p>参数说明：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Group：保留扩展</span><br><span class="line"></span><br><span class="line">Target：可调用对象，可以被run()方法调用</span><br><span class="line"></span><br><span class="line">Name：线程的名字</span><br><span class="line"></span><br><span class="line">Args:参数，调用的元组</span><br><span class="line"></span><br><span class="line">Kwagrs：参数，调用的关键字字典</span><br></pre></td></tr></table></figure>
+        <h3 id="Django-request对象"><a href="#Django-request对象" class="headerlink" title="Django request对象"></a>Django request对象</h3><p>介绍：服务器接收到http协议的请求之后，会根据包文创建HttpRequest对象，这个对象不需要我们创建，直接使用服务器构造好的对象就可以。视图的第一个参数必须是HttpRequest对象，再djando.http模块中定义了HttpRequest对象的API。</p>
+<h3 id="request的对象"><a href="#request的对象" class="headerlink" title="request的对象"></a>request的对象</h3><p>这个对象也就是视图的第一个参数def  func(request):</p>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a><strong>属性</strong></h4><ul>
+<li><p>path：请求页面的相对路径，但是不包括域名：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(request)</span>:</span></span><br><span class="line">	<span class="keyword">print</span> (retuest.path)</span><br><span class="line">    <span class="keyword">print</span> (request.get_ful_path())</span><br><span class="line">结果：</span><br><span class="line"><span class="string">"/music/renran/"</span>（这个路径就是文件再服务器上的地址）</span><br><span class="line"><span class="string">"music/renren?a=1&amp;b=2"</span></span><br><span class="line"></span><br><span class="line">扩展：</span><br><span class="line">获取相对路径:request.get_info</span><br><span class="line">获取全路径:request.get_ful_path()</span><br><span class="line">获取绝对url:request.build_absolute_uri()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>method:提交请求使用的HTTP方法。总是大写：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> request.method ==‘GET/POST’:</span><br><span class="line">	do_something</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>GET:一个类字典对象，包含所有的HTTP的get参数信息。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">获取get方式表单中或url提交的数据</span><br><span class="line">request.POST[<span class="string">"username"</span>]</span><br><span class="line">request.POST.get(<span class="string">"username"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#注意：虽然上面的两种方式都可以取得username的值，但是如果POST对象中没有username，那么使用request.POST["username"]就会报错，而request.POST.get("username")不会报错，而是返回一个None。</span></span><br><span class="line">其实上面的这个问题也很好解决：</span><br><span class="line">request.POST[<span class="string">"username"</span>,<span class="literal">None</span>]，加个<span class="literal">None</span>就很好的解决了</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>POST：一个类字典对象，包涵所有的HTTP的POST参数的信息（提交表单，但是可以是空，不包含文件的上传）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取post中表单键值数据</span></span><br><span class="line">request.POST  <span class="comment">#&lt;QueryDict: &#123;"username":"pl"&#125;&gt;  </span></span><br><span class="line">request.POST.dict()   <span class="comment">#&#123;"username":"pl"&#125;</span></span><br><span class="line">request.POST.get(<span class="string">"username"</span>)   <span class="comment">#"pl"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#总结：</span></span><br><span class="line">request.POST适合接收表单数据，表单数据一般比较简单，面对复杂的数据时，即使是一个简单的list接受后都会变形(元素变成字符串),处理起来不方便。</span><br><span class="line"></span><br><span class="line">request.body可以方便的提交复杂的结构化数据，特别适合RESTful的接口</span><br><span class="line"></span><br><span class="line"><span class="comment">#实例对比POST和body的数据</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"body:"</span>,request.body)</span><br><span class="line">print(request.body.decode(<span class="string">'utf-8'</span>))</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"--------------"</span>)</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"POST:"</span>,request.POST)</span><br><span class="line">print(request.POST.dict())</span><br><span class="line"><span class="comment">#结果（input的name=pl,value=pl）</span></span><br><span class="line">body: <span class="string">b'pl=pl'</span>	<span class="comment">#body的原始数据是bytes类型，所以进行json转换的时候非常的容易转换和处理</span></span><br><span class="line">pl=pl    <span class="comment">#解码之后直接就拿到了字符串数据</span></span><br><span class="line">--------------</span><br><span class="line">POST: &lt;QueryDict: &#123;<span class="string">'pl'</span>: [<span class="string">'pl'</span>]&#125;&gt;   <span class="comment">#POST拿到请求字典形式的数据，它和字典类似又不一样，获取它里面的数据的详细信息在下面的知识扩展里面</span></span><br><span class="line">&#123;<span class="string">'pl'</span>: <span class="string">'pl'</span>&#125;	<span class="comment">#这个方法就是获取它的字典属性</span></span><br><span class="line"><span class="comment">#注意：提交数据的时候，input中的name千万别忘记写了，不然是收不到数据的</span></span><br><span class="line">这里有一个建议，当你成功处理POST数据后，应当保持一个良好的习惯，始终返回一个HttpResponseRedirect。这不仅仅是对Django而言，它是一个良好的WEB开发习惯。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>COOKIES：一个标准的python字典，包涵所有的cookie(键值都是字符串)。</p>
+</li>
+</ul>
         
-          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/threading——线程模块/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/requests——网络请求模块/#more">more >></a>--->
         
       
 	  
@@ -1302,7 +1325,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/第三方模块/threading——线程模块/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/22/第三方模块/requests——网络请求模块/">展开全文 >></a>
         </p>
       
 
@@ -1536,6 +1559,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
               </li>
             
             <div class="clearfix"></div>

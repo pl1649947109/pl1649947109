@@ -117,6 +117,243 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/20/书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统/">第十八讲——django综合扩展八之Django缓存与自带认证系统讲</a>
+    </h1>
+  
+
+			
+			<a href="/2018/10/20/书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统/" class="archive-article-date">
+  	<time datetime="2018-10-20T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-20</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2.4k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">9min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Dajngo与缓存"><a href="#Dajngo与缓存" class="headerlink" title="Dajngo与缓存"></a>Dajngo与缓存</h2><p>我们都知道Django建立的是动态网站，正常情况下，每次请求过来都经历了这样一个过程：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">收请求 -&gt; url路由 -&gt; 视图处理 -&gt; 数据库读写 -&gt; 视图处理 -&gt; 模版渲染 -&gt; 返回请求</span><br></pre></td></tr></table></figure>
+
+<p><strong>设想这么个场景，一个用户或者大量用户都对某个页面非常感兴趣，出现了大量实质相同的请求，如果每次请求都采取上面的流程，将出现大量的重复工作，尤其是大量无谓的数据库读写。</strong></p>
+        
+          <!---<a class="article-more-a" href="/2018/10/20/书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/20/书/Django/第十八讲——django综合扩展八之Django缓存与自带认证系统/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-书/Django/第十七讲——django综合扩展七之发送邮件与日志记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/19/书/Django/第十七讲——django综合扩展七之发送邮件与日志记录/">第十七讲——django综合扩展七之发送邮件与日志记录</a>
+    </h1>
+  
+
+			
+			<a href="/2018/10/19/书/Django/第十七讲——django综合扩展七之发送邮件与日志记录/" class="archive-article-date">
+  	<time datetime="2018-10-19T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-19</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">1.8k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">7min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="发送邮件"><a href="#发送邮件" class="headerlink" title="发送邮件"></a>发送邮件</h2><p>在Python中已经内置了一个smtp邮件发送模块，Django在此基础上进行了简单地封装，让我们在Django环境中可以更方便更灵活的发送邮件。</p>
+<p>所有的功能都在django.core.mail中。</p>
+<h3 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h3><p>两行就可以搞定一封邮件：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.core.mail <span class="keyword">import</span> send_mail</span><br><span class="line"></span><br><span class="line">send_mail(</span><br><span class="line">    <span class="string">'Subject here'</span>,</span><br><span class="line">    <span class="string">'Here is the message.'</span>,</span><br><span class="line">    <span class="string">'from@example.com'</span>,</span><br><span class="line">    [<span class="string">'to@example.com'</span>],</span><br><span class="line">    fail_silently=<span class="literal">False</span>,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>导入功能模块，然后发送邮件，so easy！</p>
+<p>默认情况下，使用配置文件中的<code>EMAIL_HOST</code>和<code>EMAIL_PORT</code>设置SMTP服务器主机和端口，<code>EMAIL_HOST_USER</code>和<code>EMAIL_HOST_PASSWORD</code>是用户名和密码。如果设置了<code>EMAIL_USE_TLS</code>和<code>EMAIL_USE_SSL</code>，它们将控制是否使用相应的加密链接。</p>
+        
+          <!---<a class="article-more-a" href="/2018/10/19/书/Django/第十七讲——django综合扩展七之发送邮件与日志记录/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/19/书/Django/第十七讲——django综合扩展七之发送邮件与日志记录/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
     <article id="post-书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1063,250 +1300,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/Django/第八讲——Django知识回顾及cookie和sessio" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/10/书/Django/第八讲——Django知识回顾及cookie和sessio/">第八讲——django知识回顾及cookie和session</a>
-    </h1>
-  
-
-			
-			<a href="/2018/10/10/书/Django/第八讲——Django知识回顾及cookie和sessio/" class="archive-article-date">
-  	<time datetime="2018-10-10T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-10</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">6.1k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">24min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今日大纲</p>
-<ul>
-<li>知识回顾</li>
-<li>cookie</li>
-<li>session</li>
-</ul>
-        
-          <!---<a class="article-more-a" href="/2018/10/10/书/Django/第八讲——Django知识回顾及cookie和sessio/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/10/书/Django/第八讲——Django知识回顾及cookie和sessio/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/Django/第七讲——Django之Admin管理后台" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/09/书/Django/第七讲——Django之Admin管理后台/">第七讲——django之Admin后台管理系统</a>
-    </h1>
-  
-
-			
-			<a href="/2018/10/09/书/Django/第七讲——Django之Admin管理后台/" class="archive-article-date">
-  	<time datetime="2018-10-09T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-09</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">8.2k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">33min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Admin管理后台"><a href="#Admin管理后台" class="headerlink" title="Admin管理后台"></a>Admin管理后台</h2><p>Admin站点是Django有别于其它Web框架最重要的一点，并且非常受欢迎，简直是出门旅游xxxx的必备。不管你是写个小demo还是做个大项目都用得上。<strong>admin（下文中将Admin管理后台简称为admin）通过读取你的模型数据，快速构造出一个可以对实际数据进行管理的Web站点，常用于开发测试，简单管理等场合，适用于部门内部为工作方便的场合，但不建议在生产环境中使用。</strong></p>
-<p>默认情况下，使用startproject的时候，admin就被激活了。</p>
-<p>在使用admin时请注意下面的需求和要点：</p>
-<ul>
-<li>将<code>django.contrib.admin</code>加入<code>INSTALLED_APPS</code>。</li>
-<li>admin依赖四个模块，请确保它们存在于<code>INSTALLED_APPS</code>，他们是django.contrib.auth、django.contrib.contenttypes、django.contrib.messages和django.contrib.sessions。</li>
-<li>在你的settings文件中的TEMPLATES中的<code>context_processors</code>选项内添加<code>django.contrib.auth.context_processors.auth</code>和<code>django.contrib.messages.context_processors.messages</code>这两条。同样，将<code>django.contrib.auth.middleware.AuthenticationMiddleware</code>和<code>django.contrib.messages.middleware.MessageMiddleware</code>添加到settings的<code>MIDDLEWARE</code>内。默认情况下，这些都是配置好的。</li>
-<li>决定哪些模型需要在admin内进行管理，在<code>admin.py</code>文件中注册它们。</li>
-<li>对于每个模型，可以创建一个对应的<code>ModelAdmin</code>类，这个类将封装对模型的所有自定义设置。</li>
-<li>实例化一个AdminSite，将模型、模型对应的ModelAdmin类传给它。</li>
-<li>链接AdminSite和你的URLconf。这一步通常默认已经完成。</li>
-</ul>
-        
-          <!---<a class="article-more-a" href="/2018/10/09/书/Django/第七讲——Django之Admin管理后台/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/09/书/Django/第七讲——Django之Admin管理后台/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
@@ -1507,6 +1500,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
               </li>
             
             <div class="clearfix"></div>
