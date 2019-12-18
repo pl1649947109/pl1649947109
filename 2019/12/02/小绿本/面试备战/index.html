@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://pl1649947109.github.io/pl1649947109">
   <title>知识大总结 | 林殊途</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="python基础">
+  <meta name="description" content="python基础python内存管理机制12345671.由于python的一切皆对象，所以python的储存问题就是对象的储存问题，并且对于每个对象python会分配一块内存空间去储存他们；2.对于整数和短小的字符，python会执行缓存机制（小数据池），就是将这些对象进行缓存，不会为相同的对象分配多个内存空间；3.对于容器对象，比如列表、字典和集合等，储存的仅仅是这些对象的引用（也就是地址），">
 <meta name="keywords" content="小绿本">
 <meta property="og:type" content="article">
 <meta property="og:title" content="知识大总结">
 <meta property="og:url" content="https://pl1649947109.github.io/pl1649947109/2019/12/02/小绿本/面试备战/index.html">
 <meta property="og:site_name" content="林殊途">
-<meta property="og:description" content="python基础">
+<meta property="og:description" content="python基础python内存管理机制12345671.由于python的一切皆对象，所以python的储存问题就是对象的储存问题，并且对于每个对象python会分配一块内存空间去储存他们；2.对于整数和短小的字符，python会执行缓存机制（小数据池），就是将这些对象进行缓存，不会为相同的对象分配多个内存空间；3.对于容器对象，比如列表、字典和集合等，储存的仅仅是这些对象的引用（也就是地址），">
 <meta property="og:locale" content="zh">
 <meta property="og:image" content="http://9017499461.linshutu.top/%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.JPG">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190609064420992.png">
@@ -22,10 +22,10 @@
 <meta property="og:image" content="http://9017499461.linshutu.top/B%E6%A0%91.JPG">
 <meta property="og:image" content="http://9017499461.linshutu.top/B+%E6%A0%91.JPG">
 <meta property="og:image" content="http://9017499461.linshutu.top/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%83%E4%B9%A0.png">
-<meta property="og:updated_time" content="2019-12-14T15:05:52.544Z">
+<meta property="og:updated_time" content="2019-12-18T08:30:01.464Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="知识大总结">
-<meta name="twitter:description" content="python基础">
+<meta name="twitter:description" content="python基础python内存管理机制12345671.由于python的一切皆对象，所以python的储存问题就是对象的储存问题，并且对于每个对象python会分配一块内存空间去储存他们；2.对于整数和短小的字符，python会执行缓存机制（小数据池），就是将这些对象进行缓存，不会为相同的对象分配多个内存空间；3.对于容器对象，比如列表、字典和集合等，储存的仅仅是这些对象的引用（也就是地址），">
 <meta name="twitter:image" content="http://9017499461.linshutu.top/%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.JPG">
   
     <link rel="alternative" href="/atom.xml" title="林殊途" type="application/atom+xml">
@@ -148,7 +148,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">17.4k 字</span>
+        <span class="post-count">17.8k 字</span>
       </span>
     </span>
 
@@ -157,7 +157,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">65min</span>
+        <span class="post-count">66min</span>
       </span>
     </span>
 </div>
@@ -171,7 +171,9 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h3><a id="more"></a>
+        <h3 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h3><h4 id="python内存管理机制"><a href="#python内存管理机制" class="headerlink" title="python内存管理机制"></a>python内存管理机制</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.由于python的一切皆对象，所以python的储存问题就是对象的储存问题，并且对于每个对象python会分配一块内存空间去储存他们；</span><br><span class="line">2.对于整数和短小的字符，python会执行缓存机制（小数据池），就是将这些对象进行缓存，不会为相同的对象分配多个内存空间；</span><br><span class="line">3.对于容器对象，比如列表、字典和集合等，储存的仅仅是这些对象的引用（也就是地址），而不是这些对象本身</span><br><span class="line">垃圾回收：</span><br><span class="line">引用计数：</span><br><span class="line">标记清除：</span><br><span class="line">迭代回收：</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <h3 id="socket和并发编程"><a href="#socket和并发编程" class="headerlink" title="socket和并发编程"></a>socket和并发编程</h3><h4 id="OSI7层模型"><a href="#OSI7层模型" class="headerlink" title="OSI7层模型"></a>OSI7层模型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">物理层：基于物理链路发送比特流</span><br><span class="line">数据链路层：定义电信号的分组方式</span><br><span class="line">网络层：引入网络地址来区分不同的广播域或子网</span><br><span class="line">传输层：建立端口到端口的通信</span><br><span class="line">会话层：建立客户端到服务端的通信</span><br><span class="line">表示层：对来自应用层的命令和数据进行解释，按照一定的格式传递给会话层</span><br><span class="line">应用层：规定应用程序的数据格式</span><br></pre></td></tr></table></figure>
 
@@ -258,7 +260,7 @@ var _hmt = _hmt || [];
 
 <h4 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SQL注入就是指web应用程序对用户输入的数据内容的合法性没有进行过滤和校验，攻击者可以将自己定义的sql语句添加到web应用程序事先定义好的查询语句的结尾（比如进行登录的条件里面加一个1=True，这个条件永远成立），在管理员不知情的情况下实现非法的操作，一次来实现欺骗数据库服务器执行非授权的任意查询等操作</span><br><span class="line"></span><br><span class="line">XSS攻击：比如我们在网页进行评论，就可以将恶意的代码放到评论框中提交，这样前端和后台对我们提交的内容没有做任何的检测和过滤，我们的代码可以是一段javascript的代码，这段代码在页面展示出来可能就会对网页进行修改，某一些敏感的输入框的提交地址可以设置为我们自己的服务器，其他的用户输入一些敏感的信息我们就可以获取</span><br></pre></td></tr></table></figure>
 
-<h4 id="数据库导出导入"><a href="#数据库导出导入" class="headerlink" title="数据库导出导入"></a>数据库导出导入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">导出：mysqldump -u root -p password dn_name &gt; 地址</span><br><span class="line">导入：mysql -u root -p password db_name &lt; 地址</span><br></pre></td></tr></table></figure>
+<h4 id="数据库导出导入"><a href="#数据库导出导入" class="headerlink" title="数据库导出导入"></a>数据库导出导入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">导出：mysqldump -u root -p password dn_name &gt; 地址</span><br><span class="line">导入：</span><br><span class="line">方式一：</span><br><span class="line">mysql -u root -p password db_name &lt; 地址</span><br><span class="line">方式二：</span><br><span class="line">首先进入数据库mysql -u root -p password</span><br><span class="line">创建数据库create database db_name;</span><br><span class="line">进入数据库use db_name;</span><br><span class="line">导入数据source F:/db_name.sql（导入数据库的绝对路径）</span><br></pre></td></tr></table></figure>
 
 <h4 id="ORM和原生SQL区别"><a href="#ORM和原生SQL区别" class="headerlink" title="ORM和原生SQL区别"></a>ORM和原生SQL区别</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ORM使用起来更加方便，简单，容易理解和使用，但是对于非常复杂的查询语句它是完成不了的（比如子查询+连表查询它就实现不了）</span><br><span class="line">原生SQL虽然写起来比较麻烦，但是它的速度是非常可观的。</span><br></pre></td></tr></table></figure>
 
@@ -320,7 +322,7 @@ var _hmt = _hmt || [];
 
 <h4 id="blinker"><a href="#blinker" class="headerlink" title="blinker"></a>blinker</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">信号主要是让开发者在flask请求的过程中定制一些行为，或者说flask在列表里面预留了几个空列表，在里面存东西。简单的说，信号允许某个发送者通知接受者有事情发生了，对比@before_request有返回值，而信号没有返回值</span><br><span class="line"><span class="comment"># 10个信号</span></span><br><span class="line"></span><br><span class="line">request_started = _signals.signal(<span class="string">'request-started'</span>) <span class="comment">#请求到来前执行</span></span><br><span class="line"></span><br><span class="line">request_finished = _signals.signal(<span class="string">'request-finished'</span>) <span class="comment">#请求结束后执行</span></span><br><span class="line"></span><br><span class="line">before_render_template = _signals.signal(<span class="string">'before-render-template'</span>)<span class="comment">#模板渲染前执行</span></span><br><span class="line"></span><br><span class="line">template_rendered = _signals.signal(<span class="string">'template-rendered'</span>)<span class="comment">#模板渲染后执行</span></span><br><span class="line"></span><br><span class="line">got_request_exception = _signals.signal(<span class="string">'got-request-exception'</span>) <span class="comment">#请求执行出现异常时执行</span></span><br><span class="line"></span><br><span class="line">request_tearing_down = _signals.signal(<span class="string">'request-tearing-down'</span>)<span class="comment">#请求执行完毕后自动执行（无论成功与否）</span></span><br><span class="line"></span><br><span class="line">appcontext_tearing_down = _signals.signal(<span class="string">'appcontext-tearing-down'</span>)<span class="comment"># 请求上下文执行完毕后自动执行（无论成功与否）</span></span><br><span class="line"></span><br><span class="line">appcontext_pushed = _signals.signal(<span class="string">'appcontext-pushed'</span>) <span class="comment">#请求app上下文push时执行</span></span><br><span class="line"></span><br><span class="line">appcontext_popped = _signals.signal(<span class="string">'appcontext-popped'</span>) <span class="comment">#请求上下文pop时执行</span></span><br><span class="line"></span><br><span class="line">message_flashed = _signals.signal(<span class="string">'message-flashed'</span>)<span class="comment">#调用flask在其中添加数据时，自动触发</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="SQLAlchemy"><a href="#SQLAlchemy" class="headerlink" title="SQLAlchemy"></a>SQLAlchemy</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="SQLAlchemy"><a href="#SQLAlchemy" class="headerlink" title="SQLAlchemy"></a>SQLAlchemy</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#session和scoped_session的区别</span></span><br><span class="line">session和scopedsession本质上都是一个会话，用来操作数据库的，只是session只适合在单线程下面使用；而scoped_session 实现了一个线程的隔离,保证不同的线程拿到不同的session, 同一个线程拿到的session是同一个值(就相当于threading.local)</span><br><span class="line"><span class="comment">#SQLAlchemy如何让执行原生SQL</span></span><br><span class="line">方式一：</span><br><span class="line">cursor = session.execute(<span class="string">"select * from info"</span>)</span><br><span class="line">result = cursor.fetchall()</span><br><span class="line">方式二：</span><br><span class="line">conn = engine.raw_connection()</span><br><span class="line">cursor = conn.cursor()</span><br><span class="line">cursor.execute(<span class="string">"select * from info"</span>)</span><br><span class="line">result = cursor.fetchall()</span><br><span class="line">cursor.close()</span><br><span class="line">conn.close()</span><br><span class="line"><span class="comment">#ORM的实现原理</span></span><br><span class="line">把持久化类映射成数据库中的表</span><br><span class="line">把对象映射成数据库中表的一行记录</span><br><span class="line">把对象的属性应设成数据库中表的字段</span><br><span class="line"><span class="comment">#SQLAlchemy如何设置联合唯一索引</span></span><br></pre></td></tr></table></figure>
 
 <p><a href="http://linshutu.top/2019/11/15/%E4%B9%A6/flask/flask%E5%85%A5%E9%97%A8%E5%88%9D%E5%A7%8B/" target="_blank" rel="noopener">http://linshutu.top/2019/11/15/%E4%B9%A6/flask/flask%E5%85%A5%E9%97%A8%E5%88%9D%E5%A7%8B/</a></p>
 <h3 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -510,8 +512,8 @@ var _hmt = _hmt || [];
     </a>
   
   
-    <a href="/2019/11/24/书/flask/第四讲——flask上下文管理源码剖析/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第四讲——flask上下文管理源码剖析</div>
+    <a href="/2019/11/24/书/flask/第五讲——flask之信号大全、蓝图拆分目录、总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第五讲——flask之信号大全、蓝图拆分目录、总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -538,7 +540,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#python基础"><span class="toc-number">1.</span> <span class="toc-text">python基础</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#socket和并发编程"><span class="toc-number">2.</span> <span class="toc-text">socket和并发编程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#OSI7层模型"><span class="toc-number">2.1.</span> <span class="toc-text">OSI7层模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#BS于CS架构"><span class="toc-number">2.2.</span> <span class="toc-text">BS于CS架构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#socket套接字"><span class="toc-number">2.3.</span> <span class="toc-text">socket套接字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GIL锁"><span class="toc-number">2.4.</span> <span class="toc-text">GIL锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#进程、线程、线程池"><span class="toc-number">2.5.</span> <span class="toc-text">进程、线程、线程池</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#协程"><span class="toc-number">2.6.</span> <span class="toc-text">协程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#yield实现一个协程"><span class="toc-number">2.7.</span> <span class="toc-text">yield实现一个协程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#异步非阻塞"><span class="toc-number">2.8.</span> <span class="toc-text">异步非阻塞</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#死锁"><span class="toc-number">2.9.</span> <span class="toc-text">死锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IO多路复用"><span class="toc-number">2.10.</span> <span class="toc-text">IO多路复用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机操作系统"><span class="toc-number">3.</span> <span class="toc-text">计算机操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#三次握手和四次挥手的流程"><span class="toc-number">3.1.</span> <span class="toc-text">三次握手和四次挥手的流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#http和https"><span class="toc-number">3.2.</span> <span class="toc-text">http和https</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么连接的时候是三次握手？关闭是四次挥手？"><span class="toc-number">3.3.</span> <span class="toc-text">为什么连接的时候是三次握手？关闭是四次挥手？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么TIME-WAIT状态需要经过2MSL才能返回CLOSE状态？"><span class="toc-number">3.4.</span> <span class="toc-text">为什么TIME_WAIT状态需要经过2MSL才能返回CLOSE状态？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TCP和UDP的区别"><span class="toc-number">3.5.</span> <span class="toc-text">TCP和UDP的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#粘包的了解"><span class="toc-number">3.6.</span> <span class="toc-text">粘包的了解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#虚拟内存和物理内存的区别"><span class="toc-number">3.7.</span> <span class="toc-text">虚拟内存和物理内存的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#进程的三态模型"><span class="toc-number">3.8.</span> <span class="toc-text">进程的三态模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#进程间的通信方式有哪些"><span class="toc-number">3.9.</span> <span class="toc-text">进程间的通信方式有哪些</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库（mysql）"><span class="toc-number">4.</span> <span class="toc-text">数据库（mysql）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据库引擎"><span class="toc-number">4.1.</span> <span class="toc-text">数据库引擎</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#事务"><span class="toc-number">4.2.</span> <span class="toc-text">事务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#事务隔离级别"><span class="toc-number">4.3.</span> <span class="toc-text">事务隔离级别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B树和B-树"><span class="toc-number">4.4.</span> <span class="toc-text">B树和B+树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#锁机制"><span class="toc-number">4.5.</span> <span class="toc-text">锁机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据库优化"><span class="toc-number">4.6.</span> <span class="toc-text">数据库优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优化sql语句"><span class="toc-number">4.7.</span> <span class="toc-text">优化sql语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#索引失效（无法命中索引）"><span class="toc-number">4.8.</span> <span class="toc-text">索引失效（无法命中索引）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#执行计划"><span class="toc-number">4.9.</span> <span class="toc-text">执行计划</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视图…"><span class="toc-number">4.10.</span> <span class="toc-text">视图…</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#慢日志"><span class="toc-number">4.11.</span> <span class="toc-text">慢日志</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL注入"><span class="toc-number">4.12.</span> <span class="toc-text">SQL注入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据库导出导入"><span class="toc-number">4.13.</span> <span class="toc-text">数据库导出导入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ORM和原生SQL区别"><span class="toc-number">4.14.</span> <span class="toc-text">ORM和原生SQL区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#操作"><span class="toc-number">4.15.</span> <span class="toc-text">操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#连表查询"><span class="toc-number">4.16.</span> <span class="toc-text">连表查询</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前端"><span class="toc-number">5.</span> <span class="toc-text">前端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#websocket"><span class="toc-number">5.1.</span> <span class="toc-text">websocket</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vue（待学习）"><span class="toc-number">5.2.</span> <span class="toc-text">vue（待学习）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#django"><span class="toc-number">6.</span> <span class="toc-text">django</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#drf"><span class="toc-number">7.</span> <span class="toc-text">drf</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#视图（APIView类）"><span class="toc-number">7.1.</span> <span class="toc-text">视图（APIView类）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#序列化与关联表数据的展示"><span class="toc-number">7.2.</span> <span class="toc-text">序列化与关联表数据的展示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分页（APIView里面）"><span class="toc-number">7.3.</span> <span class="toc-text">分页（APIView里面）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分页（ListAPIView里面）"><span class="toc-number">7.4.</span> <span class="toc-text">分页（ListAPIView里面）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#筛选和视图（APIView这类）"><span class="toc-number">7.5.</span> <span class="toc-text">筛选和视图（APIView这类）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视图（ListAPIView类）"><span class="toc-number">7.6.</span> <span class="toc-text">视图（ListAPIView类）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#drf的封装、版本、认证、权限"><span class="toc-number">7.7.</span> <span class="toc-text">drf的封装、版本、认证、权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#restful规范"><span class="toc-number">7.8.</span> <span class="toc-text">restful规范</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#跨域"><span class="toc-number">7.9.</span> <span class="toc-text">跨域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jwt"><span class="toc-number">7.10.</span> <span class="toc-text">jwt</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视图的三种方式"><span class="toc-number">7.11.</span> <span class="toc-text">视图的三种方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flask"><span class="toc-number">8.</span> <span class="toc-text">flask</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#django和flask的区别"><span class="toc-number">8.1.</span> <span class="toc-text">django和flask的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flask依赖的组件"><span class="toc-number">8.2.</span> <span class="toc-text">Flask依赖的组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#蓝图的功能"><span class="toc-number">8.3.</span> <span class="toc-text">蓝图的功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用flask的第三方组件"><span class="toc-number">8.4.</span> <span class="toc-text">使用flask的第三方组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flask上下文管理流程"><span class="toc-number">8.5.</span> <span class="toc-text">Flask上下文管理流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flask中g的作用"><span class="toc-number">8.6.</span> <span class="toc-text">Flask中g的作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flask的离线脚本"><span class="toc-number">8.7.</span> <span class="toc-text">Flask的离线脚本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Stack"><span class="toc-number">8.8.</span> <span class="toc-text">Stack</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Local"><span class="toc-number">8.9.</span> <span class="toc-text">Local</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#blinker"><span class="toc-number">8.10.</span> <span class="toc-text">blinker</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQLAlchemy"><span class="toc-number">8.11.</span> <span class="toc-text">SQLAlchemy</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redis"><span class="toc-number">9.</span> <span class="toc-text">redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux"><span class="toc-number">10.</span> <span class="toc-text">linux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git"><span class="toc-number">11.</span> <span class="toc-text">git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据结构与算法"><span class="toc-number">12.</span> <span class="toc-text">数据结构与算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#斐波那契数列（递归）"><span class="toc-number">12.1.</span> <span class="toc-text">斐波那契数列（递归）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不使用python语法实现a-b值得交换"><span class="toc-number">12.2.</span> <span class="toc-text">不使用python语法实现a,b值得交换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二分查找"><span class="toc-number">12.3.</span> <span class="toc-text">二分查找</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#冒泡查询-O-n-2"><span class="toc-number">12.4.</span> <span class="toc-text">冒泡查询(O(n^2))</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#选择排序-O-n-2"><span class="toc-number">12.5.</span> <span class="toc-text">选择排序(O(n^2))</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#插入排序-O-n-2"><span class="toc-number">12.6.</span> <span class="toc-text">插入排序(O(n^2))</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#快速排序-nlogn"><span class="toc-number">12.7.</span> <span class="toc-text">快速排序(nlogn)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#爬虫"><span class="toc-number">13.</span> <span class="toc-text">爬虫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#项目"><span class="toc-number">14.</span> <span class="toc-text">项目</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CRM（客户关系管理系统）"><span class="toc-number">14.1.</span> <span class="toc-text">CRM（客户关系管理系统）</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#python基础"><span class="toc-number">1.</span> <span class="toc-text">python基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#python内存管理机制"><span class="toc-number">1.1.</span> <span class="toc-text">python内存管理机制</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#socket和并发编程"><span class="toc-number">2.</span> <span class="toc-text">socket和并发编程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#OSI7层模型"><span class="toc-number">2.1.</span> <span class="toc-text">OSI7层模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#BS于CS架构"><span class="toc-number">2.2.</span> <span class="toc-text">BS于CS架构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#socket套接字"><span class="toc-number">2.3.</span> <span class="toc-text">socket套接字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GIL锁"><span class="toc-number">2.4.</span> <span class="toc-text">GIL锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#进程、线程、线程池"><span class="toc-number">2.5.</span> <span class="toc-text">进程、线程、线程池</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#协程"><span class="toc-number">2.6.</span> <span class="toc-text">协程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#yield实现一个协程"><span class="toc-number">2.7.</span> <span class="toc-text">yield实现一个协程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#异步非阻塞"><span class="toc-number">2.8.</span> <span class="toc-text">异步非阻塞</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#死锁"><span class="toc-number">2.9.</span> <span class="toc-text">死锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IO多路复用"><span class="toc-number">2.10.</span> <span class="toc-text">IO多路复用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机操作系统"><span class="toc-number">3.</span> <span class="toc-text">计算机操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#三次握手和四次挥手的流程"><span class="toc-number">3.1.</span> <span class="toc-text">三次握手和四次挥手的流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#http和https"><span class="toc-number">3.2.</span> <span class="toc-text">http和https</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么连接的时候是三次握手？关闭是四次挥手？"><span class="toc-number">3.3.</span> <span class="toc-text">为什么连接的时候是三次握手？关闭是四次挥手？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么TIME-WAIT状态需要经过2MSL才能返回CLOSE状态？"><span class="toc-number">3.4.</span> <span class="toc-text">为什么TIME_WAIT状态需要经过2MSL才能返回CLOSE状态？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TCP和UDP的区别"><span class="toc-number">3.5.</span> <span class="toc-text">TCP和UDP的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#粘包的了解"><span class="toc-number">3.6.</span> <span class="toc-text">粘包的了解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#虚拟内存和物理内存的区别"><span class="toc-number">3.7.</span> <span class="toc-text">虚拟内存和物理内存的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#进程的三态模型"><span class="toc-number">3.8.</span> <span class="toc-text">进程的三态模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#进程间的通信方式有哪些"><span class="toc-number">3.9.</span> <span class="toc-text">进程间的通信方式有哪些</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库（mysql）"><span class="toc-number">4.</span> <span class="toc-text">数据库（mysql）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据库引擎"><span class="toc-number">4.1.</span> <span class="toc-text">数据库引擎</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#事务"><span class="toc-number">4.2.</span> <span class="toc-text">事务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#事务隔离级别"><span class="toc-number">4.3.</span> <span class="toc-text">事务隔离级别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B树和B-树"><span class="toc-number">4.4.</span> <span class="toc-text">B树和B+树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#锁机制"><span class="toc-number">4.5.</span> <span class="toc-text">锁机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据库优化"><span class="toc-number">4.6.</span> <span class="toc-text">数据库优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优化sql语句"><span class="toc-number">4.7.</span> <span class="toc-text">优化sql语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#索引失效（无法命中索引）"><span class="toc-number">4.8.</span> <span class="toc-text">索引失效（无法命中索引）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#执行计划"><span class="toc-number">4.9.</span> <span class="toc-text">执行计划</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视图…"><span class="toc-number">4.10.</span> <span class="toc-text">视图…</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#慢日志"><span class="toc-number">4.11.</span> <span class="toc-text">慢日志</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL注入"><span class="toc-number">4.12.</span> <span class="toc-text">SQL注入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据库导出导入"><span class="toc-number">4.13.</span> <span class="toc-text">数据库导出导入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ORM和原生SQL区别"><span class="toc-number">4.14.</span> <span class="toc-text">ORM和原生SQL区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#操作"><span class="toc-number">4.15.</span> <span class="toc-text">操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#连表查询"><span class="toc-number">4.16.</span> <span class="toc-text">连表查询</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前端"><span class="toc-number">5.</span> <span class="toc-text">前端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#websocket"><span class="toc-number">5.1.</span> <span class="toc-text">websocket</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vue（待学习）"><span class="toc-number">5.2.</span> <span class="toc-text">vue（待学习）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#django"><span class="toc-number">6.</span> <span class="toc-text">django</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#drf"><span class="toc-number">7.</span> <span class="toc-text">drf</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#视图（APIView类）"><span class="toc-number">7.1.</span> <span class="toc-text">视图（APIView类）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#序列化与关联表数据的展示"><span class="toc-number">7.2.</span> <span class="toc-text">序列化与关联表数据的展示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分页（APIView里面）"><span class="toc-number">7.3.</span> <span class="toc-text">分页（APIView里面）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分页（ListAPIView里面）"><span class="toc-number">7.4.</span> <span class="toc-text">分页（ListAPIView里面）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#筛选和视图（APIView这类）"><span class="toc-number">7.5.</span> <span class="toc-text">筛选和视图（APIView这类）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视图（ListAPIView类）"><span class="toc-number">7.6.</span> <span class="toc-text">视图（ListAPIView类）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#drf的封装、版本、认证、权限"><span class="toc-number">7.7.</span> <span class="toc-text">drf的封装、版本、认证、权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#restful规范"><span class="toc-number">7.8.</span> <span class="toc-text">restful规范</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#跨域"><span class="toc-number">7.9.</span> <span class="toc-text">跨域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jwt"><span class="toc-number">7.10.</span> <span class="toc-text">jwt</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视图的三种方式"><span class="toc-number">7.11.</span> <span class="toc-text">视图的三种方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flask"><span class="toc-number">8.</span> <span class="toc-text">flask</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#django和flask的区别"><span class="toc-number">8.1.</span> <span class="toc-text">django和flask的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flask依赖的组件"><span class="toc-number">8.2.</span> <span class="toc-text">Flask依赖的组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#蓝图的功能"><span class="toc-number">8.3.</span> <span class="toc-text">蓝图的功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用flask的第三方组件"><span class="toc-number">8.4.</span> <span class="toc-text">使用flask的第三方组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flask上下文管理流程"><span class="toc-number">8.5.</span> <span class="toc-text">Flask上下文管理流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flask中g的作用"><span class="toc-number">8.6.</span> <span class="toc-text">Flask中g的作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flask的离线脚本"><span class="toc-number">8.7.</span> <span class="toc-text">Flask的离线脚本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Stack"><span class="toc-number">8.8.</span> <span class="toc-text">Stack</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Local"><span class="toc-number">8.9.</span> <span class="toc-text">Local</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#blinker"><span class="toc-number">8.10.</span> <span class="toc-text">blinker</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQLAlchemy"><span class="toc-number">8.11.</span> <span class="toc-text">SQLAlchemy</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redis"><span class="toc-number">9.</span> <span class="toc-text">redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux"><span class="toc-number">10.</span> <span class="toc-text">linux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git"><span class="toc-number">11.</span> <span class="toc-text">git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据结构与算法"><span class="toc-number">12.</span> <span class="toc-text">数据结构与算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#斐波那契数列（递归）"><span class="toc-number">12.1.</span> <span class="toc-text">斐波那契数列（递归）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不使用python语法实现a-b值得交换"><span class="toc-number">12.2.</span> <span class="toc-text">不使用python语法实现a,b值得交换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二分查找"><span class="toc-number">12.3.</span> <span class="toc-text">二分查找</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#冒泡查询-O-n-2"><span class="toc-number">12.4.</span> <span class="toc-text">冒泡查询(O(n^2))</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#选择排序-O-n-2"><span class="toc-number">12.5.</span> <span class="toc-text">选择排序(O(n^2))</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#插入排序-O-n-2"><span class="toc-number">12.6.</span> <span class="toc-text">插入排序(O(n^2))</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#快速排序-nlogn"><span class="toc-number">12.7.</span> <span class="toc-text">快速排序(nlogn)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#爬虫"><span class="toc-number">13.</span> <span class="toc-text">爬虫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#项目"><span class="toc-number">14.</span> <span class="toc-text">项目</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CRM（客户关系管理系统）"><span class="toc-number">14.1.</span> <span class="toc-text">CRM（客户关系管理系统）</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -704,15 +706,7 @@ gitment.render('gitment-ctn')
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据分析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+                <a href="javascript:void(0)" class="js-tag color1">django项目部署</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -724,7 +718,7 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">python部分内容详讲</a>
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -732,63 +726,15 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
+                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">django项目部署</a>
+                <a href="javascript:void(0)" class="js-tag color3">python部分内容详讲</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">cmdb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">git版本控制系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">socket和并发编程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">flask</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drf</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">redis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">项目实战</a>
+                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -796,7 +742,47 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">flask</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">socket和并发编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">git版本控制系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
               </li>
             
             <div class="clearfix"></div>
