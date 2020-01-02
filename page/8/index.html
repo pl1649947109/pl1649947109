@@ -117,122 +117,6 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-第三方模块/shutil——高级文件操作模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/26/第三方模块/shutil——高级文件操作模块/">shutil——高级文件操作模块</a>
-    </h1>
-  
-
-			
-			<a href="/2019/08/26/第三方模块/shutil——高级文件操作模块/" class="archive-article-date">
-  	<time datetime="2019-08-26T11:58:42.392Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.7k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">7min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>介绍：该模块对文件和文件集合提供了许多高级操作。特别是，提供了支持文件复制和删除的功能。单个文件的操作，请参考os模块。</p>
-<p>注意：高级别的文件的复制的功能，也无法复制所有文件元数据。</p>
-<h3 id="文件夹和文件操作"><a href="#文件夹和文件操作" class="headerlink" title="文件夹和文件操作"></a>文件夹和文件操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">shutil.copyfileobj(src,dst,length=<span class="number">16</span>*<span class="number">1024</span>):</span><br><span class="line">功能：将src文件内容复制到dst文件，length为src每次读取的长度，用作缓冲区大小。</span><br><span class="line">参数：</span><br><span class="line">fsrc： 源文件</span><br><span class="line">fdst： 复制至fdst文件</span><br><span class="line">length： 缓冲区大小，即fsrc每次读取的长度</span><br><span class="line">实例:</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line">f1 = open(<span class="string">'file.txt'</span>,<span class="string">'r'</span>)</span><br><span class="line">f2 = open(<span class="string">'filel_copy.txt'</span>,<span class="string">'a+'</span>)</span><br><span class="line">shutil.copyfileobj(f1,f2,length=<span class="number">1024</span>)</span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2019/08/26/第三方模块/shutil——高级文件操作模块/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/26/第三方模块/shutil——高级文件操作模块/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
     <article id="post-第三方模块/epoll——线程相关模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1302,6 +1186,122 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/08/15/第三方模块/subprocess——和终端交互的模块/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-部分详讲/python之正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/05/部分详讲/python之正则表达式/">python之正则表达式</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/05/部分详讲/python之正则表达式/" class="archive-article-date">
+  	<time datetime="2019-08-05T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">6k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">23min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>导读：我们都知道学习一项技能是为了解决我们的问题的，那么正则表达式是干什么的呢？有哪些内容呢？有哪些应用呢?那么，我们下面将围绕着这三个问题进行详述。</p>
+<p><strong>首先，我们要知道什么是正则表达式</strong></p>
+<p>​        正则表达式(re)，计算机科学的一个概念。它通常被用来检索、替换那些符合某个（规则）的文本。</p>
+        
+          <!---<a class="article-more-a" href="/2019/08/05/部分详讲/python之正则表达式/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">python部分内容详讲</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/05/部分详讲/python之正则表达式/">展开全文 >></a>
         </p>
       
 
