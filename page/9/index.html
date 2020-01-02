@@ -117,6 +117,519 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-第三方模块/subprocess——和终端交互的模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/15/第三方模块/subprocess——和终端交互的模块/">subprocess模块</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/15/第三方模块/subprocess——和终端交互的模块/" class="archive-article-date">
+  	<time datetime="2019-08-15T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-15</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2.7k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">10min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="涉及的模块"><a href="#涉及的模块" class="headerlink" title="涉及的模块"></a>涉及的模块</h3><ul>
+<li><p>subproces</p>
+</li>
+<li><p>subprocess.Popen</p>
+</li>
+<li><p>os.system</p>
+</li>
+<li><p>os.popen</p>
+</li>
+</ul>
+<p><strong>subprocess及相关模块的介绍</strong></p>
+<ul>
+<li>在python中我们可以通过os.system来控制控制台的形式来运行程序或执行一些命令，但涉及到需要进程之间通信的时候，就需要用到subprocess模块。原来mulltiprocessing是一体的，但是后来官方进行了拆分，但是内容仍然有所重叠。</li>
+<li>我门几乎可以在任何操作系统上通过命令行指令与操作系统之间进行交互，那么我们在python中就可以使用上面的模块来操作我们的命令行。</li>
+<li>通常我们执行命令行比较关注两个结果：<ul>
+<li>命令执行的状态码——表示命令是否执行成功</li>
+<li>命令执行的输出结果——命令执行成功后的输出</li>
+</ul>
+</li>
+<li>我们在开始的时候通过使用os.system()、os.popen().read()来执行命令行的指令，以及我们非常少使用的commands模块。</li>
+<li>在python2.4之后，官方的文档建议使用subprocess模块，所以这篇文章我们就重点的介绍该模块的使用。</li>
+</ul>
+        
+          <!---<a class="article-more-a" href="/2019/08/15/第三方模块/subprocess——和终端交互的模块/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/15/第三方模块/subprocess——和终端交互的模块/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-部分详讲/python之正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/05/部分详讲/python之正则表达式/">python之正则表达式</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/05/部分详讲/python之正则表达式/" class="archive-article-date">
+  	<time datetime="2019-08-05T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">6k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">23min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>导读：我们都知道学习一项技能是为了解决我们的问题的，那么正则表达式是干什么的呢？有哪些内容呢？有哪些应用呢?那么，我们下面将围绕着这三个问题进行详述。</p>
+<p><strong>首先，我们要知道什么是正则表达式</strong></p>
+<p>​        正则表达式(re)，计算机科学的一个概念。它通常被用来检索、替换那些符合某个（规则）的文本。</p>
+        
+          <!---<a class="article-more-a" href="/2019/08/05/部分详讲/python之正则表达式/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">python部分内容详讲</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/05/部分详讲/python之正则表达式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-部分详讲/类比分析python异步模块asyncio、aiohttp、gevent" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/05/部分详讲/类比分析python异步模块asyncio、aiohttp、gevent/">类比分析python异步模块asyncio、aiohttp、gevent</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/05/部分详讲/类比分析python异步模块asyncio、aiohttp、gevent/" class="archive-article-date">
+  	<time datetime="2019-08-05T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">1.1k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">4min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>简述（讲的很好）</strong></p>
+<p>在Python3.6后，可以通过<strong>关键词async def来定义一个coroutine协程，协程就相当于未来需要完成的任务，多个协程就是多个需要完成的任务，多个协程可以进一步封装到一个task对象中，task就是一个储存任务的盒子。</strong>此时，<strong>装在盒子里的任务并没有真正的运行，需要把它接入到一个监视器中使它运行，同时监视器还要持续不断的盯着盒子里的任务运行到了哪一步，这个持续不断的监视器就用一个循环对象loop来实现</strong>。单来说在一个线程里，先后执行 AB 两个任务，但是当A遇到耗时操作（网络等待、文件读写等），这个时候 gevent 会让 A 继续执行，但是同时也会开始执行B任务，如果B在遇到耗时操作同时A又执行完了耗时操作。</p>
+<h4 id="asyncio示例"><a href="#asyncio示例" class="headerlink" title="asyncio示例"></a>asyncio示例</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="comment">#定义第1个协程，协程就是将要具体完成的任务，该任务耗时3秒，完成后显示任务完成</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">to_do_something</span><span class="params">(i)</span>:</span></span><br><span class="line">    print(<span class="string">'第&#123;&#125;个任务：任务启动...'</span>.format(i))</span><br><span class="line">    <span class="comment">#遇到耗时的操作，await就会使任务挂起，继续去完成下一个任务</span></span><br><span class="line">    <span class="keyword">await</span> asyncio.sleep(i)</span><br><span class="line">    print(<span class="string">'第&#123;&#125;个任务：任务完成！'</span>.format(i))</span><br><span class="line"><span class="comment">#定义第2个协程，用于通知任务进行状态</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">mission_running</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'任务正在执行...'</span>)</span><br><span class="line"></span><br><span class="line">start = time.time()</span><br><span class="line"><span class="comment">#创建一个循环</span></span><br><span class="line">loop = asyncio.get_event_loop()</span><br><span class="line"><span class="comment">#创建一个任务盒子tasks，包含了3个需要完成的任务</span></span><br><span class="line">tasks = [asyncio.ensure_future(to_do_something(<span class="number">1</span>)),</span><br><span class="line">         asyncio.ensure_future(to_do_something(<span class="number">2</span>)),</span><br><span class="line">         asyncio.ensure_future(mission_running())]</span><br><span class="line"><span class="comment">#tasks接入loop中开始运行</span></span><br><span class="line">loop.run_until_complete(asyncio.wait(tasks))</span><br><span class="line">end = time.time()</span><br><span class="line">print(end-start)</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<ul>
+<li><strong>启动入口 asyncio.run()</strong></li>
+<li><strong>并发运行asyncio任务 asyncio.create_task()</strong>，这里使用future(),效果是一样的，不同的就是task是loop创建的</li>
+<li><strong>等待对象 await，await用于挂起阻塞的异步调用接口。</strong></li>
+<li><strong>休眠 asyncio.sleep() 挂起当前任务，允许允许其他任务</strong></li>
+</ul>
+<p><strong>实例</strong>：<a href="https://chpl.top/2019/09/16/%E7%88%AC%E8%99%AB/%E7%AC%AC%E4%B8%89%E8%AE%B2%E2%80%94%E2%80%94%E9%AB%98%E6%80%A7%E8%83%BD%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB/" target="_blank" rel="noopener">https://chpl.top/2019/09/16/%E7%88%AC%E8%99%AB/%E7%AC%AC%E4%B8%89%E8%AE%B2%E2%80%94%E2%80%94%E9%AB%98%E6%80%A7%E8%83%BD%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB/</a></p>
+<p><strong>理论</strong>：<a href="https://chpl.top/2019/08/22/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/asyncio%E2%80%94%E2%80%94%E5%8D%8F%E7%A8%8B%E6%A8%A1%E5%9D%97/" target="_blank" rel="noopener">https://chpl.top/2019/08/22/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/asyncio%E2%80%94%E2%80%94%E5%8D%8F%E7%A8%8B%E6%A8%A1%E5%9D%97/</a></p>
+<h4 id="aoihttp网络访问"><a href="#aoihttp网络访问" class="headerlink" title="aoihttp网络访问"></a>aoihttp网络访问</h4><p><strong>实例</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">from</span> aiohttp <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> aiomultiprocess <span class="keyword">import</span> Process</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">put</span><span class="params">(url, params)</span>:</span></span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">with</span> request(<span class="string">"PUT"</span>, url, params=params) <span class="keyword">as</span> response:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    p = Process(target=put, args=(<span class="string">"https://jreese.sh"</span>, ))</span><br><span class="line">    <span class="keyword">await</span> p</span><br><span class="line"></span><br><span class="line">asyncio.run(main())</span><br><span class="line">If you want to get results back <span class="keyword">from</span> that coroutine, Worker makes that available:</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">from</span> aiohttp <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> aiomultiprocess <span class="keyword">import</span> Worker</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(url)</span>:</span></span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">with</span> request(<span class="string">"GET"</span>, url) <span class="keyword">as</span> response:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">await</span> response.text(<span class="string">"utf-8"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    p = Worker(target=get, args=(<span class="string">"https://jreese.sh"</span>, ))</span><br><span class="line">    response = <span class="keyword">await</span> p</span><br><span class="line"></span><br><span class="line">asyncio.run(main())</span><br><span class="line">If you want a managed pool of worker processes, then use Pool:</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">from</span> aiohttp <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> aiomultiprocess <span class="keyword">import</span> Pool</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(url)</span>:</span></span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">with</span> request(<span class="string">"GET"</span>, url) <span class="keyword">as</span> response:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">await</span> response.text(<span class="string">"utf-8"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    urls = [<span class="string">"https://jreese.sh"</span>, ...]</span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">with</span> Pool() <span class="keyword">as</span> pool:</span><br><span class="line">        result = <span class="keyword">await</span> pool.map(get, urls)</span><br><span class="line"></span><br><span class="line">asyncio.run(main())</span><br></pre></td></tr></table></figure>
+
+<p>外链：<a href="https://www.jianshu.com/p/5f41d9fb6b12" target="_blank" rel="noopener">https://www.jianshu.com/p/5f41d9fb6b12</a></p>
+<h4 id="同类型的gevent模块"><a href="#同类型的gevent模块" class="headerlink" title="同类型的gevent模块"></a>同类型的gevent模块</h4><p>说明：python程序实现的一种单线程下的多任务执行调度器，<strong>简单来说在一个线程里，先后执行 AB 两个任务，但是当A遇到耗时操作（网络等待、文件读写等），这个时候 gevent 会让 A 继续执行，但是同时也会开始执行B任务，如果B在遇到耗时操作同时A又执行完了耗时操作，gevent 又继续执行 A。</strong></p>
+<p><strong>实例</strong>：模拟通信</p>
+<p>服务端</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> gevent <span class="keyword">import</span> monkey, spawn; monkey.patch_all()  <span class="comment"># 使用gevent必须 调用  </span></span><br><span class="line"><span class="keyword">import</span> socket                                                          </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">communicate</span><span class="params">(conn)</span>:</span>                                 </span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:                                         </span><br><span class="line">        <span class="keyword">try</span>:                                           </span><br><span class="line">            data = conn.recv(<span class="number">1024</span>)                     </span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> data:<span class="keyword">break</span>                           </span><br><span class="line">            conn.send(data.upper())                     </span><br><span class="line">        <span class="keyword">except</span> ConnectionResetError:                   </span><br><span class="line">            <span class="keyword">break</span>                                       </span><br><span class="line">    conn.close()                                                       </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">server</span><span class="params">(ip, port)</span>:</span>                                   </span><br><span class="line">    soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)            </span><br><span class="line">    soc.bind((ip,port))                                 </span><br><span class="line">    soc.listen(<span class="number">5</span>)                                       </span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:                                         </span><br><span class="line">        conn, der = soc.accept()                       </span><br><span class="line">        spawn(communicate, conn)  <span class="comment"># 协程开启处理IO问题     </span></span><br><span class="line">    soc.close()                                                        </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:                             </span><br><span class="line">    g = spawn(server, <span class="string">'127.0.0.1'</span>, <span class="number">8080</span>)  <span class="comment"># 开启协程, 异步提交                 </span></span><br><span class="line">    g.join()</span><br></pre></td></tr></table></figure>
+
+<p>客户端</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Thread,currentThread</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">client</span><span class="params">()</span>:</span></span><br><span class="line">    soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">    soc.connect((<span class="string">'127.0.0.1'</span>, <span class="number">8080</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        soc.send((<span class="string">'%s hello'</span> % currentThread().getName()).encode(<span class="string">'utf-8'</span>))</span><br><span class="line">        data = soc.recv(<span class="number">1024</span>)</span><br><span class="line">        print(data.decode(<span class="string">'utf-8'</span>))</span><br><span class="line">    soc.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">500</span>):  <span class="comment"># 模拟500个 用户交互</span></span><br><span class="line">        t = Thread(target=client)  <span class="comment"># 线程开启</span></span><br><span class="line">        t.start()</span><br></pre></td></tr></table></figure>
+
+
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">python部分内容详讲</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/05/部分详讲/类比分析python异步模块asyncio、aiohttp、gevent/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-部分详讲/python之日志详讲" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/30/部分详讲/python之日志详讲/">python之日志详讲</a>
+    </h1>
+  
+
+			
+			<a href="/2019/07/30/部分详讲/python之日志详讲/" class="archive-article-date">
+  	<time datetime="2019-07-30T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-30</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">1.5k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">6min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>导读：日志在我们日后的开发中是非常有用的一个工具，本文的内容将讲解3个日志版本，由浅入深的带领大家学习。当然在实际的开发中进阶版日志是最有用的也是最常用的。</p>
+<h3 id="学习大纲："><a href="#学习大纲：" class="headerlink" title="学习大纲："></a>学习大纲：</h3><ul>
+<li><p>日志的分类</p>
+</li>
+<li><p>日志的级别</p>
+</li>
+<li><p>阉割版日志</p>
+</li>
+<li><p>简单版日志</p>
+</li>
+<li><p>进阶版日志</p>
+</li>
+</ul>
+        
+          <!---<a class="article-more-a" href="/2019/07/30/部分详讲/python之日志详讲/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">python部分内容详讲</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/30/部分详讲/python之日志详讲/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
     <article id="post-部分详讲/python常用的内置函数之方法大全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -791,480 +1304,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/18/书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容/">第十六讲——django综合扩展六之分页Paginator和聚合内容</a>
-    </h1>
-  
-
-			
-			<a href="/2018/10/18/书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容/" class="archive-article-date">
-  	<time datetime="2018-10-18T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-18</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">8min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="分页Paginator"><a href="#分页Paginator" class="headerlink" title="分页Paginator"></a>分页Paginator</h2><p>分页功能是几乎所有的网站上都需要提供的功能，当你要展示的条目比较多时，必须进行分页，不但能减小数据库读取数据压力，也有利于用户浏览。</p>
-<p>Django又很贴心的为我们提供了一个Paginator分页工具，但是不幸的是，这个工具功能差了点，不好添加CSS样式，所以前端的展示效果比较丑。如果你能力够，自己编写一个分页器，然后提交给Django官方吧，争取替代掉这个当前的分页器，我看好你哦！</p>
-<p>但不管怎么样，当前的Paginator分页器，还是值得学一下用一下的。</p>
-        
-          <!---<a class="article-more-a" href="/2018/10/18/书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/18/书/Django/第十六讲——django综合扩展六之分页Paginator和聚合内容/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/17/书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)/">第十五讲——django综合扩展五之序列化和消息框架(模板)</a>
-    </h1>
-  
-
-			
-			<a href="/2018/10/17/书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)/" class="archive-article-date">
-  	<time datetime="2018-10-17T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-17</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.7k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">11min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="序列化serializers"><a href="#序列化serializers" class="headerlink" title="序列化serializers"></a>序列化serializers</h3><p>Django的序列化工具让你可以将Django的模型‘翻译’成其它格式的数据。通常情况下，这种其它格式的数据是基于文本的，并且用于数据交换\传输过程。</p>
-        
-          <!---<a class="article-more-a" href="/2018/10/17/书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/17/书/Django/第十五讲——django综合扩展五之序列化和消息框架(模板)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/">第十四讲——django综合扩展四之网站地图sitemap和信号signal</a>
-    </h1>
-  
-
-			
-			<a href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/" class="archive-article-date">
-  	<time datetime="2018-10-16T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.3k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">9min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="网站地图sitemap"><a href="#网站地图sitemap" class="headerlink" title="网站地图sitemap"></a>网站地图sitemap</h3><p>网站地图是根据网站的结构、框架、内容，生成的导航网页，是一个网站所有链接的容器。很多网站的连接层次比较深，蜘蛛很难抓取到，网站地图可以方便搜索引擎或者网络蜘蛛抓取网站页面，了解网站的架构，为网络蜘蛛指路，增加网站内容页面的收录概率。网站地图一般存放在域名根目录下并命名为sitemap。</p>
-<p>Django自带了一个高级的生成网站地图的框架，我们可以很容易地创建出XML格式的网站地图。创建网站地图，只需编写一个Sitemap类，并在URLconf中编写对应的访问路由。</p>
-        
-          <!---<a class="article-more-a" href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/Django/第十三讲——django综合扩展三之Django-admin和manage.py" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/15/书/Django/第十三讲——django综合扩展三之Django-admin和manage.py/">第十三讲——django综合扩展三之Django-admin和manage.py</a>
-    </h1>
-  
-
-			
-			<a href="/2018/10/15/书/Django/第十三讲——django综合扩展三之Django-admin和manage.py/" class="archive-article-date">
-  	<time datetime="2018-10-15T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-15</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.8k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">10min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Django-admin和manage-py"><a href="#Django-admin和manage-py" class="headerlink" title="Django-admin和manage.py"></a>Django-admin和manage.py</h3><h4 id="Djangon内置命令选项"><a href="#Djangon内置命令选项" class="headerlink" title="Djangon内置命令选项"></a>Djangon内置命令选项</h4><ul>
-<li>check：检查整个项目是否存在问题</li>
-<li>dbshell：打开某个数据库的shell</li>
-<li>diffsettings：显示当前的settings和默认的settings之间的差别</li>
-<li>flush：删除数据库的所有数据，不删除数据表</li>
-<li>makemigrations :生成数据表记录</li>
-<li>migrate：把数据刷到数据库</li>
-<li>runserver：启动项目</li>
-<li>shell：启动命令行环境</li>
-<li>startapp:创建一个app</li>
-<li>startproject：创建一个项目</li>
-<li>test：运行所有安装app的测试代码</li>
-</ul>
-        
-          <!---<a class="article-more-a" href="/2018/10/15/书/Django/第十三讲——django综合扩展三之Django-admin和manage.py/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/15/书/Django/第十三讲——django综合扩展三之Django-admin和manage.py/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/10/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/10/">Next &raquo;</a>
     </nav>
   
 
@@ -1276,7 +1318,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info">
 		<div class="footer-center">
-			&copy; 2019 pl&nbsp
+			&copy; 2020 pl&nbsp
 			本站由 <img src="http://9017499461.linshutu.top/github%20.svg" ><a href="https://pages.github.com/" >github</a>&nbsp;提供云服务器,
 			<img src="http://9017499461.linshutu.top/%E4%B8%83%E7%89%9B%E4%BA%91.png" ><a href="https://portal.qiniu.com" >七牛云储存</a>&nbsp;提供图片加速,
 		</div>
@@ -1373,6 +1415,10 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">celery应用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">django项目部署</a>
               </li>
              
@@ -1381,11 +1427,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1393,7 +1447,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1413,7 +1467,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">flask</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1421,7 +1475,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color2">socket和并发编程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1429,15 +1483,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">socket和并发编程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drf</a>
+                <a href="javascript:void(0)" class="js-tag color1">flask</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">git版本控制系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drf</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1446,10 +1500,6 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">redis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
               </li>
             
             <div class="clearfix"></div>
