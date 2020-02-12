@@ -236,141 +236,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-小绿本/第五部分——Django" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/15/小绿本/第五部分——Django/">第五部分——Django</a>
-    </h1>
-  
-
-			
-			<a href="/2019/11/15/小绿本/第五部分——Django/" class="archive-article-date">
-  	<time datetime="2019-11-15T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">11.7k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">47min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-简述http协议以及常用的请求头"><a href="#1-简述http协议以及常用的请求头" class="headerlink" title="1.简述http协议以及常用的请求头"></a>1.简述http协议以及常用的请求头</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">User-Agent：标识浏览器</span><br><span class="line">Content_Type：用来标记请求体的数据的格式，服务端根据这个对数据进行解析</span><br><span class="line">Accept：指定客户端能够接收的内容类型</span><br><span class="line">Accept-Encoding:指定浏览器可以支持的web服务器返回内容压缩编码类型</span><br><span class="line">Accept-Language:浏览器可接受的语言</span><br><span class="line">Content-Length:请求的内容长度</span><br><span class="line">Date：请求发送的日期和时间</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-列举常见请求方法："><a href="#2-列举常见请求方法：" class="headerlink" title="2.列举常见请求方法："></a>2.列举常见请求方法：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET</span><br><span class="line">POST</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-列举常见的状态码"><a href="#3-列举常见的状态码" class="headerlink" title="3.列举常见的状态码"></a>3.列举常见的状态码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">200：请求成功</span><br><span class="line">301：永久重定向</span><br><span class="line">302：临时重定向</span><br><span class="line">403：没有通过跨站请求伪造</span><br><span class="line">404：请求的页面不存在</span><br><span class="line">500：服务器错误</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-简述websocket协议及实现原理"><a href="#4-简述websocket协议及实现原理" class="headerlink" title="4.简述websocket协议及实现原理"></a>4.简述websocket协议及实现原理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">协议：WebSocket 是一种标准协议，用于在客户端和服务端之间进行双向数据传输。但它跟 HTTP 没什么关系，它是基于 TCP 的一种独立实现。用来弥补http协议在持久通信能力上的不足。</span><br><span class="line"></span><br><span class="line">原理：WebSocket是HTML5下一种新的协议。它实现了浏览器与服务器全双工通信，能更好的节省服务器资源和带宽并达到实时通讯的目的。它与HTTP一样通过已建立的TCP连接来传输数据，但是它和HTTP最大不同是：</span><br><span class="line">WebSocket是一种双向通信协议。在建立连接后，WebSocket服务器端和客户端都能主动向对方发送或接收数据，就像Socket一样；</span><br><span class="line">WebSocket需要像TCP一样，先建立连接，连接成功后才能相互通信。</span><br><span class="line"></span><br><span class="line">相比HTTP长连接，WebSocket有以下特点：</span><br><span class="line">1，是真正的全双工方式，建立连接后客户端与服务器端是完全平等的，可以互相主动请求。</span><br><span class="line">2，Websocket协议通过第一个request建立了TCP连接之后，之后交换的数据都不需要发送 HTTP header就能交换数据</span><br><span class="line">3，此外还有 multiplexing、不同的URL可以复用同一个WebSocket连接等功能</span><br><span class="line"></span><br><span class="line">Wesocket协议的优点：</span><br><span class="line">Websocket协议一旦建立后，互相沟通所消耗的请求头是很小的</span><br><span class="line">服务端可以向客户端推送消息了</span><br><span class="line">Wesocket协议的缺点：</span><br><span class="line">少部分浏览器不支持，浏览器支持的成都与方式有区别</span><br><span class="line"></span><br><span class="line">Wesocket协议的应用场景：</span><br><span class="line">即时聊天通信</span><br><span class="line">多玩家游戏</span><br><span class="line">在线协同编辑</span><br><span class="line">实时数据流的拉取与推送</span><br><span class="line">体育实况</span><br><span class="line">实时地图位置</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-Python-web开发中，跨域问题的解决思路是什么"><a href="#5-Python-web开发中，跨域问题的解决思路是什么" class="headerlink" title="5.Python web开发中，跨域问题的解决思路是什么"></a>5.Python web开发中，跨域问题的解决思路是什么</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">首先，什么是跨域？</span><br><span class="line">同源策略/SOP（Same origin policy）是一种约定，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，浏览器很容易受到XSS、CSFR等攻击。</span><br><span class="line"></span><br><span class="line">SOP要求两个通讯地址的协议、域名、端口号必须相同，否则两个地址的通讯将被浏览器视为不安全的，并被block下来。比如“http页面”和“https页面”属于不同协议；“qq.com”、“www.qq.com”、“a.qq.com”都属于不同域名（或主机）；“a.com”和“a.com:8000”属于不同端口号。这三种情况常规都是无法直接进行通讯的。</span><br><span class="line"></span><br><span class="line">解决办法：</span><br><span class="line">目前业界流行的解决方案有三种：服务器代理、JSONP、CORS（不展开）</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-简述http的缓存机制"><a href="#6-简述http的缓存机制" class="headerlink" title="6.简述http的缓存机制"></a>6.简述http的缓存机制</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HTTP的缓存可以分为两大类：强制缓存和协商缓存。强制缓存的优先级高于比较缓存。</span><br><span class="line">强制缓存（状态码200）：服务端通知浏览器一个缓存时间，在缓存期间内，下次请求，直接使用浏览器中缓存的数据，不在时间内，执行比较缓存策略。</span><br><span class="line">比较缓存（状态码：304）：对于 比较缓存而言，将缓存信息中的Etag（浏览器当前资源在服务器的唯一标识）和Last-Modified（浏览器资源的最后修改时间）通过请求发送给服务器，由服务器校验，比较成功，返回304状态，浏览器直接使用缓存。</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://9017499461.linshutu.top/Http%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6.webp" alt></p>
-<h3 id="7-谈谈你知道的python-web框架："><a href="#7-谈谈你知道的python-web框架：" class="headerlink" title="7.谈谈你知道的python web框架："></a>7.谈谈你知道的python web框架：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Django</span><br><span class="line">flask</span><br><span class="line">Tornado</span><br><span class="line">Twisted</span><br></pre></td></tr></table></figure>
-
-<h3 id="8-django中model的SulgFiled类型字段有什么用途"><a href="#8-django中model的SulgFiled类型字段有什么用途" class="headerlink" title="8.django中model的SulgFiled类型字段有什么用途"></a>8.django中model的SulgFiled类型字段有什么用途</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slug是一个新闻行业的术语。一个slug就是一个某种东西的简短标签，包含字母、数字、下划线或者连接线，通常用于URLs中。可以设置max_length参数，默认为50。</span><br></pre></td></tr></table></figure>
-
-<h3 id="9-django常见的线上部署方式有哪几种"><a href="#9-django常见的线上部署方式有哪几种" class="headerlink" title="9.django常见的线上部署方式有哪几种"></a>9.django常见的线上部署方式有哪几种</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Nginx+uwsgi+Django+mysql（目前我用到的）</span><br></pre></td></tr></table></figure>
-
-<h3 id="10-django中使用memcached作为缓存的具体方法？优缺点说明？"><a href="#10-django中使用memcached作为缓存的具体方法？优缺点说明？" class="headerlink" title="10.django中使用memcached作为缓存的具体方法？优缺点说明？"></a>10.django中使用memcached作为缓存的具体方法？优缺点说明？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">1，settings.py</span><br><span class="line">CACHES = &#123;</span><br><span class="line">    &apos;default&apos;: &#123;</span><br><span class="line">        &apos;BACKEND&apos;: &apos;django.core.cache.backends.memcached.MemcachedCache&apos;,</span><br><span class="line">        &apos;LOCATION&apos;: &apos;127.0.0.1:11211&apos;, #多个使用列表</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2，views.py</span><br><span class="line">from django.http import  HttpResponse</span><br><span class="line"># 使用cache来操作memcached</span><br><span class="line">from django.core.cache import cache</span><br><span class="line"></span><br><span class="line"># Create your views here.</span><br><span class="line">def index(request):</span><br><span class="line">    cache.set(&apos;username&apos;,&apos;zhiliao&apos;,12000)</span><br><span class="line">    username = cache.get(&apos;username&apos;)</span><br><span class="line">    print(username)</span><br><span class="line">    return HttpResponse(&apos;index&apos;)</span><br><span class="line">我认为：</span><br><span class="line">优点：对于一些访问量高的文件放在缓存中，可以提高访问的效率</span><br><span class="line">缺点：缓存的缺点即使数据断电丢失，这点memcached没有好的办法处理</span><br></pre></td></tr></table></figure>
-
-<p>memcached的具体操作：<a href="https://blog.csdn.net/xujin0/article/details/84311862" target="_blank" rel="noopener">https://blog.csdn.net/xujin0/article/details/84311862</a></p>
-        
-          <!---<a class="article-more-a" href="/2019/11/15/小绿本/第五部分——Django/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小绿本</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/15/小绿本/第五部分——Django/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
     <article id="post-书/linux/第六讲——docker容器技术" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1237,6 +1102,121 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-书/drf/第四讲——drf请求的封装、版本、认证、权限" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/08/书/drf/第四讲——drf请求的封装、版本、认证、权限/">第四讲——drf请求的封装、版本、认证、权限</a>
+    </h1>
+  
+
+			
+			<a href="/2019/11/08/书/drf/第四讲——drf请求的封装、版本、认证、权限/" class="archive-article-date">
+  	<time datetime="2019-11-08T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-08</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">2.5k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">12min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="回顾和补充"><a href="#回顾和补充" class="headerlink" title="回顾和补充"></a>回顾和补充</h3><p>1.restful规范</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 建议用https代替http</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 在URL中体现api，添加api标识</span><br><span class="line">        https://www.cnblogs.com/xwgblog/p/<span class="number">11812244.</span>html   <span class="comment"># 错误</span></span><br><span class="line">        https://www.cnblogs.com/api/xwgblog/p/<span class="number">11812244.</span>html  <span class="comment"># 正确（根域名）</span></span><br><span class="line">        https://api.cnblogs.com/xwgblog/p/<span class="number">11812244.</span>html <span class="comment"># 正确（子域方式）</span></span><br><span class="line"></span><br><span class="line">        建议使用：https://www.cnblogs.com/api/...</span><br><span class="line">        </span><br><span class="line"><span class="number">3.</span> 在URL中要体现版本（版本可以体在在多个地方，一般就体现在url中）</span><br><span class="line">	https://www.cnblogs.com/api/v1/userinfo/</span><br><span class="line">	https://www.cnblogs.com/api/v2/userinfo/</span><br><span class="line">	</span><br><span class="line"><span class="number">4.</span> URL中一般用名词： </span><br><span class="line">	http://www.luffycity.com/api/v1/article/ (面向资源编程，网络上东西都视为资源)</span><br><span class="line"></span><br><span class="line"><span class="number">5.</span> 筛选条件，在URL参数中进行传递：</span><br><span class="line">	http://www.luffycity.com/article/page=<span class="number">1</span>&amp;category=<span class="number">1</span></span><br><span class="line">	</span><br><span class="line"><span class="number">6.</span> 根据请求不同做不同操作：GET/POST/PUT/DELTE/PATCH</span><br><span class="line"></span><br><span class="line"><span class="number">7.</span> 一般传输的数据格式都是JSON</span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2019/11/08/书/drf/第四讲——drf请求的封装、版本、认证、权限/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">drf</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/08/书/drf/第四讲——drf请求的封装、版本、认证、权限/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
     <article id="post-数据结构与算法/算法积累第一篇——python实现约瑟夫算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1363,7 +1343,7 @@ var _hmt = _hmt || [];
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
