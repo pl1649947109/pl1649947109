@@ -260,7 +260,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.6k 字</span>
+        <span class="post-count">1.7k 字</span>
       </span>
     </span>
 
@@ -269,7 +269,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">6min</span>
+        <span class="post-count">7min</span>
       </span>
     </span>
 </div>
@@ -319,7 +319,7 @@ var _hmt = _hmt || [];
 <p><code>celery multi restart WORKNAME</code></p>
 <p>查看进程数</p>
 <p><code>celery status -A celery_task</code></p>
-<h3 id="celery短信验证码"><a href="#celery短信验证码" class="headerlink" title="celery短信验证码"></a>celery短信验证码</h3><p><strong>celery项目目录</strong></p>
+<h3 id="celery短信验证码（异步任务）"><a href="#celery短信验证码（异步任务）" class="headerlink" title="celery短信验证码（异步任务）"></a>celery短信验证码（异步任务）</h3><p><strong>celery项目目录</strong></p>
 <p><img src="http://9017499461.linshutu.top/sms%E7%BB%93%E6%9E%84%E7%9B%AE%E5%BD%95.JPG" alt></p>
 <p><strong>mian：celery的入口</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"><span class="comment">#创建celery实例</span></span><br><span class="line">celery_app = Celery()</span><br><span class="line"><span class="comment">#加载celery配置</span></span><br><span class="line">celery_app.config_from_object(<span class="string">'celery_tasks.config'</span>)</span><br><span class="line"><span class="comment">#自动注册cellery任务</span></span><br><span class="line">celery_app.autodiscover_tasks([<span class="string">'celery_tasks.sms'</span>])</span><br></pre></td></tr></table></figure>
@@ -358,13 +358,24 @@ var _hmt = _hmt || [];
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> absolute_import</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"><span class="keyword">from</span> django.conf <span class="keyword">import</span> settings</span><br><span class="line"></span><br><span class="line">os.environ.setdefault(<span class="string">'DJANGO_SETTINGS_MODULE'</span>, <span class="string">'whthas_home.settings'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#实例化</span></span><br><span class="line">app = Celery(<span class="string">'demo'</span>)</span><br><span class="line"><span class="comment">#加载配置</span></span><br><span class="line">app.config_from_object(<span class="string">'django.conf:settings'</span>)</span><br><span class="line">app.autodiscover_tasks(<span class="keyword">lambda</span>: settings.INSTALLED_APPS)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task(bind=True)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">debug_task</span><span class="params">(self)</span>:</span></span><br><span class="line">    print(<span class="string">'Request: &#123;0!r&#125;'</span>.format(self.request))</span><br></pre></td></tr></table></figure>
 
 <p><strong>在setting.py同级的<code>__init__</code>里面添加</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> .celery <span class="keyword">import</span> app <span class="keyword">as</span> celery_app</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> .celery <span class="keyword">import</span> app <span class="keyword">as</span> celery_app</span><br><span class="line"></span><br><span class="line">__all__ = (<span class="string">'celery_app'</span>,)</span><br></pre></td></tr></table></figure>
 
 <p><strong>视图</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render,HttpResponse</span><br><span class="line"><span class="keyword">from</span> App.task <span class="keyword">import</span> test1</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(req)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> req.method == <span class="string">'GET'</span>:</span><br><span class="line">        test1.delay() <span class="comment">#将耗时任务放到队列里 异步加载</span></span><br><span class="line">        <span class="keyword">return</span> render(req,<span class="string">'index.html'</span>)</span><br></pre></td></tr></table></figure>
 
 <p><strong>启动项目</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#首先启动redis</span></span><br><span class="line">redis-server</span><br><span class="line">redis-cli</span><br><span class="line"></span><br><span class="line"><span class="comment">#启动django项目</span></span><br><span class="line">python manage.py runserver</span><br><span class="line"></span><br><span class="line"><span class="comment">#启动Worker</span></span><br><span class="line">python manage.py celeryd --loglevel=info</span><br><span class="line"></span><br><span class="line"><span class="comment">#启动定时任务</span></span><br><span class="line">python manage.py celery beta --loglevel=info</span><br></pre></td></tr></table></figure>
+
+<h3 id="扩展：django项目启动时自动加载嗯见"><a href="#扩展：django项目启动时自动加载嗯见" class="headerlink" title="扩展：django项目启动时自动加载嗯见"></a>扩展：django项目启动时自动加载嗯见</h3><p>大家在使用admin的时候，会有这样的现象：</p>
+<ul>
+<li>如果在项目中运行，那么在django加载时就会去每个app中调用xx.py文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from django.utils.module_loading import autodiscover_modules</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>django源码的启动流程</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[读取配置文件加载app]-&gt;[利用模块autodiscover_modules(xx.py)]-&gt;自动加载文件</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> django.apps <span class="keyword">import</span> AppConfig</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ApiConfig</span><span class="params">(AppConfig)</span>:</span></span><br><span class="line">	name = <span class="string">'apps.api'</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">ready</span><span class="params">(self)</span>:</span></span><br><span class="line">		super().ready()</span><br><span class="line">		<span class="keyword">from</span> django.utils.module_loading <span class="keyword">import</span> autodiscover_modules</span><br><span class="line">        <span class="comment">#这样就会在python　manage.py　runserver启动项目的时候自动去执行xx.py文件里面的代码</span></span><br><span class="line">		autodiscover_modules(xx.py)</span><br></pre></td></tr></table></figure>
 
 
       
@@ -1386,7 +1397,7 @@ var _hmt = _hmt || [];
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
     </nav>
   
 
@@ -1403,7 +1414,7 @@ var _hmt = _hmt || [];
 			<img src="http://9017499461.linshutu.top/%E4%B8%83%E7%89%9B%E4%BA%91.png" ><a href="https://portal.qiniu.com" >七牛云储存</a>&nbsp;提供图片加速,
 		</div>
 		<div> 
-			<span> <a href="http://www.beian.miit.gov.cn" target="_blank">豫ICP备19030055号</a> </span>
+			<span> <a href="http://www.beian.miit.gov.cn" target="_blank">豫ICP备19030055号-2</a> </span>
 		</div>
 		<div>
 			<span><img src="http://9017499461.linshutu.top/eyes.png"></span>&nbsp;|&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;&nbsp;
@@ -1503,15 +1514,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1519,7 +1526,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1527,11 +1534,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">python部分内容详讲</a>
+                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color3">python部分内容详讲</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1539,11 +1546,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Django</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1559,11 +1566,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">socket和并发编程</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">socket和并发编程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1580,6 +1587,14 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
             <div class="clearfix"></div>

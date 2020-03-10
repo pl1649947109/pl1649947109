@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="林殊途">
 <meta property="og:description" content="内容回顾1.restful规范？">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-11-16T15:34:23.708Z">
+<meta property="og:updated_time" content="2020-02-25T10:36:35.230Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第五讲——drf请求的跨域、频率限制、jwt">
 <meta name="twitter:description" content="内容回顾1.restful规范？">
@@ -141,7 +141,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">4.5k 字</span>
+        <span class="post-count">4.6k 字</span>
       </span>
     </span>
 
@@ -150,7 +150,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">21min</span>
+        <span class="post-count">22min</span>
       </span>
     </span>
 </div>
@@ -217,6 +217,10 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
+<h4 id="跨域解决办法扩展（django-cors-headers）"><a href="#跨域解决办法扩展（django-cors-headers）" class="headerlink" title="跨域解决办法扩展（django-cors-headers）"></a>跨域解决办法扩展（django-cors-headers）</h4><p>Django下配置settings.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第一步：指定允许的hosts（允许跨域的主机地址）</span></span><br><span class="line">ALLOWED_HOSTS = [<span class="string">'*'</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第二步：将corsheaders注册到app中</span></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    <span class="string">'corsheaders'</span>,</span><br><span class="line">]</span><br><span class="line"><span class="comment"># 第三步：配置中间件</span></span><br><span class="line">MIDDLEWARE = [</span><br><span class="line">    <span class="string">'corsheaders.middleware.CorsMiddleware'</span>,</span><br><span class="line">   <span class="comment"># 注意在这行代码上面配置 'django.middleware.common.CommonMiddleware',</span></span><br><span class="line">]</span><br><span class="line"><span class="comment"># 第四步：配置django-cors-headers中的参数</span></span><br><span class="line"><span class="comment"># 允许携带Cookie</span></span><br><span class="line">CORS_ALLOW_CREDENTIALS = <span class="literal">True</span></span><br><span class="line"><span class="comment"># 允许所有主机跨域</span></span><br><span class="line">CORS_ORIGIN_ALLOW_ALL = <span class="literal">True</span></span><br><span class="line"><span class="comment"># 白名单</span></span><br><span class="line"><span class="comment"># CORS_ORIGIN_WHITELIST = ('*')</span></span><br><span class="line">CORS_ALLOW_METHODS = (</span><br><span class="line">    <span class="string">'DELETE'</span>,</span><br><span class="line">    <span class="string">'GET'</span>,</span><br><span class="line">    <span class="string">'OPTIONS'</span>,</span><br><span class="line">    <span class="string">'PATCH'</span>,</span><br><span class="line">    <span class="string">'POST'</span>,</span><br><span class="line">    <span class="string">'PUT'</span>,</span><br><span class="line">    <span class="string">'VIEW'</span>,</span><br><span class="line">)</span><br><span class="line">CORS_ALLOW_HEADERS = (</span><br><span class="line"><span class="string">'XMLHttpRequest'</span>,</span><br><span class="line"><span class="string">'X_FILENAME'</span>,</span><br><span class="line"><span class="string">'accept-encoding'</span>,</span><br><span class="line"><span class="string">'authorization'</span>,</span><br><span class="line"><span class="string">'content-type'</span>,</span><br><span class="line"><span class="string">'dnt'</span>,</span><br><span class="line"><span class="string">'origin'</span>,</span><br><span class="line"><span class="string">'user-agent'</span>,</span><br><span class="line"><span class="string">'x-csrftoken'</span>,</span><br><span class="line"><span class="string">'x-requested-with'</span>,</span><br><span class="line"><span class="string">'Pragma'</span>,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>搞定！！！</p>
 <h3 id="2-drf的访问频率限制"><a href="#2-drf的访问频率限制" class="headerlink" title="2.drf的访问频率限制"></a>2.drf的访问频率限制</h3><ul>
 <li><p>频率限制在版本、认证、权限之后</p>
 </li>
@@ -476,7 +480,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#内容回顾"><span class="toc-number">1.</span> <span class="toc-text">内容回顾</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-跨域"><span class="toc-number">1.1.</span> <span class="toc-text">1.跨域</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">1.1.1.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解决跨域：CORS"><span class="toc-number">1.1.2.</span> <span class="toc-text">解决跨域：CORS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#跨域时，发送了2次请求？"><span class="toc-number">1.1.3.</span> <span class="toc-text">跨域时，发送了2次请求？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结-1"><span class="toc-number">1.1.4.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-drf的访问频率限制"><span class="toc-number">1.2.</span> <span class="toc-text">2.drf的访问频率限制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#源码"><span class="toc-number">1.2.1.</span> <span class="toc-text">源码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#dispacth"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">dispacth</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#initial"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">initial</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#check-throttles"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">check_throttles</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#get-throttles"><span class="toc-number">1.2.1.4.</span> <span class="toc-text">get_throttles</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#throttle-classes（可自定制）"><span class="toc-number">1.2.1.5.</span> <span class="toc-text">throttle_classes（可自定制）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结-2"><span class="toc-number">1.2.2.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-jwt"><span class="toc-number">1.3.</span> <span class="toc-text">3.jwt</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装"><span class="toc-number">1.3.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#案例"><span class="toc-number">1.3.2.</span> <span class="toc-text">案例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#详细使用实例"><span class="toc-number">1.3.3.</span> <span class="toc-text">详细使用实例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#falsk中使用"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">falsk中使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#drf中使用"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">drf中使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#django中间件中使用"><span class="toc-number">1.3.3.3.</span> <span class="toc-text">django中间件中使用</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#内容回顾"><span class="toc-number">1.</span> <span class="toc-text">内容回顾</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-跨域"><span class="toc-number">1.1.</span> <span class="toc-text">1.跨域</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">1.1.1.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解决跨域：CORS"><span class="toc-number">1.1.2.</span> <span class="toc-text">解决跨域：CORS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#跨域时，发送了2次请求？"><span class="toc-number">1.1.3.</span> <span class="toc-text">跨域时，发送了2次请求？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结-1"><span class="toc-number">1.1.4.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#跨域解决办法扩展（django-cors-headers）"><span class="toc-number">1.1.5.</span> <span class="toc-text">跨域解决办法扩展（django-cors-headers）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-drf的访问频率限制"><span class="toc-number">1.2.</span> <span class="toc-text">2.drf的访问频率限制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#源码"><span class="toc-number">1.2.1.</span> <span class="toc-text">源码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#dispacth"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">dispacth</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#initial"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">initial</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#check-throttles"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">check_throttles</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#get-throttles"><span class="toc-number">1.2.1.4.</span> <span class="toc-text">get_throttles</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#throttle-classes（可自定制）"><span class="toc-number">1.2.1.5.</span> <span class="toc-text">throttle_classes（可自定制）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结-2"><span class="toc-number">1.2.2.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-jwt"><span class="toc-number">1.3.</span> <span class="toc-text">3.jwt</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装"><span class="toc-number">1.3.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#案例"><span class="toc-number">1.3.2.</span> <span class="toc-text">案例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#详细使用实例"><span class="toc-number">1.3.3.</span> <span class="toc-text">详细使用实例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#falsk中使用"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">falsk中使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#drf中使用"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">drf中使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#django中间件中使用"><span class="toc-number">1.3.3.3.</span> <span class="toc-text">django中间件中使用</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -550,7 +554,7 @@ gitment.render('gitment-ctn')
 			<img src="http://9017499461.linshutu.top/%E4%B8%83%E7%89%9B%E4%BA%91.png" ><a href="https://portal.qiniu.com" >七牛云储存</a>&nbsp;提供图片加速,
 		</div>
 		<div> 
-			<span> <a href="http://www.beian.miit.gov.cn" target="_blank">豫ICP备19030055号</a> </span>
+			<span> <a href="http://www.beian.miit.gov.cn" target="_blank">豫ICP备19030055号-2</a> </span>
 		</div>
 		<div>
 			<span><img src="http://9017499461.linshutu.top/eyes.png"></span>&nbsp;|&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;&nbsp;
@@ -650,15 +654,11 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -666,7 +666,7 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -674,11 +674,11 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">python部分内容详讲</a>
+                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color3">python部分内容详讲</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -686,11 +686,11 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Django</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -706,11 +706,11 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">socket和并发编程</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">socket和并发编程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -727,6 +727,14 @@ gitment.render('gitment-ctn')
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
             <div class="clearfix"></div>
