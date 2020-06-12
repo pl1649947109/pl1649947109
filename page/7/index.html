@@ -943,220 +943,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/docker-compose" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/02/书/docker-compose/">docker compose</a>
-    </h1>
-  
-
-			
-			<a href="/2019/09/02/书/docker-compose/" class="archive-article-date">
-  	<time datetime="2019-09-02T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.9k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">8min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h2><h3 id="简单对比Dockerfile与Docker-Compose"><a href="#简单对比Dockerfile与Docker-Compose" class="headerlink" title="简单对比Dockerfile与Docker Compose"></a>简单对比Dockerfile与Docker Compose</h3><p>首先，对于镜像构建，台包含安装运行所需的环境、程序代码等，这个创建过程就是使用Dockerfile完成的。</p>
-<p>其次，容器是基于镜像实现的，通过docker run将一个镜像运行起来就成为了一个容器。</p>
-<p>当涉及到多个容器的运行（如服务编排）就可以通过docker-compose来实现，它轻松的将多个容器作为service来运行（也可以仅运行其中的某个），并且提供scale（服务扩展）的功能。</p>
-<p>简单总结：</p>
-<ul>
-<li>dockerfile：构建镜像</li>
-<li>docker run：启动容器</li>
-<li>docker-compose：启动服务</li>
-</ul>
-<h3 id="说说为什么会有dcker-compose这个东西"><a href="#说说为什么会有dcker-compose这个东西" class="headerlink" title="说说为什么会有dcker-compose这个东西"></a>说说为什么会有dcker-compose这个东西</h3><p>回顾：之前部署一个小型的项目的时候，大家是不是都是这样的一个流程：编写dockerfile脚本》生成镜像文件》启动容器》访问服务</p>
-<p>原因：针对很小的程序这样的方式是完全足够的，但是，当我们的项目比较大的时候，比如其中是用到了mysql、redis、nginx、smtp等软件的时候，我们可能会这样（基础镜像选择linux内核的系统，在这个基础镜像之上在安装这些软件服务），其实这些软件本身就是一个个的镜像，然后这些镜像合作共同服务一个项目，docker-compose就是解决这个问题的。</p>
-<p>小结：Dockerfile记录单个镜像的构建过程，docker-compose.yml记录一个项目（多个镜像的构建过程）</p>
-<p>有的教程说：dockerfile+dcoker-compose，这是因为docker-compose.yml本身没有镜像构建的信息，如果镜像是从docker registry仓库拉取先来的，那么Dockerfile就不需要了，如果镜像是bulid的，那就必须使用dockerfile。</p>
-<h3 id="docker-compose-yml脚本的功能"><a href="#docker-compose-yml脚本的功能" class="headerlink" title="docker-compose.yml脚本的功能"></a>docker-compose.yml脚本的功能</h3><p>该文件是docker-compose的准备脚本，它的功能包括：同时管理多个container以及他们之间的关系、用官方的image还是自己build的、各种网络端口定义、储存空间等。</p>
-<h3 id="Compose简介"><a href="#Compose简介" class="headerlink" title="Compose简介"></a>Compose简介</h3><p>解释：Compose是用于定义和管理Docker应用程序的工具,一个二进制的可执行文件。</p>
-<p>Compose使用的三个步骤：</p>
-<ul>
-<li>使用Dockerfile定义应用程序的环境</li>
-<li>使用docker-compose.yml定义构成应用程序的服务，这样要他们就可以在隔离环境中一起运行</li>
-<li>最后执行docker-compose up命令来启动并运行整个应用程序</li>
-</ul>
-<h3 id="Compose安装与卸载"><a href="#Compose安装与卸载" class="headerlink" title="Compose安装与卸载"></a>Compose安装与卸载</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
-
-<p>给其增加可执行权限：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +x /usr/loclal/bin/docker-coompose</span><br></pre></td></tr></table></figure>
-
-<p>创建软连接：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose</span><br></pre></td></tr></table></figure>
-
-<p>测试是否安装成功：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose --version</span><br></pre></td></tr></table></figure>
-
-<p>Compose卸载：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -rf /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
-
-<h3 id="docker-compose命令"><a href="#docker-compose命令" class="headerlink" title="docker-compose命令"></a>docker-compose命令</h3><ul>
-<li>docker-compose  up启动所有服务</li>
-<li>docker-compose  up  -d在后台启动所有服务</li>
-<li>docker-compose  ps列出项目中目前所有的容器</li>
-<li>docker-compose  stop停止正在运行的容器</li>
-<li>docker-compose  down停用并移除所有容器及网络相关</li>
-<li>docker-compose   logs查看服务容器的输出</li>
-<li>docker-compose   build构建项目中的服务容器</li>
-<li>docker-compose    pull拉取服务依赖的镜像</li>
-<li>docker-compose    restart重启项目中的服务</li>
-<li>docker-compose    rm删除所有停用的服务容器</li>
-<li>docker-compose    start启动已经存在的服务容器</li>
-<li>docker-compose    run在指定容器上执行一个命令</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose run ubuntu ping www.baid.com</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>docker-compose    scale设置指定服务运行的容器个数</li>
-<li>docker-compose    pause暂停一个服务容器</li>
-<li>docker-compose    kill通过发送SIGKILL信号来强制停止服务容器</li>
-<li>docker-compose    config验证并查看compose文件配置</li>
-<li>docker-compose    create为服务创建容器</li>
-<li>docker-compose    exec登录服务容器</li>
-<li>docker-compose    port显示某个容器端口所映射的公共端口</li>
-<li>docker-compose    push推送服务依赖的镜像</li>
-<li>docker-compose    unpause恢复处于暂停状态中的服务.</li>
-</ul>
-<h3 id="yml文件配置指令"><a href="#yml文件配置指令" class="headerlink" title="yml文件配置指令"></a>yml文件配置指令</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># version:指定本yml依从的compose哪个版本制定的</span></span><br><span class="line"><span class="attr">version:</span> <span class="string">"3.7"</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">  webapp:</span></span><br><span class="line">    <span class="comment"># build:指定为构建镜像上下文路径./dir/Dockerfile</span></span><br><span class="line"><span class="attr">    build:</span></span><br><span class="line">      <span class="comment"># 上下文路径</span></span><br><span class="line"><span class="attr">      context:</span> <span class="string">./dir</span></span><br><span class="line">      <span class="comment"># 构建镜像的Dockerfile文件名</span></span><br><span class="line"><span class="attr">      dockerfile:</span> <span class="string">Dockerfile</span></span><br><span class="line">      <span class="comment"># 设置构建镜像的标签</span></span><br><span class="line"><span class="attr">      labels:</span></span><br><span class="line"><span class="bullet">        -</span> <span class="string">"com.xxx webapp"</span></span><br><span class="line">  <span class="comment"># 覆盖容器启动的默认命令</span></span><br><span class="line"><span class="attr">  command:</span> <span class="string">["bundle",</span> <span class="string">"exec"</span><span class="string">]</span></span><br><span class="line">  <span class="comment"># 指定自定义容器名称</span></span><br><span class="line"><span class="attr">  container_name:</span> <span class="string">my-web-cntainer</span></span><br><span class="line">  <span class="comment"># 设置依赖关系</span></span><br><span class="line"><span class="attr">  depends_on:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">db</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">redis</span></span><br><span class="line"><span class="attr">  redis:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="attr">redis:alpine</span></span><br><span class="line">    <span class="comment"># 指定与服务器的部署和运行有关的配置</span></span><br><span class="line"><span class="attr">    deploy:</span></span><br><span class="line">      <span class="string">xxx（超级多）</span></span><br><span class="line"><span class="attr">  db:</span></span><br><span class="line">    <span class="comment"># 指定运行的镜像</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">postgres</span></span><br><span class="line">  <span class="comment">#docker-compose up以依赖性顺序启动服务。在以下示例中,先启动db和redis,才会启动web。</span></span><br><span class="line">  <span class="comment">#docker-compose stop按依赖关系顺序停止服务。在以下示例中,web在db和redis 之前停止。</span></span><br><span class="line">  <span class="comment"># 指定设备映射列表</span></span><br><span class="line"><span class="attr">  devices:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"/dev/xxx:/dev/xxxx"</span></span><br><span class="line">  <span class="comment"># 自定义DNS服务器</span></span><br><span class="line"><span class="attr">  dns:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="number">8.8</span><span class="number">.8</span><span class="number">.8</span></span><br><span class="line"><span class="bullet">    -</span> <span class="number">114.114</span><span class="number">.114</span><span class="number">.114</span></span><br><span class="line">  <span class="comment"># 从文件添加环境变量</span></span><br><span class="line"><span class="attr">  env_file:</span> <span class="string">.env</span></span><br><span class="line">  <span class="comment"># 暴露端口，但不映射到宿主机，只被连接的服务访问</span></span><br><span class="line"><span class="attr">  expose:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"3000"</span></span><br></pre></td></tr></table></figure>
-
-<p>模板展示</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'2'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">  web1:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">    ports:</span> </span><br><span class="line"><span class="bullet">      -</span> <span class="string">"6061:80"</span></span><br><span class="line"><span class="attr">    container_name:</span> <span class="string">"web1"</span></span><br><span class="line"><span class="attr">    networks:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">  web2:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">    ports:</span> </span><br><span class="line"><span class="bullet">      -</span> <span class="string">"6062:80"</span></span><br><span class="line"><span class="attr">    container_name:</span> <span class="string">"web2"</span></span><br><span class="line"><span class="attr">    networks:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">dev</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">pro</span></span><br><span class="line"><span class="attr">  web3:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">    ports:</span> </span><br><span class="line"><span class="bullet">      -</span> <span class="string">"6063:80"</span></span><br><span class="line"><span class="attr">    container_name:</span> <span class="string">"web3"</span></span><br><span class="line"><span class="attr">    networks:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">pro</span></span><br><span class="line"></span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line"><span class="attr">  dev:</span></span><br><span class="line"><span class="attr">    driver:</span> <span class="string">bridge</span></span><br><span class="line"><span class="attr">  pro:</span></span><br><span class="line"><span class="attr">    driver:</span> <span class="string">bridge</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p><strong>使用docker-compose+nginx+uwsgi+django部署项目</strong></p>
-<p>文件目录：</p>
-<p>–app01项目app</p>
-<p>–conf </p>
-<p>​    –uwsgi.ini配置文件</p>
-<p>–docker-compose.yml部署脚本</p>
-<p>–Dockerfile创建基础镜像脚本</p>
-<p>–hello项目</p>
-<p>–manage.py</p>
-<p>–nginx</p>
-<p>​    –Dockerfile基础目录中的镜像脚本</p>
-<p>​    –nginx.conf代理配置文件</p>
-<p>–requirements.txt项目中需要的模块</p>
-<p>首先创建一个纯净的python+django+uwsgi的镜像，便于后期使用（也可不用创建，后期docker-compose的时候再创建python镜像，这里我们先创建，后期直接把项目放进去，不用每次都下载环境）</p>
-<p>创建python+django+uwsgi的纯净镜像，命名镜像名为django：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>Dockerfile  这个dockrfile不是基础目录中的Dockerfile，需要在其他目录中创建</span><br><span class="line"> </span><br><span class="line">FROM python</span><br><span class="line">RUN mkdir /code</span><br><span class="line">WORKDIR /code</span><br><span class="line">ADD requirements.txt . /code</span><br><span class="line">RUN pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt</span><br><span class="line">RUN rm -f requirements.txt</span><br></pre></td></tr></table></figure>
-
-<p>#requirements.txt</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">django==2.2.2</span><br><span class="line">psycopg2</span><br><span class="line">uwsgi</span><br></pre></td></tr></table></figure>
-
-<p>基础目录中的Dockerfile</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>使用刚刚创建的基础镜像django</span><br><span class="line"> </span><br><span class="line">FROM django</span><br><span class="line">WORKDIR /code</span><br><span class="line">RUN mkdir hello   #创建项目目录</span><br><span class="line">ADD . /code/hello</span><br></pre></td></tr></table></figure>
-
-<p>创建uwsgi配置文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>conf/uwsgi.ini</span><br><span class="line"> </span><br><span class="line">[uwsgi]</span><br><span class="line">socket = 0.0.0.0:8000</span><br><span class="line">chdir = /code/hello   #注意：在这里的路径是容器内的项目所在的路径，而不是宿主机放项目的路径</span><br><span class="line">module = hello.wsgi</span><br><span class="line"><span class="meta">#</span>daemonize = uwsgi.log</span><br><span class="line">master = True</span><br><span class="line">processes = 4</span><br></pre></td></tr></table></figure>
-
-<p>创建nginx配置文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>nginx/nginx.conf&lt;br&gt;events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        charset utf-8;</span><br><span class="line">        location / &#123;</span><br><span class="line">           include uwsgi_params;</span><br><span class="line">           uwsgi_pass 10.127.2.3:8000;  #端口要和uwsgi里配置的一样</span><br><span class="line">           #uwsgi_param UWSGI_SCRIPT hello.wsgi;  #wsgi.py所在的目录名+.wsgi</span><br><span class="line">           #uwsgi_param UWSGI_CHDIR /opt/deploy/hello; #项目路径</span><br><span class="line"> </span><br><span class="line">        &#125;</span><br><span class="line">        location /static/ &#123;</span><br><span class="line">        alias /code/hello/static/; #静态资源路径  #注意：在这里的路径是容器内的项目所在的路径，而不是宿主机放项目的路径</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>创建nginx的Dockerfile</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>nginx/Dockerfile</span><br><span class="line"> </span><br><span class="line">FROM nginx</span><br><span class="line"> </span><br><span class="line">WORKDIR /etc/nginx/</span><br><span class="line">RUN cp nginx.conf ./nginx.conf.bak</span><br><span class="line">COPY nginx.conf ./</span><br><span class="line"> </span><br><span class="line">CMD ["nginx", "-g", "daemon off;"]</span><br></pre></td></tr></table></figure>
-
-<p>创建docker-compose.yml</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3'</span></span><br><span class="line"> </span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">  db:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">postgres</span></span><br><span class="line"><span class="attr">    restart:</span> <span class="string">always</span></span><br><span class="line"><span class="attr">    environment:</span></span><br><span class="line"><span class="attr">      POSTGRES_PASSWORD:</span> <span class="number">12345</span></span><br><span class="line"><span class="attr">    networks:</span></span><br><span class="line"><span class="attr">      net-django:</span></span><br><span class="line"><span class="attr">        ipv4_address:</span> <span class="number">10.127</span><span class="number">.2</span><span class="number">.4</span></span><br><span class="line"> </span><br><span class="line"><span class="attr">  web:</span></span><br><span class="line"><span class="attr">    build:</span> <span class="string">.</span></span><br><span class="line">    <span class="comment">#command: python3 manage.py runserver 0.0.0.0:8000</span></span><br><span class="line"><span class="attr">    privileged:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment">#ports:</span></span><br><span class="line">    <span class="comment">#  - 8000:8000</span></span><br><span class="line"><span class="attr">    depends_on:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">db</span></span><br><span class="line"><span class="attr">    networks:</span></span><br><span class="line"><span class="attr">      net-django:</span></span><br><span class="line"><span class="attr">        ipv4_address:</span> <span class="number">10.127</span><span class="number">.2</span><span class="number">.3</span></span><br><span class="line">    <span class="comment">#command: uwsgi --chdir=/code/hello --module=hello.wsgi --master --socket 0.0.0.0:8000</span></span><br><span class="line"><span class="attr">    command:</span> <span class="string">uwsgi</span> <span class="bullet">--ini</span> <span class="string">/code/hello/conf/uwsgi.ini</span>  <span class="comment">#注意：在这里的路径是容器内的项目所在的路径，而不是宿主机放项目的路径</span></span><br><span class="line"> </span><br><span class="line"><span class="attr">  nginx:</span></span><br><span class="line"><span class="attr">    container_name:</span> <span class="string">nginx-container</span></span><br><span class="line"><span class="attr">    restart:</span> <span class="string">always</span></span><br><span class="line"><span class="attr">    depends_on:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">web</span></span><br><span class="line"><span class="attr">    links:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">"web:web"</span></span><br><span class="line"><span class="attr">    build:</span> <span class="string">./nginx</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="number">8080</span><span class="string">:80</span></span><br><span class="line"><span class="attr">    networks:</span></span><br><span class="line"><span class="attr">      net-django:</span></span><br><span class="line"><span class="attr">        ipv4_address:</span> <span class="number">10.127</span><span class="number">.2</span><span class="number">.2</span></span><br><span class="line"> </span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line"><span class="attr">  net-django:</span></span><br><span class="line"><span class="attr">    ipam:</span></span><br><span class="line"><span class="attr">      config:</span></span><br><span class="line"><span class="attr">        - subnet:</span> <span class="number">10.127</span><span class="number">.2</span><span class="number">.0</span><span class="string">/24</span></span><br></pre></td></tr></table></figure>
-
-<p>最后创建容器</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`docker``-``compose build``docker``-``compose up ``-``d`</span><br></pre></td></tr></table></figure>
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/02/书/docker-compose/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
     <article id="post-书/数据库/第三讲——数据库之单表行操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1277,6 +1063,128 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-书/docker-compose" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/书/docker-compose/">docker compose</a>
+    </h1>
+  
+
+			
+			<a href="/2019/09/02/书/docker-compose/" class="archive-article-date">
+  	<time datetime="2019-09-02T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">1.9k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">8min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h2><h3 id="简单对比Dockerfile与Docker-Compose"><a href="#简单对比Dockerfile与Docker-Compose" class="headerlink" title="简单对比Dockerfile与Docker Compose"></a>简单对比Dockerfile与Docker Compose</h3><p>首先，对于镜像构建，台包含安装运行所需的环境、程序代码等，这个创建过程就是使用Dockerfile完成的。</p>
+<p>其次，容器是基于镜像实现的，通过docker run将一个镜像运行起来就成为了一个容器。</p>
+<p>当涉及到多个容器的运行（如服务编排）就可以通过docker-compose来实现，它轻松的将多个容器作为service来运行（也可以仅运行其中的某个），并且提供scale（服务扩展）的功能。</p>
+<p>简单总结：</p>
+<ul>
+<li>dockerfile：构建镜像</li>
+<li>docker run：启动容器</li>
+<li>docker-compose：启动服务</li>
+</ul>
+        
+          <!---<a class="article-more-a" href="/2019/09/02/书/docker-compose/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/02/书/docker-compose/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
     <article id="post-几种常用的设计模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1330,44 +1238,9 @@ var _hmt = _hmt || [];
 <li>使用设计模式就是为了重用代码、让代码更容易被他人理解、保证代码可靠性。</li>
 <li>项目中合理的运用设计模式可以完美地解决很多问题，每种模式在现实中都有相对应的原理与之对应，每种模式都描述了一个我们周围不断重复发生的问题，以及该问题的核心解决方案，这就设计模式能够被广泛应用的原因。</li>
 </ul>
-<h3 id="设计模式的六大原则"><a href="#设计模式的六大原则" class="headerlink" title="设计模式的六大原则"></a>设计模式的六大原则</h3><p><strong>开放封闭原则</strong>：对扩展开放，对修改关闭（在不改变原有代码及其调用方式的情况下给程序增加额外的功能）。</p>
-<p>里氏代换原则</p>
-<p><strong>里氏替换原则</strong>：这个原则是为了解决OOP编程中的继承问题的。通俗的讲就是父类出现的地方子类一定可以出现，子类出现的地方父类就不一定能够出现。</p>
-<p><strong>依赖倒转原则</strong>：针对接口编程依赖抽象而不依赖具体。</p>
-<p><strong>接口隔离原则</strong>：使用多个隔离的接口比使用户单个接口好。这句话的意思就是每个接口要精简单一，降低类之间的耦合度。</p>
-<p><strong>最少知道原则</strong>：一个实体要尽量少和其他的实体之间发生相互作用，使各系统功能模块相互独立降低系统的耦合性。</p>
-<p><strong>合成复用原则</strong>：尽量使用组合，聚合，依赖等方式来代替继承。</p>
-<p><strong>总结：里氏替换原则告诉我们不要破坏继承体系；依赖倒转原则告诉我们要面向接口编程；接口隔离原则告诉我们在设计接口的时候要精简单一；最少知道原则告诉我们要降低耦合；合成复用原则告诉我们尽量使用组合，聚合的方式来代替继承。开闭原则则是总纲，它告诉我们程序对扩展开放，对修改关闭（用抽象勾构建框架，用上线扩展细节）。</strong></p>
-<h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><p>解释：定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类。</p>
-<p>解决：主要解决接口选择问题。</p>
-<p>使用：我们明确地计划不同条件下创建不同实例时。</p>
-<p>应用：在之前做的资产信息采集的案例中，通过不同的参数实现不同资产的返回入库。</p>
-<h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p>解释：保证一个类仅有一个实例，并提供一个访问它的全局访问点。</p>
-<p>解决：一个全局是使用的类频繁地创建与销毁。</p>
-<p>实现：判断系统中是否已经有单个实例，如果有就返回，如果没有就创建。</p>
-<p>应用：Django的settings配置文件就是一个单例模式；还有日志文件也是一种单例模式；数据库连接池也是一种单例模式。</p>
-<h3 id="装饰器模式"><a href="#装饰器模式" class="headerlink" title="装饰器模式"></a>装饰器模式</h3><p>解释：动态地给一个对象添加一些额外的功能。</p>
-<p>使用：在不想增加更多子类的情况下扩展类。</p>
-<p>优点：装饰器和被装饰类可以各自独立发展，不会相互耦合。</p>
-<p>应用：在发表评论的页面需要登录才能进行下一步的时候，可以使用装饰器跳转到登录界面 ，登录成功之后但会评论界面发表评论内容。</p>
-<h3 id="外观模式"><a href="#外观模式" class="headerlink" title="外观模式"></a>外观模式</h3><p>解释：外观模式隐藏系统的复杂性，为子系统中的一组接口提供一个一致的界面。</p>
-<p>使用：客户端不需要知道系统内部的复杂联系，整个系统只需要提供一个接待员即可（相当于定义系统的入口）。</p>
-<p>解决：客户端不与系统耦合，外观类与系统耦合。</p>
-<p>应用：为复杂的模块或子系统提供外界访问的模块。</p>
-<h3 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h3><p>解释：提供一种方法顺序访问一个聚合对象中的各个元素，而无需暴露该对象的内部表示。</p>
-<p>使用：遍历一个聚合对象。</p>
-<p>实例：python中的迭代器和生成器。</p>
-<p>应用：当针对大数据集合的访问的时候，如果系统一次产生大量数据循环迭代当然是不行的，台消耗资源，使用迭代器就可以在生成时候储存的同时迭代出来数据缓解资源的压力。</p>
-<h3 id="模板模式"><a href="#模板模式" class="headerlink" title="模板模式"></a>模板模式</h3><p>解释：实际上是封装了一个固定流程，该流程由几个步骤组成，具体步骤可以由子类进行不同实现，从而让固定的流程产生不同的结果。</p>
-<p>解决：固定的流程，不同的实现</p>
-<p><strong>优点</strong></p>
-<ul>
-<li><strong>封装不变，扩展可变</strong>：父类封装了具体流程以及实现部分不变行为，其它可变行为交由子类进行具体实现；</li>
-<li><strong>流程由父类控制，子类进行实现</strong>：框架流程由父类限定，子类无法更改；子类可以针对流程某些步骤进行具体实现；</li>
-</ul>
-<p>应用：重构代码时，模板方法是一个经常使用的模式，把相同的代码抽取到父类，然后通过钩子函数约束其行为。</p>
-<h3 id="MVC模式"><a href="#MVC模式" class="headerlink" title="MVC模式"></a>MVC模式</h3><p>解释：模型-视图-控制器模式，这种模式用于应用程序的分层开发。</p>
-
+        
+          <!---<a class="article-more-a" href="/2019/09/01/几种常用的设计模式/#more">more >></a>--->
+        
       
 	  
 			  
@@ -1558,19 +1431,19 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">django项目部署</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
+                <a href="javascript:void(0)" class="js-tag color1">django项目部署</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1582,11 +1455,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">知识扩展</a>
+                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
+                <a href="javascript:void(0)" class="js-tag color5">知识扩展</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1594,11 +1467,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -41,7 +41,7 @@
 <meta property="og:image" content="http://9017499461.linshutu.top/wx-20.png">
 <meta property="og:image" content="http://9017499461.linshutu.top/wx-9.JPG">
 <meta property="og:image" content="http://9017499461.linshutu.top/wx-10.png">
-<meta property="og:updated_time" content="2020-02-22T07:31:03.613Z">
+<meta property="og:updated_time" content="2020-06-12T01:08:16.482Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序">
 <meta name="twitter:description" content="微信小程序第一部分：简略内容（理论）小程序文件结构和传统web对比    结构 传统web 微信小程序    结构文件 HTML WXML   样式文件 CSS WXSS   逻辑文件 Javascript Javascript   配置文件 无 JSON   JSON 配置JSON 是一种数据格式，并不是编程语言，在小程序中，JSON扮演的静态配置的角色。 我们可以看到在项目的根目录有一个 ap">
@@ -227,6 +227,8 @@ var _hmt = _hmt || [];
 
 <p>page字段：用于描述当前小程序所有页面路径，这是为了让微信客户端知道当前我们的小程序页面定义在哪个目录。</p>
 <p>window字段：定义小程序所有页面的顶部背景颜色、文字颜色等。</p>
+<a id="more"></a>
+
 <h4 id="page-json页面配置"><a href="#page-json页面配置" class="headerlink" title="page.json页面配置"></a>page.json页面配置</h4><p>这里的 <code>page.json</code> 其实用来表示 pages/logs 目录下的 <code>logs.json</code> 这类和小程序页面相关的配置。我们不可能在每个页面都是相同的配置，，因此我们提供了 <code>page.json</code>，让开发者可以独立定义每个页面的一些属性，例如刚刚说的顶部颜色、是否允许下拉刷新等等。页面中的配置项会覆盖<code>app.json</code>的<code>window</code>中相同的配置项。</p>
 <h4 id="project-config-json工具配置"><a href="#project-config-json工具配置" class="headerlink" title="project.config.json工具配置"></a>project.config.json工具配置</h4><p>个性化配置文件，你在工具上做的任何配置都会写入到这个文件，当你重新安装工具或者换电脑工作时，你只要载入同一个项目的代码包，开发者工具就自动会帮你恢复到当时你开发项目时的个性化配置。</p>
 <h4 id="sitemap-json站内搜索配置"><a href="#sitemap-json站内搜索配置" class="headerlink" title="sitemap.json站内搜索配置"></a>sitemap.json站内搜索配置</h4><p>微信现已开放小程序内搜索，开发者可以通过 <code>sitemap.json</code> 配置，或者管理后台页面收录开关来配置其小程序页面是否允许微信索引。当开发者允许微信索引时，微信会通过爬虫的形式，为小程序的页面内容建立索引。当用户的搜索词条触发该索引时，小程序的页面将可能展示在搜索结果中。 爬虫访问小程序内页面时，会携带特定的 user-agent：<code>mpcrawler</code> 及<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/scene-list.html" target="_blank" rel="noopener">场景值</a>：<code>1129</code>。需要注意的是，若小程序爬虫发现的页面数据和真实用户的呈现不一致，那么该页面将不会进入索引中。</p>
@@ -1650,19 +1652,19 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">django项目部署</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
+                <a href="javascript:void(0)" class="js-tag color1">django项目部署</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1674,11 +1676,11 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">知识扩展</a>
+                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
+                <a href="javascript:void(0)" class="js-tag color5">知识扩展</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1686,11 +1688,11 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
               </li>
              
               <li class="article-tag-list-item">

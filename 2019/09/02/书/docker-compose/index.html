@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="林殊途">
 <meta property="og:description" content="Docker Compose简单对比Dockerfile与Docker Compose首先，对于镜像构建，台包含安装运行所需的环境、程序代码等，这个创建过程就是使用Dockerfile完成的。 其次，容器是基于镜像实现的，通过docker run将一个镜像运行起来就成为了一个容器。 当涉及到多个容器的运行（如服务编排）就可以通过docker-compose来实现，它轻松的将多个容器作为servic">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2020-06-10T13:31:07.991Z">
+<meta property="og:updated_time" content="2020-06-12T01:09:12.850Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker compose">
 <meta name="twitter:description" content="Docker Compose简单对比Dockerfile与Docker Compose首先，对于镜像构建，台包含安装运行所需的环境、程序代码等，这个创建过程就是使用Dockerfile完成的。 其次，容器是基于镜像实现的，通过docker run将一个镜像运行起来就成为了一个容器。 当涉及到多个容器的运行（如服务编排）就可以通过docker-compose来实现，它轻松的将多个容器作为servic">
@@ -173,6 +173,8 @@ var _hmt = _hmt || [];
 <li>docker run：启动容器</li>
 <li>docker-compose：启动服务</li>
 </ul>
+<a id="more"></a>
+
 <h3 id="说说为什么会有dcker-compose这个东西"><a href="#说说为什么会有dcker-compose这个东西" class="headerlink" title="说说为什么会有dcker-compose这个东西"></a>说说为什么会有dcker-compose这个东西</h3><p>回顾：之前部署一个小型的项目的时候，大家是不是都是这样的一个流程：编写dockerfile脚本》生成镜像文件》启动容器》访问服务</p>
 <p>原因：针对很小的程序这样的方式是完全足够的，但是，当我们的项目比较大的时候，比如其中是用到了mysql、redis、nginx、smtp等软件的时候，我们可能会这样（基础镜像选择linux内核的系统，在这个基础镜像之上在安装这些软件服务），其实这些软件本身就是一个个的镜像，然后这些镜像合作共同服务一个项目，docker-compose就是解决这个问题的。</p>
 <p>小结：Dockerfile记录单个镜像的构建过程，docker-compose.yml记录一个项目（多个镜像的构建过程）</p>
@@ -400,18 +402,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/09/03/书/数据库/第四讲——数据库之多表行操作/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/09/02/书/数据库/第三讲——数据库之单表行操作/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          第四讲——数据库之多表行操作
+          第三讲——数据库之行的操作
         
       </div>
     </a>
   
   
-    <a href="/2019/09/02/书/数据库/第三讲——数据库之单表行操作/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第三讲——数据库之行的操作</div>
+    <a href="/2019/09/01/几种常用的设计模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">几种常用的设计模式</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -620,19 +622,19 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">django项目部署</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
+                <a href="javascript:void(0)" class="js-tag color1">django项目部署</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -644,11 +646,11 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">知识扩展</a>
+                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
+                <a href="javascript:void(0)" class="js-tag color5">知识扩展</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -656,11 +658,11 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
               </li>
              
               <li class="article-tag-list-item">
