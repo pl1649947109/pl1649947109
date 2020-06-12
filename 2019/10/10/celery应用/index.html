@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh">
 <meta property="og:image" content="http://9017499461.linshutu.top/Celery%E5%9B%BE%E8%A7%A3.JPG">
 <meta property="og:image" content="http://9017499461.linshutu.top/sms%E7%BB%93%E6%9E%84%E7%9B%AE%E5%BD%95.JPG">
-<meta property="og:updated_time" content="2020-02-16T16:19:43.953Z">
+<meta property="og:updated_time" content="2020-03-10T14:25:40.278Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="celery应用">
 <meta name="twitter:description" content="为什么会用到celery：我们在做网站后端程序开发时，会碰到这样的需求：用户需要在我们的网站填写注册信息，我们发给用户一封注册激活邮件到用户邮箱（或者短信验证），如果由于各种原因，这封邮件发送所需时间较长，那么客户端将会等待很久，造成不好的用户体验. 介绍：Celery是一个强大的分布式任务队列，它可以让任务的执行完全脱离主程序。它通常用来实现异步任务和定时任务。异步任务比如短信、邮件的发送，定时">
@@ -171,7 +171,7 @@ var _hmt = _hmt || [];
 <p>介绍：Celery是一个强大的分布式任务队列，它可以让任务的执行完全脱离主程序。它通常用来实现<strong>异步任务</strong>和<strong>定时任务</strong>。异步任务比如短信、邮件的发送，定时任务就是在特定的时间执行任务。</p>
 <p><img src="http://9017499461.linshutu.top/Celery%E5%9B%BE%E8%A7%A3.JPG" alt></p>
 <ul>
-<li>任务队列：包含任务的工作单元。有专门的工作进程持续不断的见识任务队列，并从中获取新的任务并处理。</li>
+<li>任务队列：包含任务的工作单元。有专门的工作进程持续不断的监控任务队列，并从中获取新的任务并处理。</li>
 <li>任务：包含异步任务和定时任务。异步任务通常在业务逻辑中被触发并发往任务队列；定时任务由Celery Beta进程周期性地发往任务队列。</li>
 <li>消息中间件Broker：就是任务调度队列，接收任务生产者发来的消息，将任务存放到队列。Celery不提供队列服务，官网推荐使用RabbitMQ或者Redis实现。</li>
 <li>任务执行单元Worker：任务的处理单元，它实时监控消息队列，获取队列中调度的任务，并执行它。</li>
@@ -598,6 +598,18 @@ gitment.render('gitment-ctn')
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">YAML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">常用设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">celery应用</a>
               </li>
              
@@ -606,11 +618,11 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
+                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -619,6 +631,10 @@ gitment.render('gitment-ctn')
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -634,23 +650,19 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">flask</a>
+                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -666,11 +678,19 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drf</a>
+                <a href="javascript:void(0)" class="js-tag color1">flask</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">git版本控制系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drf</a>
               </li>
              
               <li class="article-tag-list-item">

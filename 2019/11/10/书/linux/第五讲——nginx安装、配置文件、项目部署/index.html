@@ -6,20 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://pl1649947109.github.io/pl1649947109">
-  <title>第五讲——nginx安装、配置文件、项目部署 | 林殊途</title>
+  <title>nginx基础知识、配置文件、项目部署 | 林殊途</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装编译nginx方式一：yum源安装 1yum install nginx（自动解决依赖）  方式二：wget手动安装 1234567891011121314151617181920212223241.下载tengine（淘宝源）wget http://tengine.taobao.org/download/tengine-2.3.2.tar.gz2.编译三部曲	第一曲：指定安装路径 	./co">
-<meta name="keywords" content="linux">
+  <meta name="description" content="介绍： Nginx是轻量级的Web服务器，反向代理服务器，均衡负载器和HTTP缓存器。特点是高并发（最大支持5w个并发数）、高性能和低内存。 反向代理客户端对代理服务器是无感知的，用户只请求反向代理服务器，反向代理服务器选择目标服务器，获取数据后返回给客户端。对外看来，反向代理服务器和目标服务器就是一个服务器，只是暴露的是代理服务器的地址，进而隐藏了真实的服务器的IP地址（一台机器也可以实现）。">
+<meta name="keywords" content="Nginx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第五讲——nginx安装、配置文件、项目部署">
+<meta property="og:title" content="nginx基础知识、配置文件、项目部署">
 <meta property="og:url" content="https://pl1649947109.github.io/pl1649947109/2019/11/10/书/linux/第五讲——nginx安装、配置文件、项目部署/index.html">
 <meta property="og:site_name" content="林殊途">
-<meta property="og:description" content="安装编译nginx方式一：yum源安装 1yum install nginx（自动解决依赖）  方式二：wget手动安装 1234567891011121314151617181920212223241.下载tengine（淘宝源）wget http://tengine.taobao.org/download/tengine-2.3.2.tar.gz2.编译三部曲	第一曲：指定安装路径 	./co">
+<meta property="og:description" content="介绍： Nginx是轻量级的Web服务器，反向代理服务器，均衡负载器和HTTP缓存器。特点是高并发（最大支持5w个并发数）、高性能和低内存。 反向代理客户端对代理服务器是无感知的，用户只请求反向代理服务器，反向代理服务器选择目标服务器，获取数据后返回给客户端。对外看来，反向代理服务器和目标服务器就是一个服务器，只是暴露的是代理服务器的地址，进而隐藏了真实的服务器的IP地址（一台机器也可以实现）。">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-11-10T11:14:12.477Z">
+<meta property="og:image" content="http://9017499461.linshutu.top/nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.jpg">
+<meta property="og:image" content="http://9017499461.linshutu.top/nginx%E5%9D%87%E8%A1%A1%E8%B4%9F%E8%BD%BD.jpg">
+<meta property="og:image" content="http://9017499461.linshutu.top/nginx%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB.jpg">
+<meta property="og:image" content="http://9017499461.linshutu.top/nginx%E9%AB%98%E5%8F%AF%E7%94%A8.jpg">
+<meta property="og:updated_time" content="2020-03-30T08:27:38.680Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第五讲——nginx安装、配置文件、项目部署">
-<meta name="twitter:description" content="安装编译nginx方式一：yum源安装 1yum install nginx（自动解决依赖）  方式二：wget手动安装 1234567891011121314151617181920212223241.下载tengine（淘宝源）wget http://tengine.taobao.org/download/tengine-2.3.2.tar.gz2.编译三部曲	第一曲：指定安装路径 	./co">
+<meta name="twitter:title" content="nginx基础知识、配置文件、项目部署">
+<meta name="twitter:description" content="介绍： Nginx是轻量级的Web服务器，反向代理服务器，均衡负载器和HTTP缓存器。特点是高并发（最大支持5w个并发数）、高性能和低内存。 反向代理客户端对代理服务器是无感知的，用户只请求反向代理服务器，反向代理服务器选择目标服务器，获取数据后返回给客户端。对外看来，反向代理服务器和目标服务器就是一个服务器，只是暴露的是代理服务器的地址，进而隐藏了真实的服务器的IP地址（一台机器也可以实现）。">
+<meta name="twitter:image" content="http://9017499461.linshutu.top/nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.jpg">
   
     <link rel="alternative" href="/atom.xml" title="林殊途" type="application/atom+xml">
   
@@ -124,7 +129,7 @@ var _hmt = _hmt || [];
 			
   
     <h1 class="article-title" itemprop="name">
-      第五讲——nginx安装、配置文件、项目部署
+      nginx基础知识、配置文件、项目部署
     </h1>
   
 
@@ -141,7 +146,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.3k 字</span>
+        <span class="post-count">1.8k 字</span>
       </span>
     </span>
 
@@ -150,7 +155,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">5min</span>
+        <span class="post-count">7min</span>
       </span>
     </span>
 </div>
@@ -164,7 +169,17 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="安装编译nginx"><a href="#安装编译nginx" class="headerlink" title="安装编译nginx"></a>安装编译nginx</h3><p>方式一：yum源安装</p>
+        <p>介绍：</p>
+<p>Nginx是轻量级的Web服务器，反向代理服务器，均衡负载器和HTTP缓存器。特点是高并发（最大支持5w个并发数）、高性能和低内存。</p>
+<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>客户端对代理服务器是无感知的，用户只请求反向代理服务器，反向代理服务器选择目标服务器，获取数据后返回给客户端。对外看来，反向代理服务器和目标服务器就是一个服务器，只是暴露的是代理服务器的地址，进而隐藏了真实的服务器的IP地址（一台机器也可以实现）。</p>
+<p><img src="http://9017499461.linshutu.top/nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.jpg" alt></p>
+<h3 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h3><p>就是说多个服务器部署相同的项目，然后nginx将请求分发到各个服务器上，将负载分发到不同的服务器，这就是均衡负载。</p>
+<p><img src="http://9017499461.linshutu.top/nginx%E5%9D%87%E8%A1%A1%E8%B4%9F%E8%BD%BD.jpg" alt></p>
+<h3 id="动静分离"><a href="#动静分离" class="headerlink" title="动静分离"></a>动静分离</h3><p>加速网站的解析速度，将静态页面和动态页面由不同的服务器来解析，加快解析速度，降低原来单个服务器的压力。</p>
+<p><img src="http://9017499461.linshutu.top/nginx%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB.jpg" alt></p>
+<h3 id="高可用"><a href="#高可用" class="headerlink" title="高可用"></a>高可用</h3><p>为了提高系统的可用性和容错能力，可以增加Nginx服务器的数量，当服务器发生故障或者宕机，备份服务器就可以立即充当主服务器进行不简单工作。</p>
+<p><img src="http://9017499461.linshutu.top/nginx%E9%AB%98%E5%8F%AF%E7%94%A8.jpg" alt></p>
+<h3 id="安装编译nginx"><a href="#安装编译nginx" class="headerlink" title="安装编译nginx"></a>安装编译nginx</h3><p>方式一：yum源安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx（自动解决依赖）</span><br></pre></td></tr></table></figure>
 
 <p>方式二：wget手动安装</p>
@@ -172,7 +187,20 @@ var _hmt = _hmt || [];
 
 <a id="more"></a>
 
-<h3 id="nginx的nginx-conf配置文件"><a href="#nginx的nginx-conf配置文件" class="headerlink" title="nginx的nginx.conf配置文件"></a>nginx的nginx.conf配置文件</h3><h4 id="nginx的静态文件服务器功能"><a href="#nginx的静态文件服务器功能" class="headerlink" title="nginx的静态文件服务器功能"></a>nginx的静态文件服务器功能</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>server&#123;&#125;是定义虚拟主机功能 </span><br><span class="line">    server &#123;</span><br><span class="line">        #定义网站的端口</span><br><span class="line">        listen       80;</span><br><span class="line">        #访问的网址,该网站必须是注册的并且已解析的</span><br><span class="line">        server_name  linshutu.top;</span><br><span class="line"></span><br><span class="line">        #定义虚拟主机的访问日志功能，记录用户的ip，以及请求信息，和爬虫代理后面的真实ip等功能</span><br><span class="line">        #access_log  logs/host.access.log  main;</span><br><span class="line">        #access_log  "pipe:rollback logs/host.access_log interval=1d baknum=7 maxsize=2G"  main;</span><br><span class="line">        # location作用是匹配url，如同 django的 url.py功能一样</span><br><span class="line">        location / &#123;</span><br><span class="line">            #这个root关键词 是定义静态文件存放目录的，这里指定额的是/opt/s24html文件夹下</span><br><span class="line">            root   /opt/s24html;</span><br><span class="line">        	#index参数，定义网站首页文件名的 </span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">        #  这个location可以定义多个，比如 你想让 192.168.16.85:81/static/js/luffy.js</span><br><span class="line">        location  /static  &#123;</span><br><span class="line">        #给路径添加别名，/opt/s24crm/static/js/luffy.js</span><br><span class="line">        alias   /opt/s24crm/static/;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="nginx配置文件（nginx-conf）"><a href="#nginx配置文件（nginx-conf）" class="headerlink" title="nginx配置文件（nginx.conf）"></a>nginx配置文件（nginx.conf）</h3><p>组成：</p>
+<ul>
+<li><p>全局块：主要设置一些影响Nginx服务器整体运行的配置指令。</p>
+</li>
+<li><p>Events块：主要影响Nginx服务器与用户的网络连接。</p>
+</li>
+<li><p>HTTP块：服务器配置中最频繁的部分，包括设置代理、缓存、日志等大多数功能。</p>
+<ul>
+<li>Server块：配置虚拟主机相关的参数。</li>
+<li>Localtion块：配置请求路由，以及各种页面的处理情况。</li>
+</ul>
+</li>
+</ul>
+<h4 id="nginx的静态文件服务器功能"><a href="#nginx的静态文件服务器功能" class="headerlink" title="nginx的静态文件服务器功能"></a>nginx的静态文件服务器功能</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>server&#123;&#125;是定义虚拟主机功能 </span><br><span class="line">    server &#123;</span><br><span class="line">        #定义网站的端口</span><br><span class="line">        listen       80;</span><br><span class="line">        #访问的网址,该网站必须是注册的并且已解析的</span><br><span class="line">        server_name  linshutu.top;</span><br><span class="line"></span><br><span class="line">        #定义虚拟主机的访问日志功能，记录用户的ip，以及请求信息，和爬虫代理后面的真实ip等功能</span><br><span class="line">        #access_log  logs/host.access.log  main;</span><br><span class="line">        #access_log  "pipe:rollback logs/host.access_log interval=1d baknum=7 maxsize=2G"  main;</span><br><span class="line">        # location作用是匹配url，如同 django的 url.py功能一样</span><br><span class="line">        location / &#123;</span><br><span class="line">            #这个root关键词 是定义静态文件存放目录的，这里指定额的是/opt/s24html文件夹下</span><br><span class="line">            root   /opt/s24html;</span><br><span class="line">        	#index参数，定义网站首页文件名的 </span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">        #  这个location可以定义多个，比如 你想让 192.168.16.85:81/static/js/luffy.js</span><br><span class="line">        location  /static  &#123;</span><br><span class="line">        #给路径添加别名，/opt/s24crm/static/js/luffy.js</span><br><span class="line">        alias   /opt/s24crm/static/;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>nginx的多虚拟主机功能 </li>
@@ -248,7 +276,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
         		</li>
       		
 		</ul>
@@ -356,7 +384,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装编译nginx"><span class="toc-number">1.</span> <span class="toc-text">安装编译nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nginx的nginx-conf配置文件"><span class="toc-number">2.</span> <span class="toc-text">nginx的nginx.conf配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#nginx的静态文件服务器功能"><span class="toc-number">2.1.</span> <span class="toc-text">nginx的静态文件服务器功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nginx的访问日志功能，404页面功能"><span class="toc-number">2.2.</span> <span class="toc-text">nginx的访问日志功能，404页面功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置反向代理"><span class="toc-number">2.3.</span> <span class="toc-text">配置反向代理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nginx负载均衡"><span class="toc-number">2.4.</span> <span class="toc-text">nginx负载均衡</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nginx的负载均衡规则"><span class="toc-number">2.5.</span> <span class="toc-text">nginx的负载均衡规则</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#反向代理"><span class="toc-number">1.</span> <span class="toc-text">反向代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#负载均衡"><span class="toc-number">2.</span> <span class="toc-text">负载均衡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动静分离"><span class="toc-number">3.</span> <span class="toc-text">动静分离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高可用"><span class="toc-number">4.</span> <span class="toc-text">高可用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装编译nginx"><span class="toc-number">5.</span> <span class="toc-text">安装编译nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nginx配置文件（nginx-conf）"><span class="toc-number">6.</span> <span class="toc-text">nginx配置文件（nginx.conf）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#nginx的静态文件服务器功能"><span class="toc-number">6.1.</span> <span class="toc-text">nginx的静态文件服务器功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nginx的访问日志功能，404页面功能"><span class="toc-number">6.2.</span> <span class="toc-text">nginx的访问日志功能，404页面功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置反向代理"><span class="toc-number">6.3.</span> <span class="toc-text">配置反向代理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nginx负载均衡"><span class="toc-number">6.4.</span> <span class="toc-text">nginx负载均衡</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nginx的负载均衡规则"><span class="toc-number">6.5.</span> <span class="toc-text">nginx的负载均衡规则</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -370,7 +398,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="书/linux/第五讲——nginx安装、配置文件、项目部署" data-title="第五讲——nginx安装、配置文件、项目部署" data-url="https://pl1649947109.github.io/pl1649947109/2019/11/10/书/linux/第五讲——nginx安装、配置文件、项目部署/"></div>
+	<div class="ds-thread" data-thread-key="书/linux/第五讲——nginx安装、配置文件、项目部署" data-title="nginx基础知识、配置文件、项目部署" data-url="https://pl1649947109.github.io/pl1649947109/2019/11/10/书/linux/第五讲——nginx安装、配置文件、项目部署/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -522,6 +550,18 @@ gitment.render('gitment-ctn')
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">YAML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">常用设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">celery应用</a>
               </li>
              
@@ -530,11 +570,11 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
+                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -543,6 +583,10 @@ gitment.render('gitment-ctn')
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -558,23 +602,19 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">flask</a>
+                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -590,11 +630,19 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drf</a>
+                <a href="javascript:void(0)" class="js-tag color1">flask</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">git版本控制系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drf</a>
               </li>
              
               <li class="article-tag-list-item">

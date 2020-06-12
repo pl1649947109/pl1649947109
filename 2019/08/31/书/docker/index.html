@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://9017499461.linshutu.top/docker7.jpg">
 <meta property="og:image" content="http://9017499461.linshutu.top/docker8.jpg">
 <meta property="og:image" content="http://9017499461.linshutu.top/docker9.png">
-<meta property="og:updated_time" content="2019-12-24T08:45:41.691Z">
+<meta property="og:updated_time" content="2020-04-01T10:51:38.468Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker">
 <meta name="twitter:description" content="Docker云计算的服务类型： IAAS:kvm+openstack PAAS:docker+k8s SAAS: 一、学习目标 透彻理解Docker的概念,功能 了解Docker的核心组件,整体架构 学会Docker的安装,CentOS7.x Docker镜像的制作以及使用">
@@ -151,7 +151,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">4k 字</span>
+        <span class="post-count">4.1k 字</span>
       </span>
     </span>
 
@@ -391,9 +391,10 @@ var _hmt = _hmt || [];
 <p><img src="http://9017499461.linshutu.top/docker9.png" alt="Dockerfile解释"></p>
 <h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> This my first django Dockerfile</span><br><span class="line"><span class="meta">#</span> Version 1.0</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> Base images 基础镜像</span><br><span class="line">FROM centos:centos7.5.1804</span><br><span class="line"><span class="meta">#</span>这个centos系统就相当于是虚拟机之上的系统，就是集装箱，这是一个干净的系统，什么都没有</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>MAINTAINER 维护者信息</span><br><span class="line">LABEL maintainer="inspur_lyx@hotmail.com"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>ENV 设置环境变量</span><br><span class="line">ENV VERSION v1.0</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>RUN 执行以下命令（安装pytohn环境）</span><br><span class="line">RUN yum install -y wget</span><br><span class="line"></span><br><span class="line">RUN wget -P /etc/yum.repos.d/ http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line"></span><br><span class="line">RUN yum install -y  python36 python3-devel gcc</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>工作目录</span><br><span class="line">WORKDIR /opt</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>拷贝文件至工作目录</span><br><span class="line">COPY . /opt</span><br><span class="line"></span><br><span class="line">RUN pip3 install -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com Django==2.1.8</span><br><span class="line"></span><br><span class="line">RUN rm -rf ~/.cache/pip</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>EXPOSE 映射端口</span><br><span class="line">EXPOSE 8000</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>容器启动时执行命令</span><br><span class="line">CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]</span><br></pre></td></tr></table></figure>
 
-<h5 id="推送镜像"><a href="#推送镜像" class="headerlink" title="推送镜像"></a>推送镜像</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>创建镜像</span><br><span class="line"><span class="meta">$</span> docker build . -f Dockerfile -t my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>给镜像打上标签</span><br><span class="line"><span class="meta">$</span> docker tag my-helloworld:20191110 liyongxin5288/my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>把镜像push到镜像仓库中</span><br><span class="line"><span class="meta">$</span> docker push liyongxin5288/my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>拉取仓库中的镜像</span><br><span class="line"><span class="meta">$</span> docker pull liyongxin5288/my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>运行镜像就成为了我们的容器</span><br><span class="line"><span class="meta">$</span> docker run --name helloworld -d -p 8000:8000 my-helloworld:20191110</span><br><span class="line">(注：-p后面的参数是映射端口，把容器内容的端口映射到虚拟机的端口上面，我们通过虚拟机的IP和port就能够访问该服务了，前面的端口是容器内部的，后面的端口是我们虚拟机的)</span><br><span class="line"><span class="meta">#</span>进入容器的命令</span><br><span class="line"><span class="meta">$</span> docker exec -ti 容器的hash值   bash</span><br><span class="line">(后面的base这个分配的终端不加就使用默认的命令，但是有的命令加上这个命令运行的时候就死了那就不加)</span><br><span class="line"><span class="meta">#</span>让容器一直活着</span><br><span class="line"><span class="meta">$</span>docker run -d centos:6.9 tail -f /etc/hosts</span><br></pre></td></tr></table></figure>
+<h5 id="推送镜像"><a href="#推送镜像" class="headerlink" title="推送镜像"></a>推送镜像</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>创建镜像（镜像名称必须是小写）</span><br><span class="line"><span class="meta">$</span> docker build . -f Dockerfile -t my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>给镜像打上标签</span><br><span class="line"><span class="meta">$</span> docker tag my-helloworld:20191110 liyongxin5288/my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>把镜像push到镜像仓库中</span><br><span class="line"><span class="meta">$</span> docker push liyongxin5288/my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>拉取仓库中的镜像</span><br><span class="line"><span class="meta">$</span> docker pull liyongxin5288/my-helloworld:20191110</span><br><span class="line"><span class="meta">#</span>运行镜像就成为了我们的容器</span><br><span class="line"><span class="meta">$</span> docker run --name helloworld -d -p 8000:8000 my-helloworld:20191110</span><br><span class="line">(注：-p后面的参数是映射端口，把容器内容的端口映射到虚拟机的端口上面，我们通过虚拟机的IP和port就能够访问该服务了，前面的端口是容器内部的，后面的端口是我们虚拟机的)</span><br><span class="line"><span class="meta">#</span>进入容器的命令</span><br><span class="line"><span class="meta">$</span> docker exec -ti 容器的hash值   bash</span><br><span class="line">(后面的base这个分配的终端不加就使用默认的命令，但是有的命令加上这个命令运行的时候就死了那就不加)</span><br><span class="line"><span class="meta">#</span>让容器一直活着</span><br><span class="line"><span class="meta">$</span>docker run -d centos:6.9 tail -f /etc/hosts</span><br></pre></td></tr></table></figure>
 
-<h3 id="八、构建私有仓库"><a href="#八、构建私有仓库" class="headerlink" title="八、构建私有仓库"></a>八、构建私有仓库</h3><h5 id="下载私有仓库镜像"><a href="#下载私有仓库镜像" class="headerlink" title="下载私有仓库镜像"></a><strong>下载私有仓库镜像</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>这种方式是没有该镜像就会自动下载镜像并实例化（映射5000端口并挂载磁盘到本地/opt/data/registry目录下）</span><br><span class="line"><span class="meta">$</span>docker run -d -p 5000:5000 -v /opt/data/registry:/var/lib/registry  registry</span><br></pre></td></tr></table></figure>
+<h3 id="八、部署完整的django项目"><a href="#八、部署完整的django项目" class="headerlink" title="八、部署完整的django项目"></a>八、部署完整的django项目</h3><p>项目：<a href="https://github.com/Allen-PL/myBlog.git" target="_blank" rel="noopener">https://github.com/Allen-PL/myBlog.git</a></p>
+<h3 id="九、构建私有仓库"><a href="#九、构建私有仓库" class="headerlink" title="九、构建私有仓库"></a>九、构建私有仓库</h3><h5 id="下载私有仓库镜像"><a href="#下载私有仓库镜像" class="headerlink" title="下载私有仓库镜像"></a><strong>下载私有仓库镜像</strong></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>这种方式是没有该镜像就会自动下载镜像并实例化（映射5000端口并挂载磁盘到本地/opt/data/registry目录下）</span><br><span class="line"><span class="meta">$</span>docker run -d -p 5000:5000 -v /opt/data/registry:/var/lib/registry  registry</span><br></pre></td></tr></table></figure>
 
 <p>现在，registry这个运行的实例就是我们的私有仓库了，但是我们的推拉的时候还是不会成功。我们下面就解决这些bug</p>
 <h5 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a><strong>修改配置文件</strong></h5><p>因为私有仓库，推镜像的时候只支持http的方式，不支持https加密的方式推送，所以我们配置相关的文件以支持http形式的推送。</p>
@@ -547,11 +548,11 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/09/02/书/数据库/第三讲——数据库之单表行操作/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/09/01/几种常用的设计模式/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          第三讲——数据库之行的操作
+          几种常用的设计模式
         
       </div>
     </a>
@@ -585,7 +586,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker"><span class="toc-number">1.</span> <span class="toc-text">Docker</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、学习目标"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、学习目标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、简介"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、简介</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#为什么出现docker"><span class="toc-number">1.0.2.0.1.</span> <span class="toc-text">为什么出现docker</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#什么是docker"><span class="toc-number">1.0.2.0.2.</span> <span class="toc-text">什么是docker</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#应用场景"><span class="toc-number">1.0.2.0.3.</span> <span class="toc-text">应用场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#docker的优势"><span class="toc-number">1.0.2.0.4.</span> <span class="toc-text">docker的优势</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#发展史"><span class="toc-number">1.0.2.0.5.</span> <span class="toc-text">发展史</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#版本规划"><span class="toc-number">1.0.2.0.6.</span> <span class="toc-text">版本规划</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、安装"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、核心三要素"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、核心三要素</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#镜像仓库-Registry"><span class="toc-number">1.0.4.0.1.</span> <span class="toc-text">镜像仓库(Registry)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#容器-Containers"><span class="toc-number">1.0.4.0.2.</span> <span class="toc-text">容器(Containers)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#镜像-Images"><span class="toc-number">1.0.4.0.3.</span> <span class="toc-text">镜像(Images)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、HelloWorld"><span class="toc-number">1.0.5.</span> <span class="toc-text">五、HelloWorld</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、常用命令"><span class="toc-number">1.0.6.</span> <span class="toc-text">六、常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七、制作自己的镜像"><span class="toc-number">1.0.7.</span> <span class="toc-text">七、制作自己的镜像</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#构建镜像"><span class="toc-number">1.0.7.0.1.</span> <span class="toc-text">构建镜像</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Dockerfile（-）"><span class="toc-number">1.0.7.0.2.</span> <span class="toc-text">Dockerfile（***）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#示例"><span class="toc-number">1.0.7.0.3.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#推送镜像"><span class="toc-number">1.0.7.0.4.</span> <span class="toc-text">推送镜像</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八、构建私有仓库"><span class="toc-number">1.0.8.</span> <span class="toc-text">八、构建私有仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#下载私有仓库镜像"><span class="toc-number">1.0.8.0.1.</span> <span class="toc-text">下载私有仓库镜像</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#修改配置文件"><span class="toc-number">1.0.8.0.2.</span> <span class="toc-text">修改配置文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#重启docker"><span class="toc-number">1.0.8.0.3.</span> <span class="toc-text">重启docker</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#重启容器"><span class="toc-number">1.0.8.0.4.</span> <span class="toc-text">重启容器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#上传镜像"><span class="toc-number">1.0.8.0.5.</span> <span class="toc-text">上传镜像</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#补充"><span class="toc-number">1.0.9.</span> <span class="toc-text">补充</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#常用的命令"><span class="toc-number">1.0.9.1.</span> <span class="toc-text">常用的命令</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker"><span class="toc-number">1.</span> <span class="toc-text">Docker</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、学习目标"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、学习目标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、简介"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、简介</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#为什么出现docker"><span class="toc-number">1.0.2.0.1.</span> <span class="toc-text">为什么出现docker</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#什么是docker"><span class="toc-number">1.0.2.0.2.</span> <span class="toc-text">什么是docker</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#应用场景"><span class="toc-number">1.0.2.0.3.</span> <span class="toc-text">应用场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#docker的优势"><span class="toc-number">1.0.2.0.4.</span> <span class="toc-text">docker的优势</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#发展史"><span class="toc-number">1.0.2.0.5.</span> <span class="toc-text">发展史</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#版本规划"><span class="toc-number">1.0.2.0.6.</span> <span class="toc-text">版本规划</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、安装"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、核心三要素"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、核心三要素</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#镜像仓库-Registry"><span class="toc-number">1.0.4.0.1.</span> <span class="toc-text">镜像仓库(Registry)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#容器-Containers"><span class="toc-number">1.0.4.0.2.</span> <span class="toc-text">容器(Containers)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#镜像-Images"><span class="toc-number">1.0.4.0.3.</span> <span class="toc-text">镜像(Images)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、HelloWorld"><span class="toc-number">1.0.5.</span> <span class="toc-text">五、HelloWorld</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、常用命令"><span class="toc-number">1.0.6.</span> <span class="toc-text">六、常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七、制作自己的镜像"><span class="toc-number">1.0.7.</span> <span class="toc-text">七、制作自己的镜像</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#构建镜像"><span class="toc-number">1.0.7.0.1.</span> <span class="toc-text">构建镜像</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Dockerfile（-）"><span class="toc-number">1.0.7.0.2.</span> <span class="toc-text">Dockerfile（***）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#示例"><span class="toc-number">1.0.7.0.3.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#推送镜像"><span class="toc-number">1.0.7.0.4.</span> <span class="toc-text">推送镜像</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八、部署完整的django项目"><span class="toc-number">1.0.8.</span> <span class="toc-text">八、部署完整的django项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#九、构建私有仓库"><span class="toc-number">1.0.9.</span> <span class="toc-text">九、构建私有仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#下载私有仓库镜像"><span class="toc-number">1.0.9.0.1.</span> <span class="toc-text">下载私有仓库镜像</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#修改配置文件"><span class="toc-number">1.0.9.0.2.</span> <span class="toc-text">修改配置文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#重启docker"><span class="toc-number">1.0.9.0.3.</span> <span class="toc-text">重启docker</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#重启容器"><span class="toc-number">1.0.9.0.4.</span> <span class="toc-text">重启容器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#上传镜像"><span class="toc-number">1.0.9.0.5.</span> <span class="toc-text">上传镜像</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#补充"><span class="toc-number">1.0.10.</span> <span class="toc-text">补充</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#常用的命令"><span class="toc-number">1.0.10.1.</span> <span class="toc-text">常用的命令</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -751,6 +752,18 @@ gitment.render('gitment-ctn')
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">YAML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">常用设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">celery应用</a>
               </li>
              
@@ -759,11 +772,11 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
+                <a href="javascript:void(0)" class="js-tag color2">术语名词解析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -772,6 +785,10 @@ gitment.render('gitment-ctn')
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -787,23 +804,19 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">flask</a>
+                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -819,11 +832,19 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drf</a>
+                <a href="javascript:void(0)" class="js-tag color1">flask</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">git版本控制系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drf</a>
               </li>
              
               <li class="article-tag-list-item">
