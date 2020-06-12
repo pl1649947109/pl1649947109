@@ -243,19 +243,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-第三方模块/pymysql——和数据库交互的模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-第三方模块/mutiprocessing——进程模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/第三方模块/pymysql——和数据库交互的模块/">pymysql——和数据库交互的模块</a>
+      <a class="article-title" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">mutiprocessing——多进程管理包</a>
     </h1>
   
 
 			
-			<a href="/2019/08/22/第三方模块/pymysql——和数据库交互的模块/" class="archive-article-date">
+			<a href="/2019/08/22/第三方模块/mutiprocessing——进程模块/" class="archive-article-date">
   	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
 </a>
 			
@@ -267,7 +267,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">850 字</span>
+        <span class="post-count">523 字</span>
       </span>
     </span>
 
@@ -276,7 +276,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3min</span>
+        <span class="post-count">1min</span>
       </span>
     </span>
 </div>
@@ -290,12 +290,17 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Python 数据库的Connection、Cursor两大对象</p>
-<p><img src="http://9017499461.linshutu.top/%E6%95%B0%E6%8D%AE%E5%BA%931.png" alt></p>
-<p>两者的比喻：</p>
-<p><img src="http://9017499461.linshutu.top/%E6%95%B0%E6%8D%AE%E5%BA%932.png" alt></p>
+        <p>multiprocessing支持子进程、通信和数据共享、执行不同形式的同步。提供了<strong>Process、Queue、Pipe、Lock</strong>等组件</p>
+<h3 id="Process类"><a href="#Process类" class="headerlink" title="Process类"></a>Process类</h3><p>构造方法：</p>
+<p><strong>init</strong>(self, group=None, target=None, name=None, args=(), kwargs={})</p>
+<p><strong>参数说明</strong></p>
+<p>group：扩展参数</p>
+<p>target：表示调用对象任务。</p>
+<p>name：给子进程取别名。</p>
+<p>args：表示条用对象的位置参数元组。</p>
+<p>kwargs：表示调用对象的字典。</p>
         
-          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/pymysql——和数据库交互的模块/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/#more">more >></a>--->
         
       
 	  
@@ -326,7 +331,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/第三方模块/pymysql——和数据库交互的模块/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">展开全文 >></a>
         </p>
       
 
@@ -2744,11 +2749,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">常用设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+                <a href="javascript:void(0)" class="js-tag color2">常用设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2768,7 +2773,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2776,7 +2781,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2792,15 +2797,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2808,7 +2809,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">flask</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2820,7 +2829,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">flask</a>
+                <a href="javascript:void(0)" class="js-tag color4">drf</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2829,10 +2838,6 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drf</a>
               </li>
              
               <li class="article-tag-list-item">
