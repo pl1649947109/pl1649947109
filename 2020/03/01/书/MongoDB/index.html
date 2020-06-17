@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="林殊途">
 <meta property="og:description" content="理论概念分布式系统123分布式系统是由多台计算机和通信的软件组件通过计算机网络连接（局域网或广域网）组成。分布式系统是建立在网络之上的软件系统。由于软件的特性，所以分布式系统具有高度的内聚性和透明性。所以说，网络和分布式系统之间的区别更多的在于高层软件，而非硬件。  分布式计算的优点1234567可靠（容错高）：一台服务器崩了不会影响其他的服务器。可扩展：根据需求加更多的服务器。资源共享：服务器之">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2020-06-12T01:09:46.103Z">
+<meta property="og:updated_time" content="2020-06-12T02:42:54.267Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB蹒跚学步1">
 <meta name="twitter:description" content="理论概念分布式系统123分布式系统是由多台计算机和通信的软件组件通过计算机网络连接（局域网或广域网）组成。分布式系统是建立在网络之上的软件系统。由于软件的特性，所以分布式系统具有高度的内聚性和透明性。所以说，网络和分布式系统之间的区别更多的在于高层软件，而非硬件。  分布式计算的优点1234567可靠（容错高）：一台服务器崩了不会影响其他的服务器。可扩展：根据需求加更多的服务器。资源共享：服务器之">
@@ -141,7 +141,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">6k 字</span>
+        <span class="post-count">6.3k 字</span>
       </span>
     </span>
 
@@ -150,7 +150,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">24min</span>
+        <span class="post-count">25min</span>
       </span>
     </span>
 </div>
@@ -486,6 +486,57 @@ var _hmt = _hmt || [];
 <tr>
 <td align="left">Regular expression</td>
 <td align="left">正则表达式类型。用于存储正则表达式。</td>
+</tr>
+</tbody></table>
+<h4 id="BOSN和JSON"><a href="#BOSN和JSON" class="headerlink" title="BOSN和JSON"></a>BOSN和JSON</h4><p>bson（Binary JSON）是10gen开发的一个数据格式，是mongoDB的数据储存格式。bson基于json格式，选择json进行改造而来。（json像字符串一样储存，bson按结构储存）</p>
+<p>bson的优点：</p>
+<ul>
+<li>遍历速度更快：bson将json的每一个元素的长度存在元素的头部，这样只需要读取到元素长度就能够取得这个元素进行比较，那么也就更快。</li>
+<li>操作更加简单：json来说，数据是无类型的，9变10充一个字符变成了两个字符，那么就要移位。而bson是可自定制数据类型的。</li>
+<li>增加了额外的数据类型：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">BSON</th>
+<th align="center">JSON</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">数字</td>
+<td align="center">数字</td>
+</tr>
+<tr>
+<td align="center">字符串</td>
+<td align="center">字符串</td>
+</tr>
+<tr>
+<td align="center">数组</td>
+<td align="center">数组</td>
+</tr>
+<tr>
+<td align="center">对象</td>
+<td align="center">对象</td>
+</tr>
+<tr>
+<td align="center">bool</td>
+<td align="center">bool</td>
+</tr>
+<tr>
+<td align="center">null</td>
+<td align="center">null</td>
+</tr>
+<tr>
+<td align="center">日期</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">二进制数组</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">更多：js代码，re等</td>
+<td align="center"></td>
 </tr>
 </tbody></table>
 <h3 id="M介绍"><a href="#M介绍" class="headerlink" title="M介绍"></a>M介绍</h3><p>C++编写；基于分布式文件储存的开源数据库系统；旨在为WEB应用提供可扩展的高性能数据储存解决方案；数据结构有key=value组成；类似于JSON对象。</p>
@@ -877,7 +928,7 @@ var _hmt = _hmt || [];
 <h4 id="M全文索引"><a href="#M全文索引" class="headerlink" title="M全文索引"></a>M全文索引</h4><p>x’x</p>
 <h4 id="M正则表达式"><a href="#M正则表达式" class="headerlink" title="M正则表达式"></a>M正则表达式</h4><p>xx</p>
 <h4 id="M管理工具"><a href="#M管理工具" class="headerlink" title="M管理工具"></a>M管理工具</h4><p>RockMongo</p>
-<h4 id="MGridFS"><a href="#MGridFS" class="headerlink" title="MGridFS"></a>MGridFS</h4><p>xx</p>
+<h4 id="MGridFS"><a href="#MGridFS" class="headerlink" title="MGridFS"></a>MGridFS</h4><p>GridFS是一种将大型文件存储在MongoDB中的文件规范。使用GridFS可以将大文件分隔成多个小文档存放，这样我们能够有效的保存大文档，而且解决了BSON对象有限制的问题。</p>
 <h4 id="M固定集合"><a href="#M固定集合" class="headerlink" title="M固定集合"></a>M固定集合</h4><p>xx</p>
 <h4 id="M自动增长"><a href="#M自动增长" class="headerlink" title="M自动增长"></a>M自动增长</h4><p>M没有像SQL一样自动增长的功能，M的_id是系统自动生成的12字节的唯一标识，但在某些情况下，我们可能需要自动增长功能。</p>
 <p>xx</p>
@@ -1052,7 +1103,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#理论概念"><span class="toc-number">1.</span> <span class="toc-text">理论概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式系统"><span class="toc-number">1.1.</span> <span class="toc-text">分布式系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式计算的优点"><span class="toc-number">1.2.</span> <span class="toc-text">分布式计算的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NoSQL"><span class="toc-number">1.3.</span> <span class="toc-text">NoSQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RDBMS-vs-NoSQL"><span class="toc-number">1.4.</span> <span class="toc-text">RDBMS  vs  NoSQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CAP定理"><span class="toc-number">1.5.</span> <span class="toc-text">CAP定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NoSQL的优缺点"><span class="toc-number">1.6.</span> <span class="toc-text">NoSQL的优缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis与Mongodb"><span class="toc-number">1.7.</span> <span class="toc-text">Redis与Mongodb</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux下安装、启动、停止mogodb"><span class="toc-number">2.</span> <span class="toc-text">Linux下安装、启动、停止mogodb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mongodb概念"><span class="toc-number">3.</span> <span class="toc-text">Mongodb概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#术语比较"><span class="toc-number">3.1.</span> <span class="toc-text">术语比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M集合"><span class="toc-number">3.2.</span> <span class="toc-text">M集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#M元数据"><span class="toc-number">3.2.1.</span> <span class="toc-text">M元数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M数据类型"><span class="toc-number">3.3.</span> <span class="toc-text">M数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M介绍"><span class="toc-number">3.4.</span> <span class="toc-text">M介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M操作"><span class="toc-number">3.5.</span> <span class="toc-text">M操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建数据库"><span class="toc-number">3.5.1.</span> <span class="toc-text">创建数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看数据库"><span class="toc-number">3.5.2.</span> <span class="toc-text">查看数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除数据库"><span class="toc-number">3.5.3.</span> <span class="toc-text">删除数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建集合"><span class="toc-number">3.5.4.</span> <span class="toc-text">创建集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看集合"><span class="toc-number">3.5.5.</span> <span class="toc-text">查看集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除集合"><span class="toc-number">3.5.6.</span> <span class="toc-text">删除集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#插入文档"><span class="toc-number">3.5.7.</span> <span class="toc-text">插入文档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#更新文档"><span class="toc-number">3.5.8.</span> <span class="toc-text">更新文档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除文档"><span class="toc-number">3.5.9.</span> <span class="toc-text">删除文档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查询文档"><span class="toc-number">3.5.10.</span> <span class="toc-text">查询文档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#type操作符"><span class="toc-number">3.5.11.</span> <span class="toc-text">$type操作符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Limit与Skip方法"><span class="toc-number">3.5.12.</span> <span class="toc-text">Limit与Skip方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#排序"><span class="toc-number">3.5.13.</span> <span class="toc-text">排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#索引"><span class="toc-number">3.5.14.</span> <span class="toc-text">索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#聚合"><span class="toc-number">3.5.15.</span> <span class="toc-text">聚合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#备份与恢复"><span class="toc-number">3.5.16.</span> <span class="toc-text">备份与恢复</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#监控"><span class="toc-number">3.5.17.</span> <span class="toc-text">监控</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M高级操作"><span class="toc-number">3.6.</span> <span class="toc-text">M高级操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#M关系"><span class="toc-number">3.6.1.</span> <span class="toc-text">M关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M数据库引用"><span class="toc-number">3.6.2.</span> <span class="toc-text">M数据库引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M覆盖索引查询"><span class="toc-number">3.6.3.</span> <span class="toc-text">M覆盖索引查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M查询分析"><span class="toc-number">3.6.4.</span> <span class="toc-text">M查询分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M原子操作"><span class="toc-number">3.6.5.</span> <span class="toc-text">M原子操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M高级索引"><span class="toc-number">3.6.6.</span> <span class="toc-text">M高级索引</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#索引数组字段"><span class="toc-number">3.6.6.1.</span> <span class="toc-text">索引数组字段</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#索引子文档字段"><span class="toc-number">3.6.6.2.</span> <span class="toc-text">索引子文档字段</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M索引限制"><span class="toc-number">3.6.7.</span> <span class="toc-text">M索引限制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MObjectID"><span class="toc-number">3.6.8.</span> <span class="toc-text">MObjectID</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MMap-amp-Reduce"><span class="toc-number">3.6.9.</span> <span class="toc-text">MMap&amp;Reduce</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M全文索引"><span class="toc-number">3.6.10.</span> <span class="toc-text">M全文索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M正则表达式"><span class="toc-number">3.6.11.</span> <span class="toc-text">M正则表达式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M管理工具"><span class="toc-number">3.6.12.</span> <span class="toc-text">M管理工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MGridFS"><span class="toc-number">3.6.13.</span> <span class="toc-text">MGridFS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M固定集合"><span class="toc-number">3.6.14.</span> <span class="toc-text">M固定集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M自动增长"><span class="toc-number">3.6.15.</span> <span class="toc-text">M自动增长</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#理论概念"><span class="toc-number">1.</span> <span class="toc-text">理论概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式系统"><span class="toc-number">1.1.</span> <span class="toc-text">分布式系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式计算的优点"><span class="toc-number">1.2.</span> <span class="toc-text">分布式计算的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NoSQL"><span class="toc-number">1.3.</span> <span class="toc-text">NoSQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RDBMS-vs-NoSQL"><span class="toc-number">1.4.</span> <span class="toc-text">RDBMS  vs  NoSQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CAP定理"><span class="toc-number">1.5.</span> <span class="toc-text">CAP定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NoSQL的优缺点"><span class="toc-number">1.6.</span> <span class="toc-text">NoSQL的优缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis与Mongodb"><span class="toc-number">1.7.</span> <span class="toc-text">Redis与Mongodb</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux下安装、启动、停止mogodb"><span class="toc-number">2.</span> <span class="toc-text">Linux下安装、启动、停止mogodb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mongodb概念"><span class="toc-number">3.</span> <span class="toc-text">Mongodb概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#术语比较"><span class="toc-number">3.1.</span> <span class="toc-text">术语比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M集合"><span class="toc-number">3.2.</span> <span class="toc-text">M集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#M元数据"><span class="toc-number">3.2.1.</span> <span class="toc-text">M元数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M数据类型"><span class="toc-number">3.3.</span> <span class="toc-text">M数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#BOSN和JSON"><span class="toc-number">3.3.1.</span> <span class="toc-text">BOSN和JSON</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M介绍"><span class="toc-number">3.4.</span> <span class="toc-text">M介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M操作"><span class="toc-number">3.5.</span> <span class="toc-text">M操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建数据库"><span class="toc-number">3.5.1.</span> <span class="toc-text">创建数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看数据库"><span class="toc-number">3.5.2.</span> <span class="toc-text">查看数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除数据库"><span class="toc-number">3.5.3.</span> <span class="toc-text">删除数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建集合"><span class="toc-number">3.5.4.</span> <span class="toc-text">创建集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看集合"><span class="toc-number">3.5.5.</span> <span class="toc-text">查看集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除集合"><span class="toc-number">3.5.6.</span> <span class="toc-text">删除集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#插入文档"><span class="toc-number">3.5.7.</span> <span class="toc-text">插入文档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#更新文档"><span class="toc-number">3.5.8.</span> <span class="toc-text">更新文档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除文档"><span class="toc-number">3.5.9.</span> <span class="toc-text">删除文档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查询文档"><span class="toc-number">3.5.10.</span> <span class="toc-text">查询文档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#type操作符"><span class="toc-number">3.5.11.</span> <span class="toc-text">$type操作符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Limit与Skip方法"><span class="toc-number">3.5.12.</span> <span class="toc-text">Limit与Skip方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#排序"><span class="toc-number">3.5.13.</span> <span class="toc-text">排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#索引"><span class="toc-number">3.5.14.</span> <span class="toc-text">索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#聚合"><span class="toc-number">3.5.15.</span> <span class="toc-text">聚合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#备份与恢复"><span class="toc-number">3.5.16.</span> <span class="toc-text">备份与恢复</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#监控"><span class="toc-number">3.5.17.</span> <span class="toc-text">监控</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#M高级操作"><span class="toc-number">3.6.</span> <span class="toc-text">M高级操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#M关系"><span class="toc-number">3.6.1.</span> <span class="toc-text">M关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M数据库引用"><span class="toc-number">3.6.2.</span> <span class="toc-text">M数据库引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M覆盖索引查询"><span class="toc-number">3.6.3.</span> <span class="toc-text">M覆盖索引查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M查询分析"><span class="toc-number">3.6.4.</span> <span class="toc-text">M查询分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M原子操作"><span class="toc-number">3.6.5.</span> <span class="toc-text">M原子操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M高级索引"><span class="toc-number">3.6.6.</span> <span class="toc-text">M高级索引</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#索引数组字段"><span class="toc-number">3.6.6.1.</span> <span class="toc-text">索引数组字段</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#索引子文档字段"><span class="toc-number">3.6.6.2.</span> <span class="toc-text">索引子文档字段</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M索引限制"><span class="toc-number">3.6.7.</span> <span class="toc-text">M索引限制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MObjectID"><span class="toc-number">3.6.8.</span> <span class="toc-text">MObjectID</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MMap-amp-Reduce"><span class="toc-number">3.6.9.</span> <span class="toc-text">MMap&amp;Reduce</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M全文索引"><span class="toc-number">3.6.10.</span> <span class="toc-text">M全文索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M正则表达式"><span class="toc-number">3.6.11.</span> <span class="toc-text">M正则表达式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M管理工具"><span class="toc-number">3.6.12.</span> <span class="toc-text">M管理工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MGridFS"><span class="toc-number">3.6.13.</span> <span class="toc-text">MGridFS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M固定集合"><span class="toc-number">3.6.14.</span> <span class="toc-text">M固定集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#M自动增长"><span class="toc-number">3.6.15.</span> <span class="toc-text">M自动增长</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -1234,15 +1285,11 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">django项目部署</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1250,15 +1297,7 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
+                <a href="javascript:void(0)" class="js-tag color4">小绿本</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1266,15 +1305,27 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">第三方模块</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">python部分内容详讲</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1306,11 +1357,11 @@ gitment.render('gitment-ctn')
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">git版本控制系统</a>
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+                <a href="javascript:void(0)" class="js-tag color5">git版本控制系统</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1327,6 +1378,10 @@ gitment.render('gitment-ctn')
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">rabbitmq</a>
               </li>
             
             <div class="clearfix"></div>
