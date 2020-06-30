@@ -117,6 +117,151 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-rabbitmq" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/02/rabbitmq/">rabbitmq</a>
+    </h1>
+  
+
+			
+			<a href="/2019/07/02/rabbitmq/" class="archive-article-date">
+  	<time datetime="2019-07-02T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-02</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">1.3k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">4min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Rabbit-MQ"><a href="#Rabbit-MQ" class="headerlink" title="Rabbit MQ"></a>Rabbit MQ</h2><h3 id="队列Queue"><a href="#队列Queue" class="headerlink" title="队列Queue"></a>队列Queue</h3><p>队列是一个储存、组织数据的数据结构（或者说容器），其最大的特点就是FIFO。</p>
+<h3 id="消息队列Message-Queue"><a href="#消息队列Message-Queue" class="headerlink" title="消息队列Message Queue"></a>消息队列Message Queue</h3><p>消息从一端发出后立即到达另一端，成为即时通讯（同步通信），</p>
+<p>消息从某一端发出后，首先进入一个容器临时储存，当达到某种条件后，再由这个容器发送到另一端，称为延迟消息通讯（异步通信），</p>
+<p>容器的一个具体实现就是MQ。</p>
+<h3 id="AMQP"><a href="#AMQP" class="headerlink" title="AMQP"></a>AMQP</h3><p>一个提供消息服务的应用层标准高级消息队列协议。消息发送者与消息的接收者双方遵循这个协议可以实现异步通讯，这个协议约定了消息的格式和工作方式。</p>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>异步处理</p>
+<p>应用解耦：订单系统与库存系统</p>
+<p>流量削峰：秒杀活动（控制活动人数，超过一定的阈值的订单直接丢弃）</p>
+<p>1.用户的请求,服务器收到之后,首先写入消息队列,加入消息队列长度超过最大值,则直接抛弃用户请求或跳转到错误页面.<br>2.秒杀业务根据消息队列中的请求信息，再做后续处理.</p>
+<p>好处：解耦、提速（生产者生产完了就不了）、广播（生产者生产完了放到容器，很多消费者都可以来消费）、削峰</p>
+<h3 id="系统架构"><a href="#系统架构" class="headerlink" title="系统架构"></a>系统架构</h3><p><img src="https://pic3.zhimg.com/80/v2-cf2ff62088efcca10d15162142015e82_720w.jpg" alt></p>
+<p>​        一般一个Message有两个部分：payload（有效载荷）和label（标签），payload顾名思义就是传输的数据，label是exchange的名字或者说是一个tag，它描述了payload，而且RabbitMQ也是通过这个label来决定把这个Message发给哪个Consumer</p>
+<p>概念说明：</p>
+<ul>
+<li><p>Broker：提供传输服务，它的角色是维护一条从生产者到消费者的路线，保证数据能按照指定的方式传输</p>
+</li>
+<li><p>Exchange：消息交换机，它收到消息后指定一个Routing Key来指定这个消息的路由规则，分发到Queue中</p>
+</li>
+<li><p>Queue：消息的载体，每个消息都会被投放到一个或多个队列</p>
+</li>
+<li><p>Binding：绑定，它的作用就是把Exchange和Queue按照路由规则绑定起来</p>
+</li>
+<li><p>vhost：虚拟主机，一个boker里可以有多个vhost，用作不同用户的权限分离</p>
+</li>
+<li><p>Publisher：消息生产者，投递消息的程序</p>
+</li>
+<li><p>Consumer：消息消费者，接收消息的程序</p>
+</li>
+<li><p>Channel：消息通道，<strong>Connection</strong>就是一个TCP的连接，Producer和Consumer都是通过TCP连接到RabbitMQ Server的；<strong>Channel</strong>是建立在上述的TCP连接中，因为建立TCP Connection的开销将是巨大的，所以是节省开销。Channel是我们与Rabbit MQ打交道的最重要的一个接口，我们大部分的业务操作是再Channel这个接口中完成的（包括定义Queue、定义Exchange、绑定Queue与Exchange、发布消息等）</p>
+</li>
+</ul>
+<h3 id="任务分发机制"><a href="#任务分发机制" class="headerlink" title="任务分发机制"></a>任务分发机制</h3><p>为了保证数据不被丢失,RabbitMQ支持消息确认机制,为了保证数据能被正确处理而不仅仅是被Consumer收到,那么我们不能采用no-ack，而应该是在处理完数据之后发送ack.<br>在处理完数据之后发送ack,就是告诉RabbitMQ数据已经被接收,处理完成,RabbitMQ可以安全的删除它了. </p>
+<h3 id="消息持久化"><a href="#消息持久化" class="headerlink" title="消息持久化"></a>消息持久化</h3><p>要持久化队列queue的持久化需要在声明时指定durable=True; </p>
+<h3 id="消息序列化"><a href="#消息序列化" class="headerlink" title="消息序列化"></a>消息序列化</h3><p>RabbitMQ使用ProtoBuf序列化消息,它可作为RabbitMQ的Message的数据格式进行传输</p>
+<h3 id="python操作"><a href="#python操作" class="headerlink" title="python操作"></a>python操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#生产者</span></span><br><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="keyword">import</span> pika</span><br><span class="line"><span class="comment"># 创建凭证，使用rabbitmq用户密码登录</span></span><br><span class="line"><span class="comment"># 去邮局取邮件，必须得验证身份</span></span><br><span class="line">credentials = pika.PlainCredentials(<span class="string">"xiaohu"</span>,<span class="string">"xiaohu666"</span>)</span><br><span class="line"><span class="comment"># 新建连接，这里localhost可以更换为服务器ip</span></span><br><span class="line"><span class="comment"># 找到这个邮局，等于连接上服务器</span></span><br><span class="line">connection = pika.BlockingConnection(pika.ConnectionParameters(<span class="string">'192.168.xx.xx'</span>,credentials=credentials))</span><br><span class="line"><span class="comment"># 创建频道</span></span><br><span class="line"><span class="comment"># 建造一个大邮箱，隶属于这家邮局的邮箱，就是个连接</span></span><br><span class="line">channel = connection.channel()</span><br><span class="line"><span class="comment"># 声明一个队列，用于接收消息，队列名字叫“西游记”</span></span><br><span class="line">channel.queue_declare(queue=<span class="string">'西游记'</span>)</span><br><span class="line"><span class="comment"># 注意在rabbitmq中，消息想要发送给队列，必须经过交换(exchange)，初学可以使用空字符串交换(exchange='')，它允许我们精确的指定发送给哪个队列(routing_key=''),参数body值发送的数据</span></span><br><span class="line">channel.basic_publish(exchange=<span class="string">''</span>,</span><br><span class="line">                      routing_key=<span class="string">'西游记'</span>,</span><br><span class="line">                      body=<span class="string">'大师兄，师傅被妖怪抓走了'</span>)</span><br><span class="line">print(<span class="string">"已经发送了消息"</span>)</span><br><span class="line"><span class="comment"># 程序退出前，确保刷新网络缓冲以及消息发送给rabbitmq，需要关闭本次连接</span></span><br><span class="line">connection.close()</span><br><span class="line"></span><br><span class="line"><span class="comment">#消费者</span></span><br><span class="line"><span class="keyword">import</span> pika</span><br><span class="line"><span class="comment"># 建立与rabbitmq的连接</span></span><br><span class="line"><span class="comment"># 前四行都是连接到同一个rabbitmq服务端以及同一个队列</span></span><br><span class="line">credentials = pika.PlainCredentials(<span class="string">"pl"</span>,<span class="string">"123"</span>)</span><br><span class="line">connection = pika.BlockingConnection(pika.ConnectionParameters(<span class="string">'192.168.xx.xx'</span>,credentials=credentials))</span><br><span class="line">channel = connection.channel()</span><br><span class="line">channel.queue_declare(queue=<span class="string">"西游记"</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">callbak</span><span class="params">(ch,method,properties,body)</span>:</span></span><br><span class="line">    print(<span class="string">"消费者取出了消息：%r"</span>%body.decode(<span class="string">"utf8"</span>))</span><br><span class="line"><span class="comment"># 有消息来临，立即执行callbak，没有消息则夯住，等待消息</span></span><br><span class="line"><span class="comment"># 老百姓开始去邮箱取邮件啦，队列名字是水许传</span></span><br><span class="line">channel.basic_consume(callbak,queue=<span class="string">"西游记"</span>,no_ack=<span class="literal">True</span>)  <span class="comment">#no_ack 不用确认 </span></span><br><span class="line"><span class="comment"># 开始消费，接收消息</span></span><br><span class="line">channel.start_consuming()</span><br></pre></td></tr></table></figure>
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">rabbitmq</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/02/rabbitmq/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
     <article id="post-小绿本/面试备战" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -141,7 +286,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">32.3k 字</span>
+        <span class="post-count">39.3k 字</span>
       </span>
     </span>
 
@@ -150,7 +295,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">123min</span>
+        <span class="post-count">149min</span>
       </span>
     </span>
 </div>
@@ -1162,124 +1307,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/">第十四讲——django综合扩展四之网站地图sitemap和信号signal</a>
-    </h1>
-  
-
-			
-			<a href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/" class="archive-article-date">
-  	<time datetime="2018-10-16T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.3k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">9min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="网站地图sitemap"><a href="#网站地图sitemap" class="headerlink" title="网站地图sitemap"></a>网站地图sitemap</h3><p>网站地图是根据网站的结构、框架、内容，生成的导航网页，是一个网站所有链接的容器。很多网站的连接层次比较深，蜘蛛很难抓取到，网站地图可以方便搜索引擎或者网络蜘蛛抓取网站页面，了解网站的架构，为网络蜘蛛指路，增加网站内容页面的收录概率。网站地图一般存放在域名根目录下并命名为sitemap。</p>
-<p>Django自带了一个高级的生成网站地图的框架，我们可以很容易地创建出XML格式的网站地图。创建网站地图，只需编写一个Sitemap类，并在URLconf中编写对应的访问路由。</p>
-        
-          <!---<a class="article-more-a" href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/16/书/Django/第十四讲——django综合扩展四之网站地图sitemap和信号signal/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
     </nav>
   
 
@@ -1501,6 +1531,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rabbitmq</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">MQTT</a>
               </li>
             
             <div class="clearfix"></div>

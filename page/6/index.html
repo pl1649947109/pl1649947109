@@ -117,6 +117,131 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-第三方模块/python操作office系列及cvs文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/25/第三方模块/python操作office系列及cvs文件/">python操作office系列及cvs文件</a>
+    </h1>
+  
+
+			
+			<a href="/2019/10/25/第三方模块/python操作office系列及cvs文件/" class="archive-article-date">
+  	<time datetime="2019-10-25T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-25</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">1.2k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">5min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="python操作office系列文件"><a href="#python操作office系列文件" class="headerlink" title="python操作office系列文件"></a>python操作office系列文件</h3><h4 id="Word自动化"><a href="#Word自动化" class="headerlink" title="Word自动化"></a>Word自动化</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>  win32com</span><br><span class="line"><span class="keyword">import</span> win32com.client</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">makeword</span><span class="params">(name)</span>:</span></span><br><span class="line">    print(name)</span><br><span class="line">    <span class="comment">#操作word,</span></span><br><span class="line">    word=win32com.client.Dispatch(<span class="string">"Word.Application"</span>)<span class="comment">#启动word引擎</span></span><br><span class="line">    doc=word.Documents.Add() <span class="comment">#插入文档</span></span><br><span class="line">    word.Visible=<span class="literal">True</span> <span class="comment">#可见</span></span><br><span class="line">    rng=doc.Range(<span class="number">0</span>,<span class="number">0</span>)<span class="comment">#开始位置</span></span><br><span class="line">    rng.InsertAfter(<span class="string">u"尊敬的%s先生\n"</span>%name)<span class="comment">#匹配字符串</span></span><br><span class="line">    rng.InsertAfter(<span class="string">u"    我是xxx，定于2017.10.1与ccc大婚，诚邀来参加婚礼，先准备好分子钱"</span>)</span><br><span class="line">    filename=<span class="string">"C:\\Users\\Administrator\\Desktop\\"</span>+name+<span class="string">".doc"</span></span><br><span class="line">    doc.SaveAs(filename)<span class="comment">#保存</span></span><br><span class="line">doc.Close(<span class="literal">True</span>)<span class="comment">#关闭</span></span><br><span class="line">    word.Application.Quit()<span class="comment">#退出</span></span><br><span class="line">names=[<span class="string">"李鑫"</span>,<span class="string">"申羚锐"</span>,<span class="string">"何丰城"</span>,<span class="string">"孙雨"</span>]</span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> names:</span><br><span class="line">    makeword(name)</span><br></pre></td></tr></table></figure>
+
+<h4 id="Excle办公自动化"><a href="#Excle办公自动化" class="headerlink" title="Excle办公自动化"></a>Excle办公自动化</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>  win32com</span><br><span class="line"><span class="keyword">import</span> win32com.client</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">makeexcel</span><span class="params">(name)</span>:</span></span><br><span class="line">    print(name)</span><br><span class="line">    <span class="comment">#操作word,</span></span><br><span class="line">    ex=win32com.client.Dispatch(<span class="string">"Excel.Application"</span>)</span><br><span class="line">    wk=ex.Workbooks.Add()<span class="comment">#加一张表格</span></span><br><span class="line">    nowwk=wk.ActiveSheet <span class="comment">#当前的焦点表格</span></span><br><span class="line">    ex.Visible=<span class="literal">True</span><span class="comment">#显示</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">10</span>):</span><br><span class="line">        nowwk.Cells(i,i).value=name+str(i)<span class="comment">#插入数据Cells方法参数为横坐标和纵坐标</span></span><br><span class="line">    filename = <span class="string">"C:\\Users\\Administrator\\Desktop\\"</span> + name + <span class="string">".xls"</span></span><br><span class="line">    wk.SaveAs(filename) <span class="comment">#保存</span></span><br><span class="line">    wk.Close(<span class="literal">True</span>)<span class="comment">#关闭</span></span><br><span class="line">    ex.Application.Quit()<span class="comment">#退出</span></span><br><span class="line">names=[<span class="string">"xxx"</span>,<span class="string">"ccc"</span>,<span class="string">"vvv"</span>,<span class="string">"bbb"</span>]</span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> names:</span><br><span class="line">    makeexcel(name)</span><br></pre></td></tr></table></figure>
+
+<p>扩展：</p>
+<h5 id="用xlrd包读取Excle文件"><a href="#用xlrd包读取Excle文件" class="headerlink" title="用xlrd包读取Excle文件"></a>用xlrd包读取Excle文件</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 引用包</span></span><br><span class="line">	<span class="keyword">import</span> xlrd</span><br><span class="line"><span class="comment"># 打开文件</span></span><br><span class="line">	xlrd.open_workbook(<span class="string">r'/root/excel/chat.xls'</span>)</span><br><span class="line"><span class="comment"># 获取所有sheet</span></span><br><span class="line">	sheet_name = workbook.sheet_names()[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 根据sheet索引或者名称获取sheet内容</span></span><br><span class="line">	sheet = workbook.sheet_by_index(<span class="number">0</span>) <span class="comment"># sheet索引从0开始</span></span><br><span class="line"><span class="comment"># 获取指定单元格里面的值</span></span><br><span class="line">	sheet.cell_value(第几行,第几列)</span><br><span class="line"><span class="comment"># 获取某行或者某列的值</span></span><br><span class="line">    rows = sheet.row_values(<span class="number">1</span>) <span class="comment"># 获取第2行内容</span></span><br><span class="line">    cols = sheet.col_values(<span class="number">2</span>) <span class="comment"># 获取第3列内容</span></span><br><span class="line"><span class="comment"># 获取sheet的名称、行数、列数</span></span><br><span class="line">	<span class="keyword">print</span> (sheet.name,sheet.nrows,sheet.ncols)</span><br><span class="line"><span class="comment">#源码：</span></span><br><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> date,datetime</span><br><span class="line"></span><br><span class="line">arrayNum = <span class="number">6</span></span><br><span class="line"><span class="comment">#array = &#123;'L1':'','L2':'','L3':'','L4':'','Question':'','Answer':''&#125;</span></span><br><span class="line">tables = []</span><br><span class="line">newTables = []</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read_excel</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 打开文件</span></span><br><span class="line">    workbook = xlrd.open_workbook(<span class="string">r'/root/chat.xls'</span>)</span><br><span class="line">    <span class="comment"># 获取所有sheet</span></span><br><span class="line">    sheet_name = workbook.sheet_names()[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 根据sheet索引或者名称获取sheet内容</span></span><br><span class="line">    sheet = workbook.sheet_by_index(<span class="number">0</span>) <span class="comment"># sheet索引从0开始</span></span><br><span class="line">    <span class="comment"># sheet = workbook.sheet_by_name('Sheet1')</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#print (workboot.sheets()[0])</span></span><br><span class="line">    <span class="comment"># sheet的名称，行数，列数</span></span><br><span class="line">    <span class="keyword">print</span> (sheet.name,sheet.nrows,sheet.ncols)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取整行和整列的值（数组）</span></span><br><span class="line">    rows = sheet.row_values(<span class="number">1</span>) <span class="comment"># 获取第2行内容</span></span><br><span class="line">    <span class="comment"># cols = sheet.col_values(2) # 获取第3列内容</span></span><br><span class="line">    <span class="keyword">print</span> (rows)</span><br><span class="line">    <span class="comment"># print (cols)</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> rown <span class="keyword">in</span> range(sheet.nrows):</span><br><span class="line">       array = &#123;<span class="string">'L1'</span>:<span class="string">''</span>,<span class="string">'L2'</span>:<span class="string">''</span>,<span class="string">'L3'</span>:<span class="string">''</span>,<span class="string">'L4'</span>:<span class="string">''</span>,<span class="string">'Question'</span>:<span class="string">''</span>,<span class="string">'Answer'</span>:<span class="string">''</span>&#125;</span><br><span class="line">       array[<span class="string">'L1'</span>] = sheet.cell_value(rown,<span class="number">0</span>)</span><br><span class="line">       array[<span class="string">'L2'</span>] = sheet.cell_value(rown,<span class="number">1</span>)</span><br><span class="line">       array[<span class="string">'L3'</span>] = sheet.cell_value(rown,<span class="number">2</span>)</span><br><span class="line">       array[<span class="string">'L4'</span>] = sheet.cell_value(rown,<span class="number">3</span>)</span><br><span class="line">       array[<span class="string">'Question'</span>] = sheet.cell_value(rown,<span class="number">4</span>)</span><br><span class="line">       array[<span class="string">'Answer'</span>] = sheet.cell_value(rown,<span class="number">5</span>)</span><br><span class="line">       tables.append(array)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">print</span> (len(tables))</span><br><span class="line">    <span class="comment">#print (tables)</span></span><br><span class="line">    <span class="comment">#print (tables[5])</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># 读取Excel</span></span><br><span class="line">    read_excel();</span><br><span class="line">    <span class="keyword">print</span> (<span class="string">'读取成功'</span>)</span><br></pre></td></tr></table></figure>
+
+<h5 id="用openpyxl包写入Excle文件"><a href="#用openpyxl包写入Excle文件" class="headerlink" title="用openpyxl包写入Excle文件"></a>用openpyxl包写入Excle文件</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 引用包</span></span><br><span class="line">	<span class="keyword">import</span> openpyxl</span><br><span class="line"><span class="comment"># 创建工作簿</span></span><br><span class="line">	f = openpyxl.Workbook() <span class="comment">#创建工作簿</span></span><br><span class="line"><span class="comment"># 创建sheet</span></span><br><span class="line">	sheet1 = f.create_sheet()</span><br><span class="line"><span class="comment"># 设置每个单元格里面的值</span></span><br><span class="line">	 <span class="keyword">for</span> jkey <span class="keyword">in</span> range(len(newTables)):</span><br><span class="line">    jk = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> cT <span class="keyword">in</span> range(arrayNum):</span><br><span class="line">      jk = jkey + <span class="number">1</span></span><br><span class="line">      <span class="keyword">if</span> cT == <span class="number">0</span>:</span><br><span class="line">        sheet1.cell(row=jk,column=cT+<span class="number">1</span>).value=<span class="string">'1'</span></span><br><span class="line">      <span class="keyword">else</span>:</span><br><span class="line">        sheet1.cell(row=jk,column=cT+<span class="number">1</span>).value=<span class="string">'2'</span></span><br><span class="line"><span class="comment"># 保存文件</span></span><br><span class="line">	f.save(<span class="string">"chatPy.xlsx"</span>) <span class="comment">#保存文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#源码实例</span></span><br><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line"><span class="comment">#写excel</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">write_excel</span><span class="params">()</span>:</span></span><br><span class="line">    f = openpyxl.Workbook() <span class="comment">#创建工作簿</span></span><br><span class="line"></span><br><span class="line">    sheet1 = f.create_sheet()</span><br><span class="line">    <span class="comment">#sheet1 = f.add_sheet(u'sheet1',cell_overwrite_ok=True) #创建sheet</span></span><br><span class="line">    row0 = [<span class="string">u'L1'</span>,<span class="string">u'L2'</span>,<span class="string">u'L3'</span>,<span class="string">u'L4'</span>,<span class="string">u'问题'</span>,<span class="string">u'答案'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment">#生成第一行</span></span><br><span class="line">    <span class="comment">#for i in range(len(row0)):</span></span><br><span class="line">    <span class="comment">#    sheet1.cell(column=i,row=0).value='L1')</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#生成后续</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> jkey <span class="keyword">in</span> range(len(newTables)): </span><br><span class="line">       jk = <span class="number">1</span></span><br><span class="line">       <span class="keyword">for</span> cT <span class="keyword">in</span> range(arrayNum):</span><br><span class="line">         jk = jkey + <span class="number">1</span></span><br><span class="line">         <span class="keyword">if</span> cT == <span class="number">0</span>:</span><br><span class="line">           sheet1.cell(row=jk,column=cT+<span class="number">1</span>).value=<span class="string">'1'</span></span><br><span class="line">         <span class="keyword">else</span>:</span><br><span class="line">           sheet1.cell(row=jk,column=cT+<span class="number">1</span>).value=<span class="string">'2'</span></span><br><span class="line">           </span><br><span class="line">    f.save(<span class="string">"chatPy.xlsx"</span>) <span class="comment">#保存文件</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># 写入Excel</span></span><br><span class="line">    write_excel();</span><br><span class="line">    <span class="keyword">print</span> (<span class="string">'写入成功'</span>)</span><br></pre></td></tr></table></figure>
+
+<h5 id="用xlsxwriter包写入Excle文件"><a href="#用xlsxwriter包写入Excle文件" class="headerlink" title="用xlsxwriter包写入Excle文件"></a>用xlsxwriter包写入Excle文件</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#引用包</span></span><br><span class="line"><span class="keyword">import</span> xlsxwriter</span><br><span class="line"><span class="comment">#创建工作簿</span></span><br><span class="line">workbook = xlsxwriter.Workbook(<span class="string">'demo1.xlsx'</span>)<span class="comment">#创建一个excel文件</span></span><br><span class="line"><span class="comment">#创建sheet</span></span><br><span class="line">worksheet = workbook.add_worksheet(<span class="string">u'sheet1'</span>)<span class="comment">#在文件中创建一个名为TEST的sheet,不加名字默认为sheet1</span></span><br><span class="line"><span class="comment">#设置单元格里面的值</span></span><br><span class="line">worksheet.write(<span class="number">3</span>,<span class="number">0</span>,<span class="number">35.5</span>)<span class="comment">#第4行的第1列设置值为35.5</span></span><br><span class="line"><span class="comment">#关闭工作簿</span></span><br><span class="line">workbook.close()</span><br><span class="line"></span><br><span class="line"><span class="comment">#源码：</span></span><br><span class="line"><span class="keyword">import</span> xlsxwriter</span><br><span class="line"></span><br><span class="line"><span class="comment">#写excel</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">write_excel</span><span class="params">()</span>:</span> </span><br><span class="line">  workbook = xlsxwriter.Workbook(<span class="string">'chat.xlsx'</span>)<span class="comment">#创建一个excel文件</span></span><br><span class="line">  worksheet = workbook.add_worksheet(<span class="string">u'sheet1'</span>)<span class="comment">#在文件中创建一个名为TEST的sheet,不加名字默认为sheet1</span></span><br><span class="line"> </span><br><span class="line">  worksheet.set_column(<span class="string">'A:A'</span>,<span class="number">20</span>)<span class="comment">#设置第一列宽度为20像素</span></span><br><span class="line">  bold= workbook.add_format(&#123;<span class="string">'bold'</span>:<span class="literal">True</span>&#125;)<span class="comment">#设置一个加粗的格式对象</span></span><br><span class="line"> </span><br><span class="line">  worksheet.write(<span class="string">'A1'</span>,<span class="string">'HELLO'</span>)<span class="comment">#在A1单元格写上HELLO</span></span><br><span class="line">  worksheet.write(<span class="string">'A2'</span>,<span class="string">'WORLD'</span>,bold)<span class="comment">#在A2上写上WORLD,并且设置为加粗</span></span><br><span class="line">  worksheet.write(<span class="string">'B2'</span>,U<span class="string">'中文测试'</span>,bold)<span class="comment">#在B2上写上中文加粗</span></span><br><span class="line"> </span><br><span class="line">  worksheet.write(<span class="number">2</span>,<span class="number">0</span>,<span class="number">32</span>)<span class="comment">#使用行列的方式写上数字32,35,5</span></span><br><span class="line">  worksheet.write(<span class="number">3</span>,<span class="number">0</span>,<span class="number">35.5</span>)<span class="comment">#使用行列的时候第一行起始为0,所以2,0代表着第三行的第一列,等价于A4</span></span><br><span class="line">  worksheet.write(<span class="number">4</span>,<span class="number">0</span>,<span class="string">'=SUM(A3:A4)'</span>)<span class="comment">#写上excel公式</span></span><br><span class="line">  workbook.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># 写入Excel</span></span><br><span class="line">    write_excel();</span><br><span class="line">    <span class="keyword">print</span> (<span class="string">'写入成功'</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="PPT办公自动化"><a href="#PPT办公自动化" class="headerlink" title="PPT办公自动化"></a>PPT办公自动化</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>  win32com</span><br><span class="line"><span class="keyword">import</span> win32com.client</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">makeppt</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        ppt=win32com.client.Dispatch(<span class="string">"PowerPoint.Application"</span>)</span><br><span class="line">        pres=ppt.Presentations.Add()<span class="comment">#增加一个页面</span></span><br><span class="line">        ppt.Visible=<span class="literal">True</span></span><br><span class="line">        s1=pres.Slides.Add(<span class="number">1</span>,<span class="number">1</span>) <span class="comment">#增加一个页面</span></span><br><span class="line">        s1_0=s1.Shapes[<span class="number">0</span>].TextFrame.TextRange <span class="comment">#找到第一个文本</span></span><br><span class="line">        s1_0.Text=<span class="string">"尊敬的%s"</span>%name</span><br><span class="line">        s1_1 = s1.Shapes[<span class="number">1</span>].TextFrame.TextRange  <span class="comment"># 找到第2个文本</span></span><br><span class="line">        s1_1.Text = <span class="string">"hello world"</span></span><br><span class="line">        filename = <span class="string">"C:\\Users\\ts\\Desktop\\"</span> + name + <span class="string">".ppt"</span></span><br><span class="line">        pres.SaveAs(filename)  <span class="comment"># 保存</span></span><br><span class="line">        pres.Close()  <span class="comment"># 关闭</span></span><br><span class="line">        ppt.Application.Quit()  <span class="comment"># 退出</span></span><br><span class="line">    <span class="keyword">except</span> AttributeError:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">names=[<span class="string">"xxx"</span>,<span class="string">"ccc"</span>,<span class="string">"vvv"</span>,<span class="string">"bbb"</span>]</span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> names:</span><br><span class="line">    makeppt(name)</span><br></pre></td></tr></table></figure>
+
+<h3 id="python读写cvs文件"><a href="#python读写cvs文件" class="headerlink" title="python读写cvs文件"></a>python读写cvs文件</h3><p><a href="https://blog.csdn.net/guoziqing506/article/details/52014506" target="_blank" rel="noopener">https://blog.csdn.net/guoziqing506/article/details/52014506</a></p>
+
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/25/第三方模块/python操作office系列及cvs文件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
     <article id="post-小绿本/第二部分——并发与网络编程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -237,120 +362,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-小绿本/第一部分——Python基础篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/20/小绿本/第一部分——Python基础篇/">第一部分——Python基础篇</a>
-    </h1>
-  
-
-			
-			<a href="/2019/10/20/小绿本/第一部分——Python基础篇/" class="archive-article-date">
-  	<time datetime="2019-10-20T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">15.1k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">62min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Python基础篇"><a href="#Python基础篇" class="headerlink" title="Python基础篇"></a>Python基础篇</h2><h3 id="1：为什么学习Python"><a href="#1：为什么学习Python" class="headerlink" title="1：为什么学习Python"></a>1：为什么学习Python</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">家里有在这个IT圈子里面，也想让我接触这个圈子，然后给我建议学的Python，然后自己通过百度和向有学过Python的同学了解了Python，Python这门语言，入门比较简单，它简单易学，生态圈比较强大，涉及的地方比较多，特别是在人工智能，和数据分析这方面。在未来我觉得是往自动化，人工智能这方面发展的，所以学习了Python</span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2019/10/20/小绿本/第一部分——Python基础篇/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小绿本</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/20/小绿本/第一部分——Python基础篇/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
     <article id="post-书/drf/知识带入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -437,6 +448,120 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/10/20/书/drf/知识带入/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-小绿本/第一部分——Python基础篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/20/小绿本/第一部分——Python基础篇/">第一部分——Python基础篇</a>
+    </h1>
+  
+
+			
+			<a href="/2019/10/20/小绿本/第一部分——Python基础篇/" class="archive-article-date">
+  	<time datetime="2019-10-20T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">15.1k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">62min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Python基础篇"><a href="#Python基础篇" class="headerlink" title="Python基础篇"></a>Python基础篇</h2><h3 id="1：为什么学习Python"><a href="#1：为什么学习Python" class="headerlink" title="1：为什么学习Python"></a>1：为什么学习Python</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">家里有在这个IT圈子里面，也想让我接触这个圈子，然后给我建议学的Python，然后自己通过百度和向有学过Python的同学了解了Python，Python这门语言，入门比较简单，它简单易学，生态圈比较强大，涉及的地方比较多，特别是在人工智能，和数据分析这方面。在未来我觉得是往自动化，人工智能这方面发展的，所以学习了Python</span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2019/10/20/小绿本/第一部分——Python基础篇/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小绿本</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/20/小绿本/第一部分——Python基础篇/">展开全文 >></a>
         </p>
       
 
@@ -706,6 +831,125 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-书/Elasticsearch" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/10/书/Elasticsearch/">Elasticsearch</a>
+    </h1>
+  
+
+			
+			<a href="/2019/10/10/书/Elasticsearch/" class="archive-article-date">
+  	<time datetime="2019-10-10T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">1.6k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">7min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Elasticsearch"><a href="#Elasticsearch" class="headerlink" title="Elasticsearch"></a>Elasticsearch</h3><p>解释：Elasticsearch是一个基于Lucene的高扩展的分布式、RESTFul风格的搜索和分析引擎，支持开箱即用；Elasticsearch隐藏了Lecene的复杂性，对外提供Restful接口来操作索引、搜索。</p>
+<p>优点：</p>
+<ul>
+<li>扩展性好，可部署上百台服务器集群，处理PB级数据</li>
+<li>接近实时去索引数据、搜索数据</li>
+</ul>
+        
+          <!---<a class="article-more-a" href="/2019/10/10/书/Elasticsearch/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">elasticsearch</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/10/书/Elasticsearch/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
     <article id="post-celery应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -797,125 +1041,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/10/10/celery应用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-书/Elasticsearch" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/10/书/Elasticsearch/">Elasticsearch</a>
-    </h1>
-  
-
-			
-			<a href="/2019/10/10/书/Elasticsearch/" class="archive-article-date">
-  	<time datetime="2019-10-10T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.6k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">7min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Elasticsearch"><a href="#Elasticsearch" class="headerlink" title="Elasticsearch"></a>Elasticsearch</h3><p>解释：Elasticsearch是一个基于Lucene的高扩展的分布式、RESTFul风格的搜索和分析引擎，支持开箱即用；Elasticsearch隐藏了Lecene的复杂性，对外提供Restful接口来操作索引、搜索。</p>
-<p>优点：</p>
-<ul>
-<li>扩展性好，可部署上百台服务器集群，处理PB级数据</li>
-<li>接近实时去索引数据、搜索数据</li>
-</ul>
-        
-          <!---<a class="article-more-a" href="/2019/10/10/书/Elasticsearch/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">elasticsearch</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/10/书/Elasticsearch/">展开全文 >></a>
         </p>
       
 
@@ -1189,136 +1314,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/git/GIT版本管理工具教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/06/书/git/GIT版本管理工具教程/">git——GIT版本管理工具教程</a>
-    </h1>
-  
-
-			
-			<a href="/2019/10/06/书/git/GIT版本管理工具教程/" class="archive-article-date">
-  	<time datetime="2019-10-06T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-06</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">9.9k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">36min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="GIT版本管理工具教程"><a href="#GIT版本管理工具教程" class="headerlink" title="GIT版本管理工具教程"></a>GIT版本管理工具教程</h1><h2 id="一-Git初始化"><a href="#一-Git初始化" class="headerlink" title="一 Git初始化"></a>一 Git初始化</h2><ol>
-<li><p>下载安装， 下载地址： <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a> 每个系统的都有（linux、mac、windows等），看官网的安装教程，很详细，此处我以windows来练习 </p>
-</li>
-<li><p>首先创建一个文件夹，这个文件夹就是我们将来通过git来管理的所有文件的存放地点 。</p>
-</li>
-<li><p>在文件夹中右键 使用Git Bash </p>
-</li>
-<li><p>在弹出的窗口中执行初始化指令，让git帮我们对这个文件夹中的所有文件以及文件夹进行管理 </p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init  #创建git版本管理的本地仓库</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>产生的.git文件夹用来存放你管理的文件的所有版本以及git配置相关的内容，不要轻易动它</p>
-</li>
-</ol>
-        
-          <!---<a class="article-more-a" href="/2019/10/06/书/git/GIT版本管理工具教程/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">git版本控制系统</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/06/书/git/GIT版本管理工具教程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
     </nav>
   
 
@@ -1540,6 +1538,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rabbitmq</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">MQTT</a>
               </li>
             
             <div class="clearfix"></div>

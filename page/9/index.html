@@ -117,19 +117,19 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-第三方模块/requests——网络请求模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-第三方模块/epoll——线程相关模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/第三方模块/requests——网络请求模块/">requests和Django中的request对象</a>
+      <a class="article-title" href="/2019/08/22/第三方模块/epoll——线程相关模块/">epoll——线程相关模块</a>
     </h1>
   
 
 			
-			<a href="/2019/08/22/第三方模块/requests——网络请求模块/" class="archive-article-date">
+			<a href="/2019/08/22/第三方模块/epoll——线程相关模块/" class="archive-article-date">
   	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
 </a>
 			
@@ -141,7 +141,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.5k 字</span>
+        <span class="post-count">1.7k 字</span>
       </span>
     </span>
 
@@ -150,7 +150,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">10min</span>
+        <span class="post-count">6min</span>
       </span>
     </span>
 </div>
@@ -164,26 +164,12 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Django-request对象"><a href="#Django-request对象" class="headerlink" title="Django request对象"></a>Django request对象</h3><p>介绍：服务器接收到http协议的请求之后，会根据包文创建HttpRequest对象，这个对象不需要我们创建，直接使用服务器构造好的对象就可以。视图的第一个参数必须是HttpRequest对象，再djando.http模块中定义了HttpRequest对象的API。</p>
-<h3 id="request的对象"><a href="#request的对象" class="headerlink" title="request的对象"></a>request的对象</h3><p>这个对象也就是视图的第一个参数def  func(request):</p>
-<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a><strong>属性</strong></h4><ul>
-<li><p>path：请求页面的相对路径，但是不包括域名：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(request)</span>:</span></span><br><span class="line">	<span class="keyword">print</span> (retuest.path)</span><br><span class="line">    <span class="keyword">print</span> (request.get_ful_path())</span><br><span class="line">结果：</span><br><span class="line"><span class="string">"/music/renran/"</span>（这个路径就是文件再服务器上的地址）</span><br><span class="line"><span class="string">"music/renren?a=1&amp;b=2"</span></span><br><span class="line"></span><br><span class="line">扩展：</span><br><span class="line">获取相对路径:request.get_info</span><br><span class="line">获取全路径:request.get_ful_path()</span><br><span class="line">获取绝对url:request.build_absolute_uri()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>method:提交请求使用的HTTP方法。总是大写：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> request.method ==‘GET/POST’:</span><br><span class="line">	do_something</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>GET:一个类字典对象，包含所有的HTTP的get参数信息。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">获取get方式表单中或url提交的数据</span><br><span class="line">request.POST[<span class="string">"username"</span>]</span><br><span class="line">request.POST.get(<span class="string">"username"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#注意：虽然上面的两种方式都可以取得username的值，但是如果POST对象中没有username，那么使用request.POST["username"]就会报错，而request.POST.get("username")不会报错，而是返回一个None。</span></span><br><span class="line">其实上面的这个问题也很好解决：</span><br><span class="line">request.POST[<span class="string">"username"</span>,<span class="literal">None</span>]，加个<span class="literal">None</span>就很好的解决了</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>POST：一个类字典对象，包涵所有的HTTP的POST参数的信息（提交表单，但是可以是空，不包含文件的上传）。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取post中表单键值数据</span></span><br><span class="line">request.POST  <span class="comment">#&lt;QueryDict: &#123;"username":"pl"&#125;&gt;  </span></span><br><span class="line">request.POST.dict()   <span class="comment">#&#123;"username":"pl"&#125;</span></span><br><span class="line">request.POST.get(<span class="string">"username"</span>)   <span class="comment">#"pl"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#总结：</span></span><br><span class="line">request.POST适合接收表单数据，表单数据一般比较简单，面对复杂的数据时，即使是一个简单的list接受后都会变形(元素变成字符串),处理起来不方便。</span><br><span class="line"></span><br><span class="line">request.body可以方便的提交复杂的结构化数据，特别适合RESTful的接口</span><br><span class="line"></span><br><span class="line"><span class="comment">#实例对比POST和body的数据</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"body:"</span>,request.body)</span><br><span class="line">print(request.body.decode(<span class="string">'utf-8'</span>))</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"--------------"</span>)</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"POST:"</span>,request.POST)</span><br><span class="line">print(request.POST.dict())</span><br><span class="line"><span class="comment">#结果（input的name=pl,value=pl）</span></span><br><span class="line">body: <span class="string">b'pl=pl'</span>	<span class="comment">#body的原始数据是bytes类型，所以进行json转换的时候非常的容易转换和处理</span></span><br><span class="line">pl=pl    <span class="comment">#解码之后直接就拿到了字符串数据</span></span><br><span class="line">--------------</span><br><span class="line">POST: &lt;QueryDict: &#123;<span class="string">'pl'</span>: [<span class="string">'pl'</span>]&#125;&gt;   <span class="comment">#POST拿到请求字典形式的数据，它和字典类似又不一样，获取它里面的数据的详细信息在下面的知识扩展里面</span></span><br><span class="line">&#123;<span class="string">'pl'</span>: <span class="string">'pl'</span>&#125;	<span class="comment">#这个方法就是获取它的字典属性</span></span><br><span class="line"><span class="comment">#注意：提交数据的时候，input中的name千万别忘记写了，不然是收不到数据的</span></span><br><span class="line">这里有一个建议，当你成功处理POST数据后，应当保持一个良好的习惯，始终返回一个HttpResponseRedirect。这不仅仅是对Django而言，它是一个良好的WEB开发习惯。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>COOKIES：一个标准的python字典，包涵所有的cookie(键值都是字符串)。</p>
-</li>
-</ul>
+        <p>简介：对比select(),poll(),epoll()三个模块。他们都是IO多路复用的具体的实现。</p>
+<p><strong>Select</strong>：对多次调用不友好，内核开销大，监听连接数目有限，不是线程安全。</p>
+<p><strong>Poll</strong>：对其进行了改进，但是还有很多的问题epoll 可以说是I/O 多路复用最新的一个实现。</p>
+<p>*<em>epoll *</em>：修复了poll 和select绝大部分问题。 </p>
         
-          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/requests——网络请求模块/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/epoll——线程相关模块/#more">more >></a>--->
         
       
 	  
@@ -214,7 +200,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/第三方模块/requests——网络请求模块/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/22/第三方模块/epoll——线程相关模块/">展开全文 >></a>
         </p>
       
 
@@ -248,19 +234,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-第三方模块/mutiprocessing——进程模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-第三方模块/pymysql——和数据库交互的模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">mutiprocessing——多进程管理包</a>
+      <a class="article-title" href="/2019/08/22/第三方模块/pymysql——和数据库交互的模块/">pymysql——和数据库交互的模块</a>
     </h1>
   
 
 			
-			<a href="/2019/08/22/第三方模块/mutiprocessing——进程模块/" class="archive-article-date">
+			<a href="/2019/08/22/第三方模块/pymysql——和数据库交互的模块/" class="archive-article-date">
   	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
 </a>
 			
@@ -272,7 +258,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">523 字</span>
+        <span class="post-count">850 字</span>
       </span>
     </span>
 
@@ -281,7 +267,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1min</span>
+        <span class="post-count">3min</span>
       </span>
     </span>
 </div>
@@ -295,17 +281,12 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <p>multiprocessing支持子进程、通信和数据共享、执行不同形式的同步。提供了<strong>Process、Queue、Pipe、Lock</strong>等组件</p>
-<h3 id="Process类"><a href="#Process类" class="headerlink" title="Process类"></a>Process类</h3><p>构造方法：</p>
-<p><strong>init</strong>(self, group=None, target=None, name=None, args=(), kwargs={})</p>
-<p><strong>参数说明</strong></p>
-<p>group：扩展参数</p>
-<p>target：表示调用对象任务。</p>
-<p>name：给子进程取别名。</p>
-<p>args：表示条用对象的位置参数元组。</p>
-<p>kwargs：表示调用对象的字典。</p>
+        <p>Python 数据库的Connection、Cursor两大对象</p>
+<p><img src="http://9017499461.linshutu.top/%E6%95%B0%E6%8D%AE%E5%BA%931.png" alt></p>
+<p>两者的比喻：</p>
+<p><img src="http://9017499461.linshutu.top/%E6%95%B0%E6%8D%AE%E5%BA%932.png" alt></p>
         
-          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/#more">more >></a>--->
+          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/pymysql——和数据库交互的模块/#more">more >></a>--->
         
       
 	  
@@ -336,7 +317,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/22/第三方模块/pymysql——和数据库交互的模块/">展开全文 >></a>
         </p>
       
 
@@ -463,6 +444,128 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/08/22/第三方模块/docx——word文档模块/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-第三方模块/mutiprocessing——进程模块" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">mutiprocessing——多进程管理包</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/22/第三方模块/mutiprocessing——进程模块/" class="archive-article-date">
+  	<time datetime="2019-08-22T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">523 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>multiprocessing支持子进程、通信和数据共享、执行不同形式的同步。提供了<strong>Process、Queue、Pipe、Lock</strong>等组件</p>
+<h3 id="Process类"><a href="#Process类" class="headerlink" title="Process类"></a>Process类</h3><p>构造方法：</p>
+<p><strong>init</strong>(self, group=None, target=None, name=None, args=(), kwargs={})</p>
+<p><strong>参数说明</strong></p>
+<p>group：扩展参数</p>
+<p>target：表示调用对象任务。</p>
+<p>name：给子进程取别名。</p>
+<p>args：表示条用对象的位置参数元组。</p>
+<p>kwargs：表示调用对象的字典。</p>
+        
+          <!---<a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方模块</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/22/第三方模块/mutiprocessing——进程模块/">展开全文 >></a>
         </p>
       
 
@@ -750,122 +853,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-部分详讲/python之正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/05/部分详讲/python之正则表达式/">python之正则表达式</a>
-    </h1>
-  
-
-			
-			<a href="/2019/08/05/部分详讲/python之正则表达式/" class="archive-article-date">
-  	<time datetime="2019-08-05T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">6k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">23min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>导读：我们都知道学习一项技能是为了解决我们的问题的，那么正则表达式是干什么的呢？有哪些内容呢？有哪些应用呢?那么，我们下面将围绕着这三个问题进行详述。</p>
-<p><strong>首先，我们要知道什么是正则表达式</strong></p>
-<p>​        正则表达式(re)，计算机科学的一个概念。它通常被用来检索、替换那些符合某个（规则）的文本。</p>
-        
-          <!---<a class="article-more-a" href="/2019/08/05/部分详讲/python之正则表达式/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">python部分内容详讲</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/05/部分详讲/python之正则表达式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
     <article id="post-部分详讲/类比分析python异步模块asyncio、aiohttp、gevent" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -969,6 +956,122 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/08/05/部分详讲/类比分析python异步模块asyncio、aiohttp、gevent/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
+    <article id="post-部分详讲/python之正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/05/部分详讲/python之正则表达式/">python之正则表达式</a>
+    </h1>
+  
+
+			
+			<a href="/2019/08/05/部分详讲/python之正则表达式/" class="archive-article-date">
+  	<time datetime="2019-08-05T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">6k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">23min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>导读：我们都知道学习一项技能是为了解决我们的问题的，那么正则表达式是干什么的呢？有哪些内容呢？有哪些应用呢?那么，我们下面将围绕着这三个问题进行详述。</p>
+<p><strong>首先，我们要知道什么是正则表达式</strong></p>
+<p>​        正则表达式(re)，计算机科学的一个概念。它通常被用来检索、替换那些符合某个（规则）的文本。</p>
+        
+          <!---<a class="article-more-a" href="/2019/08/05/部分详讲/python之正则表达式/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">python部分内容详讲</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/05/部分详讲/python之正则表达式/">展开全文 >></a>
         </p>
       
 
@@ -1251,154 +1354,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-rabbitmq" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/02/rabbitmq/">rabbitmq</a>
-    </h1>
-  
-
-			
-			<a href="/2019/07/02/rabbitmq/" class="archive-article-date">
-  	<time datetime="2019-07-02T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-02</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">1.3k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Rabbit-MQ"><a href="#Rabbit-MQ" class="headerlink" title="Rabbit MQ"></a>Rabbit MQ</h2><h3 id="队列Queue"><a href="#队列Queue" class="headerlink" title="队列Queue"></a>队列Queue</h3><p>队列是一个储存、组织数据的数据结构（或者说容器），其最大的特点就是FIFO。</p>
-<h3 id="消息队列Message-Queue"><a href="#消息队列Message-Queue" class="headerlink" title="消息队列Message Queue"></a>消息队列Message Queue</h3><p>消息从一端发出后立即到达另一端，成为即时通讯（同步通信），</p>
-<p>消息从某一端发出后，首先进入一个容器临时储存，当达到某种条件后，再由这个容器发送到另一端，称为延迟消息通讯（异步通信），</p>
-<p>容器的一个具体实现就是MQ。</p>
-<h3 id="AMQP"><a href="#AMQP" class="headerlink" title="AMQP"></a>AMQP</h3><p>一个提供消息服务的应用层标准高级消息队列协议。消息发送者与消息的接收者双方遵循这个协议可以实现异步通讯，这个协议约定了消息的格式和工作方式。</p>
-<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>异步处理</p>
-<p>应用解耦：订单系统与库存系统</p>
-<p>流量削峰：秒杀活动（控制活动人数，超过一定的阈值的订单直接丢弃）</p>
-<p>1.用户的请求,服务器收到之后,首先写入消息队列,加入消息队列长度超过最大值,则直接抛弃用户请求或跳转到错误页面.<br>2.秒杀业务根据消息队列中的请求信息，再做后续处理.</p>
-<p>好处：解耦、提速（生产者生产完了就不了）、广播（生产者生产完了放到容器，很多消费者都可以来消费）、削峰</p>
-<h3 id="系统架构"><a href="#系统架构" class="headerlink" title="系统架构"></a>系统架构</h3><p><img src="https://pic3.zhimg.com/80/v2-cf2ff62088efcca10d15162142015e82_720w.jpg" alt></p>
-<p>​        一般一个Message有两个部分：payload（有效载荷）和label（标签），payload顾名思义就是传输的数据，label是exchange的名字或者说是一个tag，它描述了payload，而且RabbitMQ也是通过这个label来决定把这个Message发给哪个Consumer</p>
-<p>概念说明：</p>
-<ul>
-<li><p>Broker：提供传输服务，它的角色是维护一条从生产者到消费者的路线，保证数据能按照指定的方式传输</p>
-</li>
-<li><p>Exchange：消息交换机，它收到消息后指定一个Routing Key来指定这个消息的路由规则，分发到Queue中</p>
-</li>
-<li><p>Queue：消息的载体，每个消息都会被投放到一个或多个队列</p>
-</li>
-<li><p>Binding：绑定，它的作用就是把Exchange和Queue按照路由规则绑定起来</p>
-</li>
-<li><p>vhost：虚拟主机，一个boker里可以有多个vhost，用作不同用户的权限分离</p>
-</li>
-<li><p>Publisher：消息生产者，投递消息的程序</p>
-</li>
-<li><p>Consumer：消息消费者，接收消息的程序</p>
-</li>
-<li><p>Channel：消息通道，<strong>Connection</strong>就是一个TCP的连接，Producer和Consumer都是通过TCP连接到RabbitMQ Server的；<strong>Channel</strong>是建立在上述的TCP连接中，因为建立TCP Connection的开销将是巨大的，所以是节省开销。Channel是我们与Rabbit MQ打交道的最重要的一个接口，我们大部分的业务操作是再Channel这个接口中完成的（包括定义Queue、定义Exchange、绑定Queue与Exchange、发布消息等）</p>
-</li>
-</ul>
-<h3 id="任务分发机制"><a href="#任务分发机制" class="headerlink" title="任务分发机制"></a>任务分发机制</h3><p>为了保证数据不被丢失,RabbitMQ支持消息确认机制,为了保证数据能被正确处理而不仅仅是被Consumer收到,那么我们不能采用no-ack，而应该是在处理完数据之后发送ack.<br>在处理完数据之后发送ack,就是告诉RabbitMQ数据已经被接收,处理完成,RabbitMQ可以安全的删除它了. </p>
-<h3 id="消息持久化"><a href="#消息持久化" class="headerlink" title="消息持久化"></a>消息持久化</h3><p>要持久化队列queue的持久化需要在声明时指定durable=True; </p>
-<h3 id="消息序列化"><a href="#消息序列化" class="headerlink" title="消息序列化"></a>消息序列化</h3><p>RabbitMQ使用ProtoBuf序列化消息,它可作为RabbitMQ的Message的数据格式进行传输</p>
-<h3 id="python操作"><a href="#python操作" class="headerlink" title="python操作"></a>python操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#生产者</span></span><br><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="keyword">import</span> pika</span><br><span class="line"><span class="comment"># 创建凭证，使用rabbitmq用户密码登录</span></span><br><span class="line"><span class="comment"># 去邮局取邮件，必须得验证身份</span></span><br><span class="line">credentials = pika.PlainCredentials(<span class="string">"xiaohu"</span>,<span class="string">"xiaohu666"</span>)</span><br><span class="line"><span class="comment"># 新建连接，这里localhost可以更换为服务器ip</span></span><br><span class="line"><span class="comment"># 找到这个邮局，等于连接上服务器</span></span><br><span class="line">connection = pika.BlockingConnection(pika.ConnectionParameters(<span class="string">'192.168.xx.xx'</span>,credentials=credentials))</span><br><span class="line"><span class="comment"># 创建频道</span></span><br><span class="line"><span class="comment"># 建造一个大邮箱，隶属于这家邮局的邮箱，就是个连接</span></span><br><span class="line">channel = connection.channel()</span><br><span class="line"><span class="comment"># 声明一个队列，用于接收消息，队列名字叫“西游记”</span></span><br><span class="line">channel.queue_declare(queue=<span class="string">'西游记'</span>)</span><br><span class="line"><span class="comment"># 注意在rabbitmq中，消息想要发送给队列，必须经过交换(exchange)，初学可以使用空字符串交换(exchange='')，它允许我们精确的指定发送给哪个队列(routing_key=''),参数body值发送的数据</span></span><br><span class="line">channel.basic_publish(exchange=<span class="string">''</span>,</span><br><span class="line">                      routing_key=<span class="string">'西游记'</span>,</span><br><span class="line">                      body=<span class="string">'大师兄，师傅被妖怪抓走了'</span>)</span><br><span class="line">print(<span class="string">"已经发送了消息"</span>)</span><br><span class="line"><span class="comment"># 程序退出前，确保刷新网络缓冲以及消息发送给rabbitmq，需要关闭本次连接</span></span><br><span class="line">connection.close()</span><br><span class="line"></span><br><span class="line"><span class="comment">#消费者</span></span><br><span class="line"><span class="keyword">import</span> pika</span><br><span class="line"><span class="comment"># 建立与rabbitmq的连接</span></span><br><span class="line"><span class="comment"># 前四行都是连接到同一个rabbitmq服务端以及同一个队列</span></span><br><span class="line">credentials = pika.PlainCredentials(<span class="string">"pl"</span>,<span class="string">"123"</span>)</span><br><span class="line">connection = pika.BlockingConnection(pika.ConnectionParameters(<span class="string">'192.168.xx.xx'</span>,credentials=credentials))</span><br><span class="line">channel = connection.channel()</span><br><span class="line">channel.queue_declare(queue=<span class="string">"西游记"</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">callbak</span><span class="params">(ch,method,properties,body)</span>:</span></span><br><span class="line">    print(<span class="string">"消费者取出了消息：%r"</span>%body.decode(<span class="string">"utf8"</span>))</span><br><span class="line"><span class="comment"># 有消息来临，立即执行callbak，没有消息则夯住，等待消息</span></span><br><span class="line"><span class="comment"># 老百姓开始去邮箱取邮件啦，队列名字是水许传</span></span><br><span class="line">channel.basic_consume(callbak,queue=<span class="string">"西游记"</span>,no_ack=<span class="literal">True</span>)  <span class="comment">#no_ack 不用确认 </span></span><br><span class="line"><span class="comment"># 开始消费，接收消息</span></span><br><span class="line">channel.start_consuming()</span><br></pre></td></tr></table></figure>
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">rabbitmq</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/02/rabbitmq/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/10/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/10/">Next &raquo;</a>
     </nav>
   
 
@@ -1620,6 +1578,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rabbitmq</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">MQTT</a>
               </li>
             
             <div class="clearfix"></div>

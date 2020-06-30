@@ -117,6 +117,124 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-书/drf/第六讲——drf写视图的方法、呼啦圈的实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/12/书/drf/第六讲——drf写视图的方法、呼啦圈的实现/">第六讲——drf写视图的方法、呼啦圈最终项目版本</a>
+    </h1>
+  
+
+			
+			<a href="/2019/11/12/书/drf/第六讲——drf写视图的方法、呼啦圈的实现/" class="archive-article-date">
+  	<time datetime="2019-11-12T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">5.4k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">22min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="内容回顾补充"><a href="#内容回顾补充" class="headerlink" title="内容回顾补充"></a>内容回顾补充</h3><p>1.drf组件认证的实现过程？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">路由进入我们的视图首先进入as_view()类，在该类里面首先执行dispacth方法，接着执行initial_request对request进行封装，在这个封装里面会封装一个get_authenticators，它会循环所有的authentication对象并对其进行实例化封装成一个列表；接着执行initial方法，它里面会执行perform_authentication，该方法里面执行request.user，它就会循环执行我们的认证类，它会返回3种情况，它返回一个元祖（user,auth）表示认证成功或者NOne（接着进行下一个认证）或者抛出异常；我们根据返回的情况来判断认证。</span><br></pre></td></tr></table></figure>
+
+<p>2.drf组件中权限的实现过程？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">permission_classes = api_settings.DEFAULT_PERMISSION_CLASSES</span><br><span class="line"></span><br><span class="line">路由进入我们的视图首先进入as_view()类，在该类里面首先执行dispacth方法，在这个方法里面接着会去执行initial方法，在这个方法里面会执行一个check_permissions方法，</span><br><span class="line">该方法里面接着会去执行get_permissions，这个方法只执行</span><br><span class="line">return [permission() for permission in self.permission_classes]，在这里面会去找我们自己是否有定义的permission_classes，这是和列表，里面我们可以重写，去执行里面的类，如果该方法没有has_permission方法，就会执行permission_denied去触发异常。</span><br></pre></td></tr></table></figure>
+        
+          <!---<a class="article-more-a" href="/2019/11/12/书/drf/第六讲——drf写视图的方法、呼啦圈的实现/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">drf</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/12/书/drf/第六讲——drf写视图的方法、呼啦圈的实现/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
     <article id="post-书/drf/第五讲——drf请求的跨域、频率限制、jwt" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -598,6 +716,132 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-数据结构与算法/第五讲——数据结构算法之" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+		<header class="article-header">
+			
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/07/数据结构与算法/第五讲——数据结构算法之/">第五讲——数据结构算法之查找</a>
+    </h1>
+  
+
+			
+			<a href="/2019/11/07/数据结构与算法/第五讲——数据结构算法之/" class="archive-article-date">
+  	<time datetime="2019-11-07T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-07</time>
+</a>
+			
+			<!-- 需要添加的位置 -->
+			<!-- 开始添加字数统计-->
+			
+			  <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text"> 字数统计: </span>
+        <span class="post-count">3.3k 字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;     &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">11min</span>
+      </span>
+    </span>
+</div>
+
+			  
+			<!-- 添加完成 -->
+			
+			
+		</header>
+    
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="查找概论"><a href="#查找概论" class="headerlink" title="查找概论"></a>查找概论</h3><h4 id="静态查找表"><a href="#静态查找表" class="headerlink" title="静态查找表"></a>静态查找表</h4><p>解释：只作查找操作的查找表</p>
+<ul>
+<li>查询某个特定的数据元素是否在查找表中</li>
+<li>检索某个特定数据元素和各种属性</li>
+</ul>
+<h4 id="动态查找表"><a href="#动态查找表" class="headerlink" title="动态查找表"></a>动态查找表</h4><p>解释：在查找过程中同时插入查找表中不存在的数据元素，或者从查找表中删除已经存在的某个数据元素</p>
+<ul>
+<li>查找时插入数据元素</li>
+<li>查找时删除数据元素</li>
+</ul>
+<h3 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h3><p>解释：顺序查找又叫做线性查找，是最基本的查找技术，它的查找过程是：从表中第一个（或最后一个）记录开始，逐个进行记录的关键字和给定值比较，若某个记录的关键字和给定值比较不等时，则表中没有所查找的记录，查找不成功。</p>
+<p>时间复杂度为O(n)</p>
+<p>缺点：顺序查找技术最大的缺点就是，n很大时，查找效率极为低下，不过有点还是有的，算法简单，对静态查找表的记录没有任何要求，在一些小型数据的查找时，是可以适用的。</p>
+        
+          <!---<a class="article-more-a" href="/2019/11/07/数据结构与算法/第五讲——数据结构算法之/#more">more >></a>--->
+        
+      
+	  
+			  
+		
+		  <div class="declare" hidden="hidden"></div>
+		
+	  
+      
+      
+    </div>
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/07/数据结构与算法/第五讲——数据结构算法之/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+ 
+
+
+  
     <article id="post-书/drf/第三讲——drf筛选、视图（内置）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -700,132 +944,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/11/07/书/drf/第三讲——drf筛选、视图（内置）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
-    <article id="post-数据结构与算法/第五讲——数据结构算法之" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/07/数据结构与算法/第五讲——数据结构算法之/">第五讲——数据结构算法之查找</a>
-    </h1>
-  
-
-			
-			<a href="/2019/11/07/数据结构与算法/第五讲——数据结构算法之/" class="archive-article-date">
-  	<time datetime="2019-11-07T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-07</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">3.3k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">11min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="查找概论"><a href="#查找概论" class="headerlink" title="查找概论"></a>查找概论</h3><h4 id="静态查找表"><a href="#静态查找表" class="headerlink" title="静态查找表"></a>静态查找表</h4><p>解释：只作查找操作的查找表</p>
-<ul>
-<li>查询某个特定的数据元素是否在查找表中</li>
-<li>检索某个特定数据元素和各种属性</li>
-</ul>
-<h4 id="动态查找表"><a href="#动态查找表" class="headerlink" title="动态查找表"></a>动态查找表</h4><p>解释：在查找过程中同时插入查找表中不存在的数据元素，或者从查找表中删除已经存在的某个数据元素</p>
-<ul>
-<li>查找时插入数据元素</li>
-<li>查找时删除数据元素</li>
-</ul>
-<h3 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h3><p>解释：顺序查找又叫做线性查找，是最基本的查找技术，它的查找过程是：从表中第一个（或最后一个）记录开始，逐个进行记录的关键字和给定值比较，若某个记录的关键字和给定值比较不等时，则表中没有所查找的记录，查找不成功。</p>
-<p>时间复杂度为O(n)</p>
-<p>缺点：顺序查找技术最大的缺点就是，n很大时，查找效率极为低下，不过有点还是有的，算法简单，对静态查找表的记录没有任何要求，在一些小型数据的查找时，是可以适用的。</p>
-        
-          <!---<a class="article-more-a" href="/2019/11/07/数据结构与算法/第五讲——数据结构算法之/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/07/数据结构与算法/第五讲——数据结构算法之/">展开全文 >></a>
         </p>
       
 
@@ -1093,137 +1211,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-书/drf/第一讲——drf初始" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-		<header class="article-header">
-			
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/05/书/drf/第一讲——drf初始/">第一讲——drf初始</a>
-    </h1>
-  
-
-			
-			<a href="/2019/11/05/书/drf/第一讲——drf初始/" class="archive-article-date">
-  	<time datetime="2019-11-05T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-05</time>
-</a>
-			
-			<!-- 需要添加的位置 -->
-			<!-- 开始添加字数统计-->
-			
-			  <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.5k 字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp;     &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">12min</span>
-      </span>
-    </span>
-</div>
-
-			  
-			<!-- 添加完成 -->
-			
-			
-		</header>
-    
-	
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>drf：django rest framewok</p>
-<h2 id="第一部分-问题"><a href="#第一部分-问题" class="headerlink" title="第一部分 问题"></a>第一部分 问题</h2><ul>
-<li><p>前后端分离？</p>
-<ul>
-<li>vue.js</li>
-<li>后端给前段返回json数据</li>
-</ul>
-</li>
-<li><p>移动端盛行。</p>
-<ul>
-<li>app</li>
-<li>后端给app返回json数据</li>
-</ul>
-</li>
-<li><p>PC端应用？</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crm项目，前段后端一起写，运行在浏览器上。 一般情况下都是PC端使用。</span><br></pre></td></tr></table></figure>
-        
-          <!---<a class="article-more-a" href="/2019/11/05/书/drf/第一讲——drf初始/#more">more >></a>--->
-        
-      
-	  
-			  
-		
-		  <div class="declare" hidden="hidden"></div>
-		
-	  
-      
-      
-    </div>
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">drf</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/05/书/drf/第一讲——drf初始/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
- 
-
-
-  
     <article id="post-数据结构与算法/第三讲——数据结构算法栈和队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1343,7 +1330,7 @@ var _hmt = _hmt || [];
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
     </nav>
   
 
@@ -1565,6 +1552,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rabbitmq</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">MQTT</a>
               </li>
             
             <div class="clearfix"></div>
