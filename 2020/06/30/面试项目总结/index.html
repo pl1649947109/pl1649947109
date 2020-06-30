@@ -6,22 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://pl1649947109.github.io/pl1649947109">
-  <title>centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署 | 林殊途</title>
+  <title>xm | 林殊途</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="完整的项目部署流程不懂点我：https://chpl.top/2019/11/03/%E4%B9%A6/linux/%E7%AC%AC%E5%9B%9B%E8%AE%B2%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E3%80%81%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/ 完整的通信流程">
-<meta name="keywords" content="django项目部署">
+  <meta name="description" content="公司：  地址：郑州高新技术产业开发区梧桐街50号18号楼 主营范围：电子产品的研发、生产及销售；软硬件技术服务支持。 软件组人员：6名，1个技术组长，3个做后台的（我一个），1个做前端页面的（包括小程序页面）,1个做测试的  ﻿实验作物：郁金香  喜只晒太阳（喜光照） 喜湿润（水分要充足，注意不能过量植物呼吸产生酒精易烂根） 喜温暖（不耐高温、耐寒）最适合生长环境15-18摄氏度  电力问题：可">
+<meta name="keywords" content="小绿本">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署">
-<meta property="og:url" content="https://pl1649947109.github.io/pl1649947109/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/index.html">
+<meta property="og:title" content="xm">
+<meta property="og:url" content="https://pl1649947109.github.io/pl1649947109/2020/06/30/面试项目总结/index.html">
 <meta property="og:site_name" content="林殊途">
-<meta property="og:description" content="完整的项目部署流程不懂点我：https://chpl.top/2019/11/03/%E4%B9%A6/linux/%E7%AC%AC%E5%9B%9B%E8%AE%B2%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E3%80%81%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/ 完整的通信流程">
+<meta property="og:description" content="公司：  地址：郑州高新技术产业开发区梧桐街50号18号楼 主营范围：电子产品的研发、生产及销售；软硬件技术服务支持。 软件组人员：6名，1个技术组长，3个做后台的（我一个），1个做前端页面的（包括小程序页面）,1个做测试的  ﻿实验作物：郁金香  喜只晒太阳（喜光照） 喜湿润（水分要充足，注意不能过量植物呼吸产生酒精易烂根） 喜温暖（不耐高温、耐寒）最适合生长环境15-18摄氏度  电力问题：可">
 <meta property="og:locale" content="zh">
-<meta property="og:image" content="http://9017499461.linshutu.top/django%E9%83%A8%E7%BD%B2%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg">
-<meta property="og:updated_time" content="2019-11-16T15:31:48.294Z">
+<meta property="og:image" content="c:%5CUsers%5Cpl%5CPictures%5Cshow.JPG">
+<meta property="og:image" content="http://9017499461.linshutu.top/Celery%E5%9B%BE%E8%A7%A3.JPG">
+<meta property="og:image" content="c:%5CUsers%5Cpl%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1592297533526.png">
+<meta property="og:image" content="c:%5CUsers%5Cpl%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1592298290667.png">
+<meta property="og:image" content="c:%5CUsers%5Cpl%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1592299683622.png">
+<meta property="og:image" content="c:%5CUsers%5Cpl%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1592300125242.png">
+<meta property="og:image" content="c:%5CUsers%5Cpl%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1592279133612.png">
+<meta property="og:image" content="c:%5CUsers%5Cpl%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1592274740641.png">
+<meta property="og:image" content="c:%5CUsers%5Cpl%5CPictures%5Cxxx.png">
+<meta property="og:updated_time" content="2020-06-30T06:23:33.270Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署">
-<meta name="twitter:description" content="完整的项目部署流程不懂点我：https://chpl.top/2019/11/03/%E4%B9%A6/linux/%E7%AC%AC%E5%9B%9B%E8%AE%B2%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E3%80%81%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/ 完整的通信流程">
-<meta name="twitter:image" content="http://9017499461.linshutu.top/django%E9%83%A8%E7%BD%B2%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg">
+<meta name="twitter:title" content="xm">
+<meta name="twitter:description" content="公司：  地址：郑州高新技术产业开发区梧桐街50号18号楼 主营范围：电子产品的研发、生产及销售；软硬件技术服务支持。 软件组人员：6名，1个技术组长，3个做后台的（我一个），1个做前端页面的（包括小程序页面）,1个做测试的  ﻿实验作物：郁金香  喜只晒太阳（喜光照） 喜湿润（水分要充足，注意不能过量植物呼吸产生酒精易烂根） 喜温暖（不耐高温、耐寒）最适合生长环境15-18摄氏度  电力问题：可">
+<meta name="twitter:image" content="c:%5CUsers%5Cpl%5CPictures%5Cshow.JPG">
   
     <link rel="alternative" href="/atom.xml" title="林殊途" type="application/atom+xml">
   
@@ -119,20 +127,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-面试项目总结" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
 		<header class="article-header">
 			
   
     <h1 class="article-title" itemprop="name">
-      centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署
+      xm
     </h1>
   
 
 			
-			<a href="/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/" class="archive-article-date">
-  	<time datetime="2019-10-07T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-07</time>
+			<a href="/2020/06/30/面试项目总结/" class="archive-article-date">
+  	<time datetime="2020-06-30T06:30:25.870Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-30</time>
 </a>
 			
 			<!-- 需要添加的位置 -->
@@ -143,7 +151,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text"> 字数统计: </span>
-        <span class="post-count">2.7k 字</span>
+        <span class="post-count">11.8k 字</span>
       </span>
     </span>
 
@@ -152,7 +160,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">11min</span>
+        <span class="post-count">43min</span>
       </span>
     </span>
 </div>
@@ -166,116 +174,534 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="完整的项目部署流程"><a href="#完整的项目部署流程" class="headerlink" title="完整的项目部署流程"></a>完整的项目部署流程</h3><p>不懂点我：<a href="https://chpl.top/2019/11/03/%E4%B9%A6/linux/%E7%AC%AC%E5%9B%9B%E8%AE%B2%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E3%80%81%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/" target="_blank" rel="noopener">https://chpl.top/2019/11/03/%E4%B9%A6/linux/%E7%AC%AC%E5%9B%9B%E8%AE%B2%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E3%80%81%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</a></p>
-<h4 id="完整的通信流程"><a href="#完整的通信流程" class="headerlink" title="完整的通信流程"></a>完整的通信流程</h4><p><img src="http://9017499461.linshutu.top/django%E9%83%A8%E7%BD%B2%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg" alt></p>
-<h4 id="一、更新系统软件包"><a href="#一、更新系统软件包" class="headerlink" title="一、更新系统软件包"></a>一、更新系统软件包</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
-
-<h4 id="二、安装软件管理包和可能使用的依赖"><a href="#二、安装软件管理包和可能使用的依赖" class="headerlink" title="二、安装软件管理包和可能使用的依赖"></a><strong>二、安装软件管理包和可能使用的依赖</strong></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y groupinstall "Development tools"</span><br><span class="line">yum install openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel</span><br></pre></td></tr></table></figure>
-
+        <p>公司：</p>
+<ul>
+<li>地址：郑州高新技术产业开发区梧桐街50号18号楼</li>
+<li>主营范围：电子产品的研发、生产及销售；软硬件技术服务支持。</li>
+<li>软件组人员：6名，1个技术组长，3个做后台的（我一个），1个做前端页面的（包括小程序页面）,1个做测试的</li>
+</ul>
+<p>﻿实验作物：郁金香</p>
+<ul>
+<li>喜只晒太阳（喜光照）</li>
+<li>喜湿润（水分要充足，注意不能过量植物呼吸产生酒精易烂根）</li>
+<li>喜温暖（不耐高温、耐寒）最适合生长环境15-18摄氏度</li>
+</ul>
+<p>电力问题：可以使用市电（就是我们生活中使用的电），或者我们使用太阳能电池板</p>
+<p>项目整体架构：</p>
+<p>![](C:\Users\pl\Pictures\Saved Pictures\智能物联网种植系统.JPG)</p>
 <a id="more"></a>
 
-<h4 id="三、下载Pyhton3到-usr-local-目录"><a href="#三、下载Pyhton3到-usr-local-目录" class="headerlink" title="三、下载Pyhton3到/usr/local 目录**"></a>三、下载Pyhton3到/usr/local 目录**</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>下载</span><br><span class="line">wget https://www.python.org/ftp/python/3.6.6/Python-3.6.6.tgz</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>当前文件夹解压</span><br><span class="line">tar -zxvf Python-3.6.6.tgz</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>解压成功之后进入python-3.6.6文件夹（编译安装到指定的文件路径）</span><br><span class="line">./configure --prefix=/usr/local/python3</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>现在开始暗转python3</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>现在python3安装成功，开始建立软连接，添加变量，就相当于在windows下添加环境变量</span><br><span class="line">ln -s /usr/local/python3/bin/python3.6 /usr/bin/python3</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>同样的，pip3也和python3一起安装了，现在也一起建立软链接</span><br><span class="line">ln -s /usr/local/python3/bin/pip3.6 /usr/bin/pip3</span><br></pre></td></tr></table></figure>
+<h3 id="终端设备（TPYBoard-STM32终端设备核心板）"><a href="#终端设备（TPYBoard-STM32终端设备核心板）" class="headerlink" title="终端设备（TPYBoard-STM32终端设备核心板）"></a>终端设备（TPYBoard-STM32终端设备核心板）</h3><p>MicroPython：</p>
+<p>运行在单片机上的python的意思，语法和python3基本一样，拥有自己的解析器、编码器、虚拟机和类库。借助它，用户完全可以通过python语言实现硬件底层的访问和控制。由于它对原生的python进行了优化，所以它比原生的python快了几个数量级</p>
+<p>MicroPython开发板：</p>
+<p>国内使用的是TPYBoard开发板（比官网的多了一些功能）</p>
+<p>![](C:\Users\pl\Pictures\Saved Pictures\TPYBoard.JPG)</p>
+<p>技术点：LoRa通信模块、STM-32终端设备（空气温湿度传感器、光照强度传感器、雨滴传感器、水位传感器、土壤湿度传感器、人体红外传感器、继电器（LED灯）、电池（水泵（伺服电机驱动）、继电器））</p>
+<p>开发板：Tpyboard</p>
+<ul>
+<li><p>传感器：（外设相关的程序均各自保存为一个独立的文件，主程序需要用到外设功能时以模块的形式加载和调用）</p>
+<ul>
+<li><p>采集空气温湿度：DHT11传感器（和TPY的关系是主从关系，只有TPY主机呼叫传感器时，传感器才应答）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">传感器收到主机的信号，先把信号拉低再拉高表示我即将要发送信息了，然后一次性发从数据总线中读出40bit位数据发给主机。</span><br><span class="line">00111010 00111010 00111010  01111010  11011010</span><br><span class="line">湿度整数  +湿度小数	 +温度整数	+温度小数   =校验位</span><br><span class="line"></span><br><span class="line">根据传感器的通信时序（40bit的数据）和数据的解析方式之后，我们就可以用python编写DHT11的驱动程序</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取环境光强度：GY-30模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">光照范围：0~65535Lx</span><br><span class="line">精度：1Lx</span><br><span class="line">晴天自然光强一般是4000Lx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>土壤湿度检测：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可直连TPY的GPIO口，核心板的GPIO口为输入，土壤湿度模块的模拟喜好连接核心板的ADC接口</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>水泵的控制：继电器+水泵（RS360微型水泵）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">水泵：</span><br><span class="line">	-继电器控制水泵的开启和关闭；</span><br><span class="line">	-通过駝机调用水泵的出水角度和转动速率（就是出水的大小和方向）</span><br><span class="line">	</span><br><span class="line">水泵：</span><br><span class="line">	-工作电压：2-12V</span><br><span class="line">	-电池驱动</span><br><span class="line">继电器：</span><br><span class="line">	-最大负载：交流220V/10A</span><br><span class="line">	-继电器直连TPY，一段连着水泵</span><br><span class="line">駝机：</span><br><span class="line">	-直连TPY（TPY提供的伺服电机控制駝机）</span><br><span class="line">代码流程：TPY通过GPIO输出高电平驱动继电器打开水泵电源开启水泵，低电平关闭水泵；MicroPython提供的Servo模块通过PWM模块信号驱动駝机</span><br></pre></td></tr></table></figure>
 
-<h4 id="四、查看Python3和pip3安装情况"><a href="#四、查看Python3和pip3安装情况" class="headerlink" title="四、查看Python3和pip3安装情况"></a><strong>四、查看Python3和pip3安装情况</strong></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>在根目录环境中</span><br><span class="line">键入python3</span><br><span class="line">键入pip3</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
 
-<h4 id="五、安装virtualenv-，建议大家都安装一个virtualenv，方便不同版本项目管理。"><a href="#五、安装virtualenv-，建议大家都安装一个virtualenv，方便不同版本项目管理。" class="headerlink" title="五、安装virtualenv ，建议大家都安装一个virtualenv，方便不同版本项目管理。"></a><strong>五、安装virtualenv ，建议大家都安装一个virtualenv，方便不同版本项目管理。</strong></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>下载包</span><br><span class="line">pip3 install virtualenv</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>建立软连接</span><br><span class="line">ln -s /usr/local/python3/bin/virtualenv /usr/bin/virtualenv  #这里可能在在python3文件夹下找不到bin这个文件夹，但是我们不同的担心，后面我们一样可以使用，跳过就可以了</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>根据个人的习惯，创建项目的文件夹和虚拟环境的文件夹</span><br><span class="line">mkdir -p /data/env  #用来防止我们的虚拟环境的文件夹</span><br><span class="line">mkdir -p /data/wwwroot  #用来防止我们的项目</span><br></pre></td></tr></table></figure>
 
-<p>扩展：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">vrtaulenvwrapper是virtualenv的扩展包，用于更方便管理虚拟环境</span><br><span class="line"><span class="comment">#安装</span></span><br><span class="line">pip3 install virtualenvwrapper</span><br><span class="line"></span><br><span class="line"><span class="comment">#现在还不能使用它，还需要配置：</span></span><br><span class="line"><span class="number">1</span>、查看virtualenvwrapper的安装路径</span><br><span class="line">    sudo find / -name virtualenvwrapper.sh</span><br><span class="line"><span class="number">2</span>、创建目录用来存放虚拟环境</span><br><span class="line">    mkdir ~/.myvirtualenvs</span><br><span class="line"><span class="number">3</span>、在~/.bashrc末尾添加行(vim ~/.bashrc)</span><br><span class="line">    export WORKON_HOME=/home/Linux的用户名/.myvirtualenvs</span><br><span class="line">    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</span><br><span class="line"><span class="number">4</span>、运行： </span><br><span class="line">    source ~/.bashrc</span><br><span class="line">    </span><br><span class="line"><span class="comment">#功能</span></span><br><span class="line">workon:                 列出虚拟环境列表</span><br><span class="line">lsvirtualenv:           列出虚拟环境列表</span><br><span class="line">mkvirtualenv:           新建虚拟环境</span><br><span class="line">workon [虚拟环境名称]:    切换/进入虚拟环境</span><br><span class="line">rmvirtualenv :          删除虚拟环境</span><br><span class="line">deactivate:             离开虚拟环境</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>灯光控制</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">终端设备TPY通过继电器实现对灯泡的控制</span><br><span class="line">继电器直连TPY的GPIO口，通过GPIO口的高电平输出驱动继电器打开灯泡，低电平输出关闭灯泡</span><br></pre></td></tr></table></figure>
 
-<h4 id="六、切换到-data-env-下，创建指定版本的虚拟环境。"><a href="#六、切换到-data-env-下，创建指定版本的虚拟环境。" class="headerlink" title="六、切换到/data/env/下，创建指定版本的虚拟环境。"></a><strong>六、切换到/data/env/下，创建指定版本的虚拟环境。</strong></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建虚拟环境</span></span><br><span class="line">virtualenv --python=/usr/bin/python3 pyweb</span><br><span class="line"></span><br><span class="line"><span class="comment">#现在我们可以看见env下面多了几个文件夹，现在我们进入/data/env/pyweb/bin ，启动虚拟环境</span></span><br><span class="line">source activate</span><br><span class="line"><span class="comment">#我们现在可以看见我们的命令行前面出现(pyweb)，说明是成功进入虚拟环境。</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="七、虚拟环境里用python3安django和uwsgi"><a href="#七、虚拟环境里用python3安django和uwsgi" class="headerlink" title="七、虚拟环境里用python3安django和uwsgi"></a><strong>七、虚拟环境里用python3安django和uwsgi</strong></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#下载这两个重要的模块</span></span><br><span class="line">pip3 install django <span class="comment">#（如果用于生产的话，则需要指定安装和你项目相同的版本）  </span></span><br><span class="line">pip3 install uwsgi</span><br><span class="line"><span class="comment">#注意，版本是非常重要的，因此我们在决定搭建一个项目的时候，我们就需要事前决定我们使用什么版本的组件。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#给uwsgi建立软链接，方便使用</span></span><br><span class="line">ln -s /usr/local/python3/bin/uwsgi /usr/bin/uwsgi</span><br></pre></td></tr></table></figure>
 
-<h4 id="八、切换到网站目录-data-wwwroot-创建Django项目"><a href="#八、切换到网站目录-data-wwwroot-创建Django项目" class="headerlink" title="八、切换到网站目录/data/wwwroot,创建Django项目"></a><strong>八、切换到网站目录/data/wwwroot,创建Django项目</strong></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建项目</span></span><br><span class="line">django-admin.py startproject mysite</span><br><span class="line"></span><br><span class="line"><span class="comment">#进入我们创建的项目里面创建app</span></span><br><span class="line">python3 manage.py startapp blog</span><br><span class="line"></span><br><span class="line"><span class="comment">#进入项目文件夹/data/wwwroot/mysite,添加static和templates，分别用于存放静态文件和模板文件。</span></span><br><span class="line">mkdir templates</span><br><span class="line">mkdir static</span><br><span class="line"></span><br><span class="line"><span class="comment">#编辑项目里mysite/settings.py文件</span></span><br><span class="line">vim /data/wwwroot/mysite/mysite/settings.py</span><br><span class="line"><span class="number">1</span>,在INSTALLED_APPS 列表里添加<span class="string">'blog'</span>APP</span><br><span class="line"><span class="number">2</span>,修改ALLOWED_HOSTS，[<span class="string">'*'</span>]，可以让任何IP访问</span><br><span class="line"><span class="number">3</span>,TEMPLATES里添加模板路径os.path.join(BASE_DIR, <span class="string">'templates'</span>)</span><br><span class="line"><span class="number">4</span>,文件的尾部添加：</span><br><span class="line">STATICFILES_DIRS = (</span><br><span class="line">    os.path.join(BASE_DIR,<span class="string">'static'</span>),</span><br><span class="line">    )</span><br><span class="line"><span class="number">5</span>，保存：wq（这是linux里面的vim的命令，不懂的可以自行百度）</span><br></pre></td></tr></table></figure>
 
-<h4 id="九、在templates下添加index-html文件，输入下面内容。"><a href="#九、在templates下添加index-html文件，输入下面内容。" class="headerlink" title="九、在templates下添加index.html文件，输入下面内容。"></a><strong>九、在templates下添加index.html文件，输入下面内容。</strong></h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>我的网站<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>欢迎光临我的网站！<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>通信模块：LoRa（SX1278射频芯片的无线串口模块）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">终端设备通过LoRa模块与网关通信。</span><br><span class="line">工频：410~441MHz频段</span><br><span class="line">传输方式：透传方式</span><br><span class="line">输出：TTL电平输出</span><br><span class="line">供电：2.3~5.5V</span><br><span class="line">TPY直连：主板通过GPIO接口以及串口驱动LoRa模块</span><br><span class="line">功耗低</span><br><span class="line">覆盖范围广</span><br></pre></td></tr></table></figure>
 
-<h4 id="十、配置URL"><a href="#十、配置URL" class="headerlink" title="十、配置URL"></a><strong>十、配置URL</strong></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"><span class="keyword">from</span> blog <span class="keyword">import</span> views  <span class="comment">#导入视图</span></span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">'admin/'</span>, admin.site.urls),</span><br><span class="line">    path(<span class="string">'index/'</span>,views.index),  <span class="comment">#配置路由</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>开发板的供电：也是使用电池供电，因为终端节点往往数量巨大并且需要灵活部署</p>
+<p>功能包括：</p>
+<ul>
+<li><p>环境检测：温湿度、光照强度、土壤湿度、（雨水、水位）</p>
+</li>
+<li><p>滴管系统：</p>
+<ul>
+<li>定时滴灌（系统自动按定时启动灌溉系统）、</li>
+<li>自动滴灌（基于土壤的湿度值）、</li>
+<li>手动滴灌 （可通过web页面控制和配置，可单击web按钮可开启和停止滴灌系统）</li>
+</ul>
+</li>
+<li><p>安防报警（这个模块是基于大环境下的，后面看看删不删掉）</p>
+<ul>
+<li>通过人体红外传感器检测生产场地的多个地点，当检测到入侵信息时，web端生成报警信息，通过2G模块拨打保安人员的电话并发短信；在空旷的地方可以检测动物入侵，一旦发现可以播放报警声进行驱赶，防止野生动物对作物的破坏。</li>
+</ul>
+</li>
+<li><p>照明控制：</p>
+<ul>
+<li>手动控制：通过web页面手动控制灯光状态，可以批量控制和单个控制</li>
+<li>定时控制：可配置定时开灯、关灯，灯光按时自动执行</li>
+<li>自动控制：配置光照强度的参数，根据环境光的强度自动打开还是关闭灯管，保证作物的同时，节能。</li>
+</ul>
+</li>
+<li><p>设备管理（在线或离线，电源状态）</p>
+<ul>
+<li>所有设备通过向服务器发送心跳反映自身的在线情况和自身的剩余电量（跟换电池）</li>
+<li>终端设备的运行状态和设备信息的相关数据存放在网关数据库；网关自身的状态也存在数据库，网关定期将数据库同步到服务器端</li>
+<li>一旦设备发生故障，将新的设备的ID写成故障设备一致的，然后从服务器备份的数据库获取故障设备前的状态和设备信息，就可以做到无缝替换和修护</li>
+</ul>
+</li>
+</ul>
+<h3 id="网关（树莓派）"><a href="#网关（树莓派）" class="headerlink" title="网关（树莓派）"></a>网关（树莓派）</h3><p>网关的功能：基于网的组件、局域网与外网之间数据的转发、本地运算控制、本地数据储存中心</p>
+<p>树莓派参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ARM cpu </span><br><span class="line">512M内存</span><br><span class="line">WIFI  网线  蓝牙</span><br><span class="line">嵌入式Linux系统</span><br><span class="line">启动电源：5V</span><br><span class="line">SSH访问</span><br><span class="line">和linux系统是一样的操作，跟新python，使用虚拟环境</span><br></pre></td></tr></table></figure>
 
-<h4 id="十一、编辑blog-APP下的views-py"><a href="#十一、编辑blog-APP下的views-py" class="headerlink" title="十一、编辑blog APP下的views.py"></a><strong>十一、编辑blog APP下的views.py</strong></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render,HttpResponse</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create your views here</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">'index.html'</span>)</span><br></pre></td></tr></table></figure>
+<p>技术点：hb客户端、消息队列、消息解析、文件备份、SQLite、文件读写、串口监听</p>
+<p>功能：</p>
+<p>终端通信：数据监听、接收、缓存、解析、发送</p>
+<p>后端通信：wifi、有线、移动网络方式，MQTT、HTTP协议</p>
+<p>数据储存：储存所有终端设备的状态信息和配置参数（使用的是TF卡，终端发来的数据都是储存在内存中的，如果部持久化，一旦网管崩了，数据就完了）</p>
+<p>文件备份：定期将本地数据库传输到服务器备份（防止网关设备损坏而造成数据丢失）</p>
+<p>终端通信模型（欠着）</p>
+<p>数据持久化：</p>
+<p>使用SQLite数据库储存：它非常轻量级，可以嵌入到使用它的应用程序中，和程序共用一块内存空间</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_db</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#创建数据库</span></span><br><span class="line">	con = sqlite3.connect(<span class="string">'gw.db'</span>)</span><br><span class="line">	print(con)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_table</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#建表</span></span><br><span class="line">	con = sqlite3.connect(<span class="string">'gw.db'</span>)</span><br><span class="line">	c = con.cursor()</span><br><span class="line">	sql_str = <span class="string">'''CREATE TABLE DEVICE(</span></span><br><span class="line"><span class="string">      ID INTEGER PRIMARY KEY    NOT NULL,</span></span><br><span class="line"><span class="string">      NAME      TEXT,</span></span><br><span class="line"><span class="string">      INFO      TEXT,</span></span><br><span class="line"><span class="string">      LIGHT     TEXT,  #灯光状态</span></span><br><span class="line"><span class="string">      PUMP      TEXT,  #水泵运行状态</span></span><br><span class="line"><span class="string">      ANGLE     INTEGER,  #水泵角度</span></span><br><span class="line"><span class="string">      PHONE     INTEGER， #手机号码</span></span><br><span class="line"><span class="string">      );</span></span><br><span class="line"><span class="string">      '''</span></span><br><span class="line">	c.execute(sql_str)</span><br><span class="line">	con.commit()</span><br><span class="line">	con.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">insert_data</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#插入数据</span></span><br><span class="line">	con = sqlite3.connect(<span class="string">'gw.db'</span>)</span><br><span class="line">	c = con.cursor()</span><br><span class="line">	sql_str = <span class="string">"INSERT INTO DEVICE VALUES (2, 'soybean','greenhouse for soybean' , 1,28.5,45, 0 );"</span></span><br><span class="line">	c.execute(sql_str)</span><br><span class="line">	con.commit()</span><br><span class="line">	con.close()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">select_all</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#查找数据</span></span><br><span class="line">	conn = sqlite3.connect(<span class="string">'gw.db'</span>)</span><br><span class="line">	cursor = conn.cursor()</span><br><span class="line">	sql = <span class="string">"select * from DEVICE"</span></span><br><span class="line">	cursor.execute(sql)</span><br><span class="line">	print(cursor.fetchall())</span><br><span class="line">select_all()</span><br></pre></td></tr></table></figure>
 
-<h4 id="十二、启动项目"><a href="#十二、启动项目" class="headerlink" title="十二、启动项目"></a><strong>十二、启动项目</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 manage.py runserver</span><br></pre></td></tr></table></figure>
+<p>与服务端的文件上传下载（使用http协议）：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">在网关部分使用requests模块进行向服务端的文件上传和下载</span><br><span class="line">对于网关：</span><br><span class="line">上传：</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">"xx.xx.xx.xx"</span></span><br><span class="line">header = &#123;<span class="string">"User-Agent"</span>:<span class="string">"xxx"</span>&#125;</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"wg.db"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    requests.post(url=url,header=hreder,files=f)</span><br><span class="line">    </span><br><span class="line">下载：</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">"x.x.x.x/file_management/gw.db"</span></span><br><span class="line">r = requests.get(url).content()</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"wg.db"</span>,<span class="string">'wb'</span>) <span class="keyword">as</span> code:</span><br><span class="line">    code.write(r)</span><br></pre></td></tr></table></figure>
 
-<h4 id="十三、Django正常运行之后我们就开始配置一下uwsgi。"><a href="#十三、Django正常运行之后我们就开始配置一下uwsgi。" class="headerlink" title="十三、Django正常运行之后我们就开始配置一下uwsgi。"></a><strong>十三、Django正常运行之后我们就开始配置一下uwsgi。</strong></h4><p>注意：安装uwsgi之前python和django需要部署完成。</p>
-<p>uwsgi配置文件格式 ini、xml、json 都可，最常用的是ini的配置格式。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">方式一：xml</span><br><span class="line"><span class="meta">#</span>我们网站项目路径是 /data/wwwroot/mysite/,在项目根目录下创建mysite.xml文件，输入如下内容：</span><br><span class="line">&lt;uwsgi&gt;    </span><br><span class="line">   &lt;socket&gt;127.0.0.1:8000&lt;/socket&gt;&lt;!-- 内部端口，自定义 --&gt; </span><br><span class="line">   &lt;chdir&gt;/data/wwwroot/mysite/&lt;/chdir&gt;&lt;!-- 项目路径 --&gt;            </span><br><span class="line">   &lt;module&gt;mysite.wsgi&lt;/module&gt; </span><br><span class="line">   &lt;processes&gt;4&lt;/processes&gt; &lt;!-- 进程数 --&gt;     </span><br><span class="line">   &lt;daemonize&gt;uwsgi.log&lt;/daemonize&gt;&lt;!-- 日志文件 --&gt;</span><br><span class="line">&lt;/uwsgi&gt;</span><br><span class="line"></span><br><span class="line">方式二：ini</span><br><span class="line">[uwsgi]</span><br><span class="line">vhost = false</span><br><span class="line">plugins = python</span><br><span class="line">socket = 127.0.0.1:8000</span><br><span class="line">master = true</span><br><span class="line">enable-threads = true</span><br><span class="line">workers = 1</span><br><span class="line">wsgi-file = /data/wwwroot/mysite/wsgi.py</span><br><span class="line">chdir =/data/wwwroot/mysite/</span><br></pre></td></tr></table></figure>
+<p>这里面的文件上传服务器端的代码（<strong>欠着</strong>）</p>
+<h4 id="项目目录"><a href="#项目目录" class="headerlink" title="项目目录"></a>项目目录</h4><p>![](C:\Users\pl\Pictures\Saved Pictures\项目目录.JPG)</p>
+<h4 id="终端和网关之间的通信（JSON）"><a href="#终端和网关之间的通信（JSON）" class="headerlink" title="终端和网关之间的通信（JSON）"></a>终端和网关之间的通信（JSON）</h4><p>json支持的数据类型：object、array、string、number、bool和null</p>
+<p>终端设备与网关之间传输的数据采用JSON格式。格式如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">ori_ID</th>
+<th align="center">des_ID</th>
+<th align="center">CMD</th>
+<th align="center">VALUE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">发送设备的ID</td>
+<td align="center">接收设备的ID</td>
+<td align="center">消息类别</td>
+<td align="center">数组</td>
+</tr>
+</tbody></table>
+<p>LoRa初始化完成（开启完成加入网络），发送一条设备上线的JSON数据：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">json_online = '&#123;"ID":"1","CMD":"Online","TYPE":"N","VALUE":"N"&#125;'</span><br></pre></td></tr></table></figure>
 
-<p>ini文件详细配置说明项：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[uwsgi]</span></span><br><span class="line"><span class="comment">#自定义变量</span></span><br><span class="line"><span class="attr">projectname</span> = MyDjango</span><br><span class="line"><span class="attr">base</span> = /www/DjangoProject/MyDjango/</span><br><span class="line"><span class="comment"># 启动uwsgi的用户名和用户组</span></span><br><span class="line"><span class="attr">uid</span> = www</span><br><span class="line"><span class="attr">gid</span> = www</span><br><span class="line"><span class="comment"># 我的项目目录</span></span><br><span class="line"><span class="attr">chdir</span> = %(base)</span><br><span class="line"><span class="comment"># 指定项目的application</span></span><br><span class="line"><span class="attr">module</span> = %(projectname).wsgi:application</span><br><span class="line"><span class="comment"># 进程个数</span></span><br><span class="line"><span class="attr">workers</span> = <span class="number">5</span></span><br><span class="line"><span class="comment"># 启用主进程</span></span><br><span class="line"><span class="attr">master</span> = <span class="literal">true</span></span><br><span class="line"><span class="comment"># 自动移除unix Socket和pid文件当服务停止的时候</span></span><br><span class="line"><span class="attr">vacuum</span> = <span class="literal">true</span></span><br><span class="line"><span class="comment"># 序列化接受的内容，如果可能的话</span></span><br><span class="line"><span class="attr">thunder-lock</span> = <span class="literal">true</span></span><br><span class="line"><span class="comment"># 启用线程</span></span><br><span class="line"><span class="attr">enable-threads</span> = <span class="literal">true</span></span><br><span class="line"><span class="comment"># 设置自中断时间</span></span><br><span class="line"><span class="attr">harakiri</span> = <span class="number">30</span> </span><br><span class="line"><span class="comment"># 设置缓冲  </span></span><br><span class="line"><span class="attr">post-buffering</span> = <span class="number">4096</span></span><br><span class="line"><span class="comment">#pid文件保存路径</span></span><br><span class="line"><span class="attr">pidfile</span> = /tmp/uwsgi.pid</span><br><span class="line"><span class="comment"># 设置日志目录</span></span><br><span class="line"><span class="attr">daemonize</span> = /tmp/uwsgi.log</span><br><span class="line"><span class="comment"># 指定sock的文件路径,可以用端口或sock文件</span></span><br><span class="line"><span class="comment">#socket = 192.168.88.20:8099</span></span><br><span class="line"><span class="attr">socket</span> = /tmp/uwsgi.sock</span><br></pre></td></tr></table></figure>
+<p>正式数据的发送：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">"ori_ID"</span>:<span class="string">"1"</span>,<span class="attr">"des_ID"</span>:<span class="string">"123456"</span>,<span class="attr">"CMD"</span>:<span class="string">"Online"</span>,<span class="attr">"VALUE"</span>:[]&#125;</span><br><span class="line">#将ID为1的终端上线的消息发送给ID为123456的网关</span><br></pre></td></tr></table></figure>
 
-<p>uwsgi相关运行：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --ini uwsgi.ini</span><br></pre></td></tr></table></figure>
+<p>消息类别：</p>
+<p>上线消息：终端启动时发送上线消息，网关返回该终端的各种数据以及运行状态</p>
+<p>心跳消息：终端<strong>定期</strong>发送心跳消息给网关，并携带自身的剩余电量信息</p>
+<p>环境消息：终端<strong>定期</strong>上报各种环境参数</p>
+<p>控制指令：网关<strong>发送指令</strong>给终端，实现对终端的控制，比如开灯、关灯、打开水泵、关闭水泵。</p>
+<table>
+<thead>
+<tr>
+<th>消息类别</th>
+<th>ori_ID</th>
+<th align="center">de_ID</th>
+<th>CMD</th>
+<th align="center">VALUE</th>
+<th>消息方向</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>上线消息</td>
+<td>1</td>
+<td align="center">123456</td>
+<td>Online</td>
+<td align="center">[]</td>
+<td>终端-&gt;网关</td>
+</tr>
+<tr>
+<td>心跳消息</td>
+<td>1</td>
+<td align="center">123456</td>
+<td>Heart</td>
+<td align="center">[{“battery”:”80”}]</td>
+<td>终端-&gt;网关</td>
+</tr>
+<tr>
+<td>环境信息</td>
+<td>1</td>
+<td align="center">123456</td>
+<td>Env</td>
+<td align="center">[{“temp”:”28”},…]</td>
+<td>终端-&gt;网关</td>
+</tr>
+<tr>
+<td>控制指令</td>
+<td>123456</td>
+<td align="center">1</td>
+<td>Control</td>
+<td align="center">[{“light”:”On”},…]</td>
+<td>网关-&gt;终端</td>
+</tr>
+</tbody></table>
+<p>向下：</p>
+<p>网关通过串口操作LoRa模块，这里使用serial模块操作串口</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">q = queue.Queue()</span><br><span class="line"><span class="comment">#初始化串口</span></span><br><span class="line">ser = serial.Serial(<span class="number">9600</span>)</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">ser=serial.Serial("/dev/ttyUSB0",9600,timeout=0.5) #使用USB连接串行口</span></span><br><span class="line"><span class="string">ser=serial.Serial("/dev/ttyAMA0",9600,timeout=0.5) #使用树莓派的GPIO口连接串行口</span></span><br><span class="line"><span class="string">ser=serial.Serial(1,9600,timeout=0.5)#winsows系统使用com1口连接串行口</span></span><br><span class="line"><span class="string">ser=serial.Serial("com1",9600,timeout=0.5)#winsows系统使用com1口连接串行口</span></span><br><span class="line"><span class="string">ser=serial.Serial("/dev/ttyS1",9600,timeout=0.5)#Linux系统使用com1口连接串行口</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">LoRa</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment">#监听串口数据</span></span><br><span class="line">        count = ser.inWaiting()</span><br><span class="line">        <span class="keyword">if</span> count != <span class="number">0</span>:</span><br><span class="line">            <span class="comment">#接收串口的数据,一行行的读</span></span><br><span class="line">            recv = ser.readline()</span><br><span class="line">            <span class="comment">#数据读完之后，清空串口接收缓存</span></span><br><span class="line">            ser.flushInput()</span><br><span class="line">            <span class="comment">#将终端发来的数据缓存进消息队列</span></span><br><span class="line">            q.put(recv.decode())</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">LoRa_json</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        data = q.get()</span><br><span class="line"></span><br><span class="line"><span class="comment">#开启两个线程分别去处理数据的接收和数据的解析工作</span></span><br><span class="line">threads = []</span><br><span class="line">t1 = threading.Thread(target=LoRa)</span><br><span class="line">threads.appen(t1)</span><br><span class="line">t2 = threading.Thread(target=LoRa_json)</span><br><span class="line">threads.appen(t2)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="keyword">for</span> t <span class="keyword">in</span> threads:</span><br><span class="line">        t.start()</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">系统中的每个终端都要与网关进行LoRa通信，终端的数量还是很大的，接收的数据也是很大的；因此，我们不能使用单线程同步的IO模型，而且解析数据也是十分耗时的。所以，在这里使用消息队列缓存接受到的LoRa数据，当接收线程进行IO监听时，负责解析的线程去消息队列取消息并进行解析。</span></span><br><span class="line"><span class="string">这里使用queue.Queue()当做消息队列</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
 
-<p>重载uwsgi配置文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --reload /tmp/uwsgi.pid</span><br></pre></td></tr></table></figure>
+<h2 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h2><h2 id="项目一：智慧农业项目"><a href="#项目一：智慧农业项目" class="headerlink" title="项目一：智慧农业项目"></a>项目一：智慧农业项目</h2><h3 id="技术点"><a href="#技术点" class="headerlink" title="技术点"></a>技术点</h3><p>开发环境：Centos7</p>
+<p>技术点：Django、Bootstrap、MySQL、echarts、ajax（hb broker、hb客户端、消息解析、文件管理）</p>
+<h3 id="数据库表的构建（共计12张表）"><a href="#数据库表的构建（共计12张表）" class="headerlink" title="数据库表的构建（共计12张表）"></a>数据库表的构建（共计12张表）</h3><p>环境数据信息表</p>
+<ul>
+<li>终端ID</li>
+<li>空气温度</li>
+<li>空气湿度</li>
+<li>土壤湿度</li>
+<li>光照前度</li>
+<li>水位情况</li>
+<li>土壤湿度</li>
+<li>创建时间</li>
+</ul>
+<p>滴灌系统信息表</p>
+<ul>
+<li>终端ID</li>
+<li>阈值设定</li>
+<li>创建时间</li>
+</ul>
+<p>灯光控制信息表</p>
+<ul>
+<li>终端ID</li>
+<li>阈值设定</li>
+<li>创建时间</li>
+</ul>
+<p>报警信息表</p>
+<ul>
+<li>网关id</li>
+<li>告警信息</li>
+<li>创建时间</li>
+</ul>
+<p>设备信息列表</p>
+<ul>
+<li>网关id</li>
+<li>网关状态（在线/离线）</li>
+<li>节点一运行状态</li>
+<li>节点一电源</li>
+<li>节点二运行状态</li>
+<li>节点二电源</li>
+<li>…</li>
+<li>节点八运行状态</li>
+<li>节点八电源</li>
+<li>创建时间</li>
+</ul>
+<p>日志表</p>
+<ul>
+<li>操作电脑的IP</li>
+<li>操作记录</li>
+<li>创建时间</li>
+</ul>
+<h3 id="页面布局"><a href="#页面布局" class="headerlink" title="页面布局"></a>页面布局</h3><p>左侧导航栏：环境数据、滴灌系统、灯光控制、设备列表、文件管理</p>
+<h3 id="功能点的解答"><a href="#功能点的解答" class="headerlink" title="功能点的解答"></a>功能点的解答</h3><p>服务器的大致页面就是和我们做的CRM项目是一样的，都是在页面的左侧以分级的方式展示各个模块，右面大面积就是展示具体模块的功能，像这样：</p>
+<p><img src="C:%5CUsers%5Cpl%5CPictures%5Cshow.JPG" alt></p>
+<h4 id="网关数据的备份"><a href="#网关数据的备份" class="headerlink" title="网关数据的备份"></a>网关数据的备份</h4><p>网关上传的是备份数据库，在web界面中使用列表的形式展现（按照时间升序）；用户可手动对备份文件进行删除等操作，也可以备份文件的批量删除操作（对于勾选的数据我们我们将对应的pk值提交到后台，后台针对pk定位文件进行删除操作）；列表的数据量如果过大，我们做了分页处理（一页只展示10条数据，我们是自己写的组件，没有使用django自带的组件（后台就是使用了limit这个方法进行了每次数据访问条数的限制，做到分页，前端就是写一个样式，把后端的数据渲染进入就可以得到分页组件，或者前端使用element-ui也是可行的）），</p>
+<p>文件的上传在网关端使用requests库进行文件的上传。在服务端页面上有所有网关设备的列表，选中相应的网关，点击指定进行数据库备份，这样通过hbmqtt模块进行命令的下发，然后网关就会上传备份数据库并进行写库操作（执行脚本的方式），当然数据备份就是为了防止意外情况的发生，当网关一旦损毁，新的网关就可以使用requests模块进行数据的获取，这样就可以快速组建好新的网关。</p>
+<p>表：</p>
+<p>file_name(网关名称+时间戳)</p>
+<p>file_size（数据库大小）</p>
+<p>file_path（数据库文件储存的路径，一般情况下这个就在settings里面配置固定的储存位置，使用os.path.join(路径，file_name做路径的拼接）</p>
+<p>upload_time（数据库上传的最新时间）</p>
+<h4 id="实现终端数据的可视化"><a href="#实现终端数据的可视化" class="headerlink" title="实现终端数据的可视化"></a>实现终端数据的可视化</h4><p>空气温、湿度</p>
+<p>光照强度</p>
+<p>土壤湿度</p>
+<p>雨滴情况</p>
+<p>水位情况</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">使用折线图、柱状图在一个图里面展示，使用双Y轴（使用pyecharts里面的options来做的）的方式对不同的数据使用不同的单位（这样温度、湿度就可以放在一张图里面）。对于其他的比如光照、雨水等信息也使用这种方式进行展示</span><br><span class="line"></span><br><span class="line">后端采用pyecharts模块，对采集网关发送过来的数据进行可视化。</span><br><span class="line">该模块默认输出的内容是一个html网页，使用iframe标签把生成的网页图像嵌入到我们自己的html中</span><br><span class="line">注意的地方：</span><br><span class="line">使用的pyecharts版本的问题，对于<span class="number">0.5</span>.x版本和<span class="number">1.0</span>的版本的差别是很大的，在<span class="number">1.0</span>版本第一些方法进行了封装，并增加了一些功能，这些都是在开发的时候要十分注意的问题</span><br><span class="line">对于pyecharts模块，它自动生成的是html文件，当然，也可以生成图片，但是需要就这第三方的组件，于是这里我使用iframe标签将生成的html文件嵌入到我们自己的页面之中，这里也会出现一个问题就是页面的比例的调整，我的处理方式就是在iframe标签外面套一个div标签，控制div在我们页面的大小与位置，iframe标签填充进去并同比例进行缩放（tranceform）就能够达到我们的预期</span><br><span class="line"></span><br><span class="line"><span class="comment">#这一部分的内容是在新的页面上增加按钮选择的方式</span></span><br><span class="line"><span class="comment">#环境的信息的采集是每隔30分钟采集一次并保存到数据库，我们在前台展示的时候都是拿数据库最新的几条数据做当前环境信息的展示；当然我们也可以我们也可以回顾历史数据信息（选择查看的范围，然后进行get请求，拿到数据进行页面如渲染生成图像就可以）；还有一个粒度大显示最近几天的平均气温（湿度、阳光等等），右边对比这几天的天气情况进行环比分析（今天该怎么做，这样就有个依据）</span></span><br><span class="line">对于这个环比分析这一块，最近几天的平均气温的数据是请求发到后台，后台去数据库按照日期进行取值并求平均值，然后渲染展示到前端页面，对于天气情况的接入（我使用requests模块对中国气象局接口进行进行访问获取本地最近的天气状况，用进来进一步做判断）</span><br><span class="line"></span><br><span class="line"><span class="comment">#对于整个页面的情况，我使用的是模板继承的方式进行布局的，对于左边的导航部分我们可以做成母板的样式，其他的业务界面可以对母板页面进行继承（对于右边面板我们的多按钮生成的不同的图，我没有使用ajax的方式做，因为我们渲染的是html文件而不是对数据进行渲染，这里使用ajax不太好操作，于是我们就每一个按钮就针对一个url，用不同的url返回不同的展示数据）</span></span><br></pre></td></tr></table></figure>
 
-<p>停止uwsgi服务：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --stop /tmp/uwsgi.pid</span><br></pre></td></tr></table></figure>
+<h4 id="mysql的数据持久化"><a href="#mysql的数据持久化" class="headerlink" title="mysql的数据持久化"></a>mysql的数据持久化</h4><p>就是服务器定时向网关发一个命令，网关返回数据，服务器将数据写入到mysql数据库（这个定时的操作是基于hbmqtt模块实现的）</p>
+<p>hbmqtt模块的介绍（服务器与网关通信）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">服务端通过MQTT协议（轻量、能耗低）进行与网关的通信，进行数据和指令的传输，使用hbmqtt模块实现。其中，服务端既是MQTT broker也是MQTT客户端，网关是MQTT客户端，服务器和网关分别订阅不同的MQTT主题，通过发布指定主题实现通信。</span><br><span class="line">功能：</span><br><span class="line">支持3个等级（Qos0~2）的消息流</span><br><span class="line">当网络断开时客户端自动发起重连</span><br><span class="line">支持加密认证机制</span><br><span class="line">自带基础系统主题</span><br><span class="line">使用SSL加密方式（40位的加密密钥）</span><br><span class="line">插件系统</span><br><span class="line">TCP 和 websocket 支持</span><br><span class="line"></span><br><span class="line">命令：</span><br><span class="line">hbmqtt-用于在服务端启动broker（负责建立网络连接、支持消息订阅与发布等核心功能）</span><br><span class="line">hbmqtt_sub-用于订阅相关主题</span><br><span class="line">hbmqtt_pub-用于在相关主题上发布消息</span><br><span class="line"></span><br><span class="line">网关首先订阅主题’gateway‘，服务器通过发送消息给网关，通过发布主题‘gateway‘，一旦发布，则该消息被broker推送到所有订阅的网关。</span><br><span class="line">发布消息：hbmqtt_pub --url mqtt://ip:1883 -t/gateway -m &quot;消息&quot;</span><br><span class="line">订阅命令：hbmqtt_sub --url mqtt://ip:1883 -t/gateway</span><br></pre></td></tr></table></figure>
 
-<h4 id="十四、安装nginx和配置nginx-conf文件"><a href="#十四、安装nginx和配置nginx-conf文件" class="headerlink" title="十四、安装nginx和配置nginx.conf文件"></a>十四、安装nginx和配置nginx.conf文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>进入home目录，执行下面命令</span><br><span class="line">wget http://nginx.org/download/nginx-1.13.7.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>本地解压</span><br><span class="line">tar -zxvf nginx-1.13.7.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>暗转nginx</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install  #nginx一般默认安装好的路径为/usr/local/nginx</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>现在我们修改nginx的配置文件，在/usr/local/nginx/conf/中先备份一下nginx.conf文件，以防意外。</span><br><span class="line">cp nginx.conf nginx.conf.bak</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>然后打开nginx.conf，把原来的内容删除，直接加入以下内容：</span><br><span class="line">worker_processes  1;</span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line">    sendfile        on;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  www.django.cn;  </span><br><span class="line">        charset utf-8;</span><br><span class="line">        location / &#123;</span><br><span class="line">           include uwsgi_params;</span><br><span class="line">           uwsgi_pass 127.0.0.1:8000;  #注意</span><br><span class="line">           uwsgi_param UWSGI_SCRIPT mysite.wsgi;</span><br><span class="line">           uwsgi_param UWSGI_CHDIR /data/wwwroot/mysite;  #注意</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line">        location /static/ &#123;</span><br><span class="line">        root data/wwwroot/mysite/static/;   #注意</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>进入/usr/local/nginx/sbin/目录,执行</span><br><span class="line">./nginx -t  #该命令先检查配置文件是否有错，没有错就执行以下命令：</span><br><span class="line">./nginx   #终端没有任何提示就证明nginx启动成功，可以使用你的服务器地址查看，成功之后就会看到一个nginx欢迎页面。</span><br></pre></td></tr></table></figure>
+<p>![](C:\Users\pl\Pictures\Saved Pictures\hbmqtt.JPG)</p>
+<p>hbmqtt提供了丰富的api供我们使用（在代码中我们就是通过这种方式进行消息的传输的），MQTTClict实例化一个对象；connect()方法与broker建立连接；subscribe()方法订阅主题；publish()方法发布编码后的消息；发完消息之后，调用disconnect()方法断开与broker的连接。</p>
+<h4 id="控制设备（手动和自动）"><a href="#控制设备（手动和自动）" class="headerlink" title="控制设备（手动和自动）"></a>控制设备（手动和自动）</h4><h5 id="滴灌控制"><a href="#滴灌控制" class="headerlink" title="滴灌控制"></a>滴灌控制</h5><p>显示所有水泵的运行状态（这个只能通过环比，hbmqtt的形式下发命令获取）</p>
+<p>对水泵进行远程控制：开关控制+出水速度控制</p>
+<p>控制方式：</p>
+<ul>
+<li>手动控制：在Web界面填写水泵旋转角度和速率控制等参数（这些都是使用单选框，里面有值选择），参数设置完成单击web界面按钮实现人为主动控制水泵</li>
+<li>自动控制：设置土壤湿度值临界值（这也是input单选框），当服务器获取到土壤湿度低于临界值时自动开始浇水</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">节点的展示以一个单页面的表格的形式展示，包括它的信息（节点名称，水泵的运行状态，水泵的参数（自动控制的才有），电池的电量信息，时间信息操作（开启，弹出一个界面里面填写相关的参数信息，post提交到后台），关闭（弹出一个模态框让选择人确认关闭，通过post提交到后台）在页面的最左上角还有一个自动控制的按钮，这个按钮按下去之后也会弹出来一个页面，里面填写的是土壤适度的临界值，然后使用post提交到后台）</span><br><span class="line"></span><br><span class="line">一个节点控制的是一陇地，所以水泵控制的也是一陇地是的浇灌。水量的输送使用的是橡胶软管（在软管的应每一棵植株根部开一个个小孔用来浇灌），水泵的运行状态在页面的展示（展示过去最近时间采集的数据状态做展示，同时我们在该界面放置一个刷新的按钮，点击刷新，服务端就给网管发消息，网管告诉终端采集水泵的状态返回给服务器，服务器对采集来的数据进行数据库的储存，并展示给前端的页面。当然这个过程是有一定的延迟的，大概是2-5秒的时间，这也为什么我们一开始的时候展示之前的状态原因）</span><br><span class="line"></span><br><span class="line">手动控制：水泵的旋转角度和速率通过post的方式换地给服务端，服务端下发给网关，网关转发给指定的那个终端，终端接收到信号通过驼机去调节出水口的速率（同样也可以通过终端去控制继电器操作水泵的开启和关闭）</span><br><span class="line">....</span><br><span class="line"></span><br><span class="line">以上的操作都是在网页上进行操作的，定时和自动控制是怎么去和底层完成交互的？？</span><br></pre></td></tr></table></figure>
 
-<h4 id="十五、访问项目的页面。"><a href="#十五、访问项目的页面。" class="headerlink" title="十五、访问项目的页面。"></a><strong>十五、访问项目的页面。</strong></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>进入网站项目目录cd /data/wwwroot/mysite/执行命令：</span><br><span class="line">uwsgi -x mysite.xml</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>以上步骤都没有出错的话,进入/usr/local/nginx/sbin/目录,执行：</span><br><span class="line">./nginx -s reload</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>然后在浏览器里访问你的项目地址！我们发现一个问题就是我们的admin后台没有生效，后面的你内容我们会讲到</span><br></pre></td></tr></table></figure>
+<h5 id="灯光控制"><a href="#灯光控制" class="headerlink" title="灯光控制"></a>灯光控制</h5><ul>
+<li>手动控制：通过web界面的灯光打开和关闭按钮实现</li>
+<li>自动控制：设置灯光开启或者关闭的光照强度临界值，当服务器获取到光照强度值低于开启临界值，灯光自动开启；当光照强度高于阀值的时候就关闭灯光供应。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">对于没有太阳的天气，我们可以是使用人工光源的方式进行补光操作，增加作物的光合作用，这个在前端页面的展示就是对所有的补光灯的状态进行展示，这个也采用表格的形式进行展示（节点名称，补光灯的状态，操作（打开和关闭，它们的操作都会弹出一个确认框，只有完成确认，前端才会往后端页面发送post数据））；上面的自动控制时在前端的页面也是在左上角的地方设置一个按钮，通过点击按钮弹出一个页面进行参数信息的配置，提交到服务器，服务器进行持久化，以后没有次机信息上报过来的时候都会和这些配置信息进行比较看是否需要进行自动操作。</span><br><span class="line">终端TPY通过控制继电器来控制补光灯的打开和关闭</span><br></pre></td></tr></table></figure>
 
-<p><strong>至此，我们的项目都部署成功了！里面最值得留意的就是项目的路径不要弄错，还有，项目的所有操作都要在虚拟环境下进行。</strong></p>
-<h3 id="本地项目搬迁到服务器"><a href="#本地项目搬迁到服务器" class="headerlink" title="本地项目搬迁到服务器"></a>本地项目搬迁到服务器</h3><p>如果原来项目是在本地的，想要部署上线，可以参考下面的步骤：</p>
-<p>1、备份本地数据库。(使用sqlite数据库的话，直接打包数据库文件上传到服务器即可)</p>
-<p>2、在项目目录下用下面的命令把当前的环境依赖包导出到requirements.txt文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+<h4 id="终端-网关设备在线监控-安防报警"><a href="#终端-网关设备在线监控-安防报警" class="headerlink" title="终端/网关设备在线监控+安防报警"></a>终端/网关设备在线监控+安防报警</h4><p>在设备管理页面显示系统所有的终端，网关设备的运行状态，在线离线信息；显示设备的剩余电量以及其他的硬件参数，当电量不足时提醒用户更换电池（这里的的电池的电量不足的时候就会出触发页面的告警，告警信息会在网站的告警栏里面进行展示）</p>
+<p>红外感应出现出现有动物的入侵，也会通过网关将信息提交到服务端，在预警栏里面展示（在网关，通过2G模块向管理员发送短息）</p>
+<p>celery做定时任务</p>
+<p>定时任务celery Beta，Beta进程会读取配置文件的内容，周期性的将配置中到到期需要执行的任务发给队列（它和异步任务是有所不同的，异步任务是触发执行的）</p>
+<p><strong>配置settings</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#注册app</span></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">'app01'</span>,</span><br><span class="line">    <span class="string">'djcelery'</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">#配置celery相关</span></span><br><span class="line"><span class="keyword">import</span> djcelery</span><br><span class="line"><span class="keyword">from</span> </span><br><span class="line">djcelery.setup_loader() <span class="comment">#初始化</span></span><br><span class="line">BROKER_URL = <span class="string">'redis://127.0.0.1:6379/0'</span> <span class="comment">#进行调度的地址 加载执行的数据库0</span></span><br><span class="line">CELERY_IMPORTS = (<span class="string">'app01.task'</span>) <span class="comment">#导入装有任务的py文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置定时任务</span></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> timedelta</span><br><span class="line"><span class="keyword">from</span> celery.schedules <span class="keyword">import</span> crontab</span><br><span class="line">CELERYBEAT_SCHEDULE = &#123;</span><br><span class="line">    <span class="string">'schedule-test'</span>:&#123;</span><br><span class="line">        <span class="string">'task'</span>:<span class="string">'app01.task.test1'</span>, <span class="comment">#定时执行的任务的函数名称</span></span><br><span class="line">        <span class="string">'schedule'</span>:timedelta(seconds=<span class="number">7</span>) <span class="comment">#定时执行的间隔时间</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'schedule-test2'</span>:&#123;</span><br><span class="line">        <span class="string">'task'</span>:<span class="string">'app01.task.test2'</span>, <span class="comment">#定时执行的任务的函数名称</span></span><br><span class="line">        <span class="string">'schedule'</span>: crontab(minute=<span class="number">0</span>, hour=<span class="number">8</span>,  <span class="comment"># 每周一至周五早上8点执行任务函数day_of_week=[1, 2, 3, 4, 5]),</span></span><br><span class="line">        <span class="string">'args'</span>:(<span class="number">3</span>,) <span class="comment">#定时任务传参</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>3、把项目源码压缩打包。</p>
-<p>4、把项目上传到对应的目录里。</p>
-<p>5、创建新的虚拟环境</p>
-<p>6、安装requirements.txt里的依赖。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+<p>这里面装有任务的py文件里面就有一个函数，这个函数触发的就是通过hbmqtt想每个网关发送获取设备和网关硬件信息的指令，然后这里面处理的逻辑就取回redis（backend）里面取到返回数据进行mysql的持久化。如果告警信息也会在这里面的逻辑进行处理。</p>
+<p><strong>创建task任务</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span>  celery <span class="keyword">import</span> task</span><br><span class="line"><span class="meta">@task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test1</span><span class="params">()</span>:</span></span><br><span class="line">      print(<span class="string">'走到当前的任务了'</span>)</span><br><span class="line">      time.sleep(<span class="number">5</span>)</span><br><span class="line">      print(<span class="string">''</span>任务执行完毕<span class="string">''</span>)</span><br></pre></td></tr></table></figure>
 
-<p>7、导入数据库到服务器。</p>
-<p>然后重复上面的13、14、15的步骤，即可。</p>
-<h3 id="关于线上部署admin后台样式没有生效的问题："><a href="#关于线上部署admin后台样式没有生效的问题：" class="headerlink" title="关于线上部署admin后台样式没有生效的问题："></a><strong>关于线上部署admin后台样式没有生效的问题：</strong></h3><p>1、在settings.py尾部：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">STATIC_ROOT = <span class="string">'/www/mysite/mysite/static'</span>  <span class="comment">#设置一个目录，把后台CSS样式放到这个目录里</span></span><br></pre></td></tr></table></figure>
+<p><strong>创建celery.py文件（和settings同级）</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> absolute_import</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"><span class="keyword">from</span> django.conf <span class="keyword">import</span> settings</span><br><span class="line"></span><br><span class="line">os.environ.setdefault(<span class="string">'DJANGO_SETTINGS_MODULE'</span>, <span class="string">'whthas_home.settings'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#实例化</span></span><br><span class="line">app = Celery(<span class="string">'demo'</span>)</span><br><span class="line"><span class="comment">#加载配置</span></span><br><span class="line">app.config_from_object(<span class="string">'django.conf:settings'</span>)</span><br><span class="line">app.autodiscover_tasks(<span class="keyword">lambda</span>: settings.INSTALLED_APPS)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task(bind=True)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">debug_task</span><span class="params">(self)</span>:</span></span><br><span class="line">    print(<span class="string">'Request: &#123;0!r&#125;'</span>.format(self.request))</span><br></pre></td></tr></table></figure>
 
-<p>2、收集CSS样式，在终端输入：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py collectstatic  <span class="comment">#运行这个命令之后，就会自动把后台CSS样式收集到/static/目录下。</span></span><br></pre></td></tr></table></figure>
+<p><strong>在setting.py同级的<code>__init__</code>里面添加</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> .celery <span class="keyword">import</span> app <span class="keyword">as</span> celery_app</span><br><span class="line"></span><br><span class="line">__all__ = (<span class="string">'celery_app'</span>,)</span><br></pre></td></tr></table></figure>
 
-<p>3、把STATIC_ROOT = ‘/www/mysite/mysite/static’  注释掉，不然启动服务会出错。</p>
-<p>然后刷新页面，后台样式恢复！<strong>本人亲测无效，后续会更新</strong></p>
-<h3 id="Django启用SSL证书"><a href="#Django启用SSL证书" class="headerlink" title="Django启用SSL证书"></a><strong>Django启用SSL证书</strong></h3><p>群里好多朋友都需要使用SSL证书，在使用我这个部署教程的基础上部署SSL证书，总是遇到不少坑。在这，我在这补充一下安装SSL证书的方法，供大家参考。</p>
-<p>1、进入之前我们下载nginx的源码目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /home/nginx-1.13.7/</span><br></pre></td></tr></table></figure>
+<p>在init里面配置主文件的含义就是在项目一旦启动之后，在第一时间把定时任务起来。</p>
+<p><strong>启动项目</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#首先启动redis</span></span><br><span class="line">redis-server</span><br><span class="line">redis-cli</span><br><span class="line"></span><br><span class="line"><span class="comment">#启动django项目</span></span><br><span class="line">python manage.py runserver</span><br><span class="line"></span><br><span class="line"><span class="comment">#启动Worker</span></span><br><span class="line">python manage.py celeryd --loglevel=info</span><br><span class="line"></span><br><span class="line"><span class="comment">#启动定时任务</span></span><br><span class="line">python manage.py celery beta --loglevel=info</span><br></pre></td></tr></table></figure>
 
-<p>2、安装PCRE库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install pcre</span><br></pre></td></tr></table></figure>
+<p>扩展：自动加载的一个模块autodiscover_modules，他会去自动加再文件，就不需要我们这样配置了。但是这种方式没有研究，以后有机会再去做。</p>
+<h4 id="权限组件的应用"><a href="#权限组件的应用" class="headerlink" title="权限组件的应用"></a>权限组件的应用</h4><p>表结构：</p>
+<p>Permission权限表id/title/url/name/parent_id</p>
+<p>Role角色表id/name</p>
+<p>User用户表id/username/password</p>
+<p>role_permision（隐藏表）id/role_id/permission_id（多对多）</p>
+<p>user_role（隐藏表）id/user_id/role_id（多对多）</p>
+<p>权限有：系统管理员（最高权限，可以查看也可以下发命令操作终端），普通人员（一般权限，只能查看）</p>
+<p>权限控制到按钮级别：session中存放一个有关权限的字典，字典的key为权限的url别名，value为一个权限的具体信息。自定义一个filter的模板，判断权限是否在用户的权限字典里面，存在就返回true，用来显示按钮否则就不显示按钮。</p>
+<p>系统管理员登录成功之后可以查看用户的列表；他可以添加用户、删除用户、修改用户信息</p>
+<p>系统管理员还可以给用户分配角色（角色拥有不同的权限）</p>
+<p>对于普通的用户这些内容都是隐藏的，所以他们也没有感知。</p>
+<p>权限校验的中间件：</p>
+<p>获取当前访问的URL，判断是否在不需要权限的白名单中（比如登录，注册，注销等URL并且白名单使用使用正则表达式来写），如果在则不对url进行校验；</p>
+<p>然后从session中获取该用户的权限信息（就是指用户登录成功）；</p>
+<p>将上面取得的session，循环出每一个权限进行正则匹配，匹配成功则改变flag额标志位为true（也就是说精确到按钮级别的url要么显示要门不显示）；</p>
+<p>初始化的权限字典：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">permission_dice = &#123;</span><br><span class="line">	&apos;权限url的别名&apos;:&#123;</span><br><span class="line">	&apos;url&apos;:&apos;url路径&apos;,</span><br><span class="line">	&apos;id&apos;:&apos;权限的id&apos;,  #页面的按钮</span><br><span class="line">	&apos;pid&apos;:&apos;父权限的id&apos;  #就是说这是左边的菜单栏</span><br><span class="line">	&apos;title&apos;:&apos;权限的标题&apos;,</span><br><span class="line">	&apos;pname&apos;:&apos;父权限的url别名&apos;,</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>3、安装SSL</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install openssl openssl-devel</span><br></pre></td></tr></table></figure>
+<h4 id="登陆注册"><a href="#登陆注册" class="headerlink" title="登陆注册"></a>登陆注册</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">登陆注册使用ModoelForm来进行生成页面标签，并进行验证</span><br><span class="line">对于注册，短信验证的方式也可以看看</span><br></pre></td></tr></table></figure>
 
-<p>4、依次执行下面两行代码重新编译一下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">./configure --with-http_ssl_module</span><br></pre></td></tr></table></figure>
+<p>celery的异步任务进行注册时的短信认证功能：这里短信发送使用阿里平台的sdk（收费的），因此我们在手机号注册成功之后我们就会提示该账号已经注册，不会发送验证短信了。</p>
+<p><img src="http://9017499461.linshutu.top/Celery%E5%9B%BE%E8%A7%A3.JPG" alt></p>
+<p>流程（4步走）：任务，这里是异步任务（短信验证码的发送），异步任务通常在业务逻辑中被触发（前端点击获取验证码按钮之后给触发后台的业务逻辑），然后将生成短信验证码并发送短信的sdk发送到任务队列（任务队列就是消息中间件broker），然后执行任务单元worker实时监控消息队列并获取队列中调度任务，并执行它，最后backend用于储存执行的结果，然后，将用户提交的短信验证码和储存的验证码进行比较。</p>
+<p>注意：这里使用redis存放短信验证码，而且celery不具备调度任务的能力，这里也是使用redis进行任务的调度</p>
+<p>路由————》走到业务视图（连接redis数据库，产生随机的6个数字验证码，将短信验证码存到redis数据库并设置短息验证码标识设定60秒过期，防止频繁请求短信验证码，并且设置验证码的有效时间为300秒，最后通过delay调用将任务加到队列中）——》返回前端ok（发送短信按钮变灰倒计时开始）</p>
+<p>登录之后可以退出登录和修改个人信息的页面（注册和个人信息的修改都是使用modelform来做的）</p>
+<p><strong>mian：celery的入口</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"><span class="comment">#创建celery实例</span></span><br><span class="line">celery_app = Celery()</span><br><span class="line"><span class="comment">#加载celery配置</span></span><br><span class="line">celery_app.config_from_object(<span class="string">'celery_tasks.config'</span>)</span><br><span class="line"><span class="comment">#自动注册celery任务</span></span><br><span class="line">celery_app.autodiscover_tasks([<span class="string">'celery_tasks.sms'</span>])</span><br></pre></td></tr></table></figure>
 
-<p>5、执行make</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+<p><strong>config：celery的配置文件</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">BROKER_URL =<span class="string">'redis://127.0.0.1:6379/14'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#短信验证码过期时间,以秒为单位</span></span><br><span class="line">SMS_CODE_EXPIRES=<span class="number">200</span></span><br><span class="line"><span class="comment">#发送信息短信的间隔</span></span><br><span class="line">SMS_FLAG_EXPIRES=<span class="number">60</span></span><br></pre></td></tr></table></figure>
 
-<p>注意：是make而不是make install </p>
-<p>6、备份原来的nginx</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/local/nginx/sbin/nginx /usr/local/nginx/sbin/nginx.bak</span><br></pre></td></tr></table></figure>
+<p><strong>tasks:celery的任务</strong>，必须使用tasks命名</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> celery_tasks.main <span class="keyword">import</span> celery_app</span><br><span class="line"><span class="keyword">from</span> aliyunsdkcore.client <span class="keyword">import</span> AcsClient</span><br><span class="line"><span class="keyword">from</span> aliyunsdkcore.request <span class="keyword">import</span> CommonRequest</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用装饰器装饰任务</span></span><br><span class="line"><span class="meta">@celery_app.task(bind=True, name="send_sms", retry_backoff=3)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">send_sms</span><span class="params">(sms_code,aa,mobile)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    使用阿里云短信接口发送短信</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">	<span class="comment"># 创建AcsClient实例</span></span><br><span class="line">	client = AcsClient(</span><br><span class="line">	   <span class="string">"xx"</span>,</span><br><span class="line">	   <span class="string">"xx"</span>,</span><br><span class="line">	   <span class="string">"xx"</span></span><br><span class="line">	)</span><br><span class="line">	request = CommonRequest()</span><br><span class="line">	request.set_accept_format(<span class="string">'json'</span>)</span><br><span class="line">	request.set_domain(<span class="string">'dysmsapi.aliyuncs.com'</span>)</span><br><span class="line">	request.set_method(<span class="string">'POST'</span>)</span><br><span class="line">	request.set_protocol_type(<span class="string">'https'</span>)  <span class="comment"># https | http</span></span><br><span class="line">	request.set_version(<span class="string">'2017-05-25'</span>)</span><br><span class="line">	request.set_action_name(<span class="string">'SendSms'</span>)</span><br><span class="line"></span><br><span class="line">	request.add_query_param(<span class="string">'RegionId'</span>, <span class="string">"cn-hangzhou"</span>)</span><br><span class="line">	request.add_query_param(<span class="string">'PhoneNumbers'</span>, mobile)</span><br><span class="line">	request.add_query_param(<span class="string">'SignName'</span>, <span class="string">"xx"</span>)</span><br><span class="line">	request.add_query_param(<span class="string">'TemplateCode'</span>, <span class="string">"xx"</span>)</span><br><span class="line">	request.add_query_param(<span class="string">'TemplateParam'</span>,&#123;<span class="string">'code'</span>:sms_code&#125;)</span><br><span class="line"></span><br><span class="line">	response = client.do_action(request)</span><br><span class="line">	print(str(response, encoding=<span class="string">'utf-8'</span>))</span><br></pre></td></tr></table></figure>
 
-<p>7、将新的 nginx 覆盖旧安装目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp objs/nginx /usr/local/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
+<p><strong>settings：配置缓存</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">CACHES = &#123;</span><br><span class="line">    <span class="string">"default"</span>: &#123; <span class="comment"># 默认</span></span><br><span class="line">        <span class="string">"BACKEND"</span>: <span class="string">"django_redis.cache.RedisCache"</span>,</span><br><span class="line">        <span class="string">"LOCATION"</span>: <span class="string">"redis://127.0.0.1:6379/0"</span>,</span><br><span class="line">        <span class="string">"OPTIONS"</span>: &#123;</span><br><span class="line">            <span class="string">"CLIENT_CLASS"</span>: <span class="string">"django_redis.client.DefaultClient"</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"session"</span>: &#123; <span class="comment"># session</span></span><br><span class="line">        <span class="string">"BACKEND"</span>: <span class="string">"django_redis.cache.RedisCache"</span>,</span><br><span class="line">        <span class="string">"LOCATION"</span>: <span class="string">"redis://127.0.0.1:6379/1"</span>,</span><br><span class="line">        <span class="string">"OPTIONS"</span>: &#123;</span><br><span class="line">            <span class="string">"CLIENT_CLASS"</span>: <span class="string">"django_redis.client.DefaultClient"</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"sms_code"</span>: &#123; <span class="comment"># 短信验证码</span></span><br><span class="line">        <span class="string">"BACKEND"</span>: <span class="string">"django_redis.cache.RedisCache"</span>,</span><br><span class="line">        <span class="string">"LOCATION"</span>: <span class="string">"redis://127.0.0.1:6379/3"</span>,</span><br><span class="line">        <span class="string">"OPTIONS"</span>: &#123;</span><br><span class="line">            <span class="string">"CLIENT_CLASS"</span>: <span class="string">"django_redis.client.DefaultClient"</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>如果报错，刚用执行下面的命令覆盖</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -rfp objs/nginx /usr/local/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
+<p><strong>url：路由</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url(<span class="string">r'^api_sms/&lt;?Pmobile&gt;(\d+)/$'</span>,views.api_sms,name=<span class="string">"api_sms"</span>)</span><br></pre></td></tr></table></figure>
 
-<p>8、把域名证书复制到网站根目录里去，后缀为.crt和.key的文件。</p>
-<p>9、配置nginx.conf文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"> 1 worker_processes  1;</span><br><span class="line"> 2 events &#123;</span><br><span class="line"> 3     worker_connections  1024;</span><br><span class="line"> 4 &#125;</span><br><span class="line"> 5 http &#123;</span><br><span class="line"> 6     include       mime.types;</span><br><span class="line"> 7     default_type  application/octet-stream;</span><br><span class="line"> 8     sendfile        on;</span><br><span class="line"> 9     server &#123;</span><br><span class="line">10         listen 443 ssl http2;</span><br><span class="line">11         server_name www.django.cn django.cn;</span><br><span class="line">12         root /data/wwwroot/mysite;</span><br><span class="line">13         charset utf-8;</span><br><span class="line">14         ssl_certificate    /data/wwwroot/mysite/1_www.django.cn.crt;</span><br><span class="line">15         ssl_certificate_key    /data/wwwroot/mysite/2_www.django.cn.key;</span><br><span class="line">16         ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">17         ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;</span><br><span class="line">18         ssl_prefer_server_ciphers on;</span><br><span class="line">19         ssl_session_cache shared:SSL:10m;</span><br><span class="line">20         ssl_session_timeout 10m;</span><br><span class="line">21         error_page 497  https://$host$request_uri;</span><br><span class="line">22         location / &#123;</span><br><span class="line">23            include uwsgi_params;</span><br><span class="line">24            uwsgi_pass 127.0.0.1:8997;</span><br><span class="line">25            uwsgi_param UWSGI_SCRIPT wechatProject.wsgi;</span><br><span class="line">26            uwsgi_param UWSGI_CHDIR /data/wwwroot/mysite;</span><br><span class="line">27            </span><br><span class="line">28         &#125;</span><br><span class="line">29         location /static/ &#123;</span><br><span class="line">30         alias /data/wwwroot/mysite/static/; </span><br><span class="line">31         &#125;</span><br><span class="line">32         access_log  /data/wwwroot/mysite/www.django.cn.log;</span><br><span class="line">33         error_log  /data/wwwroot/mysite/www.django.cn.error.log;</span><br><span class="line">34     &#125;</span><br><span class="line">35 &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>view：业务</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">api_sms</span><span class="params">(request, mobile)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    发送验证码的功能</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">	<span class="comment"># 连接到存放短信验证码的redis数据库</span></span><br><span class="line">	redis_cli2 = get_redis_connection(<span class="string">"sms_code"</span>)</span><br><span class="line">	<span class="comment"># 判断数据库短信验证标识符是否存在未过期(防止恶意请求短信)</span></span><br><span class="line">	<span class="keyword">if</span> redis_cli2.get(mobile + <span class="string">"_flag"</span>) <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">		<span class="keyword">return</span> http.JsonResponse(&#123;<span class="string">"code"</span>: <span class="number">1001</span>, <span class="string">"errmsg"</span>: <span class="string">"短信验证太频繁,稍后再试"</span>&#125;)</span><br><span class="line"></span><br><span class="line">	<span class="comment"># 开始发送短信验证码</span></span><br><span class="line">	sms_code = <span class="string">"%6d"</span> % random.randint(<span class="number">0</span>, <span class="number">999999</span>)</span><br><span class="line"></span><br><span class="line">	<span class="comment"># 使用管道操作数据库,减少交互次数</span></span><br><span class="line">	redis_p = redis_cli2.pipeline()</span><br><span class="line">	<span class="comment"># 短信验证码存入数据库</span></span><br><span class="line">	<span class="comment"># constants.SMS_CODE_EXPIRES为自定义的过期时间</span></span><br><span class="line">	redis_p.setex(mobile, config.SMS_CODE_EXPIRES, sms_code)</span><br><span class="line">	<span class="comment"># 短信验证码标识, 设定60秒过期,防止频繁请求短信验证码</span></span><br><span class="line">	redis_p.setex(mobile + <span class="string">"_flag"</span>, config.SMS_CODE_EXPIRES, <span class="number">1</span>)</span><br><span class="line">	redis_p.execute()</span><br><span class="line"></span><br><span class="line">	<span class="comment"># 异步执行短信发送任务</span></span><br><span class="line">	<span class="comment"># 通过delay调用，可以将任务加到队列中，交给celery去执行</span></span><br><span class="line">	send_sms.delay(mobile, sms_code)</span><br><span class="line"></span><br><span class="line">	<span class="comment"># 后台打印查看验证码</span></span><br><span class="line">	<span class="keyword">return</span> http.JsonResponse(&#123;<span class="string">"code"</span>: <span class="number">1000</span>, <span class="string">"errmsg"</span>: <span class="string">"OK"</span>&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>10、测试配置文件是否正确</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx -t</span><br></pre></td></tr></table></figure>
+<p><strong>项目运行</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>第一步：启动redis服务</span><br><span class="line">redis-server</span><br><span class="line"><span class="meta">#</span>启动celery，在项目的环境下使用命令启动（celery_tasks.main为项目的mian文件）</span><br><span class="line">celery -A celery_tasks.main worker -l info</span><br><span class="line"><span class="meta">#</span>启动dajngo项目</span><br><span class="line">python3 manage.py runserver 0.0.0.0:8000</span><br></pre></td></tr></table></figure>
 
-<p>如果没有报错则重启nginx即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx -s reload</span><br></pre></td></tr></table></figure>
+<h4 id="docker容器线上部署"><a href="#docker容器线上部署" class="headerlink" title="docker容器线上部署"></a>docker容器线上部署</h4><h3 id="扩展："><a href="#扩展：" class="headerlink" title="扩展："></a>扩展：</h3><p>Base编解码</p>
+<p>Base64是用来将非ASCII字符的数据转换成ASCII字符的一种方法，特别适合在HTTP和MIME协议下快速传输数据</p>
+<p>要求：把3个8bit的字节转换成4个6bit的字节，然后把6bit字节的高两个添加00,组成4个8bit的字节，所以，转换之后的字符要比原来的字符长1/3。在url中，不能使用+、/等直接作为参数，这个模块就是干这个的。</p>
+<h2 id="项目二：电梯检测管理平台"><a href="#项目二：电梯检测管理平台" class="headerlink" title="项目二：电梯检测管理平台"></a>项目二：电梯检测管理平台</h2><h3 id="技术点-1"><a href="#技术点-1" class="headerlink" title="技术点"></a>技术点</h3><p>物联网：一个物理设备网络，IOT分层架构：</p>
+<ul>
+<li>云端层<ul>
+<li>可视化系统</li>
+<li>移动应用</li>
+</ul>
+</li>
+<li>边缘层<ul>
+<li>网关，分析，过滤数据</li>
+</ul>
+</li>
+<li>设备层<ul>
+<li>传感器</li>
+</ul>
+</li>
+</ul>
+<p>LoRa：低功耗远程无线通讯技术</p>
+<p>Django框架</p>
+<p>Rabbit MQ消息队列：一个面向消息的中间件，用于组件之间的解耦，消息的发送者无需知道消息使用者的存在，反之亦然。</p>
+<p>Tensorflow框架：机器学习的库</p>
+<p>Mysql数据库</p>
+<p>LSTM算法：机器学习的算法</p>
+<h3 id="页面布局-1"><a href="#页面布局-1" class="headerlink" title="页面布局"></a>页面布局</h3><h4 id="数据采集需求"><a href="#数据采集需求" class="headerlink" title="数据采集需求"></a>数据采集需求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">-电梯运行参数的采集：将智能网关发送过过来的数据储存到系统中，并根据电梯设备协议将采集端接收到的字符串按照协议规定的要求转换成电梯的实时运行数据</span><br><span class="line">	·运行时长</span><br><span class="line">	·电梯当前层数</span><br><span class="line">	·速度</span><br><span class="line">	·开关并生成对应梯的运行记录</span><br><span class="line">	</span><br><span class="line">-一键警报器信息采集：当桥厢发生故障时被困人员按下报警器，会产生报警信息，传送到系统采集终端。采集终端将故障模块信息采集并通过短信的方式通知物业公司和维修单位的相关负责人。由于在实际情况中会有不小心触碰到报警器等意外的发生，针对这种情况报警器即有人按下但未有报警信息，第二次按压，会产生高等级报警即表明有人触发报警</span><br><span class="line">	·报警信息通知</span><br><span class="line"></span><br><span class="line">-电梯视频监控数据采集：摄像头将电梯桥厢内采集到的画面经过jpg压缩后，传送到流媒体服务器中</span><br><span class="line"></span><br><span class="line">-对采集设备检测：数据采集模块会每隔一段时间，对采集设备的状态进行判定，当时间间隔大于10分钟的时候，则会判定电梯采集设备处于掉线中，同时会生成采集设备掉线记录并通知物业公司或者维修人员。</span><br><span class="line">	·掉线检测</span><br></pre></td></tr></table></figure>
 
-<p>本文转自：<a href="https://www.django.cn/article/show-4.html" target="_blank" rel="noopener">https://www.django.cn/article/show-4.html</a></p>
+<p>使用scoket进行通信，recv接收数据，进行ack验证，验证通过，存入队列，继续接收直到接收完毕。第二阶段，从队列中取出数据，判断是否符合协议规范，符合就按照协议解析并update（跟新设备），有报警信息就通知物业或者维保人员，没有就入库。</p>
+<p>操作：网关上传接口板心跳包、报警器心跳包、报警器爆镜包、接口板统计包、报警器爆镜包。正常情况下平均30s上传一次，当桥厢有变动时实时采集数据立即上报</p>
+<h4 id="电梯检测需求"><a href="#电梯检测需求" class="headerlink" title="电梯检测需求"></a>电梯检测需求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">-接口板监测：当工作人员登录电梯监测系统，进入接口板监测部分，可以看见每部电梯运行数据的列表。</span><br><span class="line">	·监测列表</span><br><span class="line">	·运行参数详情</span><br><span class="line">	·支持条件筛选</span><br><span class="line">	·全局搜索</span><br><span class="line">	·查看掉线记录</span><br><span class="line">	·下载数据表单</span><br><span class="line">	·故障记录详情</span><br><span class="line">-对于一键报警监测来说，管理员进入，可以查看所有报警器信息</span><br><span class="line">	·条件搜索、筛选</span><br><span class="line">	·报警器监测列表</span><br><span class="line">	·报警记录详情（点击一键报警器编号）</span><br><span class="line">	·数据下载</span><br><span class="line">-对于视频监控部分：显示多有监控列表，可以根据电梯编号和所在地查询播放的监控</span><br><span class="line">	·监控列表</span><br><span class="line">	·搜索</span><br><span class="line">	·监控查看</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:%5CUsers%5Cpl%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1592297533526.png" alt="1592297533526"></p>
+<p>电梯接口板的绿色代表正常，黄色代表掉线、红色代表设备监控的电梯出现故障。出现故障的时候通过celery异步自动发送短息通知维保公司和物业公司。（由于系统的采集端是独立于电梯的控制系统，所以可能会发生接口板监测页面的数据与实际电梯状态不一致的情况，知识因为每个传感器都有监测靶目标时间，只有满足条件后才能改变状态）</p>
+<h4 id="基础信息管理功能"><a href="#基础信息管理功能" class="headerlink" title="基础信息管理功能"></a>基础信息管理功能</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">-电梯基础信息管理</span><br><span class="line">	·条件搜索，筛选</span><br><span class="line">	·电梯基础信息列表</span><br><span class="line">	·电梯基础信息详情：（采集设备注册、历史报警信息、百度地图位置）</span><br><span class="line">	·基础信息编辑</span><br><span class="line">	·基础信息删除</span><br><span class="line">	·基础信息新增</span><br><span class="line">-维保单位信息管理</span><br><span class="line">	·条件搜索、排序</span><br><span class="line">	·维保企单位详情</span><br><span class="line">	·维保单位列表</span><br><span class="line">	·编辑</span><br><span class="line">	·删除</span><br><span class="line">	·新增</span><br><span class="line">-厂家信息管理：存放电梯厂家的相关信息，一边在事故发生后能够及时找到电梯厂商为救援提供技术支持</span><br><span class="line">	·厂商信息统计</span><br><span class="line">	·厂商信息查询</span><br><span class="line">	·厂商录入</span><br><span class="line">	·厂商修改</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:%5CUsers%5Cpl%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1592298290667.png" alt="1592298290667"></p>
+<p>百度地图接入高德地图的api，通过地图组件使用url请求得到地图数据（通过点击该电梯进入新的页面去请求地图数据，嵌入到页面进行展示）</p>
+<h4 id="记录管理需求"><a href="#记录管理需求" class="headerlink" title="记录管理需求"></a>记录管理需求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">维保员进入桥厢，对电梯设备进行监测，维保结束后，将维保人员信息、维保开始时间、结束时间、电梯状态相关记录上传到电梯监测平台</span><br><span class="line">-事故记录管理</span><br><span class="line">	·事故列表</span><br><span class="line">	·事故详情</span><br><span class="line">	·事故录入</span><br><span class="line">-维保记录管理</span><br><span class="line">	·维保记录列表</span><br><span class="line">	·维保详情</span><br><span class="line">	·维保情况录入</span><br><span class="line"></span><br><span class="line">-维保人员</span><br><span class="line">	·查看自己的维保记录</span><br><span class="line">	·上传维保记录</span><br><span class="line">-物业公司</span><br><span class="line">	·记录列表</span><br><span class="line">	·记录详情</span><br><span class="line">	·记录编辑</span><br><span class="line">	·记录删除</span><br><span class="line">	·记录录入</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:%5CUsers%5Cpl%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1592299683622.png" alt="1592299683622"></p>
+<p>维保人员将此次的维保记录上传到系统（这一块可以做成一款app，维保人员登录之后，将数据以api的方式上传到平台，入库和保存，这一部分可以独立出来）</p>
+<h4 id="统计分析需求"><a href="#统计分析需求" class="headerlink" title="统计分析需求"></a>统计分析需求</h4><p>统计模块的主要功能点是将对数据库中的数据抽取、归纳并展现，将统计结果以图片的方式展现给用户。电梯故障分析：柱状图、折线图、饼状图、热力图分析展现故障的下相关统计情况。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-电梯指标统计：以图表的方式呈现</span><br><span class="line">	·故障折线图</span><br><span class="line">	·电梯分布热力图</span><br><span class="line">-维保单位指标统计：主要以列表的显示展现（可搜索查询，筛选排序）</span><br><span class="line">	·维保电梯数量</span><br><span class="line">	·正常维保电梯数量</span><br><span class="line">	·超期未维保电梯数量等</span><br></pre></td></tr></table></figure>
+
+<p>（电梯指标统计与维保单位指标统计可以来回切换）这一部分使用echars，首先取得数据库的数据，然后统计之后渲染到前端页面。</p>
+<p><img src="C:%5CUsers%5Cpl%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1592300125242.png" alt="1592300125242"></p>
+<p>操作：进入该界面看到区域电梯统计表、故障趋势折线图、电梯分布位热力图（调用高德api实现热力图显示）、维保单位统计列表等</p>
+<h4 id="故障预测需求"><a href="#故障预测需求" class="headerlink" title="故障预测需求"></a>故障预测需求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过采集到的数据结合神经网络对电梯进行故障预测：数据预处理、特征选择、对电梯故障预测建模</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p><img src="C:%5CUsers%5Cpl%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1592279133612.png" alt="1592279133612"></p>
+<p>用户信息表：物业公司和维保员，巡检员</p>
+<ul>
+<li>用户名user</li>
+<li>姓名name</li>
+<li>角色role（关联角色）</li>
+<li>联系地址address</li>
+<li>联系电话tel</li>
+<li>性别sex</li>
+</ul>
+<p>角色表:区分不同的角色，不同的角色对应不同的权限，不同的菜单</p>
+<ul>
+<li><p>角色名称name</p>
+</li>
+<li><p>菜单名称menus</p>
+</li>
+<li><p>角色权限role_level</p>
+<p>动态菜单表:不同角色看到不同的菜单</p>
+</li>
+<li><p>菜单名称name(关联角色表)</p>
+</li>
+<li><p>路径（0：绝对，1：相对）url_type</p>
+</li>
+<li><p>Url地址:url_name</p>
+</li>
+</ul>
+<p>接口板监测表：电梯接口板采集的电梯运行数据</p>
+<ul>
+<li>设备编号</li>
+<li>电梯编号</li>
+<li>运行时长</li>
+<li>报警次数</li>
+<li>总楼数</li>
+<li>设备状态</li>
+<li>更新时间</li>
+<li>地点</li>
+<li>运行状态</li>
+<li>门状态</li>
+<li>报警吗</li>
+<li>最后一次报警时间</li>
+<li>垂直震动加速度</li>
+<li>水平震动加速度</li>
+<li>桥厢运行噪音</li>
+<li>…</li>
+</ul>
+<p>报警器监测表：监控电梯桥厢的报警器的表</p>
+<ul>
+<li>设备百年好</li>
+<li>电梯编号</li>
+<li>呼叫器报警次数</li>
+<li>掉线次数</li>
+<li>报警内容</li>
+<li>电压值</li>
+<li>设备状态</li>
+<li>状态位</li>
+<li>更新时间</li>
+<li>报警码</li>
+<li>最后一次报警时间</li>
+</ul>
+<p>电梯基础信息表：保存当前正在使用的电梯的基本情况</p>
+<ul>
+<li>注册码</li>
+<li>电梯编号</li>
+<li>电梯类别</li>
+<li>电梯型号</li>
+<li>额定载荷</li>
+<li>额定速度</li>
+<li>总楼层数</li>
+<li>使用单位</li>
+<li>电梯品牌</li>
+<li>…</li>
+</ul>
+<p>维保企业信息表</p>
+<ul>
+<li>维保公司</li>
+<li>法人代表</li>
+<li>公司地址</li>
+<li>邮编</li>
+<li>机构代码</li>
+<li>创立时间</li>
+<li>营业执照</li>
+<li>安全负责人</li>
+<li>负责人联系方式</li>
+<li>资质登记</li>
+<li>税务登记号</li>
+</ul>
+<p>生产商信息表：</p>
+<ul>
+<li>生产商名称</li>
+<li>品牌</li>
+<li>企业性质</li>
+<li>资质</li>
+<li>…</li>
+</ul>
+<p>维保记录表</p>
+<ul>
+<li>维保员姓名</li>
+<li>电梯编号</li>
+<li>点难题位置</li>
+<li>故障描述</li>
+<li>更换部件</li>
+<li>故障报告人</li>
+<li>故障 报告时间</li>
+<li>维保时间</li>
+<li>使用单位</li>
+<li>故障模式</li>
+<li>缺陷分类</li>
+<li>是否困人</li>
+<li>故障原因</li>
+</ul>
+<h3 id="系统架构图"><a href="#系统架构图" class="headerlink" title="系统架构图"></a>系统架构图</h3><p><img src="C:%5CUsers%5Cpl%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1592274740641.png" alt="1592274740641"></p>
+<h2 id="项目三：小程序项目"><a href="#项目三：小程序项目" class="headerlink" title="项目三：小程序项目"></a>项目三：小程序项目</h2><p>3张表：</p>
+<p>用户信息表（UserInfo）：id/username/phone(手机号)/device_id(设备id)/mail_address(用户邮箱)/mail_state(邮箱验证状态)/time_stamp(时间戳)</p>
+<p>设备信息表（DeviceInfo）:id/device_id(设备id)/device_pwd(设备注册密码)/time_stamp(时间戳)</p>
+<p>环境信息表（EnvironmentalInfo）：id/device_id(设备id)/temspensor(温度)/humdesensor(湿度)/lightsensor(光照强度)/grasssensor(可燃气体浓度)/pnsensor(粉尘浓度)/relay_switch(继电器开关状态)/infrared_switch(红外学习模块开关状态)/infrares_details(红外学习模块控制参数)/automatic_switch(自动调节开关状态)</p>
+<p>云平台通过drf的方式和小程序进行数据的交互，drf和终端指令的交互还是通过hbmqtt模块进行。</p>
+<p>网关设备也是采用树莓派</p>
+<h3 id="技术点："><a href="#技术点：" class="headerlink" title="技术点："></a>技术点：</h3><p>django rest framework（建立和）+微信小程序+MQTT协议</p>
+<h4 id="家居环境信息的可视化展示"><a href="#家居环境信息的可视化展示" class="headerlink" title="家居环境信息的可视化展示"></a>家居环境信息的可视化展示</h4><p>温湿度/光强/粉尘浓度/可燃气体浓度等。在微信小程序端使用wx-charts插件（引入，把dist里面的wxcharts.js放在小程序文件夹里面，就直接可以在当前页面引用文件），通过获取后端api发来的数据进行填充，就可以得到不同量的曲线图。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas <span class="class"><span class="keyword">class</span></span>=<span class="string">"canvas"</span> canvas-id=<span class="string">"lineGraph&#123;&#123; item.id &#125;&#125;"</span>&gt;&lt;/canvas&gt;</span><br><span class="line"></span><br><span class="line">lineShow: <span class="function"><span class="keyword">function</span> (<span class="params">type</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> random1 = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (<span class="number">500</span> - <span class="number">50</span> + <span class="number">1</span>) + <span class="number">50</span>),</span><br><span class="line">            random2 = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (<span class="number">800</span> - <span class="number">100</span> + <span class="number">1</span>) + <span class="number">100</span>),</span><br><span class="line">            random3 = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (<span class="number">1000</span> - <span class="number">200</span> + <span class="number">1</span>) + <span class="number">200</span>),</span><br><span class="line">            random4 = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (<span class="number">300</span> - <span class="number">10</span> + <span class="number">1</span>) + <span class="number">10</span>),</span><br><span class="line">            random5 = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (<span class="number">600</span> - <span class="number">300</span> + <span class="number">1</span>) + <span class="number">300</span>),</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> line = &#123;</span><br><span class="line">            canvasId: <span class="string">'lineGraph'</span>, <span class="comment">// canvas-id</span></span><br><span class="line">            type: <span class="string">'line'</span>, <span class="comment">// 图表类型，可选值为pie, line, column, area, ring</span></span><br><span class="line">            categories: [<span class="string">'201708'</span>, <span class="string">'201709'</span>, <span class="string">'201710'</span>, <span class="string">'201711'</span>, <span class="string">'201712'</span>],</span><br><span class="line">            series: [&#123; <span class="comment">// 数据列表</span></span><br><span class="line">                name: <span class="string">' '</span>,</span><br><span class="line">                data: [random1, random2, random3, random4, random5]</span><br><span class="line">            &#125;],</span><br><span class="line">            yAxis: &#123;</span><br><span class="line">                min: <span class="number">0</span> <span class="comment">// Y轴起始值</span></span><br><span class="line">            &#125;,</span><br><span class="line">            width: <span class="number">310</span>,</span><br><span class="line">            height: <span class="number">200</span>,</span><br><span class="line">            dataLabel: <span class="literal">true</span>, <span class="comment">// 是否在图表中显示数据内容值</span></span><br><span class="line">            legend: <span class="literal">false</span>, <span class="comment">// 是否显示图表下方各类别的标识</span></span><br><span class="line">            extra: &#123;</span><br><span class="line">                lineStyle: <span class="string">'curve'</span> <span class="comment">// (仅对line, area图表有效) 可选值：curve曲线，straight直线 (默认)</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">new</span> CHARTS(line);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="微信和云平台的数据交互"><a href="#微信和云平台的数据交互" class="headerlink" title="微信和云平台的数据交互"></a>微信和云平台的数据交互</h4><p>微信端使用wx.request接口，这个如果通过云平台来做流量的转发肯定是不现实的，如果说小程序直接和家居摄像头直连的话也是比较困难的。于是我们就借助摄像头人家提供的视频监控地址， 直接在小程序的查看监控的按钮下链接到人家的监控地址链接，登录认证之后就可以对自己家居环境进行实时监控查看。</p>
+<h4 id="自动预警功能"><a href="#自动预警功能" class="headerlink" title="自动预警功能"></a>自动预警功能</h4><p>这些都可以是输入框，预设值，在小程序页面，设定室内的温度值，湿度值，粉尘浓度值等等，将他们提交到云平台，云平台通过mqtt将这些预设值转发到树莓派，在网关开发中，一旦超过出现预设值的阈值，就向云平台上报数据，云平台根据预警数据直接在小程序的预警栏显示环境因子参数问题。（并以发短信的方式通知主人）</p>
+<h4 id="手动开启物理设备"><a href="#手动开启物理设备" class="headerlink" title="手动开启物理设备"></a>手动开启物理设备</h4><p>在小程序端有一些按钮，他们会监控家居物理设备的状态（这个状态的获取是这样子实现的，一旦点击这个物理设备控制的菜单栏，就去向云平台发送一个请求，查看连接设备的状态，云平台去网关问，网关查看并回答，最后小程序就会显示物理设备最终的状态），可以点击他们达到开启或者关闭物理设备的目的。点击他们将设备的参数传递到云平台，云平台将数据下发到网关，网关进行实际的操作，并将结果返回给云平台，云平台将状态返回给小程序端。</p>
+<h4 id="用户认证与接口鉴权"><a href="#用户认证与接口鉴权" class="headerlink" title="用户认证与接口鉴权"></a>用户认证与接口鉴权</h4><p>点击小程序也就是直接进入登录/注册界面，没有账号需要先进行注册</p>
+<p>表：</p>
+<p>phone  （点击获取验证码）</p>
+<p>password</p>
+<p>mail</p>
+<p>提交注册信息的时候好需要我们的微信授权（也就是登录鉴权的问题）</p>
+<p>首先调用wx.login生成code（生成一个临时的登录）</p>
+<h4 id="设备绑定"><a href="#设备绑定" class="headerlink" title="设备绑定"></a>设备绑定</h4><p>前提就是云平台已经和网关接入成功了，现在网关的唯一标识（设备id）已经存入云平台的数据库中。用户登录小程序（没有账号就注册）,登录成功之后弹出一个页面，需要用户输入设备id，然后判断设备id在数据库中是否存在。如果存在就通过后台向用户的注册时邮箱发送一封激活邮件（这个使用新浪的邮箱发送功能，当点击链接就是想服务端发送一个确认的请求，这个时候将数据库中的用户的flag设置为true那么用户就可以登陆使用自己的设备了）。并返回给小程序显示（激活邮件之后再次登录即可获取设备信息并操作）</p>
+<h4 id="前端页面图"><a href="#前端页面图" class="headerlink" title="前端页面图"></a>前端页面图</h4><p><img src="C:%5CUsers%5Cpl%5CPictures%5Cxxx.png" alt="xxx"></p>
 
       
 	  
@@ -288,7 +714,7 @@ var _hmt = _hmt || [];
 			
 			<br>
 			<strong>本文链接：</strong>
-			https://pl1649947109.github.io/pl1649947109/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/
+			https://pl1649947109.github.io/pl1649947109/2020/06/30/面试项目总结/
 			<br>
 			<strong>版权声明：</strong>
 			本作品采用
@@ -339,7 +765,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">django项目部署</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小绿本</a>
         		</li>
       		
 		</ul>
@@ -395,7 +821,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://pl1649947109.github.io/pl1649947109/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://pl1649947109.github.io/pl1649947109/2020/06/30/面试项目总结/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -409,18 +835,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/10/10/书/Elasticsearch/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2030/01/01/main/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Elasticsearch
+          网站使用说明
         
       </div>
     </a>
   
   
-    <a href="/2019/10/06/知识扩展/Django的路由path和url的比较/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Django的路由path和url的比较</div>
+    <a href="/2020/06/12/书/测试框架pytest（未发布）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -447,7 +873,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#完整的项目部署流程"><span class="toc-number">1.</span> <span class="toc-text">完整的项目部署流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#完整的通信流程"><span class="toc-number">1.1.</span> <span class="toc-text">完整的通信流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一、更新系统软件包"><span class="toc-number">1.2.</span> <span class="toc-text">一、更新系统软件包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、安装软件管理包和可能使用的依赖"><span class="toc-number">1.3.</span> <span class="toc-text">二、安装软件管理包和可能使用的依赖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、下载Pyhton3到-usr-local-目录"><span class="toc-number">1.4.</span> <span class="toc-text">三、下载Pyhton3到/usr/local 目录**</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、查看Python3和pip3安装情况"><span class="toc-number">1.5.</span> <span class="toc-text">四、查看Python3和pip3安装情况</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五、安装virtualenv-，建议大家都安装一个virtualenv，方便不同版本项目管理。"><span class="toc-number">1.6.</span> <span class="toc-text">五、安装virtualenv ，建议大家都安装一个virtualenv，方便不同版本项目管理。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#六、切换到-data-env-下，创建指定版本的虚拟环境。"><span class="toc-number">1.7.</span> <span class="toc-text">六、切换到/data/env/下，创建指定版本的虚拟环境。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#七、虚拟环境里用python3安django和uwsgi"><span class="toc-number">1.8.</span> <span class="toc-text">七、虚拟环境里用python3安django和uwsgi</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#八、切换到网站目录-data-wwwroot-创建Django项目"><span class="toc-number">1.9.</span> <span class="toc-text">八、切换到网站目录/data/wwwroot,创建Django项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#九、在templates下添加index-html文件，输入下面内容。"><span class="toc-number">1.10.</span> <span class="toc-text">九、在templates下添加index.html文件，输入下面内容。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#十、配置URL"><span class="toc-number">1.11.</span> <span class="toc-text">十、配置URL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#十一、编辑blog-APP下的views-py"><span class="toc-number">1.12.</span> <span class="toc-text">十一、编辑blog APP下的views.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#十二、启动项目"><span class="toc-number">1.13.</span> <span class="toc-text">十二、启动项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#十三、Django正常运行之后我们就开始配置一下uwsgi。"><span class="toc-number">1.14.</span> <span class="toc-text">十三、Django正常运行之后我们就开始配置一下uwsgi。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#十四、安装nginx和配置nginx-conf文件"><span class="toc-number">1.15.</span> <span class="toc-text">十四、安装nginx和配置nginx.conf文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#十五、访问项目的页面。"><span class="toc-number">1.16.</span> <span class="toc-text">十五、访问项目的页面。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地项目搬迁到服务器"><span class="toc-number">2.</span> <span class="toc-text">本地项目搬迁到服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于线上部署admin后台样式没有生效的问题："><span class="toc-number">3.</span> <span class="toc-text">关于线上部署admin后台样式没有生效的问题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Django启用SSL证书"><span class="toc-number">4.</span> <span class="toc-text">Django启用SSL证书</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#终端设备（TPYBoard-STM32终端设备核心板）"><span class="toc-number">1.</span> <span class="toc-text">终端设备（TPYBoard-STM32终端设备核心板）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网关（树莓派）"><span class="toc-number">2.</span> <span class="toc-text">网关（树莓派）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#项目目录"><span class="toc-number">2.1.</span> <span class="toc-text">项目目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#终端和网关之间的通信（JSON）"><span class="toc-number">2.2.</span> <span class="toc-text">终端和网关之间的通信（JSON）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#面试"><span class="toc-number"></span> <span class="toc-text">面试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目一：智慧农业项目"><span class="toc-number"></span> <span class="toc-text">项目一：智慧农业项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#技术点"><span class="toc-number">1.</span> <span class="toc-text">技术点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库表的构建（共计12张表）"><span class="toc-number">2.</span> <span class="toc-text">数据库表的构建（共计12张表）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#页面布局"><span class="toc-number">3.</span> <span class="toc-text">页面布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能点的解答"><span class="toc-number">4.</span> <span class="toc-text">功能点的解答</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#网关数据的备份"><span class="toc-number">4.1.</span> <span class="toc-text">网关数据的备份</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#实现终端数据的可视化"><span class="toc-number">4.2.</span> <span class="toc-text">实现终端数据的可视化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mysql的数据持久化"><span class="toc-number">4.3.</span> <span class="toc-text">mysql的数据持久化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#控制设备（手动和自动）"><span class="toc-number">4.4.</span> <span class="toc-text">控制设备（手动和自动）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#滴灌控制"><span class="toc-number">4.4.1.</span> <span class="toc-text">滴灌控制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#灯光控制"><span class="toc-number">4.4.2.</span> <span class="toc-text">灯光控制</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#终端-网关设备在线监控-安防报警"><span class="toc-number">4.5.</span> <span class="toc-text">终端/网关设备在线监控+安防报警</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#权限组件的应用"><span class="toc-number">4.6.</span> <span class="toc-text">权限组件的应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#登陆注册"><span class="toc-number">4.7.</span> <span class="toc-text">登陆注册</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#docker容器线上部署"><span class="toc-number">4.8.</span> <span class="toc-text">docker容器线上部署</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#扩展："><span class="toc-number">5.</span> <span class="toc-text">扩展：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目二：电梯检测管理平台"><span class="toc-number"></span> <span class="toc-text">项目二：电梯检测管理平台</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#技术点-1"><span class="toc-number">1.</span> <span class="toc-text">技术点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#页面布局-1"><span class="toc-number">2.</span> <span class="toc-text">页面布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据采集需求"><span class="toc-number">2.1.</span> <span class="toc-text">数据采集需求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#电梯检测需求"><span class="toc-number">2.2.</span> <span class="toc-text">电梯检测需求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基础信息管理功能"><span class="toc-number">2.3.</span> <span class="toc-text">基础信息管理功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#记录管理需求"><span class="toc-number">2.4.</span> <span class="toc-text">记录管理需求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#统计分析需求"><span class="toc-number">2.5.</span> <span class="toc-text">统计分析需求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#故障预测需求"><span class="toc-number">2.6.</span> <span class="toc-text">故障预测需求</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库"><span class="toc-number">3.</span> <span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#系统架构图"><span class="toc-number">4.</span> <span class="toc-text">系统架构图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目三：小程序项目"><span class="toc-number"></span> <span class="toc-text">项目三：小程序项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#技术点："><span class="toc-number">1.</span> <span class="toc-text">技术点：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#家居环境信息的可视化展示"><span class="toc-number">1.1.</span> <span class="toc-text">家居环境信息的可视化展示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#微信和云平台的数据交互"><span class="toc-number">1.2.</span> <span class="toc-text">微信和云平台的数据交互</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#自动预警功能"><span class="toc-number">1.3.</span> <span class="toc-text">自动预警功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#手动开启物理设备"><span class="toc-number">1.4.</span> <span class="toc-text">手动开启物理设备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#用户认证与接口鉴权"><span class="toc-number">1.5.</span> <span class="toc-text">用户认证与接口鉴权</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设备绑定"><span class="toc-number">1.6.</span> <span class="toc-text">设备绑定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#前端页面图"><span class="toc-number">1.7.</span> <span class="toc-text">前端页面图</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -461,7 +887,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署" data-title="centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署" data-url="https://pl1649947109.github.io/pl1649947109/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/"></div>
+	<div class="ds-thread" data-thread-key="面试项目总结" data-title="xm" data-url="https://pl1649947109.github.io/pl1649947109/2020/06/30/面试项目总结/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -492,7 +918,7 @@ var _hmt = _hmt || [];
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "https://pl1649947109.github.io/pl1649947109/2019/10/07/django项目部署/centos7+python3.6+Django2.2+uwsgi+sqlite3.27+nginx项目部署/",
+  id: "https://pl1649947109.github.io/pl1649947109/2020/06/30/面试项目总结/",
   owner: 'pl1649947109',
   repo: 'https://github.com/pl1649947109/gitment.git',
   oauth: {
